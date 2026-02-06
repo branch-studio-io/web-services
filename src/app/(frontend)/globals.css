@@ -51,11 +51,6 @@
   --text-sm: 0.9rem; /* Small 14.4px */
   --text-xs: 0.75rem; /* XSmall 12px */
 
-  --text-3xl-mobile: 2.7rem;
-  --text-2xl-mobile: 2rem;
-  --text-xl-mobile: 1.7rem;
-  --text-lg-mobile: 1.17rem;
-
   --leading-tight: 1.12em;
   --leading-normal: 1.5em;
   --tracking-tight: -0.01em;
@@ -84,6 +79,48 @@ main {
 
 .margins-y-0 > *:last-child {
   margin-bottom: 0 !important;
+}
+
+@layer components {
+  .prose > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  .prose > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .header-1 {
+    @apply mt-[1em] mb-[0.4em] font-sans text-[2.7rem] leading-[1.2] font-bold tracking-tight md:text-3xl;
+  }
+
+  .header-2 {
+    @apply mt-[1em] mb-[0.4em] font-sans text-[2rem] leading-[1.2] font-bold tracking-tight md:text-2xl;
+  }
+
+  .header-3 {
+    @apply mt-[1em] mb-[0.4em] font-sans text-[1.7rem] leading-[1.2] font-semibold tracking-tight md:text-xl;
+  }
+
+  .header-4 {
+    @apply mt-[1em] mb-[0.4em] font-sans text-[1.17rem] leading-[1.2] font-semibold tracking-tight md:text-lg;
+  }
+
+  .body-lg {
+    @apply font-lora mb-[1em] text-lg leading-normal font-normal tracking-normal;
+  }
+
+  .body-md {
+    @apply font-lora mb-[1em] text-base leading-normal font-normal tracking-normal;
+  }
+
+  .body-sm {
+    @apply font-lora mb-[1em] text-sm leading-normal font-normal tracking-normal;
+  }
+
+  .body-xs {
+    @apply font-lora mb-[1em] text-xs leading-normal font-normal tracking-normal;
+  }
 }
 
 @layer utilities {
