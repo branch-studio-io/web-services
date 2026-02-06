@@ -1,5 +1,18 @@
 import React from 'react'
+import { Lora, Work_Sans } from 'next/font/google'
 import './globals.css'
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+})
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  variable: '--font-work-sans',
+  display: 'swap',
+})
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
@@ -10,7 +23,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${lora.variable} ${workSans.variable}`}>
       <body>
         <main>{children}</main>
       </body>

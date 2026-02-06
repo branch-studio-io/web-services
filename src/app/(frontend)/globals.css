@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+/* Font families from next/font (Lora, Work Sans) – set on <html> in layout */
+:root {
+  --font-sans: var(--font-work-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+}
+
 /* Minimal base defaults */
 @layer base {
   html {
@@ -7,6 +13,16 @@
   }
 
   body {
+    font-family: var(--font-sans);
     @apply min-h-screen bg-white text-gray-900;
   }
+}
+
+/* Utility classes for font usage */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
