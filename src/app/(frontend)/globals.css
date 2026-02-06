@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+/* Minimal base defaults */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply min-h-screen bg-white text-gray-900;
+  }
+}
