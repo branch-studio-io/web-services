@@ -1,28 +1,96 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-/* Font families from next/font (Lora, Work Sans) – set on <html> in layout */
 :root {
-  --font-sans: var(--font-work-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+  --background: #ffffff;
+  --foreground: #160d62;
 }
 
-/* Minimal base defaults */
-@layer base {
-  html {
-    @apply antialiased;
-  }
-
-  body {
-    font-family: var(--font-sans);
-    @apply min-h-screen bg-white text-gray-900;
-  }
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-work-sans);
+  --font-lora: var(--font-lora);
+  --shadow-button: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* Utility classes for font usage */
-.font-sans {
+@theme {
+  --color-ink-300: #746da3;
+  --color-ink-400: #423784;
+  --color-ink-450: #1e2a87;
+  --color-ink-500: #160d62;
+  --color-ink: #160d62;
+
+  --color-iframe-500: #a3d0dd;
+  --color-iframe-600: #91c7d7;
+
+  --color-vale-500: #c8e3eb;
+
+  --color-row-highlight: #d8f3fb;
+
+  --color-sand: #f8f6ef;
+  --color-sand-500: #f8f6ef;
+  --color-sand-600: #e2dfd3;
+  --color-sand-700: #cfccbe;
+  --color-sand-800: #b5b4b2;
+
+  --color-cc-navy: #160d62;
+  --color-cc-yellow: #fae164;
+  --color-cc-teal: #00afbe;
+  --color-cc-red: #d12f21;
+  --color-cc-neutral: #f8f6ef;
+  --color-cc-cool-blue: #243a58;
+  --color-cc-grass-green: #466c20;
+  --color-cc-sky-blue: #4785cb;
+  --color-cc-evergreen: #59b169;
+
+  --text-3xl: 3.4rem; /* H1 54.4px */
+  --text-2xl: 2.6rem; /* H2 41.6px */
+  --text-xl: 1.8rem; /* H3 28.8px */
+  --text-lg: 1.35rem; /* H4 21.6 px */
+  --text-base: 1.1rem; /* Body 17.6px */
+  --text-sm: 0.9rem; /* Small 14.4px */
+  --text-xs: 0.75rem; /* XSmall 12px */
+
+  --text-3xl-mobile: 2.7rem;
+  --text-2xl-mobile: 2rem;
+  --text-xl-mobile: 1.7rem;
+  --text-lg-mobile: 1.17rem;
+
+  --leading-tight: 1.12em;
+  --leading-normal: 1.5em;
+  --tracking-tight: -0.01em;
+
+  --breakpoint-xs: 480px;
+}
+
+html {
+  @apply h-full scroll-smooth antialiased;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
+  @apply flex h-full flex-col;
 }
 
-.font-serif {
-  font-family: var(--font-serif);
+main {
+  @apply flex-1;
+}
+
+.margins-y-0 > *:first-child {
+  margin-top: 0 !important;
+}
+
+.margins-y-0 > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+@layer utilities {
+  .text-wrap-pretty {
+    text-wrap: pretty;
+  }
+  .text-wrap-balance {
+    text-wrap: balance;
+  }
 }
