@@ -62,7 +62,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="relative z-10 bg-white shadow-md">
       <nav
         aria-label="Global"
         className={`mx-auto flex items-center justify-between px-6 py-3 lg:px-8`}
@@ -94,7 +94,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className={clsx("text-base font-semibold text-[16px]", {
+                className={clsx("text-base text-[16px] font-semibold", {
                   "text-cc-teal text-[16px] uppercase":
                     item.type === "highlighted-link",
                 })}
@@ -135,13 +135,13 @@ export default function Header() {
           </div>
           <div className="mt-10 flow-root">
             <div className="text-center">
-              <div className="text-[clamp(1.3rem,4vw,4rem)] leading-[1.24] font-semibold text-ink">
+              <div className="text-ink text-[clamp(1.3rem,4vw,4rem)] leading-[1.24] font-semibold">
                 {navigation.map((item) =>
                   item.type === "link" || item.type === "highlighted-link" ? (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block rounded-lg hover:bg-gray-50 py-2.5"
+                      className="block rounded-lg py-2.5 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
@@ -152,7 +152,7 @@ export default function Header() {
                         <a
                           key={item.label}
                           href={item.href}
-                          className="block rounded-lg hover:bg-gray-50 py-2.5"
+                          className="block rounded-lg py-2.5 hover:bg-gray-50"
                         >
                           {item.label}
                         </a>

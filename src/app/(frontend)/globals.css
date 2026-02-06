@@ -91,35 +91,35 @@ main {
   }
 
   .header-1 {
-    @apply mt-[1em] mb-[0.4em] font-sans text-[2.7rem] leading-[1.2] font-bold tracking-tight md:text-3xl;
+    @apply font-sans text-[2.7rem] leading-[1.2] font-bold tracking-tight md:text-3xl;
   }
 
   .header-2 {
-    @apply mt-[1em] mb-[0.4em] font-sans text-[2rem] leading-[1.2] font-bold tracking-tight md:text-2xl;
+    @apply font-sans text-[2rem] leading-[1.2] font-bold tracking-tight md:text-2xl;
   }
 
   .header-3 {
-    @apply mt-[1em] mb-[0.4em] font-sans text-[1.7rem] leading-[1.2] font-semibold tracking-tight md:text-xl;
+    @apply font-sans text-[1.7rem] leading-[1.2] font-semibold tracking-tight md:text-xl;
   }
 
   .header-4 {
-    @apply mt-[1em] mb-[0.4em] font-sans text-[1.17rem] leading-[1.2] font-semibold tracking-tight md:text-lg;
+    @apply font-sans text-[1.17rem] leading-[1.2] font-semibold tracking-tight md:text-lg;
   }
 
   .body-lg {
-    @apply font-lora mb-[1em] text-lg leading-normal font-normal tracking-normal;
+    @apply font-lora text-lg;
   }
 
   .body-md {
-    @apply font-lora mb-[1em] text-base leading-normal font-normal tracking-normal;
+    @apply font-lora text-base;
   }
 
   .body-sm {
-    @apply font-lora mb-[1em] text-sm leading-normal font-normal tracking-normal;
+    @apply font-lora text-sm;
   }
 
   .body-xs {
-    @apply font-lora mb-[1em] text-xs leading-normal font-normal tracking-normal;
+    @apply font-lora text-xs;
   }
 }
 
