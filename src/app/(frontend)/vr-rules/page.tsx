@@ -1,6 +1,9 @@
 import Container from "@/components/Container";
 import NationalPreregMap from "@/components/NationalPreregMap";
+import { getYouthRegistration } from "@/utils/democracyWorkApi";
 import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
+import configPromise from "@payload-config";
+import { getPayload } from "payload";
 
 const categories = [
   {
@@ -21,10 +24,19 @@ const categories = [
   },
 ] as const;
 
-export default function VRRulesPage() {
+export default async function VRRulesPage() {
+  const payload = await getPayload({ config: configPromise });
+  const { docs: states } = await payload.find({
+    collection: "states",
+    limit: 100,
+    sort: "name",
+  });
+
+  const youthRegistration = await getYouthRegistration();
+
   return (
     <Container className="bg-sand">
-      <div className="mx-auto space-y-20">
+      <div className="mx-auto space-y-10">
         <div className="mx-auto flex flex-col gap-20 lg:flex-row">
           <div>
             <h1 className="header-2 my-4">State Requirements</h1>
@@ -57,6 +69,8 @@ export default function VRRulesPage() {
             width={800}
             height={500}
             className="mx-auto h-full w-full"
+            youthRegistration={youthRegistration}
+            states={states}
           />
         </div>
       </div>

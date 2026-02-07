@@ -1,6 +1,9 @@
 "use client";
 
-import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
+import type { State } from "@/payload-types";
+import type { YouthRegistration } from "@/types/democracy-works";
+import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
+import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
 import { feature } from "topojson-client";
@@ -11,9 +14,46 @@ type Props = {
   width: number;
   height: number;
   className: string;
+  youthRegistration: Record<string, YouthRegistration>;
+  states: State[];
 };
 
-export default function NationalPreregMap({ width, height, className }: Props) {
+export default function NationalPreregMap({
+  width,
+  height,
+  className,
+  youthRegistration,
+  states,
+}: Props) {
+  const fipsLookup = new Map(states.map((state) => [state.fips, state]));
+
+  const color = (fips: string) => {
+    const state = fipsLookup.get(fips);
+    const youth = youthRegistration[state.code];
+    if (!state || !youth) {
+      return NO_DATA_COLOR;
+    }
+
+    const age = getAge(youth.eligibilityAge);
+
+    // Preregistration starts at age 16 or earlier
+    if (youth.supported === "byAge" && age <= 16) {
+      return THREE_COLOR_DIVERGENT_SCALE[0];
+    }
+
+    // State allows at least one year to register before the first election but do not start at age 16
+    if ((youth.supported === "byAge" && age <= 17) || canRegInGeneral(youth)) {
+      return THREE_COLOR_DIVERGENT_SCALE[1];
+    }
+
+    //States with shorter preregistration periods; most have time to register in senior year.
+    if (youth.supported === "byElection" || youth.supported === "byAge") {
+      return THREE_COLOR_DIVERGENT_SCALE[2];
+    }
+
+    return NO_DATA_COLOR;
+  };
+
   const topology = topoJson as unknown as Topology;
 
   const geoJson = feature(
@@ -33,15 +73,26 @@ export default function NationalPreregMap({ width, height, className }: Props) {
       className={className}
     >
       <g>
-        {geoJson.features.map((d: Feature, i: number) => {
+        {geoJson.features.map((d: Feature) => {
+          const centroid = path.centroid(d);
           return (
-            <path
-              key={`${d.id}`}
-              d={path(d) || ""}
-              fill={THREE_COLOR_DIVERGENT_SCALE[i % 3]}
-              stroke="white"
-              strokeWidth={0.8}
-            />
+            <g key={String(d.id)}>
+              <path
+                d={path(d) ?? ""}
+                fill={color(String(d.id))}
+                stroke="white"
+                strokeWidth={0.8}
+              />
+              {/* <text
+                x={centroid[0]}
+                y={centroid[1]}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="pointer-events-none fill-gray-900 text-[10px] font-medium select-none"
+              >
+                {d.id}
+              </text> */}
+            </g>
           );
         })}
       </g>
