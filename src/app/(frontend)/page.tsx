@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function HomePage() {
   return (
-    <Container innerClassName="bg-sand">
+    <Container className="bg-sand">
       <div>
         <h1 className="header-1">Home Page</h1>
         <Link href="/vr-rules">VR Rules</Link>

@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import NationalPreregMap from "@/components/NationalPreregMap";
 import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 
 const categories = [
@@ -23,31 +24,40 @@ const categories = [
 export default function VRRulesPage() {
   return (
     <Container className="bg-sand">
-      <div className="mx-auto flex max-w-6xl flex-col gap-20 lg:flex-row">
-        <div>
-          <h1 className="header-2 my-4">State Requirements</h1>
-          <p className="font-sans text-lg">
-            Explore our interactive map to state-by-state voting requirements:
-          </p>
+      <div className="mx-auto space-y-20">
+        <div className="mx-auto flex flex-col gap-20 lg:flex-row">
+          <div>
+            <h1 className="header-2 my-4">State Requirements</h1>
+            <p className="font-sans text-lg">
+              Explore our interactive map to state-by-state voting requirements:
+            </p>
+          </div>
+          <div>
+            <h2 className="header-4 font-bold">Pre-18 Registration Laws</h2>
+            <ul className="body-md mt-6 list-none space-y-3">
+              {categories.map(({ label, description }, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span
+                    className={`h-[22px] w-[22px] shrink-0`}
+                    aria-hidden
+                    style={{
+                      backgroundColor: THREE_COLOR_DIVERGENT_SCALE[index],
+                    }}
+                  />
+                  <span>
+                    <strong>{label}</strong> <em>{description}</em>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div>
-          <h2 className="header-4 font-bold">Pre-18 Registration Laws</h2>
-          <ul className="body-md mt-6 list-none space-y-3">
-            {categories.map(({ label, description }, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span
-                  className={`h-[22px] w-[22px] shrink-0`}
-                  aria-hidden
-                  style={{
-                    backgroundColor: THREE_COLOR_DIVERGENT_SCALE[index],
-                  }}
-                />
-                <span>
-                  <strong>{label}</strong> <em>{description}</em>
-                </span>
-              </li>
-            ))}
-          </ul>
+        <div className="w-full">
+          <NationalPreregMap
+            width={800}
+            height={500}
+            className="mx-auto h-full w-full"
+          />
         </div>
       </div>
     </Container>
