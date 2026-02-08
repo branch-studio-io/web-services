@@ -73,28 +73,25 @@ export default function NationalPreregMap({
       className={className}
     >
       <g>
-        {geoJson.features.map((d: Feature) => {
-          const centroid = path.centroid(d);
-          return (
-            <g key={String(d.id)}>
-              <path
-                d={path(d) ?? ""}
-                fill={color(String(d.id))}
-                stroke="white"
-                strokeWidth={0.8}
-              />
-              {/* <text
-                x={centroid[0]}
-                y={centroid[1]}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                className="pointer-events-none fill-gray-900 text-[10px] font-medium select-none"
-              >
-                {d.id}
-              </text> */}
-            </g>
-          );
-        })}
+        {geoJson.features.map((d: Feature) => (
+          <path
+            key={`b-${d.id}`}
+            d={path(d) ?? ""}
+            fill={color(String(d.id))}
+            stroke="white"
+            strokeWidth={0.8}
+          />
+        ))}
+      </g>
+      <g>
+        {geoJson.features.map((d: Feature) => (
+          <path
+            key={`h-${d.id}`}
+            d={path(d) ?? ""}
+            className="cursor-pointer fill-transparent stroke-transparent stroke-2 hover:stroke-black"
+            strokeWidth={0.8}
+          />
+        ))}
       </g>
     </svg>
   );
