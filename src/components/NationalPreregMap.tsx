@@ -182,8 +182,10 @@ export default function NationalPreregMap({
           <div className="space-y-2 p-4">
             <h3 className="header-3 font-bold">{hoveredState.name}</h3>
             <p className="font-sans text-sm font-medium">
-              YOU CAN REGISTER TO VOTE IF:{" "}
-              {youthRegistration[hoveredState.code]?.eligibilityAge}.
+              <div>
+                YOU CAN REGISTER TO VOTE IF:{" "}
+                {eligibilityText(youthRegistration[hoveredState.code])}
+              </div>
             </p>
             <p className="font-sans text-sm font-medium">
               # OF RESIDENTS TURNING 18 THIS YEAR: ???
@@ -196,4 +198,29 @@ export default function NationalPreregMap({
       )}
     </div>
   );
+}
+
+function eligibilityText(yr: YouthRegistration) {
+  if (yr.supported === "byAge") {
+    return `You are ${formatEligibilityAge(yr.eligibilityAge)} of age or older.`;
+  }
+  if (yr.supported === "byElection") {
+    return `You will be XXX by the election on YYYY.`;
+  }
+  return "Other!!!";
+}
+
+function formatEligibilityAge(eligibilityAge: string) {
+  const str = eligibilityAge.replace(/^P/, "");
+  const parts: string[] = [];
+  const yMatch = str.match(/(\d+)Y/);
+  const mMatch = str.match(/(\d+)M/);
+  const dMatch = str.match(/(\d+)D/);
+  if (yMatch) parts.push(`${yMatch[1]} years`);
+  if (mMatch) parts.push(`${mMatch[1]} months`);
+  if (dMatch) parts.push(`${dMatch[1]} days`);
+  if (parts.length === 0) return eligibilityAge;
+  if (parts.length === 1) return parts[0];
+  if (parts.length === 2) return `${parts[0]} and ${parts[1]}`;
+  return `${parts[0]}, ${parts[1]} and ${parts[2]}`;
 }
