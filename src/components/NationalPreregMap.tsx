@@ -6,13 +6,11 @@ import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
-import { useCallback, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { feature } from "topojson-client";
 import type { Topology } from "topojson-specification";
 import topoJson from "us-atlas/states-albers-10m.json";
 
-const PANEL_WIDTH = 400;
-const PANEL_MIN_HEIGHT = 150;
 const CURSOR_OFFSET_Y = 40;
 const PANEL_EDGE_PAD = 10;
 
@@ -37,6 +35,22 @@ export default function NationalPreregMap({
     x: 0,
     y: 0,
   });
+  const [tooltipSize, setTooltipSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (hoveredState === null) {
+      setTooltipSize(null);
+      return;
+    }
+    const el = tooltipRef.current;
+    if (!el) return;
+    const { width, height } = el.getBoundingClientRect();
+    setTooltipSize({ width, height });
+  }, [hoveredState]);
 
   const color = (fips: string) => {
     const state = fipsLookup.get(fips);
@@ -83,24 +97,31 @@ export default function NationalPreregMap({
     setHoveredState(null);
   }, []);
 
+  const widthForClamp = tooltipSize?.width ?? 0;
+  const heightForClamp = tooltipSize?.height ?? 0;
   const clampedLeft = Math.max(
     PANEL_EDGE_PAD,
     Math.min(
-      mousePosition.x - PANEL_WIDTH / 2,
+      mousePosition.x - widthForClamp / 2,
       typeof window !== "undefined"
-        ? window.innerWidth - PANEL_WIDTH - PANEL_EDGE_PAD
+        ? window.innerWidth - widthForClamp - PANEL_EDGE_PAD
         : PANEL_EDGE_PAD,
     ),
   );
+  const preferredTop = mousePosition.y + CURSOR_OFFSET_Y;
   const clampedTop = Math.max(
     PANEL_EDGE_PAD,
     Math.min(
-      mousePosition.y + CURSOR_OFFSET_Y,
+      preferredTop,
       typeof window !== "undefined"
-        ? window.innerHeight - PANEL_MIN_HEIGHT - PANEL_EDGE_PAD
+        ? window.innerHeight - heightForClamp - PANEL_EDGE_PAD
         : PANEL_EDGE_PAD,
     ),
   );
+  const tooltipMaxHeight =
+    typeof window !== "undefined"
+      ? window.innerHeight - PANEL_EDGE_PAD * 2
+      : undefined;
 
   return (
     <div
@@ -146,19 +167,29 @@ export default function NationalPreregMap({
       </svg>
       {hoveredState !== null && (
         <div
+          ref={tooltipRef}
           role="tooltip"
           aria-label={`State: ${hoveredState.name}`}
-          className="bg-sand-300 pointer-events-none z-10 flex min-h-[150px] w-[400px] flex-col justify-between rounded-md drop-shadow-lg"
+          className="bg-sand-300 pointer-events-none z-10 flex w-[400px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
           style={{
             position: "fixed",
-            left: clampedLeft,
+            left: tooltipSize === null ? -9999 : clampedLeft,
             top: clampedTop,
+            maxHeight: tooltipMaxHeight,
+            visibility: tooltipSize === null ? "hidden" : "visible",
           }}
         >
-          <div className="p-4">
-            <h3 className="header-4">{hoveredState.name}</h3>
+          <div className="space-y-2 p-4">
+            <h3 className="header-3 font-bold">{hoveredState.name}</h3>
+            <p className="font-sans text-sm font-medium">
+              YOU CAN REGISTER TO VOTE IF:{" "}
+              {youthRegistration[hoveredState.code]?.eligibilityAge}.
+            </p>
+            <p className="font-sans text-sm font-medium">
+              # OF RESIDENTS TURNING 18 THIS YEAR: ???
+            </p>
           </div>
-          <div className="bg-sand-500 body-sm px-4 py-1 text-xs text-gray-500">
+          <div className="bg-sand-500 body-sm px-4 py-1 text-xs font-semibold text-gray-500">
             Click the state to learn more.
           </div>
         </div>
