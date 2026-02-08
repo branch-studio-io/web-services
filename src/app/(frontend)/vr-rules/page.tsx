@@ -9,18 +9,16 @@ const categories = [
   {
     label: "50% of U.S. teens:",
     description: "Preregistration starts at age 16 or earlier",
-    color: "bg-red-500",
   },
   {
     label: "20% more teens:",
     description:
       "States that allow at least one year to register before the first election but do not start at age 16",
-    color: "bg-green-500",
   },
   {
-    label: "50% of U.S. teens:",
-    description: "Preregistration starts at age 16 or earlier",
-    color: "bg-blue-500",
+    label: "Remaining 30%:",
+    description:
+      "Remaining 30%: States with shorter preregistration periods; most have time to register in senior year.",
   },
 ] as const;
 
