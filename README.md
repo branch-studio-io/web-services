@@ -1,9 +1,10 @@
 # The Civics Center Web Services
-The purpose of this project is to provide additional services to [The Civics Center](https://www.thecivicscenter.org/) website beyond what is possible and reasonable with Squarespace. 
+
+The purpose of this project is to provide additional services to [The Civics Center](https://www.thecivicscenter.org/) website beyond what is possible and reasonable with Squarespace.
 
 ## DNS Proxying
-Cloudflare will serve as a DNS proxy and will delegate requests for marketing pages such as /about to the SquareSpace site and request to services in this project such as those listed in [routes](#routes) to this app. 
 
+Cloudflare will serve as a DNS proxy and will delegate requests for marketing pages such as /about to the SquareSpace site and request to services in this project such as those listed in [routes](#routes) to this app.
 
 ## Routes
 
@@ -17,12 +18,12 @@ Cloudflare will serve as a DNS proxy and will delegate requests for marketing pa
   - Upcomming statewide deadlines and elections
   - Data showing the number of 18 year olds registered to vote in the state compared to age 45+.
   - Links to substack articles TCC has written about the state
-  - Call to action to register to vote 
+  - Call to action to register to vote
   - Call to action to be a drive leader at your High School
-  - Options to share 
+  - Options to share
   - Social Cards
 
-- /leaderboard - (future) Currently the TCC leaderboard lives in GoogleCloud at the subdomain https://leaderboard.thecivicscenter.org. The plan is to 
+- /leaderboard - (future) Currently the TCC leaderboard lives in GoogleCloud at the subdomain https://leaderboard.thecivicscenter.org. The plan is to
 
 ## Architecture
 
@@ -43,15 +44,18 @@ This app is a **Next.js** site with **Payload CMS** as the admin/CMS layer, buil
 1. **Prerequisites:** Node (see `engines` in `package.json`), pnpm, and a Cloudflare account.
 
 2. **Install and authenticate:**
+
    ```bash
    pnpm install
    pnpm wrangler login
    ```
 
 3. **Run the app:**
+
    ```bash
    pnpm dev
    ```
+
    Next.js runs locally; Wrangler provides local bindings to your remote D1 and R2 resources (see [Wrangler](https://developers.cloudflare.com/workers/wrangler/)).
 
 4. **Optional:** To avoid stale build artifacts, use `pnpm run devsafe` (clears `.next` and `.open-next` before starting).
@@ -68,14 +72,17 @@ This app is a **Next.js** site with **Payload CMS** as the admin/CMS layer, buil
 ## Deploying to Cloudflare
 
 1. **Create migrations** (when you change Payload schema):
+
    ```bash
    pnpm payload migrate:create
    ```
 
 2. **Deploy** (migrations first, then the app):
+
    ```bash
    pnpm run deploy
    ```
+
    This runs:
    - `deploy:database` — runs Payload migrations against production and then `wrangler d1 execute ... PRAGMA optimize` for the configured D1 DB.
    - `deploy:app` — `opennextjs-cloudflare build` then `opennextjs-cloudflare deploy`. Requires `CLOUDFLARE_ENV` if you use env-specific config in `wrangler.jsonc` (e.g. `CLOUDFLARE_ENV=staging pnpm run deploy`).
@@ -95,3 +102,5 @@ This app is a **Next.js** site with **Payload CMS** as the admin/CMS layer, buil
 - **OpenNext (Cloudflare):** [OpenNext Cloudflare docs](https://opennext.js.org/docs/cloudflare).
 - **Next.js:** [Next.js documentation](https://nextjs.org/docs).
 - **Cloudflare Workers / D1 / R2:** [Workers](https://developers.cloudflare.com/workers/), [D1](https://developers.cloudflare.com/d1/), [R2](https://developers.cloudflare.com/r2/), [Wrangler](https://developers.cloudflare.com/workers/wrangler/).
+
+Test Comment
