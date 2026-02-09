@@ -1,9 +1,13 @@
 import Container from "@/components/Container";
 import NationalPreregMap from "@/components/NationalPreregMap";
-import { getYouthRegistration } from "@/utils/democracyWorkApi";
+import statesJson from "@/data/states.json";
+import youthRegistrationsJson from "@/data/youth-registrations.json";
+import type { StateYouthRegistration } from "@/types/democracy-works";
+import type { State } from "@/types/state";
 import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
-import configPromise from "@payload-config";
-import { getPayload } from "payload";
+
+const states = statesJson as State[];
+const youthRegistrations = youthRegistrationsJson as StateYouthRegistration[];
 
 const categories = [
   {
@@ -18,20 +22,11 @@ const categories = [
   {
     label: "Remaining 30%:",
     description:
-      "Remaining 30%: States with shorter preregistration periods; most have time to register in senior year.",
+      "States with shorter preregistration periods; most have time to register in senior year.",
   },
 ] as const;
 
 export default async function VRRulesPage() {
-  const payload = await getPayload({ config: configPromise });
-  const { docs: states } = await payload.find({
-    collection: "states",
-    limit: 100,
-    sort: "name",
-  });
-
-  const youthRegistration = await getYouthRegistration();
-
   return (
     <Container className="bg-sand">
       <div className="mx-auto space-y-10">
@@ -67,7 +62,7 @@ export default async function VRRulesPage() {
             width={800}
             height={500}
             className="mx-auto h-full w-full"
-            youthRegistration={youthRegistration}
+            youthRegistrations={youthRegistrations}
             states={states}
             stateRoute="/vr-rules"
           />

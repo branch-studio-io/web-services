@@ -1,8 +1,10 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
-import configPromise from "@payload-config";
+import statesJson from "@/data/states.json";
+import type { State } from "@/types/state";
 import { notFound } from "next/navigation";
-import { getPayload } from "payload";
+
+const states = statesJson as State[];
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -10,13 +12,7 @@ type PageProps = {
 
 export default async function StateVRRulesPage({ params }: PageProps) {
   const { slug } = await params;
-  const payload = await getPayload({ config: configPromise });
-  const { docs } = await payload.find({
-    collection: "states",
-    where: { slug: { equals: slug } },
-    limit: 1,
-  });
-  const state = docs[0];
+  const state = states.find((state) => state.slug === slug);
   if (!state) {
     notFound();
   }

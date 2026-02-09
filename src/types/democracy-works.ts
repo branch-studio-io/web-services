@@ -1,3 +1,8 @@
+export type StateYouthRegistration = {
+  state: string;
+  youthRegistration: YouthRegistration;
+};
+
 export type YouthRegistration = {
   url: string | null;
   formUrl: string | null;

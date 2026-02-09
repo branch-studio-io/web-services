@@ -1,19 +1,16 @@
 "use client";
 
-import type { State } from "@/payload-types";
-import type { YouthRegistration } from "@/types/democracy-works";
+import type {
+  StateYouthRegistration,
+  YouthRegistration,
+} from "@/types/democracy-works";
+import type { State } from "@/types/state";
 import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
 import { useRouter } from "next/navigation";
-import {
-  useCallback,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { feature } from "topojson-client";
 import type { Topology } from "topojson-specification";
 import topoJson from "us-atlas/states-albers-10m.json";
@@ -22,16 +19,13 @@ const CURSOR_OFFSET_Y = 40;
 const PANEL_EDGE_PAD = 10;
 
 const topology = topoJson as unknown as Topology;
-const geoJson = feature(
-  topology,
-  topology.objects.states,
-) as FeatureCollection;
+const geoJson = feature(topology, topology.objects.states) as FeatureCollection;
 
 type Props = {
   width: number;
   height: number;
   className: string;
-  youthRegistration: Record<string, YouthRegistration>;
+  youthRegistrations: StateYouthRegistration[];
   states: State[];
   stateRoute: string;
 };
@@ -40,14 +34,21 @@ export default function NationalPreregMap({
   width,
   height,
   className,
-  youthRegistration,
+  youthRegistrations,
   states,
   stateRoute,
 }: Props) {
-  const fipsLookup = useMemo(
+  const statesByFips = useMemo(
     () => new Map(states.map((state) => [state.fips, state])),
     [states],
   );
+
+  const youthRegByState = useMemo(
+    () =>
+      new Map(youthRegistrations.map((yr) => [yr.state, yr.youthRegistration])),
+    [youthRegistrations],
+  );
+
   const [hoveredState, setHoveredState] = useState<State | null>(null);
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
     x: 0,
@@ -73,8 +74,8 @@ export default function NationalPreregMap({
 
   const color = useCallback(
     (fips: string) => {
-      const state = fipsLookup.get(fips);
-      const youth = state ? youthRegistration[state.code] : undefined;
+      const state = statesByFips.get(fips);
+      const youth = state ? youthRegByState.get(state.code) : undefined;
       if (!state || !youth) {
         return NO_DATA_COLOR;
       }
@@ -85,20 +86,20 @@ export default function NationalPreregMap({
         return THREE_COLOR_DIVERGENT_SCALE[0];
       }
 
-      if ((youth.supported === "byAge" && age <= 17) || canRegInGeneral(youth)) {
+      if (
+        (youth.supported === "byAge" && age <= 17) ||
+        canRegInGeneral(youth)
+      ) {
         return THREE_COLOR_DIVERGENT_SCALE[1];
       }
 
-      if (
-        youth.supported === "byElection" ||
-        youth.supported === "byAge"
-      ) {
+      if (youth.supported === "byElection" || youth.supported === "byAge") {
         return THREE_COLOR_DIVERGENT_SCALE[2];
       }
 
       return NO_DATA_COLOR;
     },
-    [fipsLookup, youthRegistration],
+    [statesByFips, youthRegByState],
   );
 
   const projection = useMemo(
@@ -119,20 +120,20 @@ export default function NationalPreregMap({
     (e: React.MouseEvent<SVGPathElement>) => {
       const fips = e.currentTarget.dataset.fips;
       setMousePosition({ x: e.clientX, y: e.clientY });
-      setHoveredState(fips ? fipsLookup.get(fips) ?? null : null);
+      setHoveredState(fips ? (statesByFips.get(fips) ?? null) : null);
     },
-    [fipsLookup],
+    [statesByFips],
   );
 
   const handlePathClick = useCallback(
     (e: React.MouseEvent<SVGPathElement>) => {
       const fips = e.currentTarget.dataset.fips;
-      const state = fips ? fipsLookup.get(fips) : undefined;
+      const state = fips ? statesByFips.get(fips) : undefined;
       if (state) {
         router.push(`${stateRoute}/${state.slug}`);
       }
     },
-    [fipsLookup, router, stateRoute],
+    [statesByFips, router, stateRoute],
   );
 
   const { clampedLeft, clampedTop, tooltipMaxHeight } = useMemo(() => {
@@ -223,7 +224,7 @@ export default function NationalPreregMap({
             <h3 className="header-3 font-bold">{hoveredState.name}</h3>
             <p className="font-sans text-sm font-medium">
               YOU CAN REGISTER TO VOTE IF:{" "}
-              {eligibilityText(youthRegistration[hoveredState.code])}
+              {eligibilityText(youthRegByState.get(hoveredState.code))}
             </p>
             <p className="font-sans text-sm font-medium">
               # OF RESIDENTS TURNING 18 THIS YEAR: ???
@@ -240,7 +241,7 @@ export default function NationalPreregMap({
 
 function eligibilityText(yr: YouthRegistration) {
   if (yr.supported === "byAge") {
-    return `You are ${formatEligibilityAge(yr.eligibilityAge)} of age or older.`;
+    return `You are ${formatEligibilityAge(yr.eligibilityAge)} old.`;
   }
   if (yr.supported === "byElection") {
     return `You will be XXX by the election on YYYY.`;
