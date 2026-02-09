@@ -7,13 +7,25 @@ import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
 import { useRouter } from "next/navigation";
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { feature } from "topojson-client";
 import type { Topology } from "topojson-specification";
 import topoJson from "us-atlas/states-albers-10m.json";
 
 const CURSOR_OFFSET_Y = 40;
 const PANEL_EDGE_PAD = 10;
+
+const topology = topoJson as unknown as Topology;
+const geoJson = feature(
+  topology,
+  topology.objects.states,
+) as FeatureCollection;
 
 type Props = {
   width: number;
@@ -32,7 +44,10 @@ export default function NationalPreregMap({
   states,
   stateRoute,
 }: Props) {
-  const fipsLookup = new Map(states.map((state) => [state.fips, state]));
+  const fipsLookup = useMemo(
+    () => new Map(states.map((state) => [state.fips, state])),
+    [states],
+  );
   const [hoveredState, setHoveredState] = useState<State | null>(null);
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
     x: 0,
@@ -44,6 +59,7 @@ export default function NationalPreregMap({
   } | null>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
   useLayoutEffect(() => {
     if (hoveredState === null) {
       setTooltipSize(null);
@@ -51,46 +67,45 @@ export default function NationalPreregMap({
     }
     const el = tooltipRef.current;
     if (!el) return;
-    const { width, height } = el.getBoundingClientRect();
-    setTooltipSize({ width, height });
+    const { width: w, height: h } = el.getBoundingClientRect();
+    setTooltipSize({ width: w, height: h });
   }, [hoveredState]);
 
-  const color = (fips: string) => {
-    const state = fipsLookup.get(fips);
-    const youth = youthRegistration[state.code];
-    if (!state || !youth) {
+  const color = useCallback(
+    (fips: string) => {
+      const state = fipsLookup.get(fips);
+      const youth = state ? youthRegistration[state.code] : undefined;
+      if (!state || !youth) {
+        return NO_DATA_COLOR;
+      }
+
+      const age = getAge(youth.eligibilityAge);
+
+      if (youth.supported === "byAge" && age <= 16) {
+        return THREE_COLOR_DIVERGENT_SCALE[0];
+      }
+
+      if ((youth.supported === "byAge" && age <= 17) || canRegInGeneral(youth)) {
+        return THREE_COLOR_DIVERGENT_SCALE[1];
+      }
+
+      if (
+        youth.supported === "byElection" ||
+        youth.supported === "byAge"
+      ) {
+        return THREE_COLOR_DIVERGENT_SCALE[2];
+      }
+
       return NO_DATA_COLOR;
-    }
+    },
+    [fipsLookup, youthRegistration],
+  );
 
-    const age = getAge(youth.eligibilityAge);
-
-    // Preregistration starts at age 16 or earlier
-    if (youth.supported === "byAge" && age <= 16) {
-      return THREE_COLOR_DIVERGENT_SCALE[0];
-    }
-
-    // State allows at least one year to register before the first election but do not start at age 16
-    if ((youth.supported === "byAge" && age <= 17) || canRegInGeneral(youth)) {
-      return THREE_COLOR_DIVERGENT_SCALE[1];
-    }
-
-    //States with shorter preregistration periods; most have time to register in senior year.
-    if (youth.supported === "byElection" || youth.supported === "byAge") {
-      return THREE_COLOR_DIVERGENT_SCALE[2];
-    }
-
-    return NO_DATA_COLOR;
-  };
-
-  const topology = topoJson as unknown as Topology;
-
-  const geoJson = feature(
-    topology,
-    topology.objects.states,
-  ) as FeatureCollection;
-
-  const projection = geoIdentity().fitSize([width, height], geoJson);
-  const path = geoPath(projection);
+  const projection = useMemo(
+    () => geoIdentity().fitSize([width, height], geoJson),
+    [width, height],
+  );
+  const path = useMemo(() => geoPath(projection), [projection]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -100,31 +115,54 @@ export default function NationalPreregMap({
     setHoveredState(null);
   }, []);
 
-  const widthForClamp = tooltipSize?.width ?? 0;
-  const heightForClamp = tooltipSize?.height ?? 0;
-  const clampedLeft = Math.max(
-    PANEL_EDGE_PAD,
-    Math.min(
-      mousePosition.x - widthForClamp / 2,
-      typeof window !== "undefined"
-        ? window.innerWidth - widthForClamp - PANEL_EDGE_PAD
-        : PANEL_EDGE_PAD,
-    ),
+  const handlePathMouseEnter = useCallback(
+    (e: React.MouseEvent<SVGPathElement>) => {
+      const fips = e.currentTarget.dataset.fips;
+      setMousePosition({ x: e.clientX, y: e.clientY });
+      setHoveredState(fips ? fipsLookup.get(fips) ?? null : null);
+    },
+    [fipsLookup],
   );
-  const preferredTop = mousePosition.y + CURSOR_OFFSET_Y;
-  const clampedTop = Math.max(
-    PANEL_EDGE_PAD,
-    Math.min(
-      preferredTop,
-      typeof window !== "undefined"
-        ? window.innerHeight - heightForClamp - PANEL_EDGE_PAD
-        : PANEL_EDGE_PAD,
-    ),
+
+  const handlePathClick = useCallback(
+    (e: React.MouseEvent<SVGPathElement>) => {
+      const fips = e.currentTarget.dataset.fips;
+      const state = fips ? fipsLookup.get(fips) : undefined;
+      if (state) {
+        router.push(`${stateRoute}/${state.slug}`);
+      }
+    },
+    [fipsLookup, router, stateRoute],
   );
-  const tooltipMaxHeight =
-    typeof window !== "undefined"
-      ? window.innerHeight - PANEL_EDGE_PAD * 2
-      : undefined;
+
+  const { clampedLeft, clampedTop, tooltipMaxHeight } = useMemo(() => {
+    const widthForClamp = tooltipSize?.width ?? 0;
+    const heightForClamp = tooltipSize?.height ?? 0;
+    const winWidth =
+      typeof window !== "undefined" ? window.innerWidth : PANEL_EDGE_PAD;
+    const winHeight =
+      typeof window !== "undefined" ? window.innerHeight : PANEL_EDGE_PAD;
+    return {
+      clampedLeft: Math.max(
+        PANEL_EDGE_PAD,
+        Math.min(
+          mousePosition.x - widthForClamp / 2,
+          winWidth - widthForClamp - PANEL_EDGE_PAD,
+        ),
+      ),
+      clampedTop: Math.max(
+        PANEL_EDGE_PAD,
+        Math.min(
+          mousePosition.y + CURSOR_OFFSET_Y,
+          winHeight - heightForClamp - PANEL_EDGE_PAD,
+        ),
+      ),
+      tooltipMaxHeight:
+        typeof window !== "undefined"
+          ? window.innerHeight - PANEL_EDGE_PAD * 2
+          : undefined,
+    };
+  }, [mousePosition, tooltipSize]);
 
   return (
     <div
@@ -156,17 +194,13 @@ export default function NationalPreregMap({
           {geoJson.features.map((d: Feature) => (
             <path
               key={`h-${d.id}`}
+              data-fips={d.id}
               d={path(d) ?? ""}
               className="cursor-pointer fill-transparent stroke-transparent stroke-2 hover:stroke-black"
               strokeWidth={0.8}
-              onMouseEnter={(e) => {
-                setMousePosition({ x: e.clientX, y: e.clientY });
-                setHoveredState(fipsLookup.get(String(d.id)) ?? null);
-              }}
-              onMouseLeave={() => setHoveredState(null)}
-              onClick={() => {
-                router.push(`${stateRoute}/${hoveredState.slug}`);
-              }}
+              onMouseEnter={handlePathMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onClick={handlePathClick}
             />
           ))}
         </g>
