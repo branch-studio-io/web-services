@@ -292,111 +292,6 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "states": {
-      "name": "states",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "code": {
-          "name": "code",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "name": {
-          "name": "name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "generate_slug": {
-          "name": "generate_slug",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": true
-        },
-        "slug": {
-          "name": "slug",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "fips": {
-          "name": "fips",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "(strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))"
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "(strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))"
-        }
-      },
-      "indexes": {
-        "states_code_idx": {
-          "name": "states_code_idx",
-          "columns": [
-            "code"
-          ],
-          "isUnique": true
-        },
-        "states_slug_idx": {
-          "name": "states_slug_idx",
-          "columns": [
-            "slug"
-          ],
-          "isUnique": true
-        },
-        "states_fips_idx": {
-          "name": "states_fips_idx",
-          "columns": [
-            "fips"
-          ],
-          "isUnique": true
-        },
-        "states_updated_at_idx": {
-          "name": "states_updated_at_idx",
-          "columns": [
-            "updated_at"
-          ],
-          "isUnique": false
-        },
-        "states_created_at_idx": {
-          "name": "states_created_at_idx",
-          "columns": [
-            "created_at"
-          ],
-          "isUnique": false
-        }
-      },
-      "foreignKeys": {},
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
     "payload_kv": {
       "name": "payload_kv",
       "columns": {
@@ -542,13 +437,6 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
-        },
-        "states_id": {
-          "name": "states_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
         }
       },
       "indexes": {
@@ -586,13 +474,6 @@
             "media_id"
           ],
           "isUnique": false
-        },
-        "payload_locked_documents_rels_states_id_idx": {
-          "name": "payload_locked_documents_rels_states_id_idx",
-          "columns": [
-            "states_id"
-          ],
-          "isUnique": false
         }
       },
       "foreignKeys": {
@@ -628,19 +509,6 @@
           "tableTo": "media",
           "columnsFrom": [
             "media_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        },
-        "payload_locked_documents_rels_states_fk": {
-          "name": "payload_locked_documents_rels_states_fk",
-          "tableFrom": "payload_locked_documents_rels",
-          "tableTo": "states",
-          "columnsFrom": [
-            "states_id"
           ],
           "columnsTo": [
             "id"

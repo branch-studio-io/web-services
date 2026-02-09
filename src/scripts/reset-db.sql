@@ -1,0 +1,13 @@
+PRAGMA foreign_keys = OFF; 
+DROP TABLE IF EXISTS users_sessions;  
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS media; 
+DROP TABLE IF EXISTS payload_locked_documents_rels;         
+DROP TABLE IF EXISTS payload_locked_documents;    
+DROP TABLE IF EXISTS payload_preferences_rels; 
+DROP TABLE IF EXISTS payload_preferences;  
+DROP TABLE IF EXISTS payload_migrations;   
+DROP TABLE IF EXISTS payload_kv;     
+DROP TABLE IF EXISTS states;   
+PRAGMA foreign_keys = ON;   
+SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';
