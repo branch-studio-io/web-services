@@ -174,6 +174,11 @@ export interface State {
    */
   name: string;
   /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  /**
    * FIPS code for the state (e.g. 06)
    */
   fips: string;
@@ -303,6 +308,8 @@ export interface MediaSelect<T extends boolean = true> {
 export interface StatesSelect<T extends boolean = true> {
   code?: T;
   name?: T;
+  generateSlug?: T;
+  slug?: T;
   fips?: T;
   updatedAt?: T;
   createdAt?: T;

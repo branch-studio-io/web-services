@@ -316,6 +316,21 @@
           "notNull": true,
           "autoincrement": false
         },
+        "generate_slug": {
+          "name": "generate_slug",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": true
+        },
+        "slug": {
+          "name": "slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
         "fips": {
           "name": "fips",
           "type": "text",
@@ -345,6 +360,13 @@
           "name": "states_code_idx",
           "columns": [
             "code"
+          ],
+          "isUnique": true
+        },
+        "states_slug_idx": {
+          "name": "states_slug_idx",
+          "columns": [
+            "slug"
           ],
           "isUnique": true
         },
@@ -873,6 +895,6 @@
   "internal": {
     "indexes": {}
   },
-  "id": "715a3089-5d95-4c0d-826d-97ec37b8147f",
+  "id": "1d6abc35-e48c-455f-a881-3a88b93243a5",
   "prevId": "00000000-0000-0000-0000-000000000000"
 }

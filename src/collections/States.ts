@@ -1,11 +1,12 @@
 import type { CollectionConfig } from 'payload'
+import { slugField } from 'payload'
 
 export const States: CollectionConfig = {
   slug: 'states',
   defaultSort: 'name',
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['code', 'name', 'fips'],
+    defaultColumns: ['code', 'name', 'slug', 'fips'],
     pagination: {
       defaultLimit: 50,           
       limits: [10, 25, 50, 100],  
@@ -34,6 +35,7 @@ export const States: CollectionConfig = {
         description: 'Full name of the state (e.g. California)',
       },
     },
+    slugField({ fieldToUse: 'name' }),
     {
       name: 'fips',
       type: 'text',
