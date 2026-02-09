@@ -1,7 +1,8 @@
+import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
 import configPromise from "@payload-config";
-import { getPayload } from "payload";
 import { notFound } from "next/navigation";
+import { getPayload } from "payload";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -21,7 +22,16 @@ export default async function StateVRRulesPage({ params }: PageProps) {
   }
   return (
     <Container className="bg-sand">
-      <h1 className="header-2 my-4">{state.name}</h1>
+      <BreadCrumb
+        paths={[
+          { name: "All States", href: "/vr-rules" },
+          {
+            name: `${state.name} Voter Registration Rules`,
+            href: `/vr-rules/${state.slug}`,
+          },
+        ]}
+      />
+      <h1 className="header-2 my-4">{state.name} Requirements</h1>
     </Container>
   );
 }

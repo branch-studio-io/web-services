@@ -102,5 +102,3 @@ This app is a **Next.js** site with **Payload CMS** as the admin/CMS layer, buil
 - **OpenNext (Cloudflare):** [OpenNext Cloudflare docs](https://opennext.js.org/docs/cloudflare).
 - **Next.js:** [Next.js documentation](https://nextjs.org/docs).
 - **Cloudflare Workers / D1 / R2:** [Workers](https://developers.cloudflare.com/workers/), [D1](https://developers.cloudflare.com/d1/), [R2](https://developers.cloudflare.com/r2/), [Wrangler](https://developers.cloudflare.com/workers/wrangler/).
-
-Test Comment

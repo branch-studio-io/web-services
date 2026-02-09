@@ -6,6 +6,7 @@ import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
+import { useRouter } from "next/navigation";
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { feature } from "topojson-client";
 import type { Topology } from "topojson-specification";
@@ -20,6 +21,7 @@ type Props = {
   className: string;
   youthRegistration: Record<string, YouthRegistration>;
   states: State[];
+  stateRoute: string;
 };
 
 export default function NationalPreregMap({
@@ -28,6 +30,7 @@ export default function NationalPreregMap({
   className,
   youthRegistration,
   states,
+  stateRoute,
 }: Props) {
   const fipsLookup = new Map(states.map((state) => [state.fips, state]));
   const [hoveredState, setHoveredState] = useState<State | null>(null);
@@ -40,7 +43,7 @@ export default function NationalPreregMap({
     height: number;
   } | null>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
-
+  const router = useRouter();
   useLayoutEffect(() => {
     if (hoveredState === null) {
       setTooltipSize(null);
@@ -161,6 +164,9 @@ export default function NationalPreregMap({
                 setHoveredState(fipsLookup.get(String(d.id)) ?? null);
               }}
               onMouseLeave={() => setHoveredState(null)}
+              onClick={() => {
+                router.push(`${stateRoute}/${hoveredState.slug}`);
+              }}
             />
           ))}
         </g>
@@ -182,10 +188,8 @@ export default function NationalPreregMap({
           <div className="space-y-2 p-4">
             <h3 className="header-3 font-bold">{hoveredState.name}</h3>
             <p className="font-sans text-sm font-medium">
-              <div>
-                YOU CAN REGISTER TO VOTE IF:{" "}
-                {eligibilityText(youthRegistration[hoveredState.code])}
-              </div>
+              YOU CAN REGISTER TO VOTE IF:{" "}
+              {eligibilityText(youthRegistration[hoveredState.code])}
             </p>
             <p className="font-sans text-sm font-medium">
               # OF RESIDENTS TURNING 18 THIS YEAR: ???

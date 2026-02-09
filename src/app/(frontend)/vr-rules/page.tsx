@@ -69,6 +69,7 @@ export default async function VRRulesPage() {
             className="mx-auto h-full w-full"
             youthRegistration={youthRegistration}
             states={states}
+            stateRoute="/vr-rules"
           />
         </div>
       </div>
