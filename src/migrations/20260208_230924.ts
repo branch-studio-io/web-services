@@ -10,7 +10,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   );
   `)
   await db.run(sql`CREATE UNIQUE INDEX IF NOT EXISTS \`payload_kv_key_idx\` ON \`payload_kv\` (\`key\`);`)
-  await db.run(sql`CREATE TABLE IF NOT EXISTS \`states\` (
+  await db.run(sql`CREATE TABLE \`states\` (
   	\`id\` integer PRIMARY KEY NOT NULL,
   	\`code\` text NOT NULL,
   	\`name\` text NOT NULL,
@@ -21,13 +21,13 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	\`created_at\` text DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')) NOT NULL
   );
   `)
-  await db.run(sql`CREATE UNIQUE INDEX IF NOT EXISTS \`states_code_idx\` ON \`states\` (\`code\`);`)
-  await db.run(sql`CREATE UNIQUE INDEX IF NOT EXISTS \`states_slug_idx\` ON \`states\` (\`slug\`);`)
-  await db.run(sql`CREATE UNIQUE INDEX IF NOT EXISTS \`states_fips_idx\` ON \`states\` (\`fips\`);`)
-  await db.run(sql`CREATE INDEX IF NOT EXISTS \`states_updated_at_idx\` ON \`states\` (\`updated_at\`);`)
-  await db.run(sql`CREATE INDEX IF NOT EXISTS \`states_created_at_idx\` ON \`states\` (\`created_at\`);`)
-  await db.run(sql`ALTER TABLE IF NOT EXISTS \`payload_locked_documents_rels\` ADD \`states_id\` integer REFERENCES states(id);`)
-  await db.run(sql`CREATE INDEX IF NOT EXISTS \`payload_locked_documents_rels_states_id_idx\` ON \`payload_locked_documents_rels\` (\`states_id\`);`)
+  await db.run(sql`CREATE UNIQUE INDEX \`states_code_idx\` ON \`states\` (\`code\`);`)
+  await db.run(sql`CREATE UNIQUE INDEX \`states_slug_idx\` ON \`states\` (\`slug\`);`)
+  await db.run(sql`CREATE UNIQUE INDEX \`states_fips_idx\` ON \`states\` (\`fips\`);`)
+  await db.run(sql`CREATE INDEX \`states_updated_at_idx\` ON \`states\` (\`updated_at\`);`)
+  await db.run(sql`CREATE INDEX \`states_created_at_idx\` ON \`states\` (\`created_at\`);`)
+  await db.run(sql`ALTER TABLE \`payload_locked_documents_rels\` ADD \`states_id\` integer REFERENCES states(id);`)
+  await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_states_id_idx\` ON \`payload_locked_documents_rels\` (\`states_id\`);`)
 
   await seedStates(payload, req)
 }
