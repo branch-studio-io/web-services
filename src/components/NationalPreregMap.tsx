@@ -5,11 +5,13 @@ import type {
   YouthRegistration,
 } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
+import type { StatePop } from "@/types/statePop";
 import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
 import { useRouter } from "next/navigation";
+import numeral from "numeral";
 import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { feature } from "topojson-client";
 import type { Topology } from "topojson-specification";
@@ -27,6 +29,7 @@ type Props = {
   className: string;
   youthRegistrations: StateYouthRegistration[];
   states: State[];
+  statePops: StatePop[];
   stateRoute: string;
 };
 
@@ -36,11 +39,17 @@ export default function NationalPreregMap({
   className,
   youthRegistrations,
   states,
+  statePops,
   stateRoute,
 }: Props) {
   const statesByFips = useMemo(
     () => new Map(states.map((state) => [state.fips, state])),
     [states],
+  );
+
+  const statePopsByFips = useMemo(
+    () => new Map(statePops.map((statePop) => [statePop.fips, statePop])),
+    [statePops],
   );
 
   const youthRegByState = useMemo(
@@ -227,7 +236,10 @@ export default function NationalPreregMap({
               {eligibilityText(youthRegByState.get(hoveredState.code))}
             </p>
             <p className="font-sans text-sm font-medium">
-              # OF RESIDENTS TURNING 18 THIS YEAR: ???
+              # OF RESIDENTS TURNING 18 THIS YEAR:{" "}
+              {numeral(
+                statePopsByFips.get(hoveredState.fips)?.pop18 ?? 0,
+              ).format("0,0")}
             </p>
           </div>
           <div className="bg-sand-500 body-sm px-4 py-1 text-xs font-semibold text-gray-500">

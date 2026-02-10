@@ -1,206 +1,206 @@
 [
   {
-    "code": "AL",
+    "fips": "1",
     "pop18": 45366
   },
   {
-    "code": "AK",
+    "fips": "2",
     "pop18": 5547
   },
   {
-    "code": "AZ",
+    "fips": "4",
     "pop18": 81757
   },
   {
-    "code": "AR",
+    "fips": "5",
     "pop18": 31545
   },
   {
-    "code": "CA",
+    "fips": "6",
     "pop18": 403531
   },
   {
-    "code": "CO",
+    "fips": "8",
     "pop18": 67666
   },
   {
-    "code": "CT",
+    "fips": "9",
     "pop18": 39090
   },
   {
-    "code": "DE",
+    "fips": "10",
     "pop18": 8914
   },
   {
-    "code": "DC",
+    "fips": "11",
     "pop18": 4139
   },
   {
-    "code": "FL",
+    "fips": "12",
     "pop18": 192769
   },
   {
-    "code": "GA",
+    "fips": "13",
     "pop18": 88738
   },
   {
-    "code": "HI",
+    "fips": "15",
     "pop18": 7425
   },
   {
-    "code": "ID",
+    "fips": "16",
     "pop18": 30772
   },
   {
-    "code": "IL",
+    "fips": "17",
     "pop18": 125967
   },
   {
-    "code": "IN",
+    "fips": "18",
     "pop18": 74671
   },
   {
-    "code": "IA",
+    "fips": "19",
     "pop18": 39222
   },
   {
-    "code": "KS",
+    "fips": "20",
     "pop18": 35522
   },
   {
-    "code": "KY",
+    "fips": "21",
     "pop18": 48797
   },
   {
-    "code": "LA",
+    "fips": "22",
     "pop18": 34819
   },
   {
-    "code": "ME",
+    "fips": "23",
     "pop18": 15510
   },
   {
-    "code": "MD",
+    "fips": "24",
     "pop18": 47716
   },
   {
-    "code": "MA",
+    "fips": "25",
     "pop18": 76974
   },
   {
-    "code": "MI",
+    "fips": "26",
     "pop18": 103166
   },
   {
-    "code": "MN",
+    "fips": "27",
     "pop18": 60269
   },
   {
-    "code": "MS",
+    "fips": "28",
     "pop18": 22631
   },
   {
-    "code": "MO",
+    "fips": "29",
     "pop18": 64129
   },
   {
-    "code": "MT",
+    "fips": "30",
     "pop18": 11616
   },
   {
-    "code": "NE",
+    "fips": "31",
     "pop18": 23804
   },
   {
-    "code": "NV",
+    "fips": "32",
     "pop18": 28309
   },
   {
-    "code": "NH",
+    "fips": "33",
     "pop18": 15733
   },
   {
-    "code": "NJ",
+    "fips": "34",
     "pop18": 82647
   },
   {
-    "code": "NM",
+    "fips": "35",
     "pop18": 23082
   },
   {
-    "code": "NY",
+    "fips": "36",
     "pop18": 178536
   },
   {
-    "code": "NC",
+    "fips": "37",
     "pop18": 100886
   },
   {
-    "code": "ND",
+    "fips": "38",
     "pop18": 9572
   },
   {
-    "code": "OH",
+    "fips": "39",
     "pop18": 120352
   },
   {
-    "code": "OK",
+    "fips": "40",
     "pop18": 41604
   },
   {
-    "code": "OR",
+    "fips": "41",
     "pop18": 44074
   },
   {
-    "code": "PA",
+    "fips": "42",
     "pop18": 138615
   },
   {
-    "code": "RI",
+    "fips": "44",
     "pop18": 13700
   },
   {
-    "code": "SC",
+    "fips": "45",
     "pop18": 47928
   },
   {
-    "code": "SD",
+    "fips": "46",
     "pop18": 9722
   },
   {
-    "code": "TN",
+    "fips": "47",
     "pop18": 67991
   },
   {
-    "code": "TX",
+    "fips": "48",
     "pop18": 339740
   },
   {
-    "code": "UT",
+    "fips": "49",
     "pop18": 51380
   },
   {
-    "code": "VT",
+    "fips": "50",
     "pop18": 8499
   },
   {
-    "code": "VA",
+    "fips": "51",
     "pop18": 80240
   },
   {
-    "code": "WA",
+    "fips": "53",
     "pop18": 72955
   },
   {
-    "code": "WV",
+    "fips": "54",
     "pop18": 20251
   },
   {
-    "code": "WI",
+    "fips": "55",
     "pop18": 65509
   },
   {
-    "code": "WY",
+    "fips": "56",
     "pop18": 7182
   }
 ]

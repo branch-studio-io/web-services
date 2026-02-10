@@ -1,11 +1,7 @@
-import statesJson from "@/data/states.json";
-import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import { BigQuery } from "@google-cloud/bigquery";
 import "dotenv/config";
 import { getEnvKey } from "./utils";
-
-const states = statesJson as State[];
 
 const LOCATION = getEnvKey("GCLOUD_LOCATION");
 const PROJECT_ID = getEnvKey("GCLOUD_PROJECT_ID");
@@ -38,7 +34,7 @@ export async function getStatePopulations(): Promise<StatePop[]> {
   );
 
   const statePop: StatePop[] = rows.map((row) => ({
-    code: states.find((state) => state.name === row.STATE_NAME)?.code || "",
+    fips: String(row.STATE_FIPS),
     pop18: row.POPULATION,
   }));
 

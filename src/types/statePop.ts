@@ -1,4 +1,4 @@
 export type StatePop = {
-  code: string;
+  fips: string;
   pop18: number;
 };
