@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type BreadCrumbPath = {
   name: string;
   href: string;
@@ -35,12 +37,12 @@ export default function BreadCrumb({ paths }: BreadCrumbProps) {
                     {page.name}
                   </span>
                 ) : (
-                  <a
+                  <Link
                     href={page.href}
                     className={`${index > 0 ? "ml-2" : ""} text-ink-500 text-sm font-medium hover:underline hover:underline-offset-2`}
                   >
                     {page.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             </li>

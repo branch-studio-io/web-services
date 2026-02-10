@@ -6,9 +6,9 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import { Fragment, useState } from "react";
 import DonateButton from "./DonateButton";
-
 
 const navigation = [
   {
@@ -68,7 +68,10 @@ export default function Header() {
         className={`mx-auto flex items-center justify-between px-6 py-3 lg:px-8`}
         style={{ maxWidth: MAX_WIDTH }}
       >
-        <a href={TCC_URL} className="-m-1.5 p-1.5">
+        <Link
+          href={process.env["NODE_ENV"] === "production" ? TCC_URL : "/"}
+          className="-m-1.5 p-1.5"
+        >
           <span className="sr-only">The Civics Center</span>
           <Image
             alt="The Civics Center Logo"
@@ -77,7 +80,7 @@ export default function Header() {
             height={53}
             className="h-[53px] w-auto"
           />
-        </a>
+        </Link>
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -91,7 +94,7 @@ export default function Header() {
         <div className="hidden items-center lg:flex lg:gap-x-10">
           {navigation.map((item) =>
             item.type === "link" || item.type === "highlighted-link" ? (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={clsx("text-base text-[16px] font-semibold", {
@@ -100,7 +103,7 @@ export default function Header() {
                 })}
               >
                 {item.name}
-              </a>
+              </Link>
             ) : (
               <Fragment key={item.name}>
                 <DonateButton label={item.name!} menuItems={item.items!} />
@@ -138,24 +141,24 @@ export default function Header() {
               <div className="text-ink text-[clamp(1.3rem,4vw,4rem)] leading-[1.24] font-semibold">
                 {navigation.map((item) =>
                   item.type === "link" || item.type === "highlighted-link" ? (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="block rounded-lg py-2.5 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ) : (
                     item.items
                       ?.filter((item) => item.type === "link")
                       .map((item) => (
-                        <a
+                        <Link
                           key={item.label}
                           href={item.href}
                           className="block rounded-lg py-2.5 hover:bg-gray-50"
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       ))
                   ),
                 )}

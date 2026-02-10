@@ -3,6 +3,7 @@
 import { usePopoverHover } from "@/hooks/usePopoverHover";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import clsx from "clsx";
+import Link from "next/link";
 import CaretIcon from "./CaretIcon";
 
 type MenuItem = {
@@ -27,8 +28,8 @@ export default function DonateButton({ label, menuItems }: Props) {
             <PopoverButton
               ref={buttonRef}
               className={clsx(
-                "flex items-center gap-2 rounded-md bg-cc-red px-[22.4px] py-4 text-[16px] font-semibold uppercase text-white",
-                "focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2",
+                "bg-cc-red flex items-center gap-2 rounded-md px-[22.4px] py-4 text-[16px] font-semibold text-white uppercase",
+                "focus-visible:ring-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                 "transition-colors duration-200",
               )}
             >
@@ -44,27 +45,27 @@ export default function DonateButton({ label, menuItems }: Props) {
                 "transition-all duration-200 ease-out",
               )}
             >
-              <div className="relative rounded-[22px] bg-ink-450 px-6 py-[22px] text-white shadow-lg min-w-[258px]">
+              <div className="bg-ink-450 relative min-w-[258px] rounded-[22px] px-6 py-[22px] text-white shadow-lg">
                 {/* Speech bubble tail pointing up */}
-                <div className="absolute -top-3 right-6 h-0 w-0 border-l-[14px] border-r-[14px] border-b-[14px] border-transparent border-b-ink-450" />
+                <div className="border-b-ink-450 absolute -top-3 right-6 h-0 w-0 border-r-[14px] border-b-[14px] border-l-[14px] border-transparent" />
 
                 <div className="flex flex-col gap-2">
                   {menuItems.map((item, index) =>
                     item.type === "link" ? (
-                      <a
+                      <Link
                         href={item.href}
                         key={index}
                         className={clsx(
-                          "text-right text-[16px] font-semibold leading-[20.8px]",
-                          "focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink-450 rounded",
+                          "text-right text-[16px] leading-[20.8px] font-semibold",
+                          "focus-visible:ring-offset-ink-450 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2",
                         )}
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ) : (
                       <div
                         key={index}
-                        className="text-right text-[12.8px] text-white/80 font-semibold tracking-[0.64px] transition-colors leading-[20.8px]"
+                        className="text-right text-[12.8px] leading-[20.8px] font-semibold tracking-[0.64px] text-white/80 transition-colors"
                       >
                         {item.label}
                       </div>

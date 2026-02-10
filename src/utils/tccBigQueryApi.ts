@@ -34,7 +34,7 @@ export async function getStatePopulations(): Promise<StatePop[]> {
   );
 
   const statePop: StatePop[] = rows.map((row) => ({
-    fips: String(row.STATE_FIPS),
+    fips: String(row.STATE_FIPS).padStart(2, "0"),
     pop18: row.POPULATION,
   }));
 
