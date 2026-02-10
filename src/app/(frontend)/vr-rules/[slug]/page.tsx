@@ -10,6 +10,12 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export function generateStaticParams() {
+  return states.map((state) => ({
+    slug: state.slug,
+  }));
+}
+
 export default async function StateVRRulesPage({ params }: PageProps) {
   const { slug } = await params;
   const state = states.find((state) => state.slug === slug);

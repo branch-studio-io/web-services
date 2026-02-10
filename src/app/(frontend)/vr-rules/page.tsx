@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 import NationalPreregMap from "@/components/NationalPreregMap";
 import statesJson from "@/data/states.json";
 import youthRegistrationsJson from "@/data/youth-registrations.json";
-import type { StateYouthRegistration } from "@/types/democracy-works";
+import type { StateYouthRegistration } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 

@@ -23,6 +23,7 @@
 .DS_Store
 *.pem
 COMMANDS.md
+gcloud-auth.json
 
 # debug
 npm-debug.log*

@@ -1,4 +1,4 @@
-import { YouthRegistration } from "@/types/democracy-works";
+import { YouthRegistration } from "@/types/democracyWorks";
 
 /**
  * Parses an ISO 8601 duration string (e.g. P16Y, P17Y6M, P17Y275D) and returns

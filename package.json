@@ -26,6 +26,7 @@
     "refresh:data": "cross-env NODE_OPTIONS=--no-deprecation node --import=tsx/esm src/scripts/refresh-data.ts"
   },
   "dependencies": {
+    "@google-cloud/bigquery": "^8.1.1",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@opennextjs/cloudflare": "^1.11.0",

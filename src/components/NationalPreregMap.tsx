@@ -3,7 +3,7 @@
 import type {
   StateYouthRegistration,
   YouthRegistration,
-} from "@/types/democracy-works";
+} from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
