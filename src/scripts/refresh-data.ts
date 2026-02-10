@@ -14,12 +14,12 @@ async function main(): Promise<void> {
     JSON.stringify(stateYouthRegistrations, null, 2),
   );
 
-  console.log("Fettching  Bit QueryState Populations...");
-  const statePopulations = await getStatePopulations();
-  await writeFile(
-    path.resolve(process.cwd(), "src/data/state-pops.json"),
-    JSON.stringify(statePopulations, null, 2),
-  );
+  // console.log("Fettching Big QueryState Populations...");
+  // const statePopulations = await getStatePopulations();
+  // await writeFile(
+  //   path.resolve(process.cwd(), "src/data/state-pops.json"),
+  //   JSON.stringify(statePopulations, null, 2),
+  // );
 }
 
 main()
