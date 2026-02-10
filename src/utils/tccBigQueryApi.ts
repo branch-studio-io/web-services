@@ -3,6 +3,7 @@ import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import { BigQuery } from "@google-cloud/bigquery";
 import "dotenv/config";
+import { existsSync } from "fs";
 
 const states = statesJson as State[];
 
@@ -12,6 +13,12 @@ const location = process.env.GCLOUD_LOCATION || "US";
 const authPath = process.env.GCLOUD_AUTH_PATH;
 if (!authPath) {
   throw new Error("Missing GCLOUD_AUTH_PATH");
+}
+
+console.log("GCLOUD_AUTH_PATH", authPath);
+
+if (!existsSync(authPath)) {
+  throw new Error(`GCLOUD_AUTH_PATH does not exist: ${authPath}`);
 }
 
 const bigquery = new BigQuery({
