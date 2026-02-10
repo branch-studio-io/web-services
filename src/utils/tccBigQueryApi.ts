@@ -14,13 +14,16 @@ const PRIVATE_KEY = getEnvKey("GCLOUD_PRIVATE_KEY");
 const CLIENT_EMAIL = getEnvKey("GCLOUD_CLIENT_EMAIL");
 const CLIENT_ID = getEnvKey("GCLOUD_CLIENT_ID");
 
+const privateKey = PRIVATE_KEY.replace(/^"|"$/g, "") // remove accidental wrapping quotes
+  .replace(/\\n/g, "\n"); // turn literal \n into real newlines
+
 const bigquery = new BigQuery({
   projectId: PROJECT_ID,
   credentials: {
     type: "service_account",
     project_id: PROJECT_ID,
     private_key_id: PRIVATE_KEY_ID,
-    private_key: PRIVATE_KEY,
+    private_key: privateKey,
     client_email: CLIENT_EMAIL,
     client_id: CLIENT_ID,
   },
