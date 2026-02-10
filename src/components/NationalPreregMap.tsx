@@ -1,12 +1,13 @@
 "use client";
 
-import type {
-  StateYouthRegistration,
-  YouthRegistration,
-} from "@/types/democracyWorks";
+import type { StateYouthRegistration } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
-import { canRegInGeneral, getAge } from "@/utils/democracyWorksUtils";
+import {
+  canRegInGeneral,
+  getAge,
+  voterEligibilityText,
+} from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
@@ -231,16 +232,26 @@ export default function NationalPreregMap({
         >
           <div className="space-y-2 p-4">
             <h3 className="header-3 font-bold">{hoveredState.name}</h3>
-            <p className="font-sans text-sm font-medium">
-              YOU CAN REGISTER TO VOTE IF:{" "}
-              {eligibilityText(youthRegByState.get(hoveredState.code))}
-            </p>
-            <p className="font-sans text-sm font-medium">
-              # OF RESIDENTS TURNING 18 THIS YEAR:{" "}
-              {numeral(
-                statePopsByFips.get(hoveredState.fips)?.pop18 ?? 0,
-              ).format("0,0")}
-            </p>
+            <div>
+              <div className="text-xs font-bold">
+                YOU CAN REGISTER TO VOTE IF:
+              </div>
+              <div className="text-md font-sans font-medium">
+                {voterEligibilityText(
+                  youthRegByState.get(hoveredState.code) ?? null,
+                )}
+              </div>
+            </div>
+            <div>
+              <div className="text-xs font-bold">
+                RESIDENTS TURNING 18 THIS YEAR:
+              </div>
+              <div className="text-md font-sans font-medium">
+                {numeral(
+                  statePopsByFips.get(hoveredState.fips)?.pop18 ?? 0,
+                ).format("0,0")}
+              </div>
+            </div>
           </div>
           <div className="bg-sand-500 body-sm px-4 py-1 text-xs font-semibold text-gray-500">
             Click the state to learn more.
@@ -249,29 +260,4 @@ export default function NationalPreregMap({
       )}
     </div>
   );
-}
-
-function eligibilityText(yr: YouthRegistration) {
-  if (yr.supported === "byAge") {
-    return `You are ${formatEligibilityAge(yr.eligibilityAge)} old.`;
-  }
-  if (yr.supported === "byElection") {
-    return `You will be XXX by the election on YYYY.`;
-  }
-  return "Other!!!";
-}
-
-function formatEligibilityAge(eligibilityAge: string) {
-  const str = eligibilityAge.replace(/^P/, "");
-  const parts: string[] = [];
-  const yMatch = str.match(/(\d+)Y/);
-  const mMatch = str.match(/(\d+)M/);
-  const dMatch = str.match(/(\d+)D/);
-  if (yMatch) parts.push(`${yMatch[1]} years`);
-  if (mMatch) parts.push(`${mMatch[1]} months`);
-  if (dMatch) parts.push(`${dMatch[1]} days`);
-  if (parts.length === 0) return eligibilityAge;
-  if (parts.length === 1) return parts[0];
-  if (parts.length === 2) return `${parts[0]} and ${parts[1]}`;
-  return `${parts[0]}, ${parts[1]} and ${parts[2]}`;
 }

@@ -1,0 +1,461 @@
+[
+  {
+    "code": "AL",
+    "state": "Alabama",
+    "mapColor": "Green",
+    "voterRegistrationAge": "18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+    "onlinePaperFormUrl": "https://www.sos.alabama.gov/sites/default/files/voter-pdfs/nvra-2.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "AK",
+    "state": "Alaska",
+    "mapColor": "Green",
+    "voterRegistrationAge": "90 days before age 18",
+    "onlineRegUrl": "https://voterregistration.alaska.gov/",
+    "onlinePaperFormUrl": "https://www.elections.alaska.gov/doc/forms/C03.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "AZ",
+    "state": "Arizona",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "https://servicearizona.com/VoterRegistration/selectLanguage",
+    "onlinePaperFormUrl": "https://azsos.gov/sites/default/files/voter_registration_form_092222-standard.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "AR",
+    "state": "Arkansas",
+    "mapColor": "Green",
+    "voterRegistrationAge": "18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://www.sos.arkansas.gov/uploads/elections/ArkansasVoterRegistrationApplication.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "CA",
+    "state": "California",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "http://registertovote.ca.gov/",
+    "onlinePaperFormUrl": "",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "CO",
+    "state": "Colorado",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "15",
+    "onlineRegUrl": "https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml",
+    "onlinePaperFormUrl": "https://www.sos.state.co.us/pubs/elections/vote/VoterRegFormEnglish.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "CT",
+    "state": "Connecticut",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over every year)",
+    "onlineRegUrl": "https://voterregistration.ct.gov/OLVR/",
+    "onlinePaperFormUrl": "https://portal.ct.gov/-/media/sots/electionservices/2024/ed-671-non-coded-english-5-24.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "DE",
+    "state": "Deleware",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16 at a DMV",
+    "onlineRegUrl": "https://ivote.de.gov/voterlogin.aspx",
+    "onlinePaperFormUrl": "https://elections.delaware.gov/voter/pdfs/VoterRegApplication.pdf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "DC",
+    "state": "District of Columbia",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://dcboe.org/voters/register-to-vote/register-update-voter-registration",
+    "onlinePaperFormUrl": "https://drive.google.com/file/d/1wjsUIebng1I5oqMgtx-AsAAvpkYQZG8U/view?usp=sharing",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "FL",
+    "state": "Florida",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://registertovoteflorida.gov/en/Registration/Index",
+    "onlinePaperFormUrl": "https://files.floridados.gov/media/708073/1s-2040-form-ds-de-39-eng-fillable-20240424.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "GA",
+    "state": "Geogia",
+    "mapColor": "Green",
+    "voterRegistrationAge": "17.5",
+    "onlineRegUrl": "https://registertovote.sos.ga.gov/GAOLVR/#no-back-button",
+    "onlinePaperFormUrl": "https://sos.ga.gov/sites/default/files/forms/GA_VR_APP_2019.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "HI",
+    "state": "Hawaii",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://olvr.hawaii.gov/",
+    "onlinePaperFormUrl": "https://elections.hawaii.gov/wp-content/uploads/1436986-01-Hawaii-Votes_application_final.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "ID",
+    "state": "Idaho",
+    "mapColor": "Green",
+    "voterRegistrationAge": "18 (local restrictions may vary)",
+    "onlineRegUrl": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx",
+    "onlinePaperFormUrl": "https://sos.idaho.gov/elections/forms/voter_registration.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "IL",
+    "state": "Illinois",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://ova.elections.il.gov/",
+    "onlinePaperFormUrl": "https://www.ilsos.gov/departments/drivers/isbevoterapp221.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "IN",
+    "state": "Indiana",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over every year)",
+    "onlineRegUrl": "https://indianavoters.in.gov/",
+    "onlinePaperFormUrl": "https://forms.in.gov/Download.aspx?id=9341",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "IA",
+    "state": "Iowa",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "17",
+    "onlineRegUrl": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2FVoterRegistration",
+    "onlinePaperFormUrl": "https://sos.iowa.gov/elections/pdf/voteapp.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "KS",
+    "state": "Kansas",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+    "onlinePaperFormUrl": "https://www.sos.ks.gov/forms/elections/voterregistration.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "KY",
+    "state": "Kentucky",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by next election (18 by general election, starting over every year)",
+    "onlineRegUrl": "https://vrsws.sos.ky.gov/ovrweb/",
+    "onlinePaperFormUrl": "https://elect.ky.gov/SiteCollectionDocuments/Register%20to%20Vote/Kentucky%20Voter%20Registration%20Card.pdf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "LA",
+    "state": "Louisiana",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "http://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx",
+    "onlinePaperFormUrl": "https://www.sos.la.gov/ElectionsAndVoting/PublishedDocuments/ApplicationToRegisterToVote.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "ME",
+    "state": "Maine",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://registertovote.sos.maine.gov/",
+    "onlinePaperFormUrl": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/Voter-20Registration-20Card-20--20Rev-201-25-20Fillable.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "MD",
+    "state": "Maryland",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType",
+    "onlinePaperFormUrl": "https://elections.maryland.gov/voter_registration/documents/English_Internet_VRA.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "MA",
+    "state": "Massachusetts",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://www.sec.state.ma.us/OVR/Pages/MinRequirements.aspx?RMVId=True",
+    "onlinePaperFormUrl": "https://www.sec.state.ma.us/divisions/elections/download/voter-registration-forms/voter-registration_English.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "MI",
+    "state": "Michigan",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://mvic.sos.state.mi.us/RegisterVoter",
+    "onlinePaperFormUrl": "https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Voter-Registration-Form-English.pdf?rev=10b1eafe0fb542c4b352653f5896f43d&hash=2A233AE4D84E018AA0688E0D8801FAD7",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "MN",
+    "state": "Minnesota",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://mnvotes.sos.mn.gov/VoterRegistration/index",
+    "onlinePaperFormUrl": "https://www.sos.state.mn.us/media/5975/minnesota-voter-registration-application.pdf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "MS",
+    "state": "Mississippi",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over every year)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://www.sos.ms.gov/content/documents/elections/Mail-in%20Voter%20Registration%20Application.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "MO",
+    "state": "Missouri",
+    "mapColor": "Green",
+    "voterRegistrationAge": "17.5",
+    "onlineRegUrl": "http://www.sos.mo.gov/elections/goVoteMissouri/register.aspx",
+    "onlinePaperFormUrl": "https://s1.sos.mo.gov/Elections/VoterRegistration/Home/Print",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "MT",
+    "state": "Montana",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://docs.google.com/viewer?url=https%3A%2F%2Fsosmt.gov%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D46%26wpfd_file_id%3D59393%26token%3D%26preview%3D1&embedded=true",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "NE",
+    "state": "Nebraska",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over every year)",
+    "onlineRegUrl": "https://www.nebraska.gov/apps-sos-voter-registration/eligibility/citizen",
+    "onlinePaperFormUrl": "https://sos.nebraska.gov/sites/default/files/doc/elections/vr-fillable.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "NV",
+    "state": "Nevada",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "17",
+    "onlineRegUrl": "http://www.registertovotenv.gov/",
+    "onlinePaperFormUrl": "https://drive.google.com/file/d/14Ylblauz15CTAlN8allajjhutmvZJtFj/view?usp=sharing",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "NH",
+    "state": "New Hampshire",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "NJ",
+    "state": "New Jersey",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "17",
+    "onlineRegUrl": "https://voter.svrs.nj.gov/register",
+    "onlinePaperFormUrl": "https://nj.gov/state/elections/voter-registration.shtml#vrf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "NM",
+    "state": "New Mexico",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "https://portal.sos.state.nm.us/OVR/(S(od4445h5uj2f5tyucvvhszdf))/WebPages/InstructionsStep1.aspx",
+    "onlinePaperFormUrl": "https://portal.sos.state.nm.us/OVR/(S(hwzs5tvnusbzkrrm3mjcufdq))/VRForms/VRFormEnglishFinal.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "NY",
+    "state": "New York",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "NYC Resident: https://e-register.vote.nyc/\nResident outside NYC: https://hellovoters.org/\nResident outside NYC without State Issued ID: https://elections.ny.gov/",
+    "onlinePaperFormUrl": "https://elections.ny.gov/system/files/documents/2024/06/2023-vr-form-enligh-fillable_deadline-correction.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "NC",
+    "state": "North Carolina",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+    "onlinePaperFormUrl": "https://dl.ncsbe.gov/Voter_Registration/NCVoterRegForm_06W.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "ND",
+    "state": "North Dakita",
+    "mapColor": "Gray",
+    "voterRegistrationAge": "Voter registration not required",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "OH",
+    "state": "Ohio",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over every year)",
+    "onlineRegUrl": "https://olvr.ohiosos.gov/",
+    "onlinePaperFormUrl": "https://www.ohiosos.gov/globalassets/elections/forms/vr_form_english.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "OK",
+    "state": "Oklahoma",
+    "mapColor": "Green",
+    "voterRegistrationAge": "17.5",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://oklahoma.gov/content/dam/ok/en/elections/forms/voter-registration-application.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "OR",
+    "state": "Oregon",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://secure.sos.state.or.us/orestar/vr/register.do?lang=eng&source=RTV",
+    "onlinePaperFormUrl": "https://sos.oregon.gov/elections/Documents/SEL500.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "PA",
+    "state": "Pennsylvania",
+    "mapColor": "Green",
+    "voterRegistrationAge": "18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
+    "onlinePaperFormUrl": "https://www.pavoterservices.pa.gov/documents/VoterApplication_English.pdf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "RI",
+    "state": "Rhode Island",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://vote.sos.ri.gov/Home/RegistertoVote?ActiveFlag=1",
+    "onlinePaperFormUrl": "https://vote.sos.ri.gov/Content/Pdfs/voter_registration_form.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "SC",
+    "state": "South Carolina",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "https://vrems.scvotes.sc.gov/ovr/start",
+    "onlinePaperFormUrl": "https://scvotes.gov/wp-content/uploads/2023/08/SEC-FRM-1301-202305-VR-by-Mail-web-1.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "SD",
+    "state": "South Dakota",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://sdsos.gov/elections-voting/assets/VoterRegistrationFormFillable.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "TN",
+    "state": "Tennessee",
+    "mapColor": "Green",
+    "voterRegistrationAge": "16 at a DMV. 18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "https://ovr.govote.tn.gov/",
+    "onlinePaperFormUrl": "https://sos-tn-gov-files.tnsosfiles.com/forms/ss-3010.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "TX",
+    "state": "Texas",
+    "mapColor": "Green",
+    "voterRegistrationAge": "17 and 10 months",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://www.sos.state.tx.us/elections/forms/vr-with-receipt.pdf",
+    "dmvIdRequired": ""
+  },
+  {
+    "code": "UT",
+    "state": "Utah",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://vote.utah.gov/register-to-vote-or-update-your-voter-registration/",
+    "onlinePaperFormUrl": "https://vote.utah.gov/wp-content/uploads/2024/01/2025-State-of-Utah-Voter-Registration-Form.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "VT",
+    "state": "Vermont",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "https://olvr.vermont.gov/",
+    "onlinePaperFormUrl": "https://outside.vermont.gov/dept/sos/Elections%20Division/voters/voterapplication.pdf",
+    "dmvIdRequired": "No"
+  },
+  {
+    "code": "VA",
+    "state": "Virginia",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "https://www.elections.virginia.gov/citizen-portal/",
+    "onlinePaperFormUrl": "https://www.elections.virginia.gov/media/formswarehouse/veris-voter-registration/applications/VA-NVRA-1-Voter-Registration-Application-rev-5-2024.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "WA",
+    "state": "Washington",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "16",
+    "onlineRegUrl": "http://www.sos.wa.gov/elections/myvote/",
+    "onlinePaperFormUrl": "https://www.sos.wa.gov/sites/default/files/2023-07/VRF_English.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "WV",
+    "state": "West Virginia",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "17",
+    "onlineRegUrl": "https://ovr.sos.wv.gov/Register#Qualifications",
+    "onlinePaperFormUrl": "https://sos.wv.gov/FormSearch/Elections/Voter/mail%20in%20voter%20registration%20application.pdf",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "WI",
+    "state": "Wisconsin",
+    "mapColor": "Blue",
+    "voterRegistrationAge": "18 by next election (date of primary/caucus or general if primary/caucus passed)",
+    "onlineRegUrl": "https://myvote.wi.gov/en-us/RegisterToVote",
+    "onlinePaperFormUrl": "https://www.manitowoc.org/DocumentCenter/View/12858/EL-131-Voter-Registration-Application?bidId=",
+    "dmvIdRequired": "Yes"
+  },
+  {
+    "code": "WY",
+    "state": "Wyoming",
+    "mapColor": "Yellow",
+    "voterRegistrationAge": "18 by Nov. 2026 (18 by general election, starting over even years)",
+    "onlineRegUrl": "",
+    "onlinePaperFormUrl": "https://sos.wyo.gov/Forms/Elections/General/VoterRegistrationForm.pdf",
+    "dmvIdRequired": ""
+  }
+]

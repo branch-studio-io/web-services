@@ -25,9 +25,7 @@ export default function Footer() {
       <Container className="bg-ink text-white" innerClassName="py-8">
         <div className="flex flex-row items-start justify-between gap-10 py-12">
           <div className="flex flex-col gap-x-8 gap-y-4 md:flex-row">
-            <Link
-              href={process.env["NODE_ENV"] === "production" ? TCC_URL : "/"}
-            >
+            <Link href={"/"}>
               <Image
                 alt="The Civics Center logo"
                 src={logoWhiteSvg}

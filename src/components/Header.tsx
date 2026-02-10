@@ -68,10 +68,7 @@ export default function Header() {
         className={`mx-auto flex items-center justify-between px-6 py-3 lg:px-8`}
         style={{ maxWidth: MAX_WIDTH }}
       >
-        <Link
-          href={process.env["NODE_ENV"] === "production" ? TCC_URL : "/"}
-          className="-m-1.5 p-1.5"
-        >
+        <Link href={"/"} className="-m-1.5 p-1.5">
           <span className="sr-only">The Civics Center</span>
           <Image
             alt="The Civics Center Logo"

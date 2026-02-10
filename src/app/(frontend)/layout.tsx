@@ -17,8 +17,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata = {
-  description: "A blank template using Payload in a Next.js app.",
-  title: "Payload Blank Template",
+  title: "Web Services - The Civics Center",
 };
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
