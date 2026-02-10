@@ -1,13 +1,13 @@
-import type { Authoritie } from "@/types/democracyWorks";
+import type { Authority } from "@/types/democracyWorks";
 import { getEnvKey } from "./utils";
 
 type DataResponse = {
   data: {
-    authorities: Array<Authoritie>;
+    authorities: Array<Authority>;
   };
 };
 
-export async function getAuthorities(): Promise<Authoritie[]> {
+export async function getAuthorities(): Promise<Authority[]> {
   const apiKey = getEnvKey("DEMOCRACY_WORKS_API_KEY");
 
   const fields = ["ocdId", "registration.online", "youthRegistration"];

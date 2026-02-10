@@ -10,7 +10,7 @@ export type YouthRegistration = {
   supported: "byAge" | "byElection";
   eligibilityAge: string | null;
   eligibilityByElectionType: string | null;
-  methods: string;
+  methods: string | null;
   onlineInstructions: string | null;
   inPersonInstructions: string | null;
   byMailInstructions: string | null;

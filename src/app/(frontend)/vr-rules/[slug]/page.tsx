@@ -103,7 +103,7 @@ function OnlineInstructionsBlock({ authority }: AuthortyBlockProps) {
     <div>
       <h2 className="header-4 mb-2 font-bold">Online Instructions:</h2>
       <div className="space-y-6">
-        {authority.youthRegistration.methods.includes("online") ? (
+        {authority.youthRegistration.methods?.includes("online") ? (
           <>
             {splitByBreakTags(
               authority.youthRegistration.onlineInstructions ?? "",
