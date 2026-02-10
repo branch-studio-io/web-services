@@ -1,22 +1,26 @@
-export type StateYouthRegistration = {
-  state: string;
-  youthRegistration: YouthRegistration;
+export type Registration = {
+  online: {
+    supported: boolean;
+    instructions: string;
+    url: string | null;
+  };
 };
 
 export type YouthRegistration = {
-  url: string | null;
-  formUrl: string | null;
   supported: "byAge" | "byElection";
+  eligibilityAge: string | null;
+  eligibilityByElectionType: string | null;
   methods: string;
   onlineInstructions: string | null;
-  inPersonInstructions: string;
-  byMailInstructions: string;
-  eligibilityAge: string | null;
-  statusAvailability: string | null;
-  eligibilityByElectionType: string | null;
+  inPersonInstructions: string | null;
+  byMailInstructions: string | null;
   eligibilityByElection: {
     date: string | null;
-    primaryVotingSupported: boolean;
-    futureLocalElectionApplicable: boolean | null;
   };
+};
+
+export type Authority = {
+  ocdId: string;
+  registration: Registration;
+  youthRegistration: YouthRegistration;
 };

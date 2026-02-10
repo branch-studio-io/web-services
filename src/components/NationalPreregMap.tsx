@@ -1,6 +1,6 @@
 "use client";
 
-import type { StateYouthRegistration } from "@/types/democracyWorks";
+import type { Authority } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
@@ -28,7 +28,7 @@ type Props = {
   width: number;
   height: number;
   className: string;
-  youthRegistrations: StateYouthRegistration[];
+  authorities: Authority[];
   states: State[];
   statePops: StatePop[];
   stateRoute: string;
@@ -38,7 +38,7 @@ export default function NationalPreregMap({
   width,
   height,
   className,
-  youthRegistrations,
+  authorities,
   states,
   statePops,
   stateRoute,
@@ -55,8 +55,13 @@ export default function NationalPreregMap({
 
   const youthRegByState = useMemo(
     () =>
-      new Map(youthRegistrations.map((yr) => [yr.state, yr.youthRegistration])),
-    [youthRegistrations],
+      new Map(
+        authorities.map((a) => [
+          a.ocdId.slice(-2).toUpperCase(),
+          a.youthRegistration,
+        ]),
+      ),
+    [authorities],
   );
 
   const [hoveredState, setHoveredState] = useState<State | null>(null);

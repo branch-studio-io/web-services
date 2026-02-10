@@ -1,4 +1,4 @@
-import { getYouthRegistration } from "@/utils/democracyWorkApi";
+import { getAuthorities } from "@/utils/democracyWorkApi";
 import { getStatePopulations } from "@/utils/tccBigQueryApi";
 
 import "dotenv/config";
@@ -6,12 +6,12 @@ import { writeFile } from "fs/promises";
 import path from "path";
 
 async function main(): Promise<void> {
-  console.log("Fettching Democracy Works Youth Registrations...");
-  const stateYouthRegistrations = await getYouthRegistration();
+  console.log("Fetching Democracy Works Authorities...");
+  const authorities = await getAuthorities();
 
   await writeFile(
-    path.resolve(process.cwd(), "src/data/youth-registrations.json"),
-    JSON.stringify(stateYouthRegistrations, null, 2),
+    path.resolve(process.cwd(), "src/data/authorities.json"),
+    JSON.stringify(authorities, null, 2),
   );
 
   console.log("Fettching Big QueryState Populations...");

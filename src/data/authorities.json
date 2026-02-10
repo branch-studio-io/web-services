@@ -1,6 +1,13 @@
 [
   {
-    "state": "DC",
+    "ocdId": "ocd-division/country:us/district:dc",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register in DC, you must provide your DC DMV-issued identification number or if you do not have a DMV-issued identification number, the last four digits of your Social Security number. If you are registering to vote in the District of Columbia for the first time and submit a voter registration application electronically, you may be required to provide identification that shows your name and current address the first time you vote in an election. You may attach a copy of your document to the online form, or you may be required to show it the first time you vote in an election in the District of Columbia. Acceptable forms include: current and valid government-issued photo ID; current utility bill, cell phone bill, bank statement, government check, or paycheck dated no more than 90 days before submitting your application if a copy is submitted online or 90 days before voting if shown at a voting location; any other government-issued document.",
+        "url": "https://vr.dcboe.org/213324797239968?agency_code=12"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -20,7 +27,14 @@
     }
   },
   {
-    "state": "AK",
+    "ocdId": "ocd-division/country:us/state:ak",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Alaska, you need an Alaska driver's license or state ID and a Social Security number. The address on the ID needs to match the address where you're registering to vote. If you don't have an Alaska-issued ID, you can still register by mail.",
+        "url": "https://voterregistration.alaska.gov/Registration/RegistrationDetails?haveValidAKDL=true"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -40,7 +54,14 @@
     }
   },
   {
-    "state": "AL",
+    "ocdId": "ocd-division/country:us/state:al",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Alabama, you need an Alabama Driver's License or an Alabama Non-Driver's Identification card. If you don’t have an Alabama-issued ID, you can still register by mail.",
+        "url": "https://www.alabamainteractive.org/sos/voter_registration/instructions.action"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -60,7 +81,14 @@
     }
   },
   {
-    "state": "AR",
+    "ocdId": "ocd-division/country:us/state:ar",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -80,7 +108,14 @@
     }
   },
   {
-    "state": "AZ",
+    "ocdId": "ocd-division/country:us/state:az",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "You need an Arizona driver's license or non-operating ID to use Arizona's online voter registration system. If you don't have an Arizona-issued ID, you can still register by mail to vote.",
+        "url": "https://azmvdnow.gov/guest/customeranonymous/voterregistration"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -100,7 +135,14 @@
     }
   },
   {
-    "state": "CA",
+    "ocdId": "ocd-division/country:us/state:ca",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in California, you need to provide a California-issued driver license or California identification card number, the last four digits of your Social Security number, and consent to the use of your DMV-stored digital signature to use California’s online voter registration system. If you don't have a California-issued ID or don't want to provide consent for the use of your digital signature, you can use the California Online Voter Registration system to fill out an application. You must then print the form or request that your local election office print and mail the form to you. The printed form must be completed and returned to your local election office by mail or in person.",
+        "url": "https://registertovote.ca.gov/"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.sos.ca.gov/elections/pre-register-16-vote-18/pre-reg-faqs",
       "formUrl": null,
@@ -120,7 +162,14 @@
     }
   },
   {
-    "state": "CO",
+    "ocdId": "ocd-division/country:us/state:co",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Colorado, you need to provide at least ONE of the following: Colorado Driver’s License number, Colorado ID card number, OR the last four digits of your Social Security number. If you don’t have a Colorado Driver’s License, Colorado ID card, or Social Security number, you can still submit a voter registration application by mail.",
+        "url": "https://www.coloradosos.gov/voter/pages/pub/olvr/verifyNewVoter.xhtml"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.sos.state.co.us/pubs/elections/highSchoolRegistration.html",
       "formUrl": null,
@@ -140,7 +189,14 @@
     }
   },
   {
-    "state": "CT",
+    "ocdId": "ocd-division/country:us/state:ct",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To use the online voter registration system you must have a current and valid driver’s license, learner’s permit, or non-driver photo identification card issued by the Connecticut Department of Motor Vehicles (DMV) and a signature on file with DMV.",
+        "url": "https://voterregistration.ct.gov/OLVR/welcome.do"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -160,7 +216,14 @@
     }
   },
   {
-    "state": "DE",
+    "ocdId": "ocd-division/country:us/state:de",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Delaware, you must be at least 18 years old on or before the next general election. You must provide ONE of the following when registering online: Delaware driver's license number, Delaware State ID number, or the last four digits of your Social Security number.",
+        "url": "https://ivote.de.gov/voterview/registrant/newregistrant"
+      }
+    },
     "youthRegistration": {
       "url": "https://dmv.de.gov/DriverServices/other/index.shtml?dc=dr_oth_vote",
       "formUrl": null,
@@ -180,7 +243,14 @@
     }
   },
   {
-    "state": "FL",
+    "ocdId": "ocd-division/country:us/state:fl",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Florida, you are required to provide the last four digits of your Social Security number and the issued date and ID number from your Florida driver license or Florida identification card issued by the Florida Department of Highway Safety and Motor Vehicles. If you don’t have a Florida-issued ID or Social Security number, you can still submit a voter registration application by mail or in person.",
+        "url": "https://registertovoteflorida.gov/home"
+      }
+    },
     "youthRegistration": {
       "url": "https://registertovoteflorida.gov/home",
       "formUrl": null,
@@ -200,7 +270,14 @@
     }
   },
   {
-    "state": "GA",
+    "ocdId": "ocd-division/country:us/state:ga",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Georgia, you are required to provide your valid Georgia driver’s license number or your ID card number issued by the Georgia Department of Driver Services (DDS). If you don’t have a Georgia driver’s license or ID card issued by DDS, you can still submit a voter registration application by mail or in person.",
+        "url": "https://mvp.sos.ga.gov/s/voter-registration?IsRegisterNow=true"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -220,7 +297,14 @@
     }
   },
   {
-    "state": "HI",
+    "ocdId": "ocd-division/country:us/state:hi",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "You need a Hawaii ID and a Social Security number to use Hawaii's online voter registration system. If you don’t have a Social Security number or a Hawaii-issued ID, you can still submit a voter registration application by mail or in person.",
+        "url": "https://olvr.hawaii.gov/register.aspx"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -240,7 +324,14 @@
     }
   },
   {
-    "state": "IA",
+    "ocdId": "ocd-division/country:us/state:ia",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Iowa, you need the last FIVE digits of your Social Security number and either an Iowa Driver’s License or an Iowa Non-operators ID. If you have not been issued a Social Security number or Iowa ID number, you can still submit a voter registration application by mail.",
+        "url": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -260,7 +351,14 @@
     }
   },
   {
-    "state": "ID",
+    "ocdId": "ocd-division/country:us/state:id",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "You need an Idaho ID to use Idaho's online voter registration system. If your residence does not match the address on your ID, you are required to provide proof of residence. Acceptable forms include (but are not limited to): proof of insurance; mortgage, lease, or rental agreement; utility bill (excluding cell phone); bank or credit card statement; paystub or paycheck; and enrollment letter from an Idaho high school or university. If you don’t have an Idaho DMV-issued ID, you can still submit a voter registration application by mail or in person.",
+        "url": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -280,7 +378,14 @@
     }
   },
   {
-    "state": "IL",
+    "ocdId": "ocd-division/country:us/state:il",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Illinois, you are required to provide the last four digits of your Social Security number and ONE of the following ID numbers with its issuance date: Illinois Drivers License or Illinois State ID number. If you don’t have an Illinois-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+        "url": "https://ova.elections.il.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -300,7 +405,14 @@
     }
   },
   {
-    "state": "IN",
+    "ocdId": "ocd-division/country:us/state:in",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register using the Indiana online voter registration system, you are required to provide the number from your Indiana driver’s license or Indiana identification card issued by the Indiana Bureau of Motor Vehicles. If you don’t have an Indiana-issued driver’s license or identification card, you can still submit a voter registration application by mail or in person.",
+        "url": "https://indianavoters.in.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -320,7 +432,14 @@
     }
   },
   {
-    "state": "KS",
+    "ocdId": "ocd-division/country:us/state:ks",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Kansas, you need a Kansas driver's license or a Kansas non-driver's identification card. If you don’t have a Kansas-issued ID, you can still register by mail or in person.",
+        "url": "https://www.kdor.ks.gov/Apps/VoterReg"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -340,7 +459,14 @@
     }
   },
   {
-    "state": "KY",
+    "ocdId": "ocd-division/country:us/state:ky",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Kentucky, you need to provide your full Social Security number. If you don’t have a Social Security number, you can still submit a voter registration application by mail.",
+        "url": "https://vrsws.sos.ky.gov/ovrweb/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -360,7 +486,14 @@
     }
   },
   {
-    "state": "LA",
+    "ocdId": "ocd-division/country:us/state:la",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Louisiana, you need to provide the four-digit audit code from your Louisiana driver's license or Louisiana special ID. If you are at least 17 years old and don’t have a Louisiana driver's license or Louisiana special ID, you can still submit a voter registration application by mail.",
+        "url": "https://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -380,7 +513,14 @@
     }
   },
   {
-    "state": "MA",
+    "ocdId": "ocd-division/country:us/state:ma",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Massachusetts, you need ONE of the following ID numbers issued by the Massachusetts Registry of Motor Vehicle (RMV): Driver's License, Learner's Permit, or State ID. If you don’t have a RMV-issued ID, you can still register by mail or in person.",
+        "url": "https://www.sec.state.ma.us/OVR/"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.sec.state.ma.us/divisions/elections/voter-resources/registering-to-vote.htm",
       "formUrl": null,
@@ -400,7 +540,14 @@
     }
   },
   {
-    "state": "MD",
+    "ocdId": "ocd-division/country:us/state:md",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "You need an ID issued by the Maryland Motor Vehicle Administration (MVA) and a Social Security number to use Maryland's online voter registration system.",
+        "url": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.elections.maryland.gov/voter_registration/17_year_olds.html",
       "formUrl": null,
@@ -420,7 +567,14 @@
     }
   },
   {
-    "state": "ME",
+    "ocdId": "ocd-division/country:us/state:me",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Maine, you need to provide at least ONE of the following: Maine driver’s license number, Maine state ID card number, or the last four digits of your Social Security number. If you don’t have a Maine driver’s license, Maine state ID card, or Social Security number, you can still submit a voter registration application by mail.",
+        "url": "https://registertovote.sos.maine.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -440,7 +594,14 @@
     }
   },
   {
-    "state": "MI",
+    "ocdId": "ocd-division/country:us/state:mi",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "You need a Michigan driver's license or state ID and the last four digits of your Social Security number to use Michigan's online voter registration system. If you don’t have a Social Security number or Michigan-issued ID, you can still submit a voter registration application by mail or in person.",
+        "url": "https://mvic.sos.state.mi.us/RegisterVoter"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.michigan.gov/sos/elections/voting/first-time-voters",
       "formUrl": "https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/ED-121a-Michigan-Voter-Preregistration-Application-and-Change-of-Address-Form.pdf?rev=2a0413ce83e24577ab6bbe36f2c08df7&amp;hash=E53D1A3FBE546E4AACEE451E4EAD332A",
@@ -460,7 +621,14 @@
     }
   },
   {
-    "state": "MN",
+    "ocdId": "ocd-division/country:us/state:mn",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Minnesota, you need to provide your email address and ONE of the following: Minnesota driver’s license number, Minnesota identification card number, OR the last four digits of your Social Security number. If you don’t have a Minnesota-issued ID or Social Security number, you can still submit a voter registration application by mail.",
+        "url": "https://mnvotes.sos.mn.gov/VoterRegistration/index"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.sos.mn.gov/elections-voting/register-to-vote/",
       "formUrl": null,
@@ -480,7 +648,14 @@
     }
   },
   {
-    "state": "MO",
+    "ocdId": "ocd-division/country:us/state:mo",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "Missouri requires that you use a tablet, mobile device, or other touchscreen device to register online to vote. This is because you will be required to provide a signature during the process.",
+        "url": "https://s1.sos.mo.gov/elections/voterregistration/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -500,7 +675,14 @@
     }
   },
   {
-    "state": "MS",
+    "ocdId": "ocd-division/country:us/state:ms",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -520,7 +702,14 @@
     }
   },
   {
-    "state": "MT",
+    "ocdId": "ocd-division/country:us/state:mt",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -540,7 +729,14 @@
     }
   },
   {
-    "state": "NC",
+    "ocdId": "ocd-division/country:us/state:nc",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in North Carolina, you must be an existing North Carolina Division of Motor Vehicles (NCDMV) customer and you will need your DMV-issued driver’s license or ID number and Social Security number. Existing DMV customers may register to vote, update their voter registration address, or update their party affiliation. They may not change their name. If you don’t have a NCDMV-issued ID, you can still submit a voter registration application by mail or in person at your county election office.",
+        "url": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.ncsbe.gov/registering/who-can-register/preregistering-vote-when-you-are-16-or-17-years-old",
       "formUrl": null,
@@ -560,7 +756,14 @@
     }
   },
   {
-    "state": "ND",
+    "ocdId": "ocd-division/country:us/state:nd",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -580,7 +783,14 @@
     }
   },
   {
-    "state": "NE",
+    "ocdId": "ocd-division/country:us/state:ne",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Nebraska, you need a valid Nebraska State ID or Driver’s License. If you don’t have a Nebraska-issued ID, you can still submit a voter registration application by mail or in person.",
+        "url": "https://www.nebraska.gov/apps-sos-voter-registration/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -600,7 +810,14 @@
     }
   },
   {
-    "state": "NH",
+    "ocdId": "ocd-division/country:us/state:nh",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -620,7 +837,14 @@
     }
   },
   {
-    "state": "NJ",
+    "ocdId": "ocd-division/country:us/state:nj",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in New Jersey, you need to provide your New Jersey Driver’s License number OR non-driver ID card number issued by the New Jersey Motor Vehicle Commission (MVC). If you do not have a New Jersey-issued ID, you must provide your Social Security number AND use a device that allows you to sign on-screen or upload your signature. If you don’t have any of the above, you can still submit a voter registration application by mail.",
+        "url": "https://voter.svrs.nj.gov/register"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -640,7 +864,14 @@
     }
   },
   {
-    "state": "NM",
+    "ocdId": "ocd-division/country:us/state:nm",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in New Mexico, you need a Social Security number and either a New Mexico Driver’s License or a New Mexico Motor Vehicles Division (MVD) ID. If you don’t have a New Mexico-issued ID, you can still register by mail.",
+        "url": "https://portal1.sos.nm.gov/OVR/WebPages/InstructionsStep1.aspx"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -660,7 +891,14 @@
     }
   },
   {
-    "state": "NV",
+    "ocdId": "ocd-division/country:us/state:nv",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Nevada, you need a current and valid driver’s license or ID card issued by the Nevada DMV and the last four digits of your Social Security number. If you don’t have a Nevada-issued ID or Social Security number, you can still register by mail or in person.",
+        "url": "https://registertovote.nv.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -680,7 +918,14 @@
     }
   },
   {
-    "state": "NY",
+    "ocdId": "ocd-division/country:us/state:ny",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in New York, you need a NY.Gov ID. If you have previously used NY.Gov with another agency, you may use the same login to access the Online Voter Registration portal. If you have not used NY.Gov, you will need to create an account.<br><br>You will be asked to provide your New York State-issued ID number. If you don’t have a New York State-issued ID, you can still submit a voter registration application online, but you will have to show ID the first time you vote. You can also submit a voter registration application by mail or in person.",
+        "url": "https://elections.ny.gov/voter-registration-process#register-online"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -700,7 +945,14 @@
     }
   },
   {
-    "state": "OH",
+    "ocdId": "ocd-division/country:us/state:oh",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Ohio, you need the last four digits of your Social Security number and either an Ohio driver’s license or an Ohio identification card number. If you don’t have an Ohio-issued ID or Social Security number, you can still register by mail or in person.",
+        "url": "https://olvr.ohiosos.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -720,7 +972,14 @@
     }
   },
   {
-    "state": "OK",
+    "ocdId": "ocd-division/country:us/state:ok",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Oklahoma, you must have an Oklahoma Driver License or state ID. You must also have a digital signature on file with Service Oklahoma. The name and address on your ID must match your voter registration exactly. If you don't have an Oklahoma-issued ID or a digital signature on file with Service Oklahoma, you can still submit a voter registration application by mail.",
+        "url": "https://okvoterportal.okelections.gov/Home/RegWizard"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -740,7 +999,14 @@
     }
   },
   {
-    "state": "OR",
+    "ocdId": "ocd-division/country:us/state:or",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Oregon, you need to provide ONE of the following: Oregon driver’s license, Oregon permit number, OR ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV). If you don’t have an Oregon-issued ID, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
+        "url": "https://sos.oregon.gov/voting/Pages/registration.aspx?lang=en"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -760,7 +1026,14 @@
     }
   },
   {
-    "state": "PA",
+    "ocdId": "ocd-division/country:us/state:pa",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Pennsylvania, you need to provide your Pennsylvania driver’s license number or PennDOT ID card number. If you do not have a Pennsylvania-issued ID, you need to provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate you do not have an ID number. To complete the online voter registration application without a PennDOT ID number, you must upload a digital image of your signature. You can also request and sign a signature form from the Department of State or print and sign a voter registration application. Both the signature form and the printed registration application must be returned to your county elections office by mail or in person. If you don’t have an ID number and do not upload an image of your signature, you can still submit a voter registration application by mail.",
+        "url": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -780,7 +1053,14 @@
     }
   },
   {
-    "state": "RI",
+    "ocdId": "ocd-division/country:us/state:ri",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Rhode Island, you need to provide your Rhode Island DMV-issued driver’s license or State ID number. If you don’t have a Rhode Island-issued ID, you can still submit a voter registration form by mail.",
+        "url": "https://vote.sos.ri.gov/Home/RegistertoVote?ActiveFlag=1"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -800,7 +1080,14 @@
     }
   },
   {
-    "state": "SC",
+    "ocdId": "ocd-division/country:us/state:sc",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in South Carolina, you need a Social Security number and either a South Carolina driver’s license or a South Carolina Department of Motor Vehicles (SCDMV) ID. If you don’t have a South Carolina-issued ID, you can still register by mail.",
+        "url": "https://vrems.scvotes.sc.gov/ovr/start"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -820,7 +1107,14 @@
     }
   },
   {
-    "state": "SD",
+    "ocdId": "ocd-division/country:us/state:sd",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -840,7 +1134,14 @@
     }
   },
   {
-    "state": "TN",
+    "ocdId": "ocd-division/country:us/state:tn",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Tennessee, you need your Social Security number and ONE of the following: Tennessee driver's license or Tennessee Department of Safety and Homeland Security ID. If you submit a voter registration application online and are registering for the first time in your county, you must vote in person the first time after registering. If you enrolled in the Safe At Home program or permanent absentee voting, you are not required to vote in person for the first time.",
+        "url": "https://ovr.govote.tn.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -860,7 +1161,14 @@
     }
   },
   {
-    "state": "TX",
+    "ocdId": "ocd-division/country:us/state:tx",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -880,7 +1188,14 @@
     }
   },
   {
-    "state": "UT",
+    "ocdId": "ocd-division/country:us/state:ut",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Utah, you are required to provide your valid Utah driver license number or valid Utah ID number. Your address must also match the address on file with the Driver License Division. If your driver license address is not current, you must update your address with the Driver License Division before submitting your online voter registration. If you don't have a Utah-issued ID, you can still submit a voter registration application by mail or in person.",
+        "url": "https://secure.utah.gov/voterreg/index.html"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -900,7 +1215,14 @@
     }
   },
   {
-    "state": "VA",
+    "ocdId": "ocd-division/country:us/state:va",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Virginia, you need your full Social Security number and either a Virginia driver’s license or Virginia state ID number. If you don’t have a Virginia-issued ID or Social Security number, you can still register by mail or in person.",
+        "url": "https://vote.elections.virginia.gov/Registration/DmvLookup"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -920,7 +1242,14 @@
     }
   },
   {
-    "state": "VT",
+    "ocdId": "ocd-division/country:us/state:vt",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Vermont, you need to provide ONE of the following ID numbers: Vermont driver’s license, Vermont permit, or Vermont ID. If you do not have a Vermont-issued ID, you must provide the last four digits of your Social Security number. If you are registering to vote in Vermont for the first time, you must include a copy of ONE form of ID. Acceptable forms include: valid driver’s license, valid US passport, current utility bill, current bank statement, or another government document containing your residential address. If you don’t have a Vermont-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+        "url": "https://olvr.vermont.gov/"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -940,7 +1269,14 @@
     }
   },
   {
-    "state": "WA",
+    "ocdId": "ocd-division/country:us/state:wa",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Washington, you need to provide ONE of the following: Washington driver license number, Washington permit number, Washington state ID number, or the last 4 digits of your Social Security number. If you don't have a Washington-issued ID or Social Security number, you can still register by mail or in person with an alternate ID.",
+        "url": "https://olvr.votewa.gov/"
+      }
+    },
     "youthRegistration": {
       "url": "https://www.sos.wa.gov/elections/voters/voter-eligibility-resources/future-voter-program",
       "formUrl": null,
@@ -960,7 +1296,14 @@
     }
   },
   {
-    "state": "WI",
+    "ocdId": "ocd-division/country:us/state:wi",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in Wisconsin, you are required to provide your Wisconsin driver license number or Wisconsin state ID card number issued by the Wisconsin Department of Motor Vehicles (DMV). If you don’t have a Wisconsin-issued driver license or ID card, you can still submit a voter registration application by mail or in person.",
+        "url": "https://myvote.wi.gov/en-us/Register-To-Vote"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -980,7 +1323,14 @@
     }
   },
   {
-    "state": "WV",
+    "ocdId": "ocd-division/country:us/state:wv",
+    "registration": {
+      "online": {
+        "supported": true,
+        "instructions": "To register online in West Virginia, you need the last four digits of your Social Security number and either a West Virginia Driver’s License or ID card. If you don’t have a West Virginia-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+        "url": "https://ovr.sos.wv.gov/Register/Landing"
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
@@ -1000,7 +1350,14 @@
     }
   },
   {
-    "state": "WY",
+    "ocdId": "ocd-division/country:us/state:wy",
+    "registration": {
+      "online": {
+        "supported": false,
+        "instructions": null,
+        "url": null
+      }
+    },
     "youthRegistration": {
       "url": null,
       "formUrl": null,
