@@ -2,6 +2,8 @@ import type {
   StateYouthRegistration,
   YouthRegistration,
 } from "@/types/democracyWorks";
+import { getEnvKey } from "./utils";
+
 
 type YouthRegistrationRaw = {
   data: {
@@ -15,10 +17,7 @@ type YouthRegistrationRaw = {
 export async function getYouthRegistration(): Promise<
   StateYouthRegistration[]
 > {
-  const apiKey = process.env.DEMOCRACY_WORKS_API_KEY;
-  if (!apiKey) {
-    throw new Error("Missing DEMOCRACY_WORKS_API_KEY");
-  }
+  const apiKey = getEnvKey("DEMOCRACY_WORKS_API_KEY");
 
   const response = await fetch(
     "https://api.democracy.works/v2/authorities/state?fields=ocdId,youthRegistration&pageSize=51",
