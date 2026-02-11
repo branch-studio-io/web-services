@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
@@ -11,6 +10,7 @@ import {
   PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
+import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import numeral from "numeral";
 import { useMemo } from "react";

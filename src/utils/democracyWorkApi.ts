@@ -93,7 +93,7 @@ async function fetchPageData<T>(
 
 export async function getAuthorities(): Promise<Authority[]> {
   const apiKey = getEnvKey("DEMOCRACY_WORKS_API_KEY");
-  const fields = ["ocdId", "registration.online", "youthRegistration"];
+  const fields = ["ocdId", "registration", "youthRegistration"];
   const pageSize = 51;
   const baseParams = new URLSearchParams({
     fields: fields.join(","),

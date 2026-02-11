@@ -13,6 +13,7 @@ import {
   parseStateCode,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import numeral from "numeral";
 
@@ -63,7 +64,13 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           {statePop && <PopBlock statePop={statePop} />}
           {authority && <EligibilityBlock authority={authority} />}
           <ElectionsBlock elections={stateElections} />
-          {authority && <OnlineInstructionsBlock authority={authority} />}
+          <UsefulLinksBlock state={state} authority={authority} />
+          {authority && authority.registration.online?.supported && (
+            <OnlineRegistrationBlock authority={authority} />
+          )}
+          {authority && authority.registration.byMail?.supported && (
+            <ByMailRegistrationBlock authority={authority} />
+          )}
         </div>
       </div>
     </Container>
@@ -85,11 +92,11 @@ function PopBlock({ statePop }: PopBlockProps) {
   );
 }
 
-type AuthortyBlockProps = {
+type EligibilityBlockProps = {
   authority: Authority;
 };
 
-function EligibilityBlock({ authority }: AuthortyBlockProps) {
+function EligibilityBlock({ authority }: EligibilityBlockProps) {
   return (
     <div>
       <h2 className="header-4 mb-2 font-bold">You can register to vote if:</h2>
@@ -99,7 +106,7 @@ function EligibilityBlock({ authority }: AuthortyBlockProps) {
         </p>
         <p className="body-md font-semibold">
           <em>
-            That means juniors, seniors, and X percent of sophmores... can
+            That means seniors, juniors, and X percent of sophmores... can
             register to vote in your HS today.
           </em>
         </p>
@@ -108,24 +115,58 @@ function EligibilityBlock({ authority }: AuthortyBlockProps) {
   );
 }
 
-function OnlineInstructionsBlock({ authority }: AuthortyBlockProps) {
+type OnlineRegistrationBlockProps = {
+  authority: Authority;
+};
+
+function OnlineRegistrationBlock({ authority }: OnlineRegistrationBlockProps) {
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">Online Instructions:</h2>
-      <div className="space-y-6">
-        {authority.youthRegistration.methods?.includes("online") ? (
-          <DemocracyWorksText
-            text={authority.youthRegistration.onlineInstructions ?? ""}
-            renderers={{
-              paragraph: (children) => (
-                <p className="body-md">{children}</p>
-              ),
-            }}
-          />
-        ) : (
-          <p className="body-md">
-            Online registration is not supported in this state.
-          </p>
+      <h2 className="header-4 mb-2 font-bold">Online Registration:</h2>
+      <div className="space-y-4">
+        <DemocracyWorksText
+          text={authority.registration.online?.instructions}
+          renderers={{
+            paragraph: (children) => <p className="body-md">{children}</p>,
+          }}
+        />
+        {authority.registration.online?.url && (
+          <Link
+            href={authority.registration.online?.url}
+            className="body-md font-semibold hover:underline hover:underline-offset-2"
+            target="_blank"
+          >
+            Register Online &gt;
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+}
+
+type ByMailRegistrationBlockProps = {
+  authority: Authority;
+};
+
+function ByMailRegistrationBlock({ authority }: ByMailRegistrationBlockProps) {
+  return (
+    <div>
+      <h2 className="header-4 mb-2 font-bold">By Mail Registration:</h2>
+      <div className="space-y-4">
+        <DemocracyWorksText
+          text={authority.registration.byMail?.idInstructions}
+          renderers={{
+            paragraph: (children) => <p className="body-md">{children}</p>,
+          }}
+        />
+        {authority.registration.byMail?.url && (
+          <Link
+            href={authority.registration.byMail?.url}
+            className="text-md font-sans font-semibold hover:underline hover:underline-offset-2"
+            target="_blank"
+          >
+            Register By Mail &gt;
+          </Link>
         )}
       </div>
     </div>
@@ -140,16 +181,52 @@ function ElectionsBlock({ elections }: ElectionsBlockProps) {
   return (
     <div>
       <h2 className="header-4 mb-2 font-bold">Upcoming Elections:</h2>
-      <ul className="body-md list-none space-y-3">
+      <ul className="body-md list-disc space-y-3 pl-6">
         {elections && elections.length > 0 ? (
           elections.map((election, index) => (
-            <li key={index} className="flex items-start gap-3">
+            <li key={index}>
               {formatElectionDate(election.date)} - {election.description}
             </li>
           ))
         ) : (
-          <p className="body-md">No upcoming elections found for this state.</p>
+          <li className="body-md">
+            No upcoming elections found for this state.
+          </li>
         )}
+      </ul>
+    </div>
+  );
+}
+
+type UsefulLinksBlockProps = {
+  authority: Authority;
+  state: State;
+};
+
+function UsefulLinksBlock({ authority, state }: UsefulLinksBlockProps) {
+  return (
+    <div>
+      <h2 className="header-4 mb-2 font-bold">Useful Links:</h2>
+      <ul className="body-md list-disc space-y-3 pl-6">
+        <li>
+          <Link
+            href={`https://fairelectionscenter.org/voter-registration-drive-guides/${state.slug}/`}
+            className="underline underline-offset-2"
+            target="_blank"
+          >
+            Conducting a Voter Registration Drive in {state.name}
+          </Link>{" "}
+          from the Fair Elections Center
+        </li>
+        <li>
+          <Link
+            href={authority.registration.formUrl ?? ""}
+            className="underline underline-offset-2"
+            target="_blank"
+          >
+            Paper Registration Form
+          </Link>
+        </li>
       </ul>
     </div>
   );

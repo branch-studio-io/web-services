@@ -6,10 +6,19 @@ export enum PreregStatus {
 }
 
 export type Registration = {
+  formUrl: string | null;
+  byMail: {
+    supported: boolean;
+    url: string | null;
+    idInstructions: string | null;
+  };
   online: {
     supported: boolean;
     instructions: string;
     url: string | null;
+  };
+  inPerson: {
+    supported: boolean;
   };
 };
 
