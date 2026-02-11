@@ -2,7 +2,13 @@ import { YouthRegistration } from "@/types/democracyWorks";
 
 // Parse "ocd-division/country:us/state:fl/cd:1" to return the state code in uppercase
 export function parseStateCode(ocdId: string): string {
-  return ocdId.split("/").find((part) => part.startsWith("state:"))?.split(":")[1].toUpperCase() ?? "";
+  return (
+    ocdId
+      .split("/")
+      .find((part) => part.startsWith("state:"))
+      ?.split(":")[1]
+      .toUpperCase() ?? ""
+  );
 }
 
 /**
@@ -26,13 +32,9 @@ export function getAge(eligibilityAge: string | null): number {
   return years + months / 12 + days / 365;
 }
 
-/**
- * Checks if the eligibilityByElectionType contains the word general or if they can
- * register in November. Had to add the Nov check since I can't 100% count on eligibilityByElectionType
- * @param youthRegistration
- * @returns
- */
-export function canRegInGeneral(youthRegistration: YouthRegistration) {
+export function nextRegOpportunityIsGeneral(
+  youthRegistration: YouthRegistration,
+) {
   const date = youthRegistration.eligibilityByElection?.date;
   return (
     youthRegistration.supported === "byElection" &&

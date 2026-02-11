@@ -4,8 +4,8 @@ import type { Authority } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
-  canRegInGeneral,
   getAge,
+  nextRegOpportunityIsGeneral,
   parseStateCode,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
@@ -101,8 +101,10 @@ export default function NationalPreregMap({
 
       if (
         (youth.supported === "byAge" && age <= 17) ||
-        canRegInGeneral(youth)
+        nextRegOpportunityIsGeneral(youth)
       ) {
+        // If the next registration opportunity is the general election then assume
+        // they will have at least one year to register to
         return THREE_COLOR_DIVERGENT_SCALE[1];
       }
 
