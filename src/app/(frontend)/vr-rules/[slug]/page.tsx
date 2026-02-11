@@ -162,7 +162,7 @@ function ByMailRegistrationBlock({ authority }: ByMailRegistrationBlockProps) {
         {authority.registration.byMail?.url && (
           <Link
             href={authority.registration.byMail?.url}
-            className="text-md font-sans font-semibold hover:underline hover:underline-offset-2"
+            className="body-md font-semibold hover:underline hover:underline-offset-2"
             target="_blank"
           >
             Register By Mail &gt;
