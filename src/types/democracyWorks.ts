@@ -24,3 +24,22 @@ export type Authority = {
   registration: Registration;
   youthRegistration: YouthRegistration;
 };
+
+export type Election = {
+  ocdId: string;
+  date: string;
+  description: string;
+  type:
+    | "presidentialPrimary"
+    | "state"
+    | "stateSenate"
+    | "stateHouse"
+    | "congressional"
+    | "senate"
+    | "county"
+    | "subCounty"
+    | "municipal"
+    | "subMunicipal"
+    | "school"
+    | "special";
+};

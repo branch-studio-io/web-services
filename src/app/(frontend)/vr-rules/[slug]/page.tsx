@@ -1,12 +1,17 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
 import authoritiesJson from "@/data/authorities.json";
+import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
-import type { Authority } from "@/types/democracyWorks";
+import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
-import { voterEligibilityText } from "@/utils/democracyWorksUtils";
+import {
+  formatElectionDate,
+  parseStateCode,
+  voterEligibilityText,
+} from "@/utils/democracyWorksUtils";
 import { splitByBreakTags } from "@/utils/utils";
 import { notFound } from "next/navigation";
 import numeral from "numeral";
@@ -14,6 +19,7 @@ import numeral from "numeral";
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
+const elections = electionsJson as Election[];
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -32,10 +38,13 @@ export default async function StateVRRulesPage({ params }: PageProps) {
     notFound();
   }
   const authority = authorities.find(
-    (a) => a.ocdId.slice(-2).toUpperCase() === state.code,
+    (a) => parseStateCode(a.ocdId) === state.code,
   );
 
   const statePop = statePops.find((sp) => sp.fips === state.fips);
+  const stateElections = elections.filter(
+    (e) => parseStateCode(e.ocdId) === state.code,
+  );
 
   return (
     <Container className="bg-sand">
@@ -54,6 +63,9 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           {statePop && <PopBlock statePop={statePop} />}
           {authority && <EligibilityBlock authority={authority} />}
           {authority && <OnlineInstructionsBlock authority={authority} />}
+          {stateElections?.length > 0 && (
+            <ElectionsBlock elections={stateElections} />
+          )}
         </div>
       </div>
     </Container>
@@ -119,6 +131,25 @@ function OnlineInstructionsBlock({ authority }: AuthortyBlockProps) {
           </p>
         )}
       </div>
+    </div>
+  );
+}
+
+type ElectionsBlockProps = {
+  elections: Election[];
+};
+
+function ElectionsBlock({ elections }: ElectionsBlockProps) {
+  return (
+    <div>
+      <h2 className="header-4 mb-2 font-bold">Upcoming Elections:</h2>
+      <ul className="body-md list-none space-y-3">
+        {elections.map((election, index) => (
+          <li key={index} className="flex items-start gap-3">
+            {formatElectionDate(election.date)} - {election.description}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

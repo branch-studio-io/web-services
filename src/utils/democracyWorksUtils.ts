@@ -1,5 +1,10 @@
 import { YouthRegistration } from "@/types/democracyWorks";
 
+// Parse "ocd-division/country:us/state:fl/cd:1" to return the state code in uppercase
+export function parseStateCode(ocdId: string): string {
+  return ocdId.split("/").find((part) => part.startsWith("state:"))?.split(":")[1].toUpperCase() ?? "";
+}
+
 /**
  * Parses an ISO 8601 duration string (e.g. P16Y, P17Y6M, P17Y275D) and returns
  * the equivalent age as a decimal. Years are whole, months contribute 1/12,

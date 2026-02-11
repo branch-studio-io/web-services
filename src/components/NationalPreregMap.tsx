@@ -6,6 +6,7 @@ import type { StatePop } from "@/types/statePop";
 import {
   canRegInGeneral,
   getAge,
+  parseStateCode,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
@@ -56,10 +57,7 @@ export default function NationalPreregMap({
   const youthRegByState = useMemo(
     () =>
       new Map(
-        authorities.map((a) => [
-          a.ocdId.slice(-2).toUpperCase(),
-          a.youthRegistration,
-        ]),
+        authorities.map((a) => [parseStateCode(a.ocdId), a.youthRegistration]),
       ),
     [authorities],
   );
