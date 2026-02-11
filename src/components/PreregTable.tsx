@@ -10,7 +10,7 @@ import {
   PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
-import { ChevronRightIcon } from "@heroicons/react/16/solid";
+import { ChevronRightIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import numeral from "numeral";
 import { useMemo } from "react";
@@ -45,6 +45,14 @@ export default function PreregTable({
           getStateCodeFromOcdId(a.ocdId),
           a.youthRegistration,
         ]),
+      ),
+    [authorities],
+  );
+
+  const registrationByState = useMemo(
+    () =>
+      new Map(
+        authorities.map((a) => [getStateCodeFromOcdId(a.ocdId), a.registration]),
       ),
     [authorities],
   );
@@ -95,6 +103,18 @@ export default function PreregTable({
               Next Election
             </th>
             <th
+              className="border-sand-600 border-r border-b px-4 py-1.5 text-center text-xs font-semibold tracking-wide text-gray-950 uppercase"
+              scope="col"
+            >
+              By Mail
+            </th>
+            <th
+              className="border-sand-600 border-r border-b px-4 py-1.5 text-center text-xs font-semibold tracking-wide text-gray-950 uppercase"
+              scope="col"
+            >
+              Online
+            </th>
+            <th
               className="border-sand-600 border-r border-b px-4 py-1.5 text-right text-xs font-semibold tracking-wide text-gray-950 uppercase"
               scope="col"
             >
@@ -105,6 +125,7 @@ export default function PreregTable({
         <tbody>
           {states.map((state, index) => {
             const youthReg = youthRegByState.get(state.code);
+            const registration = registrationByState.get(state.code);
             const statePop = statePopsByFips.get(state.fips);
             const nextElection = nextElectionByState.get(state.code);
             const rowBg = index % 2 === 0 ? "bg-white" : "bg-sand-300";
@@ -140,6 +161,22 @@ export default function PreregTable({
                   {nextElection
                     ? `${formatElectionDate(nextElection.date)} — ${nextElection.description}`
                     : "—"}
+                </td>
+                <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
+                  {registration?.byMail.supported && (
+                    <XMarkIcon
+                      className="mx-auto size-5 text-gray-950"
+                      aria-label="By mail registration supported"
+                    />
+                  )}
+                </td>
+                <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
+                  {registration?.online.supported && (
+                    <XMarkIcon
+                      className="mx-auto size-5 text-gray-950"
+                      aria-label="Online registration supported"
+                    />
+                  )}
                 </td>
                 <td className="border-sand-600 border-r px-4 py-1.5 text-right text-sm text-gray-950 tabular-nums">
                   {numeral(statePop?.pop18 ?? 0).format("0,0")}
