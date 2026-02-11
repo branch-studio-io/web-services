@@ -3,13 +3,13 @@
 import type { Authority } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
+import { getPreregStatus } from "@/utils/democracyWorkApi";
+import { PreregStatus } from "@/types/democracyWorks";
 import {
-  getAge,
-  nextRegOpportunityIsGeneral,
   parseStateCode,
+  PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
-import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
 import { useRouter } from "next/navigation";
@@ -89,30 +89,11 @@ export default function NationalPreregMap({
     (fips: string) => {
       const state = statesByFips.get(fips);
       const youth = state ? youthRegByState.get(state.code) : undefined;
-      if (!state || !youth) {
-        return NO_DATA_COLOR;
+      if (!state) {
+        return PREREG_STATUS_COLORS[PreregStatus.NOT_AVAILABLE];
       }
-
-      const age = getAge(youth.eligibilityAge);
-
-      if (youth.supported === "byAge" && age <= 16) {
-        return THREE_COLOR_DIVERGENT_SCALE[0];
-      }
-
-      if (
-        (youth.supported === "byAge" && age <= 17) ||
-        nextRegOpportunityIsGeneral(youth)
-      ) {
-        // If the next registration opportunity is the general election then assume
-        // they will have at least one year to register to
-        return THREE_COLOR_DIVERGENT_SCALE[1];
-      }
-
-      if (youth.supported === "byElection" || youth.supported === "byAge") {
-        return THREE_COLOR_DIVERGENT_SCALE[2];
-      }
-
-      return NO_DATA_COLOR;
+      const status = getPreregStatus(youth);
+      return PREREG_STATUS_COLORS[status];
     },
     [statesByFips, youthRegByState],
   );
@@ -226,7 +207,7 @@ export default function NationalPreregMap({
           ref={tooltipRef}
           role="tooltip"
           aria-label={`State: ${hoveredState.name}`}
-          className="bg-sand-300 pointer-events-none z-10 flex w-[400px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
+          className="bg-sand-100 pointer-events-none z-10 flex w-[400px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
           style={{
             position: "fixed",
             left: tooltipSize === null ? -9999 : clampedLeft,
@@ -258,7 +239,7 @@ export default function NationalPreregMap({
               </div>
             </div>
           </div>
-          <div className="bg-sand-500 body-sm px-4 py-1 text-xs font-semibold text-gray-500">
+          <div className="bg-sand-300 body-sm px-4 py-1 text-xs font-semibold text-gray-500">
             Click the state to learn more.
           </div>
         </div>

@@ -1,3 +1,10 @@
+export enum PreregStatus {
+  AGE_16_OR_EARLIER = "AGE_16_OR_EARLIER",
+  AT_LEAST_ONE_YEAR = "AT_LEAST_ONE_YEAR",
+  LESS_THAN_ONE_YEAR = "LESS_THAN_ONE_YEAR",
+  NOT_AVAILABLE = "NOT_AVAILABLE",
+}
+
 export type Registration = {
   online: {
     supported: boolean;
@@ -39,7 +46,5 @@ export type Election = {
     | "county"
     | "subCounty"
     | "municipal"
-    | "subMunicipal"
-    | "school"
     | "special";
 };

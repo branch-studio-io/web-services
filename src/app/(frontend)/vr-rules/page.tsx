@@ -1,9 +1,11 @@
 import Container from "@/components/Container";
 import NationalPreregMap from "@/components/NationalPreregMap";
+import PreregTable from "@/components/PreregTable";
 import authoritiesJson from "@/data/authorities.json";
+import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
-import type { Authority } from "@/types/democracyWorks";
+import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
@@ -11,6 +13,7 @@ import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
+const elections = electionsJson as Election[];
 
 const categories = [
   {
@@ -69,6 +72,14 @@ export default async function VRRulesPage() {
             states={states}
             statePops={statePops}
             stateRoute="/vr-rules"
+          />
+        </div>
+        <div className="w-full pt-5">
+          <PreregTable
+            states={states}
+            authorities={authorities}
+            statePops={statePops}
+            elections={elections}
           />
         </div>
       </div>

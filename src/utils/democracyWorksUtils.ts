@@ -1,4 +1,12 @@
-import { YouthRegistration } from "@/types/democracyWorks";
+import { type YouthRegistration, PreregStatus } from "@/types/democracyWorks";
+import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
+
+export const PREREG_STATUS_COLORS: Record<PreregStatus, string> = {
+  [PreregStatus.AGE_16_OR_EARLIER]: THREE_COLOR_DIVERGENT_SCALE[0],
+  [PreregStatus.AT_LEAST_ONE_YEAR]: THREE_COLOR_DIVERGENT_SCALE[1],
+  [PreregStatus.LESS_THAN_ONE_YEAR]: THREE_COLOR_DIVERGENT_SCALE[2],
+  [PreregStatus.NOT_AVAILABLE]: NO_DATA_COLOR,
+};
 
 // Parse "ocd-division/country:us/state:fl/cd:1" to return the state code in uppercase
 export function parseStateCode(ocdId: string): string {

@@ -1,5 +1,42 @@
-import type { Authority, Election } from "@/types/democracyWorks";
+import type {
+  Authority,
+  Election,
+  YouthRegistration,
+} from "@/types/democracyWorks";
+import { PreregStatus } from "@/types/democracyWorks";
+import { getAge, nextRegOpportunityIsGeneral } from "./democracyWorksUtils";
 import { getEnvKey } from "./utils";
+
+/**
+ * Classifies a youth registration into a pre-registration status category.
+ * Returns NOT_AVAILABLE for null/undefined.
+ */
+export function getPreregStatus(
+  youth: YouthRegistration | null | undefined,
+): PreregStatus {
+  if (!youth) {
+    return PreregStatus.NOT_AVAILABLE;
+  }
+
+  const age = getAge(youth.eligibilityAge);
+
+  if (youth.supported === "byAge" && age <= 16) {
+    return PreregStatus.AGE_16_OR_EARLIER;
+  }
+
+  if (
+    (youth.supported === "byAge" && age <= 17) ||
+    nextRegOpportunityIsGeneral(youth)
+  ) {
+    return PreregStatus.AT_LEAST_ONE_YEAR;
+  }
+
+  if (youth.supported === "byElection" || youth.supported === "byAge") {
+    return PreregStatus.LESS_THAN_ONE_YEAR;
+  }
+
+  return PreregStatus.NOT_AVAILABLE;
+}
 
 type Pagination = {
   totalRecordCount: number;
