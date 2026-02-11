@@ -62,8 +62,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           <h1 className="header-2 mt-4">{state.name} Requirements</h1>
           {statePop && <PopBlock statePop={statePop} />}
           {authority && <EligibilityBlock authority={authority} />}
-          {authority && <OnlineInstructionsBlock authority={authority} />}
           <ElectionsBlock elections={stateElections} />
+          {authority && <OnlineInstructionsBlock authority={authority} />}
         </div>
       </div>
     </Container>

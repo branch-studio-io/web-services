@@ -9,16 +9,16 @@ const routes = [
     label: "State Requirements",
   },
   {
+    href: "/register-to-vote",
+    label: "Register to Vote",
+  },
+  {
     href: "/data-portal",
     label: "Data Portal",
   },
   {
     href: "/leaderboard",
     label: "Leaderboard",
-  },
-  {
-    href: "/register-to-vote",
-    label: "Register to Vote",
   },
 ];
 
