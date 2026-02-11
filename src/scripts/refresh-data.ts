@@ -6,11 +6,11 @@ import { writeFile } from "fs/promises";
 import path from "path";
 
 async function main(): Promise<void> {
-  // console.log("Fetching Democracy Works Authorities...");
-  // await writeData(await getAuthorities(), "src/data/authorities.json");
+  console.log("Fetching Democracy Works Authorities...");
+  await writeData(await getAuthorities(), "src/data/authorities.json");
 
-  // console.log("Fettching Big QueryState Populations...");
-  // await writeData(await getStatePopulations(), "src/data/state-pops.json");
+  console.log("Fettching Big QueryState Populations...");
+  await writeData(await getStatePopulations(), "src/data/state-pops.json");
 
   console.log("Fetching Democracy Works Elections...");
   await writeData(await getElections(), "src/data/elections.json");

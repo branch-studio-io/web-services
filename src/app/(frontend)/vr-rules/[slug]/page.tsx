@@ -63,9 +63,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           {statePop && <PopBlock statePop={statePop} />}
           {authority && <EligibilityBlock authority={authority} />}
           {authority && <OnlineInstructionsBlock authority={authority} />}
-          {stateElections?.length > 0 && (
-            <ElectionsBlock elections={stateElections} />
-          )}
+          <ElectionsBlock elections={stateElections} />
         </div>
       </div>
     </Container>
@@ -136,7 +134,7 @@ function OnlineInstructionsBlock({ authority }: AuthortyBlockProps) {
 }
 
 type ElectionsBlockProps = {
-  elections: Election[];
+  elections: Election[] | null;
 };
 
 function ElectionsBlock({ elections }: ElectionsBlockProps) {
@@ -144,11 +142,15 @@ function ElectionsBlock({ elections }: ElectionsBlockProps) {
     <div>
       <h2 className="header-4 mb-2 font-bold">Upcoming Elections:</h2>
       <ul className="body-md list-none space-y-3">
-        {elections.map((election, index) => (
-          <li key={index} className="flex items-start gap-3">
-            {formatElectionDate(election.date)} - {election.description}
-          </li>
-        ))}
+        {elections && elections.length > 0 ? (
+          elections.map((election, index) => (
+            <li key={index} className="flex items-start gap-3">
+              {formatElectionDate(election.date)} - {election.description}
+            </li>
+          ))
+        ) : (
+          <p className="body-md">No upcoming elections found for this state.</p>
+        )}
       </ul>
     </div>
   );
