@@ -13,12 +13,16 @@ const routes = [
     label: "Register to Vote",
   },
   {
-    href: "/data-portal",
-    label: "Data Portal",
+    href: "/run-a-drive",
+    label: "Run a Drive",
   },
   {
     href: "/leaderboard",
     label: "Leaderboard",
+  },
+  {
+    href: "/data-portal",
+    label: "Data Portal",
   },
 ];
 

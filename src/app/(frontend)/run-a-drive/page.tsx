@@ -6,10 +6,11 @@ export default async function Page() {
   return (
     <Container>
       <section className="mx-auto max-w-3xl space-y-4">
-        <h1 className="header-1">Data Portal</h1>
+        <h1 className="header-1">Run a Drive</h1>
         <p className="body-md">
-          This site will include a data portal showing how 18-year-olds are
-          registering to vote compared with adults ages 45 and older.{" "}
+          This site will include the Voter Registration Drive Management
+          Platform, enabling student leaders to build teams, manage their
+          drives, and track progress.{" "}
         </p>
         <Link
           href="/"
