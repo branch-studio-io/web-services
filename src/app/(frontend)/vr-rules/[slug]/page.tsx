@@ -1,5 +1,6 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
+import { DemocracyWorksText } from "@/components/DemocracyWorksText";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
@@ -12,7 +13,6 @@ import {
   parseStateCode,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
-import { splitByBreakTags } from "@/utils/utils";
 import { notFound } from "next/navigation";
 import numeral from "numeral";
 
@@ -114,15 +114,14 @@ function OnlineInstructionsBlock({ authority }: AuthortyBlockProps) {
       <h2 className="header-4 mb-2 font-bold">Online Instructions:</h2>
       <div className="space-y-6">
         {authority.youthRegistration.methods?.includes("online") ? (
-          <>
-            {splitByBreakTags(
-              authority.youthRegistration.onlineInstructions ?? "",
-            ).map((paragraph, i) => (
-              <p key={i} className="body-md">
-                {paragraph}
-              </p>
-            ))}
-          </>
+          <DemocracyWorksText
+            text={authority.youthRegistration.onlineInstructions ?? ""}
+            renderers={{
+              paragraph: (children) => (
+                <p className="body-md">{children}</p>
+              ),
+            }}
+          />
         ) : (
           <p className="body-md">
             Online registration is not supported in this state.
