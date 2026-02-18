@@ -11,6 +11,7 @@ import type { StatePop } from "@/types/statePop";
 import {
   formatElectionDate,
   parseStateCode,
+  studentImpactText,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
 import Link from "next/link";
@@ -97,6 +98,7 @@ type EligibilityBlockProps = {
 };
 
 function EligibilityBlock({ authority }: EligibilityBlockProps) {
+  const impactText = studentImpactText(authority.youthRegistration);
   return (
     <div>
       <h2 className="header-4 mb-2 font-bold">You can register to vote if:</h2>
@@ -104,12 +106,14 @@ function EligibilityBlock({ authority }: EligibilityBlockProps) {
         <p className="body-md">
           {voterEligibilityText(authority.youthRegistration)}
         </p>
-        <p className="body-md font-semibold">
-          <em>
-            That means seniors, juniors, and X percent of sophmores... can
-            register to vote in your HS today.
-          </em>
-        </p>
+        {impactText && (
+          <p className="body-md font-semibold">
+            <em>
+              That means {impactText} can register to vote in your high school
+              today.
+            </em>
+          </p>
+        )}
       </div>
     </div>
   );

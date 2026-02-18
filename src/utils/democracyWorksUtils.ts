@@ -64,6 +64,133 @@ export function voterEligibilityText(youthRegistration: YouthRegistration) {
 }
 
 /**
+ * Returns a qualitative statement about which high school grade levels can
+ * register to vote, based on youth registration eligibility. Uses terms like
+ * "all", "most", "many", and "even some" rather than exact percentages.
+ *
+ * Assumes: Sophomores 15–16 (most commonly 16), Juniors 16–17 (most commonly 17),
+ * Seniors 17–18 (most commonly 18).
+ *
+ * @param youthRegistration - Authority youth registration config with
+ *   supported, eligibilityAge, and eligibilityByElection
+ * @returns Statement like "all seniors, all juniors, and most sophomores can
+ *   register..." or null if youth preregistration is not supported
+ */
+export function studentImpactText(
+  youthRegistration: YouthRegistration | null | undefined,
+  asOfDate: Date = new Date(),
+): string | null {
+  if (!youthRegistration) return null;
+
+  if (youthRegistration.supported === "byAge") {
+    const age = getAge(youthRegistration.eligibilityAge);
+    const gradeAges = getExpectedGradeAges(asOfDate);
+    return studentImpactByAge(age, gradeAges);
+  }
+
+  if (youthRegistration.supported === "byElection") {
+    const electionDate = youthRegistration.eligibilityByElection?.date;
+    return studentImpactByElection(electionDate);
+  }
+
+  return null;
+}
+
+export type GradeAges = {
+  seniors: number;
+  juniors: number;
+  sophomores: number;
+  freshmen: number;
+};
+
+/**
+ * Returns the expected typical current age for each high school grade level
+ * based on the date. In the fall, students are younger (just started the
+ * grade); in the spring, they are older.
+ *
+ * Assumes US school year Sept–May: fall = younger, spring = older.
+ * Sophomores 15→16, Juniors 16→17, Seniors 17→18 over the year.
+ *
+ * @param date - Date to evaluate (default: today)
+ */
+export function getExpectedGradeAges(date: Date = new Date()): GradeAges {
+  const month = date.getMonth();
+  // Progress 0 at Sept (start of year), 1 at May (end). June–Aug use end-of-year ages.
+  const progress =
+    month >= 8 ? (month - 8) / 8 : month <= 4 ? (month + 4) / 8 : 1;
+
+  return {
+    seniors: 17 + progress,
+    juniors: 16 + progress,
+    sophomores: 15 + progress,
+    freshmen: 14 + progress,
+  };
+}
+
+/** Qualifier for how many in a grade qualify: "all" | "most" | "many" | "even some" | null (none) */
+function qualifierForGrade(
+  eligibilityAge: number,
+  typicalAge: number,
+): "all" | "most" | "many" | "even some" | null {
+  if (eligibilityAge <= typicalAge - 0.25) return "all";
+  if (eligibilityAge <= typicalAge + 0.25) return "most";
+  if (eligibilityAge <= typicalAge + 0.5) return "many";
+  if (eligibilityAge <= typicalAge + 0.75) return "even some";
+  return null;
+}
+
+function studentImpactByAge(
+  eligibilityAge: number,
+  gradeAges: GradeAges,
+): string {
+  const seniorQ = qualifierForGrade(eligibilityAge, gradeAges.seniors);
+  const juniorQ = qualifierForGrade(eligibilityAge, gradeAges.juniors);
+  const sophQ = qualifierForGrade(eligibilityAge, gradeAges.sophomores);
+  const freshQ = qualifierForGrade(eligibilityAge, gradeAges.freshmen);
+
+  const parts: string[] = [];
+  if (seniorQ) parts.push(`${seniorQ} seniors`);
+  if (juniorQ) parts.push(`${juniorQ} juniors`);
+  if (sophQ) parts.push(`${sophQ} sophomores`);
+  if (freshQ) parts.push(`${freshQ} freshmen`);
+
+  if (parts.length === 0) return "most seniors"; // fallback for 18+ only
+  if (parts.length === 1) return parts[0];
+  const last = parts.pop();
+  return `${parts.join(", ")}, and ${last}`;
+}
+
+function studentImpactByElection(
+  electionDate: string | null | undefined,
+): string {
+  // Must be 18 by election; sophomores (15-16) never qualify
+  if (!electionDate) {
+    return "most seniors and many juniors";
+  }
+
+  const now = new Date();
+  const election = new Date(electionDate + "T00:00:00");
+  if (Number.isNaN(election.getTime())) {
+    return "most seniors and many juniors";
+  }
+
+  const monthsUntilElection =
+    (election.getFullYear() - now.getFullYear()) * 12 +
+    (election.getMonth() - now.getMonth());
+
+  if (monthsUntilElection >= 12) {
+    return "all seniors, most juniors";
+  }
+  if (monthsUntilElection >= 6) {
+    return "all seniors and most juniors";
+  }
+  if (monthsUntilElection >= 3) {
+    return "most seniors and many juniors";
+  }
+  return "most seniors and even some juniors";
+}
+
+/**
  * Formats an ISO date string (YYYY-MM-DD) as "Nov 3rd, 2026".
  */
 export function formatElectionDate(date: string): string {
