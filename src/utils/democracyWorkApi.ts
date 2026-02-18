@@ -127,7 +127,15 @@ export async function getAuthorities(): Promise<Authority[]> {
 
 export async function getElections(): Promise<Election[]> {
   const apiKey = getEnvKey("DEMOCRACY_WORKS_API_KEY");
-  const fields = ["ocdId", "date", "description", "type"];
+  const fields = [
+    "ocdId",
+    "date",
+    "description",
+    "type",
+    "registration.inPerson.deadline.date",
+    "registration.byMail.deadline.date",
+    "registration.online.deadline.date",
+  ];
   const electionTypes = [
     "presidentialPrimary",
     "state",

@@ -1,4 +1,8 @@
-import { type YouthRegistration, PreregStatus } from "@/types/democracyWorks";
+import {
+  type Election,
+  type YouthRegistration,
+  PreregStatus,
+} from "@/types/democracyWorks";
 import { NO_DATA_COLOR, THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
 
 export const PREREG_STATUS_COLORS: Record<PreregStatus, string> = {
@@ -188,6 +192,44 @@ function studentImpactByElection(
     return "most seniors and many juniors";
   }
   return "most seniors and even some juniors";
+}
+
+/**
+ * Returns the first available registration deadline for an election, in order:
+ * online, byMail, inPerson.
+ */
+export type RegistrationDeadline =
+  | { date: string; method: "online" }
+  | { date: string; method: "byMail" }
+  | { date: string; method: "inPerson" };
+
+export function getRegistrationDeadline(
+  election: Election,
+): RegistrationDeadline | null {
+  const reg = election.registration;
+  if (!reg) return null;
+
+  const onlineDate = reg.online?.deadline?.date;
+  if (onlineDate) return { date: onlineDate, method: "online" };
+
+  const byMailDate = reg.byMail?.deadline?.date;
+  if (byMailDate) return { date: byMailDate, method: "byMail" };
+
+  const inPersonDate = reg.inPerson?.deadline?.date;
+  if (inPersonDate) return { date: inPersonDate, method: "inPerson" };
+
+  return null;
+}
+
+/**
+ * Formats a registration deadline for display, appending "by mail" or "in person"
+ * when the method is not online.
+ */
+export function formatDeadlineSuffix(deadline: RegistrationDeadline): string {
+  const formatted = formatElectionDate(deadline.date);
+  if (deadline.method === "online") return formatted;
+  if (deadline.method === "byMail") return `${formatted} by mail`;
+  return `${formatted} in person`;
 }
 
 /**

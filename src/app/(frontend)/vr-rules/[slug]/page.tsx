@@ -10,6 +10,8 @@ import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
   formatElectionDate,
+  formatDeadlineSuffix,
+  getRegistrationDeadline,
   parseStateCode,
   studentImpactText,
   voterEligibilityText,
@@ -187,11 +189,20 @@ function ElectionsBlock({ elections }: ElectionsBlockProps) {
       <h2 className="header-4 mb-2 font-bold">Upcoming Elections:</h2>
       <ul className="body-md list-disc space-y-3 pl-6">
         {elections && elections.length > 0 ? (
-          elections.map((election, index) => (
-            <li key={index}>
-              {formatElectionDate(election.date)} - {election.description}
-            </li>
-          ))
+          elections.map((election, index) => {
+            const deadline = getRegistrationDeadline(election);
+            return (
+              <li key={index}>
+                {formatElectionDate(election.date)} - {election.description}
+                {deadline && (
+                  <>
+                    {" "}
+                    (Register by {formatDeadlineSuffix(deadline)})
+                  </>
+                )}
+              </li>
+            );
+          })
         ) : (
           <li className="body-md">
             No upcoming elections found for this state.

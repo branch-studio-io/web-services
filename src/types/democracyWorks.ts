@@ -56,4 +56,21 @@ export type Election = {
     | "subCounty"
     | "municipal"
     | "special";
+    registration: {
+      inPerson: {
+        deadline: {
+          date: string;
+        }
+      },
+      byMail: {
+        deadline: {
+          date: string;
+        }
+      },
+      online: {
+        deadline: {
+          date: string;
+        }
+      }
+    }
 };

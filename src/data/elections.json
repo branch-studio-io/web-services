@@ -3,648 +3,2507 @@
     "ocdId": "ocd-division/country:us/state:ar",
     "date": "2026-03-03",
     "description": "Arkansas Preferential Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-02-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-02"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nc",
     "date": "2026-03-03",
     "description": "North Carolina Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-02-06"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-02-06"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-06"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:tx",
     "date": "2026-03-03",
     "description": "Texas Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-02-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-02"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ga/cd:14",
     "date": "2026-03-10",
     "description": "Congressional District 14 Special Election",
-    "type": "congressional"
+    "type": "congressional",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-02-09"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-02-09"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-09"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ms",
     "date": "2026-03-10",
     "description": "Mississippi Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-02-09"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-09"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:il",
     "date": "2026-03-17",
     "description": "Illinois Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-03-17"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-03-01"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-02-17"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ga/cd:14",
     "date": "2026-04-07",
     "description": "Congressional District 14 Special Runoff Election",
-    "type": "congressional"
+    "type": "congressional",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wi",
     "date": "2026-04-07",
     "description": "Wisconsin Spring Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-03"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-03-18"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-03-18"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nj/cd:11",
     "date": "2026-04-16",
     "description": "Congressional District 11 Special General Election",
-    "type": "congressional"
+    "type": "congressional",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-03-26"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-03-26"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-03-26"
+        }
+      }
+    }
+  },
+  {
+    "ocdId": "ocd-division/country:us/state:va",
+    "date": "2026-04-21",
+    "description": "Virginia Constitutional Amendment Special Election",
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-18"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-14"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-14"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:in",
     "date": "2026-05-05",
     "description": "Indiana Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:oh",
     "date": "2026-05-05",
     "description": "Ohio Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-06"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:tn",
     "date": "2026-05-05",
     "description": "Tennessee State and County Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ne",
     "date": "2026-05-12",
     "description": "Nebraska Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-01"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-27"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-27"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wv",
     "date": "2026-05-12",
     "description": "West Virginia Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-21"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-21"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-21"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:la",
     "date": "2026-05-16",
     "description": "Louisiana Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-15"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-25"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-15"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:al",
     "date": "2026-05-19",
     "description": "Alabama Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ga",
     "date": "2026-05-19",
     "description": "Georgia Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:id",
     "date": "2026-05-19",
     "description": "Idaho Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-08"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-08"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-08"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ky",
     "date": "2026-05-19",
     "description": "Kentucky Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-20"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:or",
     "date": "2026-05-19",
     "description": "Oregon Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-04-28"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-04-28"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-04-28"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:pa",
     "date": "2026-05-19",
     "description": "Pennsylvania Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ca",
     "date": "2026-06-02",
     "description": "California Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ia",
     "date": "2026-06-02",
     "description": "Iowa Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-01"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mt",
     "date": "2026-06-02",
     "description": "Montana Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-04"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nj",
     "date": "2026-06-02",
     "description": "New Jersey Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-12"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-12"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-12"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nm",
     "date": "2026-06-02",
     "description": "New Mexico Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-05"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-05"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:sd",
     "date": "2026-06-02",
     "description": "South Dakota Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-18"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:me",
     "date": "2026-06-09",
     "description": "Maine Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-09"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-19"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-19"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nv",
     "date": "2026-06-09",
     "description": "Nevada Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-12"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-09"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-12"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nd",
     "date": "2026-06-09",
     "description": "North Dakota Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:sc",
     "date": "2026-06-09",
     "description": "South Carolina Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-08"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-10"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-11"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ok",
     "date": "2026-06-16",
     "description": "Oklahoma Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-05-22"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-22"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-22"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/district:dc",
     "date": "2026-06-16",
     "description": "District of Columbia Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-16"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-05-26"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-05-26"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:va",
     "date": "2026-06-16",
     "description": "Virginia Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-13"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-05"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-05"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:md",
     "date": "2026-06-23",
     "description": "Maryland Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-02"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ny",
     "date": "2026-06-23",
     "description": "New York Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-13"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-13"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-13"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ut",
     "date": "2026-06-23",
     "description": "Utah Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-19"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-12"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-12"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:co",
     "date": "2026-06-30",
     "description": "Colorado Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-30"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-30"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-30"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:az",
     "date": "2026-07-21",
     "description": "Arizona Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-06-22"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-06-22"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-06-22"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ca/cd:1",
     "date": "2026-08-04",
     "description": "Congressional District 1 Special Election",
-    "type": "congressional"
+    "type": "congressional",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ks",
     "date": "2026-08-04",
     "description": "Kansas Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-07-14"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-14"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-14"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mi",
     "date": "2026-08-04",
     "description": "Michigan Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-04"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-20"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-20"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mo",
     "date": "2026-08-04",
     "description": "Missouri Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-07-08"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-08"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-08"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wa",
     "date": "2026-08-04",
     "description": "Washington Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-04"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-27"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-27"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:tn",
     "date": "2026-08-06",
     "description": "Tennessee Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-07-07"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-07"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-07"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:hi",
     "date": "2026-08-08",
     "description": "Hawaii Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-08"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-08-08"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-29"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ct",
     "date": "2026-08-11",
     "description": "Connecticut Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-10"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-24"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-24"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mn",
     "date": "2026-08-11",
     "description": "Minnesota Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-10"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-21"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-21"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:vt",
     "date": "2026-08-11",
     "description": "Vermont Statewide Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wi",
     "date": "2026-08-11",
     "description": "Wisconsin Partisan Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-07"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-22"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-22"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ak",
     "date": "2026-08-18",
     "description": "Alaska Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-07-19"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-19"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-19"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:fl",
     "date": "2026-08-18",
     "description": "Florida Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-07-20"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-20"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-20"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wy",
     "date": "2026-08-18",
     "description": "Wyoming Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-17"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-08-03"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ma",
     "date": "2026-09-01",
     "description": "Massachusetts Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nh",
     "date": "2026-09-08",
     "description": "New Hampshire Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ri",
     "date": "2026-09-08",
     "description": "Rhode Island Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-09"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-08-09"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-08-09"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:de",
     "date": "2026-09-15",
     "description": "Delaware Primary Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-08-22"
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:al",
     "date": "2026-11-03",
     "description": "Alabama General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ak",
     "date": "2026-11-03",
     "description": "Alaska General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:az",
     "date": "2026-11-03",
     "description": "Arizona General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ar",
     "date": "2026-11-03",
     "description": "Arkansas General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ca",
     "date": "2026-11-03",
     "description": "California General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:co",
     "date": "2026-11-03",
     "description": "Colorado General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ct",
     "date": "2026-11-03",
     "description": "Connecticut General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:de",
     "date": "2026-11-03",
     "description": "Delaware General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:fl",
     "date": "2026-11-03",
     "description": "Florida General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ga",
     "date": "2026-11-03",
     "description": "Georgia General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:hi",
     "date": "2026-11-03",
     "description": "Hawaii General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:id",
     "date": "2026-11-03",
     "description": "Idaho General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:il",
     "date": "2026-11-03",
     "description": "Illinois General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:in",
     "date": "2026-11-03",
     "description": "Indiana General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ia",
     "date": "2026-11-03",
     "description": "Iowa General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ks",
     "date": "2026-11-03",
     "description": "Kansas General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ky",
     "date": "2026-11-03",
     "description": "Kentucky General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:la",
     "date": "2026-11-03",
     "description": "Louisiana General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:me",
     "date": "2026-11-03",
     "description": "Maine General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:md",
     "date": "2026-11-03",
     "description": "Maryland General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ma",
     "date": "2026-11-03",
     "description": "Massachusetts General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mi",
     "date": "2026-11-03",
     "description": "Michigan General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mn",
     "date": "2026-11-03",
     "description": "Minnesota General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ms",
     "date": "2026-11-03",
     "description": "Mississippi General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mo",
     "date": "2026-11-03",
     "description": "Missouri General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:mt",
     "date": "2026-11-03",
     "description": "Montana General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ne",
     "date": "2026-11-03",
     "description": "Nebraska General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nv",
     "date": "2026-11-03",
     "description": "Nevada General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nh",
     "date": "2026-11-03",
     "description": "New Hampshire General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nj",
     "date": "2026-11-03",
     "description": "New Jersey General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nm",
     "date": "2026-11-03",
     "description": "New Mexico General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ny",
     "date": "2026-11-03",
     "description": "New York General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nc",
     "date": "2026-11-03",
     "description": "North Carolina General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:nd",
     "date": "2026-11-03",
     "description": "North Dakota General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:oh",
     "date": "2026-11-03",
     "description": "Ohio General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ok",
     "date": "2026-11-03",
     "description": "Oklahoma General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:or",
     "date": "2026-11-03",
     "description": "Oregon General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:pa",
     "date": "2026-11-03",
     "description": "Pennsylvania General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ri",
     "date": "2026-11-03",
     "description": "Rhode Island General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:sc",
     "date": "2026-11-03",
     "description": "South Carolina General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:sd",
     "date": "2026-11-03",
     "description": "South Dakota General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:tn",
     "date": "2026-11-03",
     "description": "Tennessee General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:tx",
     "date": "2026-11-03",
     "description": "Texas General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/district:dc",
     "date": "2026-11-03",
     "description": "District of Columbia General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:ut",
     "date": "2026-11-03",
     "description": "Utah General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:vt",
     "date": "2026-11-03",
     "description": "Vermont General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:va",
     "date": "2026-11-03",
     "description": "Virginia General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wa",
     "date": "2026-11-03",
     "description": "Washington General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wv",
     "date": "2026-11-03",
     "description": "West Virginia General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wi",
     "date": "2026-11-03",
     "description": "Wisconsin General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   },
   {
     "ocdId": "ocd-division/country:us/state:wy",
     "date": "2026-11-03",
     "description": "Wyoming General Election",
-    "type": "state"
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
   }
 ]
