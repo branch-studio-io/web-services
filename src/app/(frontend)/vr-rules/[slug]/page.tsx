@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
-import { DemocracyWorksText } from "@/components/DemocracyWorksText";
+import { IDRequirementsBlock } from "@/components/IDRequirementsBlock";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
@@ -9,13 +9,14 @@ import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
-  formatElectionDate,
   formatDeadlineSuffix,
+  formatElectionDate,
   getRegistrationDeadline,
   parseStateCode,
   studentImpactText,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
+import { extractIdRequirements } from "@/utils/idRequirements";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import numeral from "numeral";
@@ -87,7 +88,7 @@ type PopBlockProps = {
 function PopBlock({ statePop }: PopBlockProps) {
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">
+      <h2 className="header-3 mb-2 font-bold">
         Residents turning 18 this year:
       </h2>
       <p className="body-md">{numeral(statePop.pop18 ?? 0).format("0,0")}</p>
@@ -103,7 +104,7 @@ function EligibilityBlock({ authority }: EligibilityBlockProps) {
   const impactText = studentImpactText(authority.youthRegistration);
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">You can register to vote if:</h2>
+      <h2 className="header-3 mb-2 font-bold">You can register to vote if:</h2>
       <div className="space-y-4">
         <p className="body-md">
           {voterEligibilityText(authority.youthRegistration)}
@@ -126,16 +127,16 @@ type OnlineRegistrationBlockProps = {
 };
 
 function OnlineRegistrationBlock({ authority }: OnlineRegistrationBlockProps) {
+  const { bullets, fullText } = extractIdRequirements(
+    authority.registration.online?.instructions ?? null,
+  );
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">Online Registration:</h2>
+      <h2 className="header-3 border-ink mb-2 border-b pb-2 font-bold">
+        Online Registration:
+      </h2>
       <div className="space-y-4">
-        <DemocracyWorksText
-          text={authority.registration.online?.instructions}
-          renderers={{
-            paragraph: (children) => <p className="body-md">{children}</p>,
-          }}
-        />
+        <IDRequirementsBlock bullets={bullets} fullText={fullText} />
         {authority.registration.online?.url && (
           <Link
             href={authority.registration.online?.url}
@@ -155,16 +156,16 @@ type ByMailRegistrationBlockProps = {
 };
 
 function ByMailRegistrationBlock({ authority }: ByMailRegistrationBlockProps) {
+  const { bullets, fullText } = extractIdRequirements(
+    authority.registration.byMail?.idInstructions ?? null,
+  );
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">By Mail Registration:</h2>
+      <h2 className="header-3 border-ink mb-2 border-b pb-2 font-bold">
+        By Mail Registration:
+      </h2>
       <div className="space-y-4">
-        <DemocracyWorksText
-          text={authority.registration.byMail?.idInstructions}
-          renderers={{
-            paragraph: (children) => <p className="body-md">{children}</p>,
-          }}
-        />
+        <IDRequirementsBlock bullets={bullets} fullText={fullText} />
         {authority.registration.byMail?.url && (
           <Link
             href={authority.registration.byMail?.url}
@@ -186,7 +187,7 @@ type ElectionsBlockProps = {
 function ElectionsBlock({ elections }: ElectionsBlockProps) {
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">Upcoming Elections:</h2>
+      <h2 className="header-3 mb-2 font-bold">Upcoming Elections:</h2>
       <ul className="body-md list-disc space-y-3 pl-6">
         {elections && elections.length > 0 ? (
           elections.map((election, index) => {
@@ -195,10 +196,7 @@ function ElectionsBlock({ elections }: ElectionsBlockProps) {
               <li key={index}>
                 {formatElectionDate(election.date)} - {election.description}
                 {deadline && (
-                  <>
-                    {" "}
-                    (Register by {formatDeadlineSuffix(deadline)})
-                  </>
+                  <> (Register by {formatDeadlineSuffix(deadline)})</>
                 )}
               </li>
             );
@@ -221,7 +219,7 @@ type UsefulLinksBlockProps = {
 function UsefulLinksBlock({ authority, state }: UsefulLinksBlockProps) {
   return (
     <div>
-      <h2 className="header-4 mb-2 font-bold">Useful Links:</h2>
+      <h2 className="header-3 mb-2 font-bold">Useful Links:</h2>
       <ul className="body-md list-disc space-y-3 pl-6">
         <li>
           <Link
