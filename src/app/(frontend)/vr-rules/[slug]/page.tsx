@@ -17,6 +17,18 @@ import {
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
 import { extractIdRequirements } from "@/utils/idRequirements";
+
+function concatByMailInstructions(authority: Authority): string | null {
+  const byMail = authority.registration.byMail;
+  if (!byMail) return null;
+  const parts = [
+    byMail.idInstructions,
+    byMail.signatureInstructions,
+    byMail.citizenInstructions,
+    byMail.newVoterInstructions,
+  ].filter((s): s is string => Boolean(s?.trim()));
+  return parts.length > 0 ? parts.join("<br>") : null;
+}
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import numeral from "numeral";
@@ -69,11 +81,29 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           {authority && <EligibilityBlock authority={authority} />}
           <ElectionsBlock elections={stateElections} />
           <UsefulLinksBlock state={state} authority={authority} />
+          {authority && authority.youthRegistration.onlineInstructions && (
+            <RegistrationInstructionsBlock
+              title="Online Pre-registration:"
+              instructions={authority.youthRegistration.onlineInstructions}
+            />
+          )}
           {authority && authority.registration.online?.supported && (
-            <OnlineRegistrationBlock authority={authority} />
+            <RegistrationInstructionsBlock
+              title="Online Registration:"
+              instructions={authority.registration.online?.instructions ?? null}
+            />
+          )}
+          {authority && authority.youthRegistration.byMailInstructions && (
+            <RegistrationInstructionsBlock
+              title="Youth By Mail Pre-registration:"
+              instructions={authority.youthRegistration.byMailInstructions}
+            />
           )}
           {authority && authority.registration.byMail?.supported && (
-            <ByMailRegistrationBlock authority={authority} />
+            <RegistrationInstructionsBlock
+              title="By Mail Registration:"
+              instructions={concatByMailInstructions(authority)}
+            />
           )}
         </div>
       </div>
@@ -122,59 +152,23 @@ function EligibilityBlock({ authority }: EligibilityBlockProps) {
   );
 }
 
-type OnlineRegistrationBlockProps = {
-  authority: Authority;
+type RegistrationInstructionsBlockProps = {
+  title: string;
+  instructions: string | null;
 };
 
-function OnlineRegistrationBlock({ authority }: OnlineRegistrationBlockProps) {
-  const { bullets, fullText } = extractIdRequirements(
-    authority.registration.online?.instructions ?? null,
-  );
+function RegistrationInstructionsBlock({
+  title,
+  instructions,
+}: RegistrationInstructionsBlockProps) {
+  const { bullets, fullText } = extractIdRequirements(instructions);
   return (
     <div>
       <h2 className="header-3 border-ink mb-2 border-b pb-2 font-bold">
-        Online Registration:
+        {title}
       </h2>
       <div className="space-y-4">
         <IDRequirementsBlock bullets={bullets} fullText={fullText} />
-        {authority.registration.online?.url && (
-          <Link
-            href={authority.registration.online?.url}
-            className="body-md font-semibold hover:underline hover:underline-offset-2"
-            target="_blank"
-          >
-            Register Online &gt;
-          </Link>
-        )}
-      </div>
-    </div>
-  );
-}
-
-type ByMailRegistrationBlockProps = {
-  authority: Authority;
-};
-
-function ByMailRegistrationBlock({ authority }: ByMailRegistrationBlockProps) {
-  const { bullets, fullText } = extractIdRequirements(
-    authority.registration.byMail?.idInstructions ?? null,
-  );
-  return (
-    <div>
-      <h2 className="header-3 border-ink mb-2 border-b pb-2 font-bold">
-        By Mail Registration:
-      </h2>
-      <div className="space-y-4">
-        <IDRequirementsBlock bullets={bullets} fullText={fullText} />
-        {authority.registration.byMail?.url && (
-          <Link
-            href={authority.registration.byMail?.url}
-            className="body-md font-semibold hover:underline hover:underline-offset-2"
-            target="_blank"
-          >
-            Register By Mail &gt;
-          </Link>
-        )}
       </div>
     </div>
   );

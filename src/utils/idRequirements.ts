@@ -9,23 +9,21 @@ export const ID_REQUIREMENTS = {
     order: 1,
     label: "State ID",
     definition:
-      "State driver's license or state ID card number (includes learner's permit, non-driver ID)",
+      "State driver's license or ID number (includes learner's permit, non-driver ID)",
     pattern:
       /driver'?s?\s*license|state\s+id|learner'?s?\s*permit|non[- ]?(?:driver|operating|operators)|dmv[- ]?issued|dmv\s+id|mva\s+id|penn\s*dot|penndot|identification\s+(?:card|number)|id\s+card|motor\s+vehicle|registry\s+of\s+motor|mvd\s+id|scdmv|ncdmv|service\s+oklahoma|bureau\s+of\s+motor\s+vehicles/i,
   },
   SSN: {
     order: 2,
-    label: "Social Security Number",
-    definition:
-      "Social Security number (full, last 4 digits, or last 5 digits depending on state)",
+    label: "SSN",
+    definition: "Social Security number (partial or full, depending on state)",
     pattern:
       /social\s+security|\bssn\b|last\s+(?:four|4|five|5)\s+digits\s+of\s+(?:your\s+)?(?:social\s+security|ssn)|full\s+social\s+security/i,
   },
   NONE_FALLBACK: {
     order: 3,
-    label: "No ID Available",
-    definition:
-      'If you have none of the primary IDs: indicate "None" on the form, or register by mail/in person—see full text for details',
+    label: "None",
+    definition: "Optionally no ID allowed, see full details.",
     pattern:
       /indicate\s+["']?none["']?|write\s+["']?none["']?|check\s+the\s+box.*do\s+not\s+have|leave\s+that\s+field\s+blank|do\s+not\s+have\s+an?\s+id|have\s+not\s+been\s+issued|state\s+assigns|unique\s+(?:identifier|id|identifying)\s+(?:number|will\s+be\s+provided)?|unique\s+identifier\s+will\s+be\s+provided|will\s+be\s+assigned|can\s+still\s+(?:register|submit|use)|register\s+by\s+mail|submit.*by\s+mail|visit.*county.*in\s+person|clerk'?s?\.?\s*office\s+will\s+issue|generate\s+a\s+pdf\s+form|do\s+not\s+possess.*(?:driver|social\s+security)/i,
   },
@@ -122,9 +120,7 @@ export function extractIdRequirements(
     }
   }
 
-  bullets.sort(
-    (a, b) => ID_REQUIREMENTS[a].order - ID_REQUIREMENTS[b].order,
-  );
+  bullets.sort((a, b) => ID_REQUIREMENTS[a].order - ID_REQUIREMENTS[b].order);
 
   return { bullets, fullText };
 }

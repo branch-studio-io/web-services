@@ -11,6 +11,9 @@ export type Registration = {
     supported: boolean;
     url: string | null;
     idInstructions: string | null;
+    signatureInstructions?: string | null;
+    citizenInstructions?: string | null;
+    newVoterInstructions?: string | null;
   };
   online: {
     supported: boolean;
