@@ -1,8 +1,12 @@
 import { DemocracyWorksText } from "@/components/DemocracyWorksText";
+import {
+  type IdRequirementType,
+  ID_REQUIREMENTS,
+} from "@/utils/idRequirements";
 
 type IDRequirementsBlockProps = {
   fullText: string | null;
-  bullets: string[];
+  bullets: IdRequirementType[];
 };
 
 export function IDRequirementsBlock({
@@ -18,9 +22,15 @@ export function IDRequirementsBlock({
         <div>
           <h3 className="header-4 mb-2 font-bold">ID Requirements</h3>
           <ul className="body-md list-disc space-y-1 pl-6">
-            {bullets.map((bullet, index) => (
-              <li key={index}>{bullet}</li>
-            ))}
+            {bullets.map((bullet, index) => {
+              const { label, definition } = ID_REQUIREMENTS[bullet];
+              return (
+                <li key={index}>
+                  <span className="font-bold">{label}: </span>
+                  {definition}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

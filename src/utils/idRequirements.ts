@@ -1,50 +1,84 @@
 /**
- * Extracts short ID requirement bullets from long voter registration instructions
- * using pattern matching and a dictionary of common phrases.
+ * Extracts ID requirement types from long voter registration instructions
+ * using pattern matching against a taxonomy of requirement enums.
  */
 
-export type IdRequirementsResult = {
-  bullets: string[];
-  fullText: string;
-};
+/** Single source of truth: order, label, definition, and pattern per requirement type */
+export const ID_REQUIREMENTS = {
+  STATE_DL_OR_ID: {
+    order: 1,
+    label: "State ID",
+    definition:
+      "State driver's license or state ID card number (includes learner's permit, non-driver ID)",
+    pattern:
+      /driver'?s?\s*license|state\s+id|learner'?s?\s*permit|non[- ]?(?:driver|operating|operators)|dmv[- ]?issued|dmv\s+id|mva\s+id|penn\s*dot|penndot|identification\s+(?:card|number)|id\s+card|motor\s+vehicle|registry\s+of\s+motor|mvd\s+id|scdmv|ncdmv|service\s+oklahoma|bureau\s+of\s+motor\s+vehicles/i,
+  },
+  SSN: {
+    order: 2,
+    label: "Social Security Number",
+    definition:
+      "Social Security number (full, last 4 digits, or last 5 digits depending on state)",
+    pattern:
+      /social\s+security|\bssn\b|last\s+(?:four|4|five|5)\s+digits\s+of\s+(?:your\s+)?(?:social\s+security|ssn)|full\s+social\s+security/i,
+  },
+  NONE_FALLBACK: {
+    order: 3,
+    label: "No ID Available",
+    definition:
+      'If you have none of the primary IDs: indicate "None" on the form, or register by mail/in person—see full text for details',
+    pattern:
+      /indicate\s+["']?none["']?|write\s+["']?none["']?|check\s+the\s+box.*do\s+not\s+have|leave\s+that\s+field\s+blank|do\s+not\s+have\s+an?\s+id|have\s+not\s+been\s+issued|state\s+assigns|unique\s+(?:identifier|id|identifying)\s+(?:number|will\s+be\s+provided)?|unique\s+identifier\s+will\s+be\s+provided|will\s+be\s+assigned|can\s+still\s+(?:register|submit|use)|register\s+by\s+mail|submit.*by\s+mail|visit.*county.*in\s+person|clerk'?s?\.?\s*office\s+will\s+issue|generate\s+a\s+pdf\s+form|do\s+not\s+possess.*(?:driver|social\s+security)/i,
+  },
+  PROOF_OF_ID_OR_RESIDENCE: {
+    order: 4,
+    label: "Proof of ID or Residence",
+    definition:
+      "Copy of photo ID or document showing name and address (e.g. utility bill, bank statement, lease)",
+    pattern:
+      /copy\s+of|proof\s+of\s+(?:identity|residence|residency)|submit.*copy|include\s+(?:a\s+)?copy|utility\s+bill|bank\s+statement|government\s+check|paycheck|paystub|lease|rental\s+agreement|mortgage|proof\s+of\s+insurance|enrollment\s+letter/i,
+  },
+  PROOF_OF_CITIZENSHIP: {
+    order: 5,
+    label: "Proof of Citizenship",
+    definition:
+      "Proof of citizenship (e.g. certificate of citizenship, naturalization, birth certificate)",
+    pattern:
+      /proof\s+of\s+.*citizenship|certificate\s+of\s+(?:united\s+states\s+)?citizenship|certificate\s+of\s+naturalization/i,
+  },
+  SIGNATURE: {
+    order: 6,
+    label: "Signature",
+    definition:
+      "Signature required (DMV-stored, in-process capture, or upload of digital image)",
+    pattern:
+      /signature|digital\s+image\s+of\s+your\s+signature|upload.*signature|sign\s+on[- ]?screen|dmv[- ]?stored|on\s+file\s+with\s+dmv|touchscreen|sign\s+during\s+the\s+process/i,
+  },
+  FIRST_TIME_ID_AT_POLLS: {
+    order: 7,
+    label: "First-Time Voter ID at Polls",
+    definition: "Must show ID when voting for the first time",
+    pattern:
+      /first\s+time\s+(?:you\s+)?vote|first\s+time\s+voting|identification\s+when\s+you\s+vote|show\s+id\s+the\s+first\s+time|verify\s+your\s+identity\s+the\s+first\s+time|provide\s+identification\s+when\s+voting|vote\s+in\s+person\s+the\s+first\s+time/i,
+  },
+  FIRST_TIME_PROOF_WITH_APPLICATION: {
+    order: 8,
+    label: "First-Time Proof with Application",
+    definition:
+      "First-time registrants: must submit proof of ID with application if no ID number provided",
+    pattern:
+      /registering\s+(?:to\s+vote\s+)?for\s+the\s+first\s+time.*(?:submit|include|copy)|first\s+time\s+in\s+your\s+jurisdiction.*(?:submit|copy)/i,
+  },
+  EXEMPTIONS: {
+    order: 9,
+    label: "Exemptions",
+    definition:
+      "Exemptions for ID requirement (e.g. 65+, disability, military, overseas)—see full text",
+    pattern:
+      /exempt\s+from\s+the\s+id\s+requirement|65\s+years\s+old|have\s+a\s+disability|uniformed\s+services|merchant\s+marines|residing\s+outside\s+the\s+us/i,
+  },
+} as const;
 
-const ID_REQUIREMENT_PATTERNS: { pattern: RegExp; label: string }[] = [
-  {
-    pattern:
-      /(?:new\s+york\s+)?state[- ]?issued\s+(?:id|identification)(?:\s+number)?/gi,
-    label: "State-issued ID",
-  },
-  {
-    pattern:
-      /driver'?s?\s*license|state\s+id\s*(?:card|number)?|id\s+card|penndot\s+id|non[- ]?operating\s+(?:identification|id)|dmv[- ]?issued|nonoperating\s+identification/gi,
-    label: "Driver's license or state ID",
-  },
-  {
-    pattern:
-      /last\s+five\s+digits\s+of\s+(?:your\s+)?(?:social\s+security|ssn)/gi,
-    label: "Last 5 digits of SSN",
-  },
-  {
-    pattern:
-      /last\s+(?:four|4)\s+digits\s+(?:of\s+(?:your\s+)?(?:social\s+security|ssn)|of\s+your\s+social\s+security\s+number)|\bssn\b|social\s+security\s+number(?!\s*and)/gi,
-    label: "Last 4 digits of SSN",
-  },
-  {
-    pattern:
-      /indicate\s+["']?(?:none|NONE)["']?|check\s+the\s+box\s+that\s+indicates\s+you\s+do\s+not\s+have\s+an?\s+id|do\s+not\s+have\s+an?\s+id\s+number|have\s+not\s+been\s+issued\s+any\s+of\s+these\s+numbers/gi,
-    label: "Indicate 'None' if not applicable",
-  },
-  {
-    pattern:
-      /upload\s+(?:a\s+)?(?:digital\s+)?(?:image\s+of\s+)?your\s+signature|digital\s+image\s+of\s+your\s+signature/gi,
-    label: "Signature upload (if no state ID)",
-  },
-  {
-    pattern:
-      /(?:can\s+still|you\s+can\s+still)\s+(?:register|submit)\s+(?:a\s+voter\s+registration\s+)?(?:application\s+)?by\s+mail|register\s+by\s+mail\s+(?:without\s+id|as\s+fallback)?/gi,
-    label: "Can register by mail without ID",
-  },
-];
+export type IdRequirementType = keyof typeof ID_REQUIREMENTS;
 
 function stripHtmlForMatching(text: string): string {
   return text
@@ -54,12 +88,17 @@ function stripHtmlForMatching(text: string): string {
     .trim();
 }
 
+export type IdRequirementsResult = {
+  bullets: IdRequirementType[];
+  fullText: string;
+};
+
 /**
- * Extracts a short bulleted list of ID requirements from long registration
- * instruction text using pattern matching.
+ * Extracts ID requirement types from long registration instruction text
+ * using pattern matching.
  *
  * @param instructions - Raw instruction string (e.g. from authority.registration.online.instructions or byMail.idInstructions)
- * @returns Object with bullets array (may be empty) and fullText for accordion display
+ * @returns Object with bullets array (IdRequirementType enum values, ordered) and fullText for accordion display
  */
 export function extractIdRequirements(
   instructions: string | null,
@@ -70,15 +109,22 @@ export function extractIdRequirements(
   }
 
   const plainText = stripHtmlForMatching(fullText);
-  const seen = new Set<string>();
-  const bullets: string[] = [];
+  const seen = new Set<IdRequirementType>();
+  const bullets: IdRequirementType[] = [];
 
-  for (const { pattern, label } of ID_REQUIREMENT_PATTERNS) {
-    if (pattern.test(plainText) && !seen.has(label)) {
-      seen.add(label);
-      bullets.push(label);
+  for (const [type, config] of Object.entries(ID_REQUIREMENTS) as [
+    IdRequirementType,
+    (typeof ID_REQUIREMENTS)[IdRequirementType],
+  ][]) {
+    if (config.pattern.test(plainText) && !seen.has(type)) {
+      seen.add(type);
+      bullets.push(type);
     }
   }
+
+  bullets.sort(
+    (a, b) => ID_REQUIREMENTS[a].order - ID_REQUIREMENTS[b].order,
+  );
 
   return { bullets, fullText };
 }

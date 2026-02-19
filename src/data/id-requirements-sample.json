@@ -1,0 +1,826 @@
+[
+  {
+    "label": "DC byMail",
+    "input": "Federal law now requires that all voter registration applications must include either the applicant's DC-issued driver's license number or the last four digits of the applicant's Social Security number in order to be processed. If you have not been issued any of these numbers you must indicate \"None\".",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "DC online",
+    "input": "To register in DC, you must provide your DC DMV-issued identification number or if you do not have a DMV-issued identification number, the last four digits of your Social Security number. If you are registering to vote in the District of Columbia for the first time and submit a voter registration application electronically, you may be required to provide identification that shows your name and current address the first time you vote in an election. You may attach a copy of your document to the online form, or you may be required to show it the first time you vote in an election in the District of Columbia. Acceptable forms include: current and valid government-issued photo ID; current utility bill, cell phone bill, bank statement, government check, or paycheck dated no more than 90 days before submitting your application if a copy is submitted online or 90 days before voting if shown at a voting location; any other government-issued document.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Alaska byMail",
+    "input": "When registering by mail in Alaska, you are required to provide ONE of the following ID numbers: Alaska driver’s license; Alaska state ID; last four digits of your Social Security number.<br><br>If you have not been issued any of these numbers, indicate that you do not have an ID number.<br><br>If you submit a voter registration application by mail and you are not already registered to vote in Alaska, you must provide proof of identity. You may include a copy of your proof of identity with your application, or you must verify your identity the first time you vote. Acceptable forms include: driver’s license; state ID card; US passport; current and valid photo identification; birth certificate; Hunting and Fishing license",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Alaska online",
+    "input": "To register online in Alaska, you need an Alaska driver's license or state ID and a Social Security number. The address on the ID needs to match the address where you're registering to vote. If you don't have an Alaska-issued ID, you can still register by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Alabama byMail",
+    "input": "If you have one, you must provide your Alabama driver's license number or Alabama non-driver's identification card number. If you do not have an Alabama driver's license or non-driver's identification card, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers you must indicate \"NONE\" and a unique identifier will be provided for you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Alabama online",
+    "input": "To register online in Alabama, you need an Alabama Driver's License or an Alabama Non-Driver's Identification card. If you don’t have an Alabama-issued ID, you can still register by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Arkansas byMail",
+    "input": "Your completed voter registration form must contain your Arkansas driver's license number or nonoperating identification number. If you do not have a driver's license or nonoperating identification, you must include the last four digits of your Social Security number. If you do not have a driver's license or a nonoperating identification or a Social Security number, please indicate \"NONE\" on the form. A unique identifying number will be assigned by the State.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Arizona byMail",
+    "input": "Your completed voter registration form must contain the number of your Arizona driver's license, or non-operating identification license issued pursuant to A.R.S. Sec. 28-3165, if the license is current and valid. If you do not have a current and valid Arizona driver's license or non-operating identification license, you must include the last four digits of your Social Security number if one has been issued to you. If you do not have a current and valid driver's license or non-operating identification license or a Social Security number, please write \"NONE\" on the form. A unique identifying number will be assigned by the Secretary of State.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Arizona online",
+    "input": "You need an Arizona driver's license or non-operating ID to use Arizona's online voter registration system. If you don't have an Arizona-issued ID, you can still register by mail to vote.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "California byMail",
+    "input": "When you register to vote, you must provide your California driver's license or California identification card number, if you have one. If you do not have a driver's license or ID card, you must provide the last four digits of your Social Security number (SSN). If you do not include this information, you will be required to provide identification when you vote if it is your first time voting in a federal election.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "California online",
+    "input": "To register online in California, you need to provide a California-issued driver license or California identification card number, the last four digits of your Social Security number, and consent to the use of your DMV-stored digital signature to use California’s online voter registration system. If you don't have a California-issued ID or don't want to provide consent for the use of your digital signature, you can use the California Online Voter Registration system to fill out an application. You must then print the form or request that your local election office print and mail the form to you. The printed form must be completed and returned to your local election office by mail or in person.",
+    "expected": [
+      "SIGNATURE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Colorado byMail",
+    "input": "When submitting your application by mail in Colorado, you are required to provide your Colorado driver’s license number or Colorado ID card number if you have one. If you have not been issued one of these ID numbers, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Colorado online",
+    "input": "To register online in Colorado, you need to provide at least ONE of the following: Colorado Driver’s License number, Colorado ID card number, OR the last four digits of your Social Security number. If you don’t have a Colorado Driver’s License, Colorado ID card, or Social Security number, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Connecticut byMail",
+    "input": "When you register to vote, you must provide your Connecticut driver's license number, or if none, the last four digits of your Social Security number.",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Connecticut online",
+    "input": "To use the online voter registration system you must have a current and valid driver’s license, learner’s permit, or non-driver photo identification card issued by the Connecticut Department of Motor Vehicles (DMV) and a signature on file with DMV.",
+    "expected": [
+      "SIGNATURE",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Delaware byMail",
+    "input": "When submitting your application by mail in Delaware, you are required to provide your Delaware driver’s license number or Delaware State ID number. If you do not have a Delaware-issued ID, you are required to provide the last four digits of your Social Security number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Delaware online",
+    "input": "To register online in Delaware, you must be at least 18 years old on or before the next general election. You must provide ONE of the following when registering online: Delaware driver's license number, Delaware State ID number, or the last four digits of your Social Security number.",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Florida byMail",
+    "input": "If you have one, you must provide your Florida driver's license number or Florida identification card number. If you do not have a Florida driver's license or identification card, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Florida online",
+    "input": "To register online in Florida, you are required to provide the last four digits of your Social Security number and the issued date and ID number from your Florida driver license or Florida identification card issued by the Florida Department of Highway Safety and Motor Vehicles. If you don’t have a Florida-issued ID or Social Security number, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Georgia byMail",
+    "input": "Federal law requires you to provide your full Georgia driver's license number or Georgia-issued ID number. If you do not have a Georgia driver's license or Georgia ID, you must provide the last 4 digits of your Social Security number. Providing your full Social Security number is optional. Your Social Security number will be kept confidential and may be used for comparison with other state agency databases for voter registration identification purposes. If you do not possess a Georgia driver's license or Social Security number, a unique identifier will be provided for you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Georgia online",
+    "input": "To register online in Georgia, you are required to provide your valid Georgia driver’s license number or your ID card number issued by the Georgia Department of Driver Services (DDS). If you don’t have a Georgia driver’s license or ID card issued by DDS, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Hawaii byMail",
+    "input": "When you register to vote, you must provide your Hawaii driver’s license or State identification number, if you have one. If you do not have a driver’s license or ID number, you must provide the last four digits of your Social Security number (SSN). If you do not have any of this information, the Clerk’s Office will issue you a unique identification number, which will serve to identify you for voter registration purposes.",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Hawaii online",
+    "input": "You need a Hawaii ID and a Social Security number to use Hawaii's online voter registration system. If you don’t have a Social Security number or a Hawaii-issued ID, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Iowa byMail",
+    "input": "When submitting your application by mail in Iowa, you are required to provide ONE of the following: Iowa driver’s license number, Iowa non-operators ID number, or last four digits of your Social Security number. If you have not been issued any of these numbers, indicate you do not have an ID number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Iowa online",
+    "input": "To register online in Iowa, you need the last FIVE digits of your Social Security number and either an Iowa Driver’s License or an Iowa Non-operators ID. If you have not been issued a Social Security number or Iowa ID number, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Idaho byMail",
+    "input": "When registering by mail in Idaho, you need an Idaho Driver’s License number or the last four digits of your Social Security number. If you registered to vote on or after July 1, 2023, and you do not have an Idaho-issued ID or your residence does not match the address on your ID, you must provide proof of residence to your county elections office or at the polls. Proof of residency documents must be current and include the address you wish to use when registering. Acceptable forms can include (but are not limited to) an Idaho Driver’s License or Idaho ID card, US federal photo ID, Tribal ID card, Concealed Weapons License issued by an Idaho county sheriff, proof of insurance, mortgage, or rental agreement, utility bill (excluding cell phone bills), bank or credit card statement, paystub, paycheck, or government-issue check.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Idaho online",
+    "input": "You need an Idaho ID to use Idaho's online voter registration system. If your residence does not match the address on your ID, you are required to provide proof of residence. Acceptable forms include (but are not limited to): proof of insurance; mortgage, lease, or rental agreement; utility bill (excluding cell phone); bank or credit card statement; paystub or paycheck; and enrollment letter from an Idaho high school or university. If you don’t have an Idaho DMV-issued ID, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Illinois byMail",
+    "input": "When submitting your application by mail in Illinois, you are required to provide your Illinois Driver’s License number, Illinois Secretary of State ID card number, or the last four digits of your Social Security number if you have one. If you have not been issued any of these numbers, indicate you do not have an ID number. If you are registering to vote for the first time in your jurisdiction and you do not include an ID number on your mail-in application, you must submit with your form a copy of ONE of the following forms of ID: current and valid photo identification OR current utility bill, bank statement, government check, paycheck, or other government document that shows your name and address. If you do not include a copy of your ID, you will be required to provide identification when voting for the first time.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "FIRST_TIME_PROOF_WITH_APPLICATION",
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Illinois online",
+    "input": "To register online in Illinois, you are required to provide the last four digits of your Social Security number and ONE of the following ID numbers with its issuance date: Illinois Drivers License or Illinois State ID number. If you don’t have an Illinois-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Indiana byMail",
+    "input": "When submitting your application by mail in Indiana, you are required to provide your Indiana driver’s license number or Indiana Bureau of Motor Vehicles ID Card number. If you have not been issued one of these ID numbers, you must provide the last four digits of your Social Security number. If you do not have a Social Security number, indicate NONE and a voter ID number will be assigned to you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Indiana online",
+    "input": "To register using the Indiana online voter registration system, you are required to provide the number from your Indiana driver’s license or Indiana identification card issued by the Indiana Bureau of Motor Vehicles. If you don’t have an Indiana-issued driver’s license or identification card, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Kansas byMail",
+    "input": "When submitting your application by mail in Kansas, you are required to provide your current Kansas driver’s license number or nondriver’s identification card number. If you do not have either, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, write “none” in the ID number box.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Kansas online",
+    "input": "To register online in Kansas, you need a Kansas driver's license or a Kansas non-driver's identification card. If you don’t have a Kansas-issued ID, you can still register by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Kentucky byMail",
+    "input": "When submitting your application by mail in Kentucky, you are required to provide your full Social Security number. If you do not have a Social Security number, leave that field blank. You will not be denied the right to register to vote if you do not include your Social Security number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Kentucky online",
+    "input": "To register online in Kentucky, you need to provide your full Social Security number. If you don’t have a Social Security number, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Louisiana byMail",
+    "input": "You are required to provide your Louisiana driver's license number or Louisiana special ID card number, if you have one. If you do not have a Louisiana driver's license number or Louisiana special ID card number, you are required to include the last four digits of your Social Security number. Your SSN remains confidential and is only used for registration purposes. If you have not been issued any of these numbers, include a copy of ONE of the following: copy of a current and valid photo ID; copy of a current utility bill, bank statement, government check, paycheck, or other government document that shows your name and address.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Louisiana online",
+    "input": "To register online in Louisiana, you need to provide the four-digit audit code from your Louisiana driver's license or Louisiana special ID. If you are at least 17 years old and don’t have a Louisiana driver's license or Louisiana special ID, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Massachusetts byMail",
+    "input": "Federal law requires that you provide your Massachusetts driver's license number to register to vote. If you do not have a current and valid Massachusetts driver's license, you must provide the last four digits of your Social Security number. If you have neither, you must write \"NONE\" in the box  and a unique identifying number will be assigned to you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Massachusetts online",
+    "input": "To register online in Massachusetts, you need ONE of the following ID numbers issued by the Massachusetts Registry of Motor Vehicle (RMV): Driver's License, Learner's Permit, or State ID. If you don’t have a RMV-issued ID, you can still register by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Maryland byMail",
+    "input": "If you have a current, valid Maryland driver's license or a Motor Vehicle Administration identification card (MVA ID), you must enter your driver's license or identification number. If you do not have a current, valid Maryland driver's license or MVA ID, you must enter the last 4 digits of your Social Security number.",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Maryland online",
+    "input": "You need an ID issued by the Maryland Motor Vehicle Administration (MVA) and a Social Security number to use Maryland's online voter registration system.",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Maine byMail",
+    "input": "When submitting your application by mail in Maine, you are required to provide your Maine driver’s license or State ID number. If you do not have a Maine driver’s license or State ID, you are required to include the last four digits of your Social Security number. If you have not been issued any of these numbers, write \"NONE\" in the space for ID number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Maine online",
+    "input": "To register online in Maine, you need to provide at least ONE of the following: Maine driver’s license number, Maine state ID card number, or the last four digits of your Social Security number. If you don’t have a Maine driver’s license, Maine state ID card, or Social Security number, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Michigan byMail",
+    "input": "Your completed voter registration form must contain your Michigan driver's license number or Michigan-issued personal identification card number. If you do not have a driver's license or state issued personal identification card, you must include the last four digits of your Social Security number. If you do not have a driver's license or a state issued personal identification card or a Social Security number, please write \"NONE\" on the form. A unique identifying number will be assigned by the State.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Michigan online",
+    "input": "You need a Michigan driver's license or state ID and the last four digits of your Social Security number to use Michigan's online voter registration system. If you don’t have a Social Security number or Michigan-issued ID, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Minnesota byMail",
+    "input": "You are required to provide your Minnesota driver's license or state ID number to register to vote. If you do not have a Minnesota driver's license or state ID, you will have to provide the last four digits of your Social Security number. If you have neither, indicate \"NONE\" on the form.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Minnesota online",
+    "input": "To register online in Minnesota, you need to provide your email address and ONE of the following: Minnesota driver’s license number, Minnesota identification card number, OR the last four digits of your Social Security number. If you don’t have a Minnesota-issued ID or Social Security number, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Missouri byMail",
+    "input": "Your completed voter registration form must contain your Missouri driver's license number and the last four digits of your Social Security number. If you do not have a driver's license or a Social Security number, please indicate “NONE” on the form. A unique identifying number will be assigned by the State.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Missouri online",
+    "input": "Missouri requires that you use a tablet, mobile device, or other touchscreen device to register online to vote. This is because you will be required to provide a signature during the process.",
+    "expected": [
+      "SIGNATURE"
+    ]
+  },
+  {
+    "label": "Mississippi byMail",
+    "input": "You are required to provide your current and valid Mississippi driver's license number or, if you don't have one, the last four digits of your Social Security number. If you have not been issued any of these numbers, include a copy of ONE of the following: current and valid photo ID or current utility bill, bank statement, government check, paycheck or other government document that shows your name and address.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Montana byMail",
+    "input": "You must provide your Montana driver's license number, Montana ID card number, or the last 4 digits of your Social Security number. If you have not been issued any of these numbers, indicate “NONE” in the identification number box and include a copy of ONE of the following: United States passport; Montana tribal ID card; military ID card; Montana concealed carry permit; photo identification, including, but not limited to, a school district or postsecondary education photo identification with your name AND a current utility bill, bank statement, paycheck, government check, or other government document that shows your name and current address",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "North Carolina byMail",
+    "input": "When submitting a voter registration application by mail in North Carolina, you are required to provide your valid North Carolina driver’s license or DMV ID number. If you do not have a North Carolina-issued ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate you do not have an ID number and include a copy of ONE of the following: current utility bill, bank statement, government check, paycheck, or other government document that shows your name and address.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "North Carolina online",
+    "input": "To register online in North Carolina, you must be an existing North Carolina Division of Motor Vehicles (NCDMV) customer and you will need your DMV-issued driver’s license or ID number and Social Security number. Existing DMV customers may register to vote, update their voter registration address, or update their party affiliation. They may not change their name. If you don’t have a NCDMV-issued ID, you can still submit a voter registration application by mail or in person at your county election office.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Nebraska byMail",
+    "input": "When submitting your application by mail in Nebraska, you are required to provide your Nebraska driver’s license or state ID number. If you do not have a Nebraska-issued ID, you are required to provide the last four digits of your Social Security number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Nebraska online",
+    "input": "To register online in Nebraska, you need a valid Nebraska State ID or Driver’s License. If you don’t have a Nebraska-issued ID, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New Jersey byMail",
+    "input": "When submitting your application by mail in New Jersey, you are required to provide your New Jersey Driver’s License number or non-driver ID card number issued by the New Jersey Motor Vehicle Commission (MVC). If you do not have a New Jersey-issued ID, you must provide the last four digits of your Social Security Number. If you have not been issued any of these numbers, indicate you do not have an ID number and include a copy of ONE of the following with your application: current and valid photo ID or document with your name and current address. If you do not include a copy of acceptable ID with your application, you will need to verify your identity the first time you vote.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New Jersey online",
+    "input": "To register online in New Jersey, you need to provide your New Jersey Driver’s License number OR non-driver ID card number issued by the New Jersey Motor Vehicle Commission (MVC). If you do not have a New Jersey-issued ID, you must provide your Social Security number AND use a device that allows you to sign on-screen or upload your signature. If you don’t have any of the above, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SIGNATURE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New Mexico byMail",
+    "input": "You must provide your New Mexico driver's license or state ID number. If you don't have one, you can use the last four digits of your Social Security number. This registration card containing the last four digits of your Social Security number will become part of the permanent voter registration records of your locality, which are open to inspection by the public in the office of the county clerk. However, the last four digits of your Social Security number and date of birth will remain confidential and will not be disclosed to the public. Computerized listings of limited voter registration information (without Social Security number or birth date) are available to the general public, and are furnished upon request to incumbent election officeholders, candidates, political parties, courts, and non‐profit organizations promoting voter participation and registration, for political purposes only (Sec.1-5-19B, NMSA 1978).",
+    "expected": [
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New Mexico online",
+    "input": "To register online in New Mexico, you need a Social Security number and either a New Mexico Driver’s License or a New Mexico Motor Vehicles Division (MVD) ID. If you don’t have a New Mexico-issued ID, you can still register by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Nevada byMail",
+    "input": "When submitting your application by mail in Nevada, you are required to provide your Nevada driver’s license or state ID number if you have one. If you have not been issued one of these ID numbers, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE. If you select this option, you will be contacted by your County Election Department for more information once your application is received.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Nevada online",
+    "input": "To register online in Nevada, you need a current and valid driver’s license or ID card issued by the Nevada DMV and the last four digits of your Social Security number. If you don’t have a Nevada-issued ID or Social Security number, you can still register by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New York byMail",
+    "input": "When submitting your application by mail in New York, you are required to provide your valid New York State driver's license, permit, or ID number. If you do not have a New York State-issued ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "New York online",
+    "input": "To register online in New York, you need a NY.Gov ID. If you have previously used NY.Gov with another agency, you may use the same login to access the Online Voter Registration portal. If you have not used NY.Gov, you will need to create an account.<br><br>You will be asked to provide your New York State-issued ID number. If you don’t have a New York State-issued ID, you can still submit a voter registration application online, but you will have to show ID the first time you vote. You can also submit a voter registration application by mail or in person.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "NONE_FALLBACK"
+    ]
+  },
+  {
+    "label": "Ohio byMail",
+    "input": "Your Social Security number is requested. Providing this number is voluntary. This information allows the Board of Elections to verify your registration if necessary (O.R.C. 3503.14). [Federal law requires that you provide your Ohio driver's license number to register to vote. If you do not have a driver's license then you will have to provide at least the last four digits of your Social Security number. If you don't have either number you will have to write \"NONE\" on the form and the State will assign you a number.]",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Ohio online",
+    "input": "To register online in Ohio, you need the last four digits of your Social Security number and either an Ohio driver’s license or an Ohio identification card number. If you don’t have an Ohio-issued ID or Social Security number, you can still register by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Oklahoma byMail",
+    "input": "When submitting your application by mail in Oklahoma, you are required to provide your Oklahoma driver’s license or state ID number if you have one. If you have not been issued one of these ID numbers, you must provide the last four digits of your Social Security number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Oklahoma online",
+    "input": "To register online in Oklahoma, you must have an Oklahoma Driver License or state ID. You must also have a digital signature on file with Service Oklahoma. The name and address on your ID must match your voter registration exactly. If you don't have an Oklahoma-issued ID or a digital signature on file with Service Oklahoma, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SIGNATURE",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Oregon byMail",
+    "input": "When submitting your application by mail in Oregon, you are required to provide your valid Oregon driver's license, permit, or ID number. If you do not have an Oregon-issued ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE and include a copy of ONE of the following with your application: valid photo ID; current utility bill, bank statement, government check, paycheck, or other government document that shows your name and address; proof of eligibility under the Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA) or the Voting Accessibility for the Elderly and Handicapped Act (VAEH)",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Oregon online",
+    "input": "To register online in Oregon, you need to provide ONE of the following: Oregon driver’s license, Oregon permit number, OR ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV). If you don’t have an Oregon-issued ID, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Pennsylvania byMail",
+    "input": "When submitting your application by mail in Pennsylvania, you are required to provide your Pennsylvania driver’s license number or PennDOT ID number if you have one. If you have not been issued a Pennsylvania ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate that you do not have an ID number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Pennsylvania online",
+    "input": "To register online in Pennsylvania, you need to provide your Pennsylvania driver’s license number or PennDOT ID card number. If you do not have a Pennsylvania-issued ID, you need to provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate you do not have an ID number. To complete the online voter registration application without a PennDOT ID number, you must upload a digital image of your signature. You can also request and sign a signature form from the Department of State or print and sign a voter registration application. Both the signature form and the printed registration application must be returned to your county elections office by mail or in person. If you don’t have an ID number and do not upload an image of your signature, you can still submit a voter registration application by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SIGNATURE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Rhode Island byMail",
+    "input": "You are required to provide your Rhode Island DMV-issued driver’s license or State ID number if you have one. If you have not been issued one of these ID numbers, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, the State of Rhode Island will assign a unique identifying number to you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Rhode Island online",
+    "input": "To register online in Rhode Island, you need to provide your Rhode Island DMV-issued driver’s license or State ID number. If you don’t have a Rhode Island-issued ID, you can still submit a voter registration form by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "South Carolina byMail",
+    "input": "When submitting your application by mail in South Carolina, you are required to provide at least the last four digits of your Social Security number and a copy of ONE of the following forms of ID: current valid photo ID; current utility bill, bank statement, paycheck or other government document that shows your name and address in the county where you register to vote<br> <br>If you do not provide a copy of proof of ID, you will be required to provide it before voting.<br><br>You are exempt from the ID requirement when submitting a voter registration application by mail if you: are 65 years old or older; have a disability; are a member of the US Uniformed Services or Merchant Marines or their family; are a US citizens residing outside the US",
+    "expected": [
+      "EXEMPTIONS",
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN"
+    ]
+  },
+  {
+    "label": "South Carolina online",
+    "input": "To register online in South Carolina, you need a Social Security number and either a South Carolina driver’s license or a South Carolina Department of Motor Vehicles (SCDMV) ID. If you don’t have a South Carolina-issued ID, you can still register by mail.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "South Dakota byMail",
+    "input": "When submitting your application by mail in South Dakota, you are required to provide your South Dakota Driver License number or South Dakota Non-Driver ID number. If you do not have a South Dakota-issued ID, you are required to provide the last four digits of your Social Security number. If you have not been issued any of these numbers, you can still visit your county auditor's office and complete your voter registration in person.  You will you will be asked to sign a statement verifying the fact that you do not have a valid South Dakota driver license, a South Dakota non-driver identification number, or a Social Security number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Tennessee byMail",
+    "input": "When submitting your application by mail in Tennessee, you are required to provide your full Social Security number, if you have one.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Tennessee online",
+    "input": "To register online in Tennessee, you need your Social Security number and ONE of the following: Tennessee driver's license or Tennessee Department of Safety and Homeland Security ID. If you submit a voter registration application online and are registering for the first time in your county, you must vote in person the first time after registering. If you enrolled in the Safe At Home program or permanent absentee voting, you are not required to vote in person for the first time.",
+    "expected": [
+      "FIRST_TIME_ID_AT_POLLS",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Texas byMail",
+    "input": "You must provide your Texas driver's license number or Texas personal ID number to register to vote. If you do not have a Texas driver's license or personal ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE. A unique identifying number will instead be assigned to you by your State.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Utah byMail",
+    "input": "Your completed voter registration form must contain your Utah Driver License number or your Utah State Identification number if you have one. If you do not have a Utah Driver License or a Utah State Identification card, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, indicate NONE.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Utah online",
+    "input": "To register online in Utah, you are required to provide your valid Utah driver license number or valid Utah ID number. Your address must also match the address on file with the Driver License Division. If your driver license address is not current, you must update your address with the Driver License Division before submitting your online voter registration. If you don't have a Utah-issued ID, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Virginia byMail",
+    "input": "When submitting your application by mail in Virginia, you are required to provide your full Social Security number if you have one.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Virginia online",
+    "input": "To register online in Virginia, you need your full Social Security number and either a Virginia driver’s license or Virginia state ID number. If you don’t have a Virginia-issued ID or Social Security number, you can still register by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Vermont byMail",
+    "input": "When registering by mail in Vermont, you need to provide your Vermont driver’s license number or Vermont personal ID (PID) number. If you do not have a Vermont-issued ID, you must provide the last four digits of your Social Security number. If you do not have a Vermont-issued ID or Social Security number, indicate NONE on the form. The Secretary of State's office will assign you a unique identifying number.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Vermont online",
+    "input": "To register online in Vermont, you need to provide ONE of the following ID numbers: Vermont driver’s license, Vermont permit, or Vermont ID. If you do not have a Vermont-issued ID, you must provide the last four digits of your Social Security number. If you are registering to vote in Vermont for the first time, you must include a copy of ONE form of ID. Acceptable forms include: valid driver’s license, valid US passport, current utility bill, current bank statement, or another government document containing your residential address. If you don’t have a Vermont-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN"
+    ]
+  },
+  {
+    "label": "Washington byMail",
+    "input": "When registering by mail in Washington, you are required to provide your Washington driver license, permit, or ID number or the last four digits of your Social Security number. If you have not been issued any of these numbers, you can leave that field blank. After you submit your application, your local election office will reach out to give you instructions about using an alternate ID to complete the voter registration process.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Washington online",
+    "input": "To register online in Washington, you need to provide ONE of the following: Washington driver license number, Washington permit number, Washington state ID number, or the last 4 digits of your Social Security number. If you don't have a Washington-issued ID or Social Security number, you can still register by mail or in person with an alternate ID.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Wisconsin byMail",
+    "input": "When registering by mail in Wisconsin, you are required to provide your valid and unexpired Wisconsin driver license or Wisconsin state ID number and the expiration date. If you have not been issued a Wisconsin ID, or if you have an expired, canceled, suspended, or revoked Wisconsin-issued ID, you must provide the last four digits of your Social Security number. If you have not been issued any of these numbers, check the box that indicates you do not have an ID number. You must also provide proof of residence when registering to vote. If you submit your application by mail, you must include a copy of proof of residence or submit proof of residence in an electronic format. Acceptable forms include but are not limited to: current and valid Wisconsin Driver License or State ID card or any official ID card or license issued by the Wisconsin government. When filling out a voter registration application, you must review the registration qualifications in Box 1. If you meet the requirements, check all of the boxes. If you do not meet all of the requirements, do not submit the form.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Wisconsin online",
+    "input": "To register online in Wisconsin, you are required to provide your Wisconsin driver license number or Wisconsin state ID card number issued by the Wisconsin Department of Motor Vehicles (DMV). If you don’t have a Wisconsin-issued driver license or ID card, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "West Virginia byMail",
+    "input": "Enter your West Virginia driver’s license or DMV-issued non-driver’s ID number. If you do not have a West Virginia driver’s license or DMV-issued ID, enter the last four digits of your Social Security number. If you do not have a driver’s license, DMV ID, or Social Security number, enter the word “NONE.” An ID number will be assigned to you.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "West Virginia online",
+    "input": "To register online in West Virginia, you need the last four digits of your Social Security number and either a West Virginia Driver’s License or ID card. If you don’t have a West Virginia-issued ID or a Social Security number, you can still submit a voter registration application by mail or in person.",
+    "expected": [
+      "NONE_FALLBACK",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  },
+  {
+    "label": "Wyoming byMail",
+    "input": "When submitting your application by mail in Wyoming, you must include your Wyoming driver’s license number and provide proof of identity, residence, and citizenship. Your form must also be notarized before mailing.<br><br>Acceptable forms of proof of identity AND residence include: Wyoming driver’s license; United States passport; tribal ID card issued by a federally recognized tribe<br><br>If you have not been issued any of these forms of ID, you may provide your Wyoming driver's license number or the last 4 digits of your Social Security number, along with one of the following forms of identification that can also serve as proof of residence if it lists a Wyoming address. Acceptable forms include: valid US passport; driver's license or ID card issued by the federal government, any state, or an outlying possession of the United States; photo ID card issued by the University of Wyoming, a Wyoming community college, or a Wyoming public school; military ID card; ID card issued to a dependent of a member of the United States Armed Forces; tribal ID card issued by a federally recognized tribe<br><br>If you have not been issued a Wyoming driver's license number or a Social Security number, indicate you do not have an ID number and contact your county clerk. You must provide two of the following forms of identification that can also serve as proof of residence if it lists a Wyoming address. Acceptable forms include: certificate of United States citizenship; certificate of naturalization; United States Military Draft Record or Selective Service Card or Record; voter registration card from another state or county; United States Social Security card; certificate of Birth Abroad issued by the Department of State; original or certified copy of birth certificate bearing an official seal; any form of identification issued by an official agency of the United States or a state; void Wyoming driver's license or ID card; temporary Wyoming driver's license or ID card<br><br>You can find a full list of acceptable forms of proof of identity, residence, and citizenship on the <a href=\"https://sos.wyo.gov/elections/state/registeringtovote.aspx\">Wyoming Secretary of State</a> website.",
+    "expected": [
+      "NONE_FALLBACK",
+      "PROOF_OF_CITIZENSHIP",
+      "PROOF_OF_ID_OR_RESIDENCE",
+      "SSN",
+      "STATE_DL_OR_ID"
+    ]
+  }
+]
