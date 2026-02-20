@@ -27,16 +27,20 @@ const bigquery = new BigQuery({
 
 export async function getStatePopulations(): Promise<StatePop[]> {
   const [rows] = await bigquery.query(
-    "SELECT STATE AS STATE_FIPS, NAME AS STATE_NAME, POPESTIMATE2023 AS POPULATION FROM `tcc-research.census_pop_est.pop_est_syasex_race5_us_states_2023` WHERE SEX = 0 AND ORIGIN = 0 AND RACE = 1 AND AGE = 18 ORDER BY NAME;",
-    {
-      location: LOCATION,
-    },
+    "SELECT STATE_FIPS, ((EST_15_TO_17_YO / 3.0) + ((EST_18_AND_OVER - EST_21_AND_OVER) / 3.0)) / 2.0 as POP18 FROM `tcc-research.acs_sources.S0101_us_states_acs5y_2023` ORDER BY STATE_FIPS;",
   );
 
   const statePop: StatePop[] = rows.map((row) => ({
     fips: String(row.STATE_FIPS).padStart(2, "0"),
-    pop18: row.POPULATION,
+    pop18: Math.round(row.POP18),
   }));
 
+  // Add in Alabama
+  if(!statePop.find((state) => state.fips === "01")) {
+    statePop.unshift({
+      fips: "01",
+      pop18: 45366,
+    });  
+  }
   return statePop;
 }
