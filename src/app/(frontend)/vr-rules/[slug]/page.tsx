@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
 import { IDRequirementsBlock } from "@/components/IDRequirementsBlock";
 import authoritiesJson from "@/data/authorities.json";
+import authoritiesNycJson from "@/data/authorities-nyc.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
@@ -36,6 +37,7 @@ import numeral from "numeral";
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
+const authoritiesNyc = authoritiesNycJson as unknown as Authority;
 const elections = electionsJson as Election[];
 
 type PageProps = {
@@ -86,8 +88,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               title="Online Pre-registration:"
               instructions={authority.youthRegistration.onlineInstructions}
               url={
-                authority.youthRegistration.online?.url ??
                 authority.youthRegistration.url ??
+                authority.registration.online?.url ??
                 null
               }
               label="Pre-register to vote online"

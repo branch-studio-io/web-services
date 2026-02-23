@@ -34,8 +34,6 @@ export type YouthRegistration = {
   inPersonInstructions: string | null;
   byMailInstructions: string | null;
   url?: string | null;
-  /** When present, use for Online Pre-registration link; else fallback to top-level url */
-  online?: { url?: string | null };
   eligibilityByElection: {
     date: string | null;
   };

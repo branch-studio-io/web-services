@@ -1,0 +1,31 @@
+{
+  "ocdId": "ocd-organization/country:us/state:ny/place:new_york/government",
+  "registration": {
+    "statusUrl": "https://amiregistered.vote.nyc/",
+    "formUrl": "https://vote.nyc/page/register-vote#p3",
+    "noRegistrationRequiredInstructions": null,
+    "methods": ["byMail", "online"],
+    "byMail": {
+      "supported": true,
+      "url": "https://vote.nyc/page/register-vote#p3",
+      "idInstructions": "To register to vote by mail, you will typically need to provide identifying information such as your driver’s license or non-driver ID number, or the last four digits of your Social Security number.<br>If you do not have those numbers, you may need to provide another form of ID that shows your name and address, such as a photo ID, utility bill, bank statement, paycheck, government check, or other government document. In some cases, you may need to include a copy of this ID with your registration form.<br>If your identity cannot be verified before Election Day, you may be asked to show ID the first time you vote.",
+      "signatureInstructions": "When signing a voter registration form, you are generally required to confirm (under penalty of law) that you meet your state’s voter eligibility requirements, that the information you provided is true, and that the signature or mark on the form is yours.<br>By signing, you may also be affirming residency requirements and acknowledging that providing false information can result in criminal penalties, fines, or jail time.",
+      "citizenInstructions": null,
+      "newVoterInstructions": ""
+    },
+    "online": {
+      "supported": true,
+      "instructions": "To register, you must: Be a US citizen. Be 18 years old by the end of this year (you may pre-register at 16 or 17 but cannot vote until you are 18). Not be in prison for a felony conviction <br>Not claim the right to vote elsewhere <br>Not be found to be incompetent by a court<br>Be 18 years old by the end of this year (you may pre-register at 16 or 17 but cannot vote until you are 18)<br>Not be in prison for a felony conviction<br>Not claim the right to vote elsewhere<br>Not be found to be incompetent by a court.",
+      "url": "https://e-register.vote.nyc/"
+    }
+  },
+  "youthRegistration": {
+    "url": "https://e-register.vote.nyc/",
+    "formUrl": "https://vote.nyc/page/register-vote#p3",
+    "supported": "byAge",
+    "methods": "online,by-mail,in-person",
+    "onlineInstructions": "To register, you must: Be a US citizen. Be 18 years old by the end of this year (you may pre-register at 16 or 17 but cannot vote until you are 18). Not be in prison for a felony conviction. Not claim the right to vote elsewhere. Not be found to be incompetent by a court.",
+    "byMailInstructions": "To register to vote by mail, you will typically need to provide identifying information such as your driver’s license or non-driver ID number, or the last four digits of your Social Security number.<br>If you do not have those numbers, you may need to provide another form of ID that shows your name and address, such as a photo ID, utility bill, bank statement, paycheck, government check, or other government document. In some cases, you may need to include a copy of this ID with your registration form.<br>If your identity cannot be verified before Election Day, you may be asked to show ID the first time you vote.",
+    "eligibilityAge": "P16Y"
+  }
+}
