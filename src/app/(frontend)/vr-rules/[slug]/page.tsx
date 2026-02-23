@@ -85,12 +85,20 @@ export default async function StateVRRulesPage({ params }: PageProps) {
             <RegistrationInstructionsBlock
               title="Online Pre-registration:"
               instructions={authority.youthRegistration.onlineInstructions}
+              url={
+                authority.youthRegistration.online?.url ??
+                authority.youthRegistration.url ??
+                null
+              }
+              label="Pre-register to vote online"
             />
           )}
           {authority && authority.registration.online?.supported && (
             <RegistrationInstructionsBlock
               title="Online Registration:"
               instructions={authority.registration.online?.instructions ?? null}
+              url={authority.registration.online?.url ?? null}
+              label="Register to vote online"
             />
           )}
           {authority && authority.youthRegistration.byMailInstructions && (
@@ -155,11 +163,15 @@ function EligibilityBlock({ authority }: EligibilityBlockProps) {
 type RegistrationInstructionsBlockProps = {
   title: string;
   instructions: string | null;
+  url?: string | null;
+  label?: string | null;
 };
 
 function RegistrationInstructionsBlock({
   title,
   instructions,
+  url,
+  label,
 }: RegistrationInstructionsBlockProps) {
   const { bullets, fullText } = extractIdRequirements(instructions);
   return (
@@ -168,7 +180,12 @@ function RegistrationInstructionsBlock({
         {title}
       </h2>
       <div className="space-y-4">
-        <IDRequirementsBlock bullets={bullets} fullText={fullText} />
+        <IDRequirementsBlock
+          bullets={bullets}
+          fullText={fullText}
+          linkUrl={url}
+          linkLabel={label}
+        />
       </div>
     </div>
   );

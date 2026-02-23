@@ -3,18 +3,25 @@ import {
   type IdRequirementType,
   ID_REQUIREMENTS,
 } from "@/utils/idRequirements";
+import Link from "next/link";
 
 type IDRequirementsBlockProps = {
   fullText: string | null;
   bullets: IdRequirementType[];
+  /** Optional link to show in Full Details section */
+  linkUrl?: string | null;
+  linkLabel?: string | null;
 };
 
 export function IDRequirementsBlock({
   fullText,
   bullets,
+  linkUrl,
+  linkLabel,
 }: IDRequirementsBlockProps) {
   const text = fullText?.trim() ?? "";
-  if (!text) return null;
+  const hasLink = linkUrl && linkLabel;
+  if (!text && !hasLink) return null;
 
   return (
     <div className="space-y-4">
@@ -44,15 +51,29 @@ export function IDRequirementsBlock({
           </span>
           Full Details
         </summary>
-        <div className="mt-2">
-          <DemocracyWorksText
-            text={text}
-            renderers={{
-              paragraph: (children) => (
-                <p className="body-md mb-4">{children}</p>
-              ),
-            }}
-          />
+        <div className="mt-2 space-y-4">
+          {text && (
+            <DemocracyWorksText
+              text={text}
+              renderers={{
+                paragraph: (children) => (
+                  <p className="body-md mb-4">{children}</p>
+                ),
+              }}
+            />
+          )}
+          {hasLink && (
+            <p className="body-md">
+              <Link
+                href={linkUrl}
+                className="underline underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {linkLabel}
+              </Link>
+            </p>
+          )}
         </div>
       </details>
     </div>
