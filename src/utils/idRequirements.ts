@@ -47,7 +47,7 @@ export const ID_REQUIREMENTS = {
   NONE_FALLBACK: {
     order: 6,
     label: "None",
-    definition: "Optionally no ID allowed, see full details.",
+    definition: "Alternative options are available if you do not have ID. See full details.",
     pattern:
       /indicate\s+["']?none["']?|write\s+["']?none["']?|check\s+the\s+box.*do\s+not\s+have|leave\s+that\s+field\s+blank|do\s+not\s+have\s+an?\s+id|have\s+not\s+been\s+issued|state\s+assigns|unique\s+(?:identifier|id|identifying)\s+(?:number|will\s+be\s+provided)?|unique\s+identifier\s+will\s+be\s+provided|will\s+be\s+assigned|can\s+still\s+(?:register|submit|use)|register\s+by\s+mail|submit.*by\s+mail|visit.*county.*in\s+person|clerk'?s?\.?\s*office\s+will\s+issue|generate\s+a\s+pdf\s+form|do\s+not\s+possess.*(?:driver|social\s+security)/i,
   },
