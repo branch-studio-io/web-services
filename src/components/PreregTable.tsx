@@ -10,7 +10,8 @@ import {
   PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
-import { ChevronRightIcon, XMarkIcon } from "@heroicons/react/16/solid";
+import { extractIdRequirements } from "@/utils/idRequirements";
+import { CheckIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import numeral from "numeral";
 import { useMemo } from "react";
@@ -52,7 +53,10 @@ export default function PreregTable({
   const registrationByState = useMemo(
     () =>
       new Map(
-        authorities.map((a) => [getStateCodeFromOcdId(a.ocdId), a.registration]),
+        authorities.map((a) => [
+          getStateCodeFromOcdId(a.ocdId),
+          a.registration,
+        ]),
       ),
     [authorities],
   );
@@ -115,6 +119,19 @@ export default function PreregTable({
               Online
             </th>
             <th
+              className="border-sand-600 border-r border-b px-4 py-1.5 text-center text-xs font-semibold tracking-wide text-gray-950 uppercase"
+              scope="col"
+            >
+              DMV Issued ID{" "}
+              <Link
+                href="#dmv-issued-id"
+                className="hover:underline focus:underline focus:outline-none"
+                aria-label="View DMV-issued ID explanation"
+              >
+                *
+              </Link>
+            </th>
+            <th
               className="border-sand-600 border-r border-b px-4 py-1.5 text-right text-xs font-semibold tracking-wide text-gray-950 uppercase"
               scope="col"
             >
@@ -129,6 +146,13 @@ export default function PreregTable({
             const statePop = statePopsByFips.get(state.fips);
             const nextElection = nextElectionByState.get(state.code);
             const rowBg = index % 2 === 0 ? "bg-white" : "bg-sand-300";
+
+            const onlineInstructions =
+              registration?.online?.instructions ??
+              youthReg?.onlineInstructions ??
+              null;
+            const { bullets } = extractIdRequirements(onlineInstructions);
+            const requiresDmvId = bullets.includes("STATE_DL_OR_ID");
 
             return (
               <tr key={state.fips} className={rowBg}>
@@ -164,17 +188,25 @@ export default function PreregTable({
                 </td>
                 <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
                   {registration?.byMail.supported && (
-                    <XMarkIcon
-                      className="mx-auto size-5 text-gray-950"
+                    <CheckIcon
+                      className="mx-auto size-5 text-green-600"
                       aria-label="By mail registration supported"
                     />
                   )}
                 </td>
                 <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
                   {registration?.online.supported && (
-                    <XMarkIcon
-                      className="mx-auto size-5 text-gray-950"
+                    <CheckIcon
+                      className="mx-auto size-5 text-green-600"
                       aria-label="Online registration supported"
+                    />
+                  )}
+                </td>
+                <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
+                  {requiresDmvId && (
+                    <CheckIcon
+                      className="mx-auto size-5 text-green-600"
+                      aria-label="DMV-issued ID required for online registration"
                     />
                   )}
                 </td>
@@ -186,6 +218,25 @@ export default function PreregTable({
           })}
         </tbody>
       </table>
+      <div
+        id="dmv-issued-id"
+        className="mt-4 scroll-mt-4 text-sm text-gray-950"
+      >
+        * DMV-issued ID required to register to vote online. Eligible citizens
+        can print out and mail in a voter registration application without
+        DMV-issued ID. Check your state’s form for details. For assistance
+        learning what forms of ID you can use to register and vote, and for help
+        obtaining a valid form of ID, visit{" "}
+        <a
+          href="https://voteriders.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          VoteRiders.org
+        </a>
+        .
+      </div>
     </div>
   );
 }
