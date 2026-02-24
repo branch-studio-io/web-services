@@ -8,7 +8,10 @@ import statesJson from "@/data/states.json";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
-import { THREE_COLOR_DIVERGENT_SCALE } from "@/utils/globals";
+import {
+  THREE_COLOR_BORDER_DIVERGENT_SCALE,
+  THREE_COLOR_DIVERGENT_SCALE,
+} from "@/utils/globals";
 
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
@@ -60,10 +63,11 @@ export default async function VRRulesPage() {
               {categories.map(({ label, description }, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span
-                    className={`h-[22px] w-[22px] shrink-0`}
+                    className="mt-[1px] h-[22px] w-[22px] shrink-0 rounded-xs border"
                     aria-hidden
                     style={{
                       backgroundColor: THREE_COLOR_DIVERGENT_SCALE[index],
+                      borderColor: THREE_COLOR_BORDER_DIVERGENT_SCALE[index],
                     }}
                   />
                   <span>

@@ -7,6 +7,7 @@ import { getPreregStatus } from "@/utils/democracyWorkApi";
 import {
   formatElectionDate,
   parseStateCode,
+  PREREG_STATUS_BORDER_COLORS,
   PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
@@ -113,10 +114,12 @@ export default function PreregTable({
                   className="inline-flex items-center gap-2 hover:underline focus:underline focus:outline-none"
                 >
                   <span
-                    className="size-4 shrink-0 rounded-xs"
+                    className="size-4 shrink-0 rounded-xs border"
                     style={{
                       backgroundColor:
                         PREREG_STATUS_COLORS[getPreregStatus(youthReg)],
+                      borderColor:
+                        PREREG_STATUS_BORDER_COLORS[getPreregStatus(youthReg)],
                     }}
                     aria-hidden
                   />
@@ -285,10 +288,12 @@ export default function PreregTable({
                 <td className="border-sand-600 border-r px-4 py-1.5 text-sm font-medium text-gray-950">
                   <div className="flex items-center gap-2">
                     <div
-                      className="size-4 shrink-0 rounded-xs"
+                      className="size-4 shrink-0 rounded-xs border"
                       style={{
                         backgroundColor:
                           PREREG_STATUS_COLORS[getPreregStatus(youthReg)],
+                        borderColor:
+                          PREREG_STATUS_BORDER_COLORS[getPreregStatus(youthReg)],
                       }}
                       aria-hidden
                     />
