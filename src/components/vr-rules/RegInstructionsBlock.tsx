@@ -19,8 +19,8 @@ export function RegInstructionsBlock({
   url,
   label,
 }: RegInstructionsBlockProps) {
-  const { bullets, fullText } = extractIdRequirements(instructions);
-  const text = fullText?.trim() ?? "";
+  const bullets = extractIdRequirements(instructions);
+  const text = instructions?.trim() ?? "";
   const hasLink = url && label;
 
   return (

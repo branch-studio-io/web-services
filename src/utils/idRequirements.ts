@@ -86,27 +86,21 @@ function stripHtmlForMatching(text: string): string {
     .trim();
 }
 
-export type IdRequirementsResult = {
-  bullets: IdRequirementType[];
-  fullText: string;
-};
-
 /**
  * Extracts ID requirement types from long registration instruction text
  * using pattern matching.
  *
  * @param instructions - Raw instruction string (e.g. from authority.registration.online.instructions or byMail.idInstructions)
- * @returns Object with bullets array (IdRequirementType enum values, ordered) and fullText for accordion display
+ * @returns Array of IdRequirementType values found in the text, ordered
  */
 export function extractIdRequirements(
   instructions: string | null,
-): IdRequirementsResult {
-  const fullText = instructions?.trim() ?? "";
-  if (!fullText) {
-    return { bullets: [], fullText };
+): IdRequirementType[] {
+  if (!instructions?.trim()) {
+    return [];
   }
 
-  const plainText = stripHtmlForMatching(fullText);
+  const plainText = stripHtmlForMatching(instructions);
   const seen = new Set<IdRequirementType>();
   const bullets: IdRequirementType[] = [];
 
@@ -122,5 +116,5 @@ export function extractIdRequirements(
 
   bullets.sort((a, b) => ID_REQUIREMENTS[a].order - ID_REQUIREMENTS[b].order);
 
-  return { bullets, fullText };
+  return bullets;
 }

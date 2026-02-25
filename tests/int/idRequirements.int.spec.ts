@@ -21,8 +21,7 @@ describe("extractIdRequirements", () => {
     }[] = [];
 
     for (const sample of samples) {
-      const { bullets } = extractIdRequirements(sample.input);
-      const extracted = bullets;
+      const extracted = extractIdRequirements(sample.input);
       const expectedSet = new Set(sample.expected);
 
       const missing = sample.expected.filter((e) => !extracted.includes(e));
