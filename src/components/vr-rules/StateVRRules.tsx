@@ -40,36 +40,22 @@ export function StateVRRules({
       {authority && <EligibilityBlock authority={authority} />}
       <ElectionsBlock elections={stateElections} />
       <UsefulLinksBlock state={state} authority={authority} />
-      {authority && authority.youthRegistration.onlineInstructions && (
-        <RegInstructionsBlock
-          title="Online Pre-registration:"
-          instructions={authority.youthRegistration.onlineInstructions}
-          url={
-            authority.youthRegistration.url ??
-            authority.registration.online?.url ??
-            null
-          }
-          label="Pre-register to vote online"
-        />
-      )}
       {authority && authority.registration.online?.supported && (
         <RegInstructionsBlock
-          title="Online Registration:"
-          instructions={authority.registration.online?.instructions ?? null}
-          url={authority.registration.online?.url ?? null}
-          label="Register to vote online"
-        />
-      )}
-      {authority && authority.youthRegistration.byMailInstructions && (
-        <RegInstructionsBlock
-          title="Youth By Mail Pre-registration:"
-          instructions={authority.youthRegistration.byMailInstructions}
+          title="Registration Online:"
+          regInstructions={authority.registration.online?.instructions ?? null}
+          preRegInstructions={
+            authority.youthRegistration.onlineInstructions ?? null
+          }
         />
       )}
       {authority && authority.registration.byMail?.supported && (
         <RegInstructionsBlock
-          title="By Mail Registration:"
-          instructions={concatByMailInstructions(authority)}
+          title="Registration by Mail:"
+          regInstructions={concatByMailInstructions(authority) ?? null}
+          preRegInstructions={
+            authority.youthRegistration.byMailInstructions ?? null
+          }
         />
       )}
       <VoteRidersBlock />

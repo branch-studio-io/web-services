@@ -4,24 +4,54 @@ import {
   ID_REQUIREMENTS,
   extractIdRequirements,
 } from "@/utils/idRequirements";
-import Link from "next/link";
+
+type IdRequirementsListProps = {
+  title: string;
+  bullets: IdRequirementType[];
+};
+
+function IdRequirementsList({ title, bullets }: IdRequirementsListProps) {
+  if (bullets.length === 0) return null;
+  return (
+    <div>
+      <h3 className="body-md mb-2 font-bold">{title}</h3>
+      <ul className="body-md list-disc space-y-1 pl-6">
+        {bullets.map((bullet, index) => {
+          const { label: bulletLabel, definition } = ID_REQUIREMENTS[bullet];
+          return (
+            <li key={index}>
+              <span className="font-bold">{bulletLabel}: </span>
+              {definition}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
 
 type RegInstructionsBlockProps = {
   title: string;
-  instructions: string | null;
+  regInstructions: string | null;
+  preRegInstructions: string | null;
   url?: string | null;
   label?: string | null;
 };
 
 export function RegInstructionsBlock({
   title,
-  instructions,
-  url,
-  label,
+  regInstructions,
+  preRegInstructions,
 }: RegInstructionsBlockProps) {
-  const bullets = extractIdRequirements(instructions);
-  const text = instructions?.trim() ?? "";
-  const hasLink = url && label;
+  const regBullets = extractIdRequirements(regInstructions);
+  const preRegBullets = extractIdRequirements(preRegInstructions);
+
+  const combinedBullets = Array.from(
+    new Set([...regBullets, ...preRegBullets]),
+  ).sort((a, b) => ID_REQUIREMENTS[a].order - ID_REQUIREMENTS[b].order);
+
+  const regText = regInstructions?.trim() ?? "";
+  const preRegText = preRegInstructions?.trim() ?? "";
 
   return (
     <div>
@@ -29,25 +59,10 @@ export function RegInstructionsBlock({
         {title}
       </h2>
       <div className="space-y-4">
-        {text || hasLink ? (
+        <IdRequirementsList title="ID Requirements" bullets={combinedBullets} />
+
+        {regText || preRegText ? (
           <>
-            {bullets.length > 0 && (
-              <div>
-                <h3 className="body-md mb-2 font-bold">ID Requirements</h3>
-                <ul className="body-md list-disc space-y-1 pl-6">
-                  {bullets.map((bullet: IdRequirementType, index: number) => {
-                    const { label: bulletLabel, definition } =
-                      ID_REQUIREMENTS[bullet];
-                    return (
-                      <li key={index}>
-                        <span className="font-bold">{bulletLabel}: </span>
-                        {definition}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            )}
             <details className="group">
               <summary className="body-md mb-2 flex cursor-pointer list-none items-center gap-2 font-bold [&::-webkit-details-marker]:hidden">
                 <span
@@ -58,10 +73,13 @@ export function RegInstructionsBlock({
                 </span>
                 Full Details
               </summary>
-              <div className="mt-2 space-y-4">
-                {text && (
+              <div className="mt-6 space-y-4">
+                <h3 className="body-md mb-2 font-bold">
+                  Registration Instructions
+                </h3>
+                {regText && (
                   <DemocracyWorksText
-                    text={text}
+                    text={regText}
                     renderers={{
                       paragraph: (children) => (
                         <p className="body-md mb-4">{children}</p>
@@ -69,17 +87,19 @@ export function RegInstructionsBlock({
                     }}
                   />
                 )}
-                {hasLink && (
-                  <p className="body-md">
-                    <Link
-                      href={url!}
-                      className="underline underline-offset-2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {label}
-                    </Link>
-                  </p>
+
+                <h3 className="body-md mb-2 font-bold">
+                  Pre-Registration Instructions
+                </h3>
+                {preRegText && (
+                  <DemocracyWorksText
+                    text={preRegText}
+                    renderers={{
+                      paragraph: (children) => (
+                        <p className="body-md mb-4">{children}</p>
+                      ),
+                    }}
+                  />
                 )}
               </div>
             </details>
