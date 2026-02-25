@@ -5,7 +5,7 @@ import {
 } from "@/utils/idRequirements";
 import Link from "next/link";
 
-type IDRequirementsBlockProps = {
+type IDReqsBlockProps = {
   fullText: string | null;
   bullets: IdRequirementType[];
   /** Optional link to show in Full Details section */
@@ -13,12 +13,12 @@ type IDRequirementsBlockProps = {
   linkLabel?: string | null;
 };
 
-export function IDRequirementsBlock({
+export function IDReqsBlock({
   fullText,
   bullets,
   linkUrl,
   linkLabel,
-}: IDRequirementsBlockProps) {
+}: IDReqsBlockProps) {
   const text = fullText?.trim() ?? "";
   const hasLink = linkUrl && linkLabel;
   if (!text && !hasLink) return null;

@@ -11,7 +11,6 @@ import {
   PREREG_STATUS_COLORS,
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
-import { extractIdRequirements } from "@/utils/idRequirements";
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import numeral from "numeral";
@@ -94,13 +93,6 @@ export default function PreregTable({
           const statePop = statePopsByFips.get(state.fips);
           const nextElection = nextElectionByState.get(state.code);
 
-          const onlineInstructions =
-            registration?.online?.instructions ??
-            youthReg?.onlineInstructions ??
-            null;
-          const { bullets } = extractIdRequirements(onlineInstructions);
-          const requiresDmvId = bullets.includes("STATE_DL_OR_ID");
-
           const rowBg = index % 2 === 0 ? "bg-white" : "bg-sand-300";
 
           return (
@@ -159,7 +151,7 @@ export default function PreregTable({
                 </div>
                 <div>
                   <dt className="sr-only">
-                    By Mail, Online, DMV Issued ID
+                    By Mail, Online
                   </dt>
                   <dd className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
                     <span className="flex items-center gap-1.5">
@@ -183,26 +175,6 @@ export default function PreregTable({
                         <span className="inline-block size-5 shrink-0 text-center text-gray-400">—</span>
                       )}
                       <span className="text-xs font-semibold uppercase tracking-wide text-gray-950">Online</span>
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      {requiresDmvId ? (
-                        <CheckIcon
-                          className="size-5 shrink-0 text-green-600"
-                          aria-label="DMV-issued ID required for online registration"
-                        />
-                      ) : (
-                        <span className="inline-block size-5 shrink-0 text-center text-gray-400">—</span>
-                      )}
-                      <span className="text-xs font-semibold uppercase tracking-wide text-gray-950">
-                        DMV Issued ID{" "}
-                        <Link
-                          href="#dmv-issued-id"
-                          className="font-normal normal-case tracking-normal hover:underline focus:underline focus:outline-none"
-                          aria-label="View DMV-issued ID explanation"
-                        >
-                          *
-                        </Link>
-                      </span>
                     </span>
                   </dd>
                 </div>
@@ -253,19 +225,6 @@ export default function PreregTable({
             >
               Online
             </th>
-            <th
-              className="border-sand-600 border-r border-b px-4 py-1.5 text-center text-xs font-semibold tracking-wide text-gray-950 uppercase"
-              scope="col"
-            >
-              DMV Issued ID{" "}
-              <Link
-                href="#dmv-issued-id"
-                className="hover:underline focus:underline focus:outline-none"
-                aria-label="View DMV-issued ID explanation"
-              >
-                *
-              </Link>
-            </th>
           </tr>
         </thead>
         <tbody>
@@ -275,13 +234,6 @@ export default function PreregTable({
             const statePop = statePopsByFips.get(state.fips);
             const nextElection = nextElectionByState.get(state.code);
             const rowBg = index % 2 === 0 ? "bg-white" : "bg-sand-300";
-
-            const onlineInstructions =
-              registration?.online?.instructions ??
-              youthReg?.onlineInstructions ??
-              null;
-            const { bullets } = extractIdRequirements(onlineInstructions);
-            const requiresDmvId = bullets.includes("STATE_DL_OR_ID");
 
             return (
               <tr key={state.fips} className={rowBg}>
@@ -336,38 +288,11 @@ export default function PreregTable({
                     />
                   )}
                 </td>
-                <td className="border-sand-600 border-r px-4 py-1.5 text-center text-sm text-gray-950">
-                  {requiresDmvId && (
-                    <CheckIcon
-                      className="mx-auto size-5 text-green-600"
-                      aria-label="DMV-issued ID required for online registration"
-                    />
-                  )}
-                </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-      </div>
-      <div
-        id="dmv-issued-id"
-        className="mt-4 max-w-prose scroll-mt-4 text-sm text-gray-950"
-      >
-        * DMV-issued ID required to register to vote online. Eligible citizens
-        can print out and mail in a voter registration application without
-        DMV-issued ID. Check your state’s form for details. For assistance
-        learning what forms of ID you can use to register and vote, and for help
-        obtaining a valid form of ID, visit{" "}
-        <a
-          href="https://voteriders.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline"
-        >
-          VoteRiders.org
-        </a>
-        .
       </div>
     </div>
   );
