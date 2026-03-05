@@ -6,18 +6,7 @@ import {
   voterEligibilityText,
 } from "@/utils/democracyWorksUtils";
 import numeral from "numeral";
-
-function concatByMailInstructions(authority: Authority): string | null {
-  const byMail = authority.registration.byMail;
-  if (!byMail) return null;
-  const parts = [
-    byMail.idInstructions,
-    byMail.signatureInstructions,
-    byMail.citizenInstructions,
-    byMail.newVoterInstructions,
-  ].filter((s): s is string => Boolean(s?.trim()));
-  return parts.length > 0 ? parts.join("<br>") : null;
-}
+import { LinkButton } from "../Button";
 
 type StateVRSummaryProps = {
   state: State;
@@ -63,7 +52,7 @@ export function StateVRSummary({
           fill="#160d62"
           fontWeight="bold"
         >
-          TODO: Bar Chart
+          Bar Chart Goes Here
         </text>
       </svg>
 
@@ -73,6 +62,7 @@ export function StateVRSummary({
           turn 18 every year.
         </h2>
       )}
+
     </div>
   );
 }

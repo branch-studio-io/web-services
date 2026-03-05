@@ -10,7 +10,7 @@ export function StateStamp({ state }: StateStampProps) {
       <h1 className="header-3 mx-auto max-w-[304px] text-center font-extrabold">
         Here’s everything to know in
       </h1>
-      <h2 className="header-2 bg-cc-teal px-[40px] py-[24px] text-center font-extrabold text-white drop-shadow-lg drop-shadow-black/40">
+      <h2 className="header-2 bg-cc-teal px-[40px] py-[24px] text-center font-extrabold whitespace-nowrap text-white drop-shadow-lg drop-shadow-black/40">
         {state.name}
       </h2>
     </div>
