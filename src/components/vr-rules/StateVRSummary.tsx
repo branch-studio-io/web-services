@@ -48,11 +48,9 @@ export function StateVRSummary({
         </h2>
       )}
       <svg
-        width={754}
-        height={260}
         viewBox="0 0 754 260"
         xmlns="http://www.w3.org/2000/svg"
-        className="mt-8 rounded-lg"
+        className="mt-8 h-auto w-full rounded-lg"
         aria-label="Bar Chart Placeholder"
       >
         <rect x="0" y="0" width="754" height="260" fill="#fff" />
