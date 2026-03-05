@@ -6,7 +6,7 @@ type StateStampProps = {
 
 export function StateStamp({ state }: StateStampProps) {
   return (
-    <div className="mb-10 flex w-fit shrink-0 rotate-[-4.57deg] flex-col gap-5 lg:ml-5">
+    <div className="mb-10 flex w-fit shrink-0 rotate-[-4.57deg] flex-col gap-5">
       <h1 className="header-3 mx-auto max-w-[304px] text-center font-extrabold">
         Here’s everything to know in
       </h1>

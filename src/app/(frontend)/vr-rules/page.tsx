@@ -63,7 +63,7 @@ export default async function VRRulesPage() {
               {categories.map(({ label, description }, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span
-                    className="mt-[1px] h-[22px] w-[22px] shrink-0 rounded-xs border"
+                    className="mt-1px h-[22px] w-[22px] shrink-0 rounded-xs border"
                     aria-hidden
                     style={{
                       backgroundColor: THREE_COLOR_DIVERGENT_SCALE[index],

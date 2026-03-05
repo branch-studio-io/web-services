@@ -47,51 +47,96 @@ export default async function StateVRRulesPage({ params }: PageProps) {
   return (
     <>
       <Container className="bg-sand">
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-20 lg:flex-row">
-            <aside className="w-320px flex justify-center">
-              <StateStamp state={state} />
-            </aside>
-
-            <div className="flex flex-col gap-6">
-              <BreadCrumb
-                paths={[
-                  { name: "All States", href: "/vr-rules" },
-                  {
-                    name: `${state.name} Requirements`,
-                    href: `/vr-rules/${state.slug}`,
-                  },
-                ]}
-              />
-              <StateVRSummary
-                state={state}
-                authority={authority}
-                statePop={statePop}
-                stateElections={stateElections}
-              />
-
-              <div className="flex gap-4">
-                <LinkButton variant="primary" href="#">
-                  Register to Vote
-                </LinkButton>
-                <LinkButton variant="primary" href="#">
-                  Learn to Lead
-                </LinkButton>
-                <LinkButton variant="primary" href="#">
-                  Share on Social
-                </LinkButton>
-              </div>
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
+          <div className="flex justify-center lg:justify-start">
+            <StateStamp state={state} />
+          </div>
+          <div className="">
+            <BreadCrumb
+              paths={[
+                { name: "All States", href: "/vr-rules" },
+                {
+                  name: `${state.name} Requirements`,
+                  href: `/vr-rules/${state.slug}`,
+                },
+              ]}
+            />
+            <StateVRSummary
+              state={state}
+              authority={authority}
+              statePop={statePop}
+              stateElections={stateElections}
+            />
+          </div>
+          <div className="flex items-center justify-end">
+            <h3 className="header-4 font-extrabold">Next Steps! →</h3>
+          </div>
+          <div className="flex items-center justify-end lg:justify-start">
+            <div className="flex flex-col gap-4 lg:flex-row">
+              <LinkButton
+                variant="primary"
+                href="#"
+                className="whitespace-nowrap"
+              >
+                Register to Vote
+              </LinkButton>
+              <LinkButton
+                variant="primary"
+                href="#"
+                className="whitespace-nowrap"
+              >
+                Learn to Lead
+              </LinkButton>
+              <LinkButton
+                variant="primary"
+                href="#"
+                className="whitespace-nowrap"
+              >
+                Share on Social
+              </LinkButton>
             </div>
           </div>
         </div>
       </Container>
       <Container className="bg-white">
-        <StateVRRules
-          state={state}
-          authority={authority}
-          statePop={statePop}
-          stateElections={stateElections}
-        />
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
+          <div className="flex flex-col items-center justify-center gap-6">
+            <h3 className="header-4 font-extrabold">Next Steps!</h3>
+            <div>
+              <div className="flex w-fit flex-col gap-4">
+                <LinkButton
+                  variant="primary"
+                  href="#"
+                  className="whitespace-nowrap"
+                >
+                  Register to Vote
+                </LinkButton>
+                <LinkButton
+                  variant="primary"
+                  href="#"
+                  className="whitespace-nowrap"
+                >
+                  Learn to Lead
+                </LinkButton>
+                <LinkButton
+                  variant="primary"
+                  href="#"
+                  className="whitespace-nowrap"
+                >
+                  Share on Social
+                </LinkButton>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <StateVRRules
+              state={state}
+              authority={authority}
+              statePop={statePop}
+              stateElections={stateElections}
+            />
+          </div>
+        </div>
       </Container>
     </>
   );
