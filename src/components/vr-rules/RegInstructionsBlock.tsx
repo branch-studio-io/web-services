@@ -55,9 +55,9 @@ export function RegInstructionsBlock({
 
   return (
     <div>
-      <h2 className="header-3 border-ink mb-2 border-b pb-2 font-bold">
+      <h3 className="header-4 mb-2 border-b border-gray-300 pb-2 font-extrabold">
         {title}
-      </h2>
+      </h3>
       <div className="space-y-4">
         <IdRequirementsList title="ID Requirements" bullets={combinedBullets} />
 

@@ -12,7 +12,9 @@ type ElectionsBlockProps = {
 export function ElectionsBlock({ elections }: ElectionsBlockProps) {
   return (
     <div>
-      <h2 className="header-3 mb-2 font-bold">Upcoming Elections:</h2>
+      <h3 className="header-4 mb-2 border-b border-gray-300 pb-2 font-extrabold">
+        Upcoming Elections:
+      </h3>
       <ul className="body-md list-disc space-y-3 pl-6">
         {elections && elections.length > 0 ? (
           elections.map((election, index) => {

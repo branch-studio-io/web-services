@@ -3,9 +3,9 @@ import Link from "next/link";
 export function VoteRidersBlock() {
   return (
     <div id="dmv-issued-id" className="scroll-mt-4">
-      <h2 className="header-3 mb-2 font-bold">
+      <h3 className="header-4 mb-2 border-b border-gray-300 pb-2 font-extrabold">
         Assistance Obtaining an ID
-      </h2>
+      </h3>
       <div className="body-md space-y-4">
         <p>
           DMV-issued ID required to register to vote online. Eligible citizens
@@ -21,8 +21,8 @@ export function VoteRidersBlock() {
           >
             VoteRiders.org
           </Link>{" "}
-          — For assistance learning what forms of ID you can use to register
-          and vote, and for help obtaining a valid form of ID.
+          — For assistance learning what forms of ID you can use to register and
+          vote, and for help obtaining a valid form of ID.
         </p>
       </div>
     </div>

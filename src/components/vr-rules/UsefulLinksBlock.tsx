@@ -10,7 +10,9 @@ type UsefulLinksBlockProps = {
 export function UsefulLinksBlock({ authority, state }: UsefulLinksBlockProps) {
   return (
     <div>
-      <h2 className="header-3 mb-2 font-bold">Useful Links:</h2>
+      <h3 className="header-4 mb-2 border-b border-gray-300 pb-2 font-extrabold">
+        Useful Links:
+      </h3>
       <ul className="body-md list-disc space-y-3 pl-6">
         <li>
           <Link

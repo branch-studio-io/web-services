@@ -33,9 +33,9 @@ export function StateVRRules({
 }: StateVRRulesProps) {
   return (
     <div className="space-y-8">
-      <h1 className="header-3 mt-4 font-extrabold">
+      <h2 className="header-3 mt-4 font-extrabold">
         More Details on {state.name}
-      </h1>
+      </h2>
       <ElectionsBlock elections={stateElections} />
       <UsefulLinksBlock state={state} authority={authority} />
       {authority && authority.registration.online?.supported && (
