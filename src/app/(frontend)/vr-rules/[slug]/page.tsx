@@ -1,6 +1,8 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import Container from "@/components/Container";
+import { StateStamp } from "@/components/vr-rules/StateStamp";
 import { StateVRRules } from "@/components/vr-rules/StateVRRules";
+import { StateVRSummary } from "@/components/vr-rules/StateVRSummary";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
@@ -42,25 +44,39 @@ export default async function StateVRRulesPage({ params }: PageProps) {
   );
 
   return (
-    <Container className="bg-sand">
-      <div className="mx-auto max-w-3xl">
-        <BreadCrumb
-          paths={[
-            { name: "All States", href: "/vr-rules" },
-            {
-              name: `${state.name} Voter Registration Rules`,
-              href: `/vr-rules/${state.slug}`,
-            },
-          ]}
-        />
+    <>
+      <Container className="bg-sand">
+        <div className="flex flex-col gap-12">
+          <div className="flex flex-col items-center gap-20 lg:flex-row lg:items-start">
+            <StateStamp state={state} />
+            <div className="flex flex-col gap-6">
+              <BreadCrumb
+                paths={[
+                  { name: "All States", href: "/vr-rules" },
+                  {
+                    name: `${state.name} Requirements`,
+                    href: `/vr-rules/${state.slug}`,
+                  },
+                ]}
+              />
+              <StateVRSummary
+                state={state}
+                authority={authority}
+                statePop={statePop}
+                stateElections={stateElections}
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+      <Container className="bg-white">
         <StateVRRules
           state={state}
           authority={authority}
           statePop={statePop}
           stateElections={stateElections}
         />
-
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 }

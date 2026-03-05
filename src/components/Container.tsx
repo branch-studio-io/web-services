@@ -16,7 +16,7 @@ export default function Container({
   return (
     <div className={twMerge("bg-white", className)}>
       <div
-        className={twMerge("mx-auto px-6 py-16 lg:px-8", innerClassName)}
+        className={twMerge("mx-auto px-6 py-12 lg:px-8", innerClassName)}
         style={{ maxWidth: MAX_WIDTH }}
       >
         {children}

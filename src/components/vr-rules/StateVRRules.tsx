@@ -1,6 +1,4 @@
 import { ElectionsBlock } from "@/components/vr-rules/ElectionsBlock";
-import { EligibilityBlock } from "@/components/vr-rules/EligibilityBlock";
-import { PopBlock } from "@/components/vr-rules/PopBlock";
 import { RegInstructionsBlock } from "@/components/vr-rules/RegInstructionsBlock";
 import { UsefulLinksBlock } from "@/components/vr-rules/UsefulLinksBlock";
 import { VoteRidersBlock } from "@/components/vr-rules/VoteRidersBlock";
@@ -35,9 +33,9 @@ export function StateVRRules({
 }: StateVRRulesProps) {
   return (
     <div className="space-y-8">
-      <h1 className="header-2 mt-4">{state.name} Requirements</h1>
-      {statePop && <PopBlock statePop={statePop} />}
-      {authority && <EligibilityBlock authority={authority} />}
+      <h1 className="header-3 mt-4 font-extrabold">
+        More Details on {state.name}
+      </h1>
       <ElectionsBlock elections={stateElections} />
       <UsefulLinksBlock state={state} authority={authority} />
       {authority && authority.registration.online?.supported && (
