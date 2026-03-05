@@ -55,18 +55,25 @@ export function RegInstructionsBlock({
 
   return (
     <div>
-      <h3 className="header-4 mb-2 border-b border-gray-300 pb-2 font-extrabold">
-        {title}
-      </h3>
-      <div className="space-y-4">
+      <details className="group">
+        <summary className="header-4 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
+          <span
+            className="transition-transform select-none group-open:rotate-90"
+            aria-hidden
+          >
+            ▸
+          </span>
+          {title}
+        </summary>
+        <div className="space-y-4 border-t border-gray-300 pt-2">
         <IdRequirementsList title="ID Requirements" bullets={combinedBullets} />
 
         {regText || preRegText ? (
           <>
-            <details className="group">
+            <details className="group/fulldetails">
               <summary className="body-md mb-2 flex cursor-pointer list-none items-center gap-2 font-bold [&::-webkit-details-marker]:hidden">
                 <span
-                  className="transition-transform select-none group-open:rotate-90"
+                  className="transition-transform select-none group-open/fulldetails:rotate-90"
                   aria-hidden
                 >
                   ▸
@@ -105,7 +112,8 @@ export function RegInstructionsBlock({
             </details>
           </>
         ) : null}
-      </div>
+        </div>
+      </details>
     </div>
   );
 }
