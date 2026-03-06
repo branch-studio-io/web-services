@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import NationalPreregMap from "@/components/vr-rules/NationalPreregMap";
-import PreregTable from "@/components/vr-rules/PreregTable";
+import StateList from "@/components/vr-rules/StateList";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
@@ -79,12 +79,7 @@ export default async function VRRulesPage() {
           </div>
         </div>
         <div className="w-full pt-5">
-          <PreregTable
-            states={states}
-            authorities={authorities}
-            statePops={statePops}
-            elections={elections}
-          />
+          <StateList states={states} authorities={authorities} />
         </div>
       </div>
     </Container>
