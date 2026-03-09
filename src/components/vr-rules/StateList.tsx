@@ -47,10 +47,12 @@ export default function StateList({ states, authorities }: Props) {
               <StateIcon
                 code={state.code}
                 size="lg"
-                className="shrink-0 text-cc-teal drop-shadow-md"
+                className="text-cc-teal shrink-0 drop-shadow-md"
               />
-              <div className="flex min-w-0 flex-1 flex-col gap-1">
-                <h3 className="font-bold text-gray-950">{state.name}</h3>
+              <div className="flex min-w-0 flex-1 flex-col">
+                <h3 className="text-lg font-bold text-gray-950">
+                  {state.name}
+                </h3>
                 <p className="font-sans text-base text-gray-950">
                   {youthReg ? voterEligibilityText(youthReg) : "—"}
                 </p>
