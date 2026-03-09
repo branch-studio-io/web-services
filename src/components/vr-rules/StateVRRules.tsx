@@ -5,6 +5,7 @@ import { VoteRidersBlock } from "@/components/vr-rules/VoteRidersBlock";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
+import { StatePolicyBlock } from "./StatePolicyBlock";
 
 function concatByMailInstructions(authority: Authority): string | null {
   const byMail = authority.registration.byMail;
@@ -55,6 +56,9 @@ export function StateVRRules({
             authority.youthRegistration.byMailInstructions ?? null
           }
         />
+      )}
+      {state.code === "CA" && (
+        <StatePolicyBlock title="State High School Voter Registration Policy Requirements:" />
       )}
       <VoteRidersBlock />
     </div>
