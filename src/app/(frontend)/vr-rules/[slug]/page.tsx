@@ -132,7 +132,6 @@ export default async function StateVRRulesPage({ params }: PageProps) {
             <StateVRRules
               state={state}
               authority={authority}
-              statePop={statePop}
               stateElections={stateElections}
             />
           </div>

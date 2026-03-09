@@ -18,7 +18,6 @@ export function StateVRSummary({
   state,
   authority,
   statePop,
-  stateElections,
 }: StateVRSummaryProps) {
   const impactText = studentImpactText(authority.youthRegistration);
   return (

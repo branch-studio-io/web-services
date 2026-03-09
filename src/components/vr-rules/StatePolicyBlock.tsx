@@ -45,9 +45,9 @@ export function StatePolicyBlock({ title }: StatePolocyBlockProps) {
             registration forms at central locations, including voter
             registration forms with graduation materials; or providing
             hyperlinks to, and the Internet Web site address of, the Secretary
-            of State's electronic voter registration system in notices sent by
-            electronic mail to students and placed on the Internet Web site of
-            the high school, college, or university.
+            of State&apos;s electronic voter registration system in notices sent
+            by electronic mail to students and placed on the Internet Web site
+            of the high school, college, or university.
           </p>
           <p>
             <strong>Cal. Elec. Code §2148 (a)</strong> Every high school,
@@ -61,14 +61,15 @@ export function StatePolicyBlock({ title }: StatePolocyBlockProps) {
           <p>
             <strong>Cal. Educ. Code § 49040</strong> The last two full weeks in
             April and the last two full weeks in September shall be known as
-            ‘high school voter education weeks,’ during which time persons
-            authorized by the county elections official shall be allowed to
-            register students and school personnel on any high school campus ….
+            &apos;high school voter education weeks,&apos; during which time
+            persons authorized by the county elections official shall be allowed
+            to register students and school personnel on any high school campus
+            ….
           </p>
           <p>
             <strong>Cal. Educ. Code § 49041</strong> The administrator of a high
             school, or his or her designee, may appoint one or more pupils … to
-            be voter outreach coordinators,” and those coordinators may
+            be voter outreach coordinators,&apos; and those coordinators may
             coordinate voter-registration activities and other election-related
             outreach on campus.
           </p>

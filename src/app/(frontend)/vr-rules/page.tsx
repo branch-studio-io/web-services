@@ -2,10 +2,9 @@ import Container from "@/components/Container";
 import NationalPreregMap from "@/components/vr-rules/NationalPreregMap";
 import StateList from "@/components/vr-rules/StateList";
 import authoritiesJson from "@/data/authorities.json";
-import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
-import type { Authority, Election } from "@/types/democracyWorks";
+import type { Authority } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
@@ -16,7 +15,6 @@ import {
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
-const elections = electionsJson as Election[];
 
 const categories = [
   {
@@ -31,7 +29,7 @@ const categories = [
   {
     label: "Remaining 30%:",
     description:
-      "States with shorter preregistration periods; most have time to register in senior year.",
+      "States with shorter preregistration periods; most have time to register iroun senior year.",
   },
 ] as const;
 
@@ -69,8 +67,7 @@ export default async function VRRulesPage() {
                       aria-hidden
                       style={{
                         backgroundColor: THREE_COLOR_DIVERGENT_SCALE[index],
-                        borderColor:
-                          THREE_COLOR_BORDER_DIVERGENT_SCALE[index],
+                        borderColor: THREE_COLOR_BORDER_DIVERGENT_SCALE[index],
                       }}
                     />
                     <span>

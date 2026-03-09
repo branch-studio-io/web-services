@@ -59,7 +59,6 @@ export function StateIcon({
       aria-hidden
     >
       <g fill="currentColor">
-        {/* eslint-disable-next-line react/no-danger */}
         <g dangerouslySetInnerHTML={{ __html: svgData.innerHtml }} />
       </g>
     </svg>

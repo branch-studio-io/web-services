@@ -3,7 +3,6 @@ import { BigQuery } from "@google-cloud/bigquery";
 import "dotenv/config";
 import { getEnvKey } from "./utils";
 
-const LOCATION = getEnvKey("GCLOUD_LOCATION");
 const PROJECT_ID = getEnvKey("GCLOUD_PROJECT_ID");
 const PRIVATE_KEY_ID = getEnvKey("GCLOUD_PRIVATE_KEY_ID");
 const PRIVATE_KEY = getEnvKey("GCLOUD_PRIVATE_KEY");

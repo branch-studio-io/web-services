@@ -22,14 +22,12 @@ function concatByMailInstructions(authority: Authority): string | null {
 type StateVRRulesProps = {
   state: State;
   authority: Authority | undefined;
-  statePop: StatePop | undefined;
   stateElections: Election[];
 };
 
 export function StateVRRules({
   state,
   authority,
-  statePop,
   stateElections,
 }: StateVRRulesProps) {
   return (
