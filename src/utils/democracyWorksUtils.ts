@@ -68,16 +68,42 @@ export function nextRegOpportunityIsGeneral(
   );
 }
 
-export function voterEligibilityText(youthRegistration: YouthRegistration) {
+export type VoterEligibilityParts = {
+  /** Leading phrase: "You will be" | "You will turn" | "You are" (empty when not applicable) */
+  intro: string;
+  /** Main eligibility statement, e.g. "18 by May 19th, 2026." or "16 years old." */
+  main: string;
+  /** Optional parenthetical note, e.g. "(18 by the next election.)" or empty */
+  note: string;
+};
+
+export function voterEligibilityParts(
+  youthRegistration: YouthRegistration,
+): VoterEligibilityParts {
   if (youthRegistration.supported === "byAge") {
-    return voterRegistrationAgeText(youthRegistration.eligibilityAge);
-  } else if (youthRegistration.supported === "byElection") {
-    const p1 = `You will be 18 by ${formatElectionDate(youthRegistration.eligibilityByElection?.date ?? "")}.`;
-    const type = youthRegistration.eligibilityByElectionType;
-    const p2 = type ? `(18 by the ${type}.)` : "";
-    return [p1, p2].filter(Boolean).join(" ");
+    return voterRegistrationAgeParts(youthRegistration.eligibilityAge);
   }
-  return "Registration is not required.";
+  if (youthRegistration.supported === "byElection") {
+    const dateStr = formatElectionDate(
+      youthRegistration.eligibilityByElection?.date ?? "",
+    );
+    const type = youthRegistration.eligibilityByElectionType;
+    return {
+      intro: "You will be",
+      main: `18 by ${dateStr}.`,
+      note: type ? `(18 by the ${type}.)` : "",
+    };
+  }
+  return {
+    intro: "",
+    main: "Registration is not required.",
+    note: "",
+  };
+}
+
+export function voterEligibilityText(youthRegistration: YouthRegistration): string {
+  const { intro, main, note } = voterEligibilityParts(youthRegistration);
+  return [intro, main, note].filter(Boolean).join(" ");
 }
 
 /**
@@ -270,6 +296,57 @@ export function formatElectionDate(date: string): string {
 
 /**
  * Converts an ISO 8601 duration string (e.g. P15Y, P17Y6M, P17Y275D) into
+ * human-readable age parts. When a days component is present, computes days
+ * until the target age.
+ *
+ * @param eligibilityAge - ISO 8601 duration (e.g. P16Y, P17Y6M, P17Y275D)
+ * @param targetAge - Age to use in "turn X in N days" (default 18)
+ */
+function voterRegistrationAgeParts(
+  eligibilityAge: string,
+  targetAge: number = 18,
+): VoterEligibilityParts {
+  if (!eligibilityAge?.startsWith("P")) {
+    return { intro: "", main: "", note: "" };
+  }
+
+  const yearsMatch = eligibilityAge.match(/(\d+)Y/);
+  const monthsMatch = eligibilityAge.match(/(\d+)M/);
+  const daysMatch = eligibilityAge.match(/(\d+)D/);
+
+  const years = yearsMatch ? Number.parseInt(yearsMatch[1], 10) : 0;
+  const months = monthsMatch ? Number.parseInt(monthsMatch[1], 10) : 0;
+  const days = daysMatch ? Number.parseInt(daysMatch[1], 10) : 0;
+
+  if (daysMatch && days > 0) {
+    const age = getAge(eligibilityAge);
+    const daysUntilTarget = Math.round((targetAge - age) * 365);
+    return {
+      intro: "You will turn",
+      main: `${targetAge} in ${daysUntilTarget} days.`,
+      note: "",
+    };
+  }
+
+  if (months > 0) {
+    const monthLabel = months === 1 ? "month" : "months";
+    return {
+      intro: "You are",
+      main: `${years} years and ${months} ${monthLabel} old.`,
+      note: "",
+    };
+  }
+
+  const yearLabel = years === 1 ? "year" : "years";
+  return {
+    intro: "You are",
+    main: `${years} ${yearLabel} old.`,
+    note: "",
+  };
+}
+
+/**
+ * Converts an ISO 8601 duration string (e.g. P15Y, P17Y6M, P17Y275D) into
  * human-readable age text. When a days component is present, computes days
  * until the target age (e.g. "You will turn 18 in 90 days").
  *
@@ -281,30 +358,7 @@ export function voterRegistrationAgeText(
   eligibilityAge: string,
   targetAge: number = 18,
 ): string {
-  if (!eligibilityAge?.startsWith("P")) return "";
-
-  const yearsMatch = eligibilityAge.match(/(\d+)Y/);
-  const monthsMatch = eligibilityAge.match(/(\d+)M/);
-  const daysMatch = eligibilityAge.match(/(\d+)D/);
-
-  const years = yearsMatch ? Number.parseInt(yearsMatch[1], 10) : 0;
-  const months = monthsMatch ? Number.parseInt(monthsMatch[1], 10) : 0;
-  const days = daysMatch ? Number.parseInt(daysMatch[1], 10) : 0;
-
-  // Days component present → compute days until target age
-  if (daysMatch && days > 0) {
-    const age = getAge(eligibilityAge);
-    const daysUntilTarget = Math.round((targetAge - age) * 365);
-    return `You will turn ${targetAge} in ${daysUntilTarget} days.`;
-  }
-
-  // Years + months (no days)
-  if (months > 0) {
-    const monthLabel = months === 1 ? "month" : "months";
-    return `You are ${years} years and ${months} ${monthLabel} old.`;
-  }
-
-  // Years only
-  const yearLabel = years === 1 ? "year" : "years";
-  return `You are ${years} ${yearLabel} old.`;
+  const { intro, main } = voterRegistrationAgeParts(eligibilityAge, targetAge);
+  if (!main) return "";
+  return intro ? `${intro} ${main}` : main;
 }

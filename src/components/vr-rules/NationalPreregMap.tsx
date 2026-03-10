@@ -1,10 +1,10 @@
 "use client";
 
 import type { Authority } from "@/types/democracyWorks";
+import { PreregStatus } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import { getPreregStatus } from "@/utils/democracyWorkApi";
-import { PreregStatus } from "@/types/democracyWorks";
 import {
   parseStateCode,
   PREREG_STATUS_COLORS,
@@ -193,7 +193,7 @@ export default function NationalPreregMap({
               key={`h-${d.id}`}
               data-fips={d.id}
               d={path(d) ?? ""}
-              className="cursor-pointer fill-transparent stroke-transparent stroke-2 hover:stroke-black"
+              className="cursor-pointer fill-transparent transition-colors duration-300 ease-out hover:fill-black/15 hover:stroke-black/15 hover:stroke-2"
               strokeWidth={0.8}
               onMouseEnter={handlePathMouseEnter}
               onMouseLeave={handleMouseLeave}

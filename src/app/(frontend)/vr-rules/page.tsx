@@ -29,7 +29,7 @@ const categories = [
   {
     label: "Remaining 30%:",
     description:
-      "States with shorter preregistration periods; most have time to register iroun senior year.",
+      "States with shorter preregistration periods; most have time to register in senior year",
   },
 ] as const;
 
