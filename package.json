@@ -24,7 +24,8 @@
     "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --import=tsx/esm\" playwright test --config=playwright.config.ts",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts",
     "refresh:data": "cross-env NODE_OPTIONS=--no-deprecation node --import=tsx/esm src/scripts/refresh-data.ts",
-    "process:state-svgs": "node src/scripts/process-state-svgs.js"
+    "process:state-svgs": "node src/scripts/process-state-svgs.js",
+    "process:state-policies": "node src/scripts/process-state-policies.js"
   },
   "dependencies": {
     "@google-cloud/bigquery": "^8.1.1",
@@ -38,6 +39,7 @@
     "@payloadcms/ui": "3.73.0",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
+    "csv-parse": "^5.6.0",
     "d3": "^7.9.0",
     "d3-geo": "^3.1.1",
     "dotenv": "16.4.7",

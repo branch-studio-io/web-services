@@ -4,7 +4,7 @@ import { UsefulLinksBlock } from "@/components/vr-rules/UsefulLinksBlock";
 import { VoteRidersBlock } from "@/components/vr-rules/VoteRidersBlock";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
-import type { StatePop } from "@/types/statePop";
+import type { StatePolicy } from "@/types/statePolicies";
 import { StatePolicyBlock } from "./StatePolicyBlock";
 
 function concatByMailInstructions(authority: Authority): string | null {
@@ -23,12 +23,14 @@ type StateVRRulesProps = {
   state: State;
   authority: Authority | undefined;
   stateElections: Election[];
+  statePolicies: StatePolicy[];
 };
 
 export function StateVRRules({
   state,
   authority,
   stateElections,
+  statePolicies,
 }: StateVRRulesProps) {
   return (
     <div className="space-y-8">
@@ -55,8 +57,11 @@ export function StateVRRules({
           }
         />
       )}
-      {state.code === "CA" && (
-        <StatePolicyBlock title="State High School Voter Registration Policy Requirements:" />
+      {statePolicies.length > 0 && (
+        <StatePolicyBlock
+          title="State High School Voter Registration Policy Requirements:"
+          policies={statePolicies}
+        />
       )}
       <VoteRidersBlock />
     </div>

@@ -21,18 +21,6 @@ const statesPath = path.join(root, "src", "data", "states.json");
 const states = JSON.parse(fs.readFileSync(statesPath, "utf-8"));
 const STATE_CODES = states.map((s) => s.code);
 
-function cleanSvgContent(svgText) {
-  // Remove XML declaration
-  let content = svgText.replace(/<\?xml[^?]*\?>\s*/i, "");
-  // Remove comments
-  content = content.replace(/<!--[\s\S]*?-->/g, "");
-  // Strip fill attributes from paths
-  content = content.replace(/\s+fill="[^"]*"/gi, "");
-  // Add fill="inherit" to path elements
-  content = content.replace(/<path /gi, '<path fill="inherit" ');
-  return content.trim();
-}
-
 function extractSvgData(svgText) {
   const viewBoxMatch = svgText.match(/viewBox="([^"]+)"/);
   const viewBox = viewBoxMatch ? viewBoxMatch[1] : "0 0 100 100";

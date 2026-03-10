@@ -8,9 +8,11 @@ import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
+import statePoliciesJson from "@/data/state-policies.json";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
+import type { StatePolicies } from "@/types/statePolicies";
 import { parseStateCode } from "@/utils/democracyWorksUtils";
 import { notFound } from "next/navigation";
 
@@ -18,6 +20,7 @@ const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
 const elections = electionsJson as Election[];
+const statePolicies = statePoliciesJson as StatePolicies[];
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -43,6 +46,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
   const stateElections = elections.filter(
     (e) => parseStateCode(e.ocdId) === state.code,
   );
+
+  const policies = statePolicies.find((sp) => sp.state === state.code)?.policies ?? [];
 
   return (
     <>
@@ -133,6 +138,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               state={state}
               authority={authority}
               stateElections={stateElections}
+              statePolicies={policies}
             />
           </div>
         </div>

@@ -1,0 +1,187 @@
+[
+  {
+    "state": "CA",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "High schools are required to designate a person responsible for distributing voter registration forms, and the Secretary of State is required to distribute forms to high schools."
+      },
+      {
+        "label": "Special Days",
+        "description": "The last two full weeks in April and September are designated as High School Voter Education Weeks, during which during time persons authorized by the county elections official shall be allowed to register students and school personnel on any high school campus."
+      }
+    ]
+  },
+  {
+    "state": "CO",
+    "policies": [
+      {
+        "label": "Training",
+        "description": "The county clerk and recorder shall train and supervise the high school deputy registrars."
+      },
+      {
+        "label": "Form Distribution",
+        "description": "The county clerk and recorder shall issue sufficient materials to each high school deputy registrar for the registration or preregistration of all eligible students, employees, and other persons at the high school which the high school deputy registrar serves."
+      }
+    ]
+  },
+  {
+    "state": "CT",
+    "policies": [
+      {
+        "label": "Form distribution and registration sessions",
+        "description": "Registrars of voters must hold registration sessions in public high schools annually in the winter or spring and must distribute voter registration information in high schools in September each year"
+      }
+    ]
+  },
+  {
+    "state": "FL",
+    "policies": [
+      {
+        "label": "Education and Training",
+        "description": "County supervisor must conduct high school voter registration / education program in each high school"
+      }
+    ]
+  },
+  {
+    "state": "GA",
+    "policies": [
+      {
+        "label": "Education",
+        "description": "Each public school student shall be apprised of his or her right to register as an elector and to vote in elections"
+      },
+      {
+        "label": "Special Days",
+        "description": "Each eligible student shall be given an opportunity, arranged by the school administration, to register to vote at his or her school during the month of April of each year."
+      }
+    ]
+  },
+  {
+    "state": "IA",
+    "policies": [
+      {
+        "label": "Opportunity to register",
+        "description": "At least twice during each school year, public and private high schools shall offer the opportunity to register to vote to students who are at least 17 years old."
+      },
+      {
+        "label": "Education",
+        "description": "Public and private high schools shall require, as a condition of graduation, that high school students receive instruction in voting statutes and procedures, voter registration requirements, the use of paper ballots and voting systems in the election process, and the method of acquiring and casting an absentee ballot."
+      }
+    ]
+  },
+  {
+    "state": "IL",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "Schools must distribute voter registration materials to high schools"
+      }
+    ]
+  },
+  {
+    "state": "KY",
+    "policies": [
+      {
+        "label": "Form distribution and assistance",
+        "description": "The county clerk shall provide voter registration forms annually to each public and private high school. Each school shall have a designated person who shall be responsible for informing students of the availability of the registration forms and assisting them in registering."
+      }
+    ]
+  },
+  {
+    "state": "LA",
+    "policies": [
+      {
+        "label": "Opportunity to register",
+        "description": "Public schools shall provide an opportunity for each high school senior who is at least seventeen years old to register to vote by using a school computer to fill out an electronic voter registration application or by using the state mail voter registration application form."
+      },
+      {
+        "label": "Special Days",
+        "description": "The first Tuesday after the first Monday in May annually shall be known as Louisiana High School Seniors Voter Registration Day."
+      },
+      {
+        "label": "Voter Registration Agencies",
+        "description": "Public high schools are designated as voter registration agencies."
+      }
+    ]
+  },
+  {
+    "state": "ME",
+    "policies": [
+      {
+        "label": "Voter Registration Agencies",
+        "description": "Public high schools are designated as voter registration agencies."
+      }
+    ]
+  },
+  {
+    "state": "MN",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "Schools must make voter-registration applications available each May and September and may request forms from the Secretary of State"
+      }
+    ]
+  },
+  {
+    "state": "NC",
+    "policies": [
+      {
+        "label": "Form Availability",
+        "description": "Every public high school shall make available to its students and others who are eligible to register to vote the application forms, applicaiton forms, and shall keep a sufficient supply of the forms so that they are always available."
+      }
+    ]
+  },
+  {
+    "state": "PA",
+    "policies": [
+      {
+        "label": "School space available",
+        "description": "School boards must provide space in public school buildings when county voter-registration commissions request it for registration activities."
+      }
+    ]
+  },
+  {
+    "state": "RI",
+    "policies": [
+      {
+        "label": "Voter registration drives",
+        "description": "Election boards must conduct voter-registration drives annually in high schools."
+      }
+    ]
+  },
+  {
+    "state": "SC",
+    "policies": [
+      {
+        "label": "Form Availability",
+        "description": "Every high school shall make voter registration application forms available to its students."
+      }
+    ]
+  },
+  {
+    "state": "VA",
+    "policies": [
+      {
+        "label": "Opportunity to Register",
+        "description": "Publich high schools shall provide students who are old enough to vote an opportunty to complete an application during the normal course of the school day, including through online registration or paper forms."
+      }
+    ]
+  },
+  {
+    "state": "WA",
+    "policies": [
+      {
+        "label": "Special Days",
+        "description": "January 16 is Temperance and Good Citizenship Day. Social studies teachers must, as resources allow, coordinate a voter registration event for high school seniors and make voter sign up and registration available to all students."
+      },
+      {
+        "label": "Opportunity to Register",
+        "description": "All students who will be eighteen years of age or older by the time of the next general election will be given the opportunity to register to vote online in the classroom. Students who do not possess a state identicard or driver's license must be provided a paper registration form."
+      },
+      {
+        "label": "Form Distribution",
+        "description": "The superintendent of public instruction, in consultation with the secretary of state, must update and distribute youth voter registration materials annually, by December 1st, for eligible students to register to vote at school."
+      }
+    ]
+  }
+]
