@@ -42,11 +42,11 @@ export default async function HomePage() {
           <div className="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0">
             <div className="space-y-2">
               <h2 className="header-1">Web Services</h2>
-              <p className="body-md">
+              <p className="body-md font-lora">
                 The site contains specific page routes that are not possible to
                 create with Squarespace.
               </p>
-              <p className="body-sm text-ink-300">
+              <p className="body-sm text-ink-300 font-lora">
                 Source code is available on{" "}
                 <Link
                   href="https://github.com/CivicsCenter"
@@ -58,7 +58,7 @@ export default async function HomePage() {
               </p>
               <Link
                 href="/admin"
-                className="text-ink-600 hover:text-ink-700 mt-4 inline-flex items-center text-lg font-medium hover:underline hover:underline-offset-4"
+                className="text-ink-600 hover:text-ink-700 body-lg mt-4 inline-flex items-center font-medium hover:underline hover:underline-offset-4"
               >
                 Update via Admin Panel
                 <ChevronRightIcon className="text-ink-600 h-6 w-6" />
@@ -75,10 +75,10 @@ export default async function HomePage() {
                   )}
                 >
                   <div>
-                    <span className="mb-1 block text-xs font-semibold text-gray-500">
+                    <span className="body-sm mb-1 block font-semibold text-gray-500">
                       {route.href}
                     </span>
-                    <span className="text-ink-600 text-xl font-semibold">
+                    <span className="text-ink-600 body-xl font-semibold">
                       {route.label}
                     </span>
                   </div>

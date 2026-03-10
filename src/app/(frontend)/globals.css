@@ -51,18 +51,6 @@
   --color-cc-sky-blue: #4785cb;
   --color-cc-evergreen: #59b169;
 
-  --text-3xl: 3.4rem; /* H1 54.4px */
-  --text-2xl: 2.6rem; /* H2 41.6px */
-  --text-xl: 1.8rem; /* H3 28.8px */
-  --text-lg: 1.35rem; /* H4 21.6 px */
-  --text-base: 1.1rem; /* Body 17.6px */
-  --text-sm: 0.9rem; /* Small 14.4px */
-  --text-xs: 0.75rem; /* XSmall 12px */
-
-  --leading-tight: 1.12em;
-  --leading-normal: 1.5em;
-  --tracking-tight: -0.01em;
-
   --breakpoint-xs: 480px;
 }
 
@@ -98,36 +86,84 @@ main {
     margin-bottom: 0 !important;
   }
 
+  .tag {
+    @apply font-sans text-[22px] leading-normal font-bold tracking-[-0.01em] uppercase md:text-[25px];
+  }
+
   .header-1 {
-    @apply font-sans text-[2.7rem] leading-[1.2] font-bold tracking-tight md:text-3xl;
+    @apply font-sans text-[45px] leading-[1.18] font-bold tracking-[-0.01em] md:text-[55px];
   }
 
   .header-2 {
-    @apply font-sans text-[2rem] leading-[1.2] font-bold tracking-tight md:text-2xl;
+    @apply font-sans text-[38px] leading-[1.18] font-bold tracking-[-0.01em] md:text-[50px];
   }
 
   .header-3 {
-    @apply font-sans text-[1.7rem] leading-[1.2] font-semibold tracking-tight md:text-xl;
+    @apply font-sans text-[30px] leading-[1.18] font-bold tracking-[-0.01em] md:text-[35px];
   }
 
   .header-4 {
-    @apply font-sans text-[1.17rem] leading-[1.2] font-semibold tracking-tight md:text-lg;
+    @apply font-sans text-[26px] leading-normal font-bold tracking-[-0.01em] md:text-[30px];
+  }
+
+  .header-5 {
+    @apply font-sans text-[22px] leading-normal font-bold tracking-[-0.01em] md:text-[20px];
+  }
+
+  .header-6 {
+    @apply font-sans text-[16px] leading-normal font-bold tracking-[-0.01em] md:text-[16px];
+  }
+
+  .body-xl {
+    @apply text-[24px] leading-[1.6];
   }
 
   .body-lg {
-    @apply font-lora text-lg;
+    @apply text-[20px] leading-[1.6];
   }
 
   .body-md {
-    @apply font-lora text-base;
+    @apply text-[18px] leading-[1.6];
+  }
+
+  .body-base {
+    @apply text-[16px] leading-[1.6];
   }
 
   .body-sm {
-    @apply font-lora text-sm;
+    @apply text-[14px] leading-[1.6];
   }
 
-  .body-xs {
-    @apply font-lora text-xs;
+  /*****************
+  Squarespace Styles
+  *****************/
+
+  .header-sqsp-1 {
+    @apply font-sans text-[2.7rem] leading-[1.2] font-bold tracking-[-0.01em] md:text-[3.4rem];
+  }
+
+  .header-sqsp-2 {
+    @apply font-sans text-[2rem] leading-[1.2] font-bold tracking-[-0.01em] md:text-[2.6rem];
+  }
+
+  .header-sqsp-3 {
+    @apply font-sans text-[1.7rem] leading-[1.2] font-semibold tracking-[-0.01em] md:text-[1.8rem];
+  }
+
+  .header-sqsp-4 {
+    @apply font-sans text-[1.17rem] leading-[1.2] font-semibold tracking-[-0.01em] md:text-[1.35rem];
+  }
+
+  .body-sqsp-lg {
+    @apply font-lora text-[1.7rem] leading-normal;
+  }
+
+  .body-sqsp-md {
+    @apply font-lora text-[1.1rem] leading-normal;
+  }
+
+  .body-sqsp-sm {
+    @apply font-lora text-[0.9rem] leading-normal;
   }
 }
 

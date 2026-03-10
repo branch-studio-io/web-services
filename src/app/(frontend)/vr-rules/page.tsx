@@ -40,11 +40,9 @@ export default async function VRRulesPage() {
         <div className="mx-auto flex flex-col gap-10">
           <div className="mx-auto flex flex-col gap-10 lg:flex-row lg:flex-wrap lg:gap-x-20 lg:gap-y-0">
             <div className="order-1 lg:min-w-0 lg:flex-1">
-              <h1 className="header-2 my-4">State Requirements</h1>
-              <p className="font-sans text-lg">
-                Explore our interactive map to state-by-state voting
-                requirements:
-              </p>
+              <h1 className="header-3 my-4 lg:ml-20">
+                Explore the map to find your states requirements!
+              </h1>
             </div>
             <div className="order-2 w-full shrink-0 lg:order-3 lg:basis-full">
               <NationalPreregMap
@@ -58,8 +56,8 @@ export default async function VRRulesPage() {
               />
             </div>
             <div className="order-3 lg:order-2 lg:min-w-0 lg:flex-1">
-              <h2 className="header-4 font-bold">Pre-18 Registration Laws</h2>
-              <ul className="body-md mt-6 list-none space-y-3">
+              <h2 className="header-5 font-bold">Pre-18 Registration Laws</h2>
+              <ul className="font-lora mt-6 list-none space-y-3 text-base">
                 {categories.map(({ label, description }, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span
