@@ -47,27 +47,25 @@ export default function StateList({ states, authorities }: Props) {
         return (
           <li key={state.fips} className={`w-full ${rowBg}`}>
             <div
-              className="mx-auto flex items-center gap-x-10 gap-y-6 px-6 py-4 lg:px-8"
+              className="mx-auto flex flex-col items-center gap-x-10 gap-y-6 px-6 py-4 md:flex-row md:items-start md:px-8"
               style={{ maxWidth: MAX_WIDTH }}
             >
               <Link
                 href={`/vr-rules/${state.slug}`}
-                className="shrink-0 cursor-pointer text-[#90D2DC] drop-shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="block h-[120px] w-[120px] shrink-0 cursor-pointer text-[#90D2DC] drop-shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 md:h-[100px] md:w-[100px]"
                 aria-label={`See all voter registration rules for ${state.name}`}
               >
-                <StateIcon code={state.code} size="lg" />
+                <StateIcon code={state.code} />
               </Link>
-              <div className="flex min-w-0 flex-1 flex-col">
-                <h3 className="text-lg font-bold text-gray-950">
-                  {state.name}
-                </h3>
-                <p className="font-lora text-base text-gray-950">
+              <div className="flex min-w-0 flex-1 flex-col w-full text-left">
+                <h3 className="text-lg font-bold">{state.name}</h3>
+                <p className="font-lora text-base">
                   <strong>Voter registration age:</strong>{" "}
                   {briefEligibility ?? "—"}
                 </p>
                 <Link
                   href={`/vr-rules/${state.slug}`}
-                  className="font-lora mt-1 text-sm font-bold text-gray-950 hover:underline hover:decoration-2 hover:underline-offset-2 focus:underline focus:decoration-2 focus:outline-none"
+                  className="font-lora mt-1 text-sm font-bold hover:underline hover:decoration-2 hover:underline-offset-2 focus:underline focus:decoration-2 focus:outline-none"
                 >
                   See all about {state.name} →
                 </Link>

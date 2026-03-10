@@ -134,6 +134,10 @@ main {
     @apply text-[14px] leading-[1.6];
   }
 
+  .underline-highlight {
+    @apply underline underline-offset-2 decoration-cc-teal decoration-[15.5%];
+  }
+
   /*****************
   Squarespace Styles
   *****************/

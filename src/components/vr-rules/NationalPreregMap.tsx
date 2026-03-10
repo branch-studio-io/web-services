@@ -8,7 +8,7 @@ import { getPreregStatus } from "@/utils/democracyWorkApi";
 import {
   parseStateCode,
   PREREG_STATUS_COLORS,
-  voterEligibilityText,
+  voterEligibilityParts,
 } from "@/utils/democracyWorksUtils";
 import { geoIdentity, geoPath } from "d3-geo";
 import type { Feature, FeatureCollection } from "geojson";
@@ -207,7 +207,7 @@ export default function NationalPreregMap({
           ref={tooltipRef}
           role="tooltip"
           aria-label={`State: ${hoveredState.name}`}
-          className="bg-sand-100 pointer-events-none z-10 flex w-[400px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
+          className="bg-sand-100 pointer-events-none z-10 flex w-[430px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
           style={{
             position: "fixed",
             left: tooltipSize === null ? -9999 : clampedLeft,
@@ -216,31 +216,36 @@ export default function NationalPreregMap({
             visibility: tooltipSize === null ? "hidden" : "visible",
           }}
         >
-          <div className="space-y-2 p-4">
+          <div className="space-y-2 p-6">
             <h3 className="header-3 font-bold">{hoveredState.name}</h3>
-            <div>
-              <div className="text-xs font-bold">
-                YOU CAN REGISTER TO VOTE IF:
-              </div>
-              <div className="text-md font-sans font-medium">
-                {voterEligibilityText(
-                  youthRegByState.get(hoveredState.code) ?? null,
-                )}
-              </div>
+            <div className="space-y-3 font-sans text-base leading-normal font-extrabold">
+              <p>
+                You can register to vote if:{" "}
+                {(() => {
+                  const youthReg = youthRegByState.get(hoveredState.code);
+                  if (!youthReg) return "—";
+                  const { intro, main, note } = voterEligibilityParts(youthReg);
+                  return (
+                    <>
+                      <span className="underline-highlight">
+                        {intro && <>{intro} </>}
+                        {main}
+                      </span>
+                      {note && <> {note}</>}
+                    </>
+                  );
+                })()}
+              </p>
+              <p>
+                Number of residents turning 18 this year:{" "}
+                <span className="underline-highlight">
+                  {numeral(
+                    statePopsByFips.get(hoveredState.fips)?.pop18 ?? 0,
+                  ).format("0,0")}
+                </span>
+              </p>
+              <p>Click for more info:</p>
             </div>
-            <div>
-              <div className="text-xs font-bold">
-                RESIDENTS TURNING 18 THIS YEAR:
-              </div>
-              <div className="text-md font-sans font-medium">
-                {numeral(
-                  statePopsByFips.get(hoveredState.fips)?.pop18 ?? 0,
-                ).format("0,0")}
-              </div>
-            </div>
-          </div>
-          <div className="bg-sand-300 body-sm px-4 py-1 text-xs font-semibold text-gray-500">
-            Click the state to learn more.
           </div>
         </div>
       )}
