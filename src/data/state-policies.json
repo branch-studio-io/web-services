@@ -105,6 +105,23 @@
     ]
   },
   {
+    "state": "MA",
+    "policies": [
+      {
+        "label": "Special Days",
+        "description": "Subject to city consent, election officials are required to hold voter education and voluntary registration sessions in each high schools every year between April 1 and May 15."
+      },
+      {
+        "label": "Form Distribution",
+        "description": "Public and private high schools shall make voter registration forms available to students"
+      },
+      {
+        "label": "Challenge",
+        "description": "The state secretary must establish a non-partisan high school voter challenge program and promulgate regulations for participating high schools."
+      }
+    ]
+  },
+  {
     "state": "ME",
     "policies": [
       {
@@ -126,8 +143,48 @@
     "state": "NC",
     "policies": [
       {
-        "label": "Form Availability",
-        "description": "Every public high school shall make available to its students and others who are eligible to register to vote the application forms, applicaiton forms, and shall keep a sufficient supply of the forms so that they are always available."
+        "label": "Form Distribution",
+        "description": "Every public high school shall make available to its students and others who are eligible to register to vote the application forms, application forms, and shall keep a sufficient supply of the forms so that they are always available."
+      }
+    ]
+  },
+  {
+    "state": "NJ",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "Public and private high schools must provide voter-registration forms and civic-participation information to seniors."
+      },
+      {
+        "label": "Monitoring",
+        "description": "School district and private school administrators must provide the executive county superintendent with a statement of assurance concerning their distribution of voter registration forms"
+      }
+    ]
+  },
+  {
+    "state": "NY",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "School boards and governing bodies of private schools are required to adopt policies and procedures for providing students with access to voter registration and preregistratin forms, assistance with completing forms, and information on the requirements to register and preregister to vote."
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "policies": [
+      {
+        "label": "Schools as designated registration locations",
+        "description": "Persons qualified to register or to change their registration because of a change of address or change of name may register or change their registration in person at any state or local office of a designated agency, ... at a public high school ..."
+      }
+    ]
+  },
+  {
+    "state": "OR",
+    "policies": [
+      {
+        "label": "District plans",
+        "description": "School districts with high schools must adopt plans for encouraging student to register to vote and to vote in elections."
       }
     ]
   },
@@ -159,11 +216,33 @@
     ]
   },
   {
+    "state": "TN",
+    "policies": [
+      {
+        "label": "Voter Registration Agencies",
+        "description": "Public high schools are designated as voter registration agencies."
+      },
+      {
+        "label": "Form Distribution",
+        "description": "High schools are required to distribute voter registration forms, assist with completion, and transmit forms to election officials."
+      }
+    ]
+  },
+  {
+    "state": "TX",
+    "policies": [
+      {
+        "label": "Form Distribution",
+        "description": "High schools principals are required to designate a deputy registrar, and deputy registrars are required to distribute voter registration forms twice per year to each student who is or will be 18 years of age or older during that year."
+      }
+    ]
+  },
+  {
     "state": "VA",
     "policies": [
       {
         "label": "Opportunity to Register",
-        "description": "Publich high schools shall provide students who are old enough to vote an opportunty to complete an application during the normal course of the school day, including through online registration or paper forms."
+        "description": "Public high schools shall provide students who are old enough to vote an opportunity to complete an application during the normal course of the school day, including through online registration or paper forms."
       }
     ]
   },
