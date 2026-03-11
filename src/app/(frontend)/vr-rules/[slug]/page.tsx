@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 import { StateStamp } from "@/components/vr-rules/StateStamp";
 import { StateVRRules } from "@/components/vr-rules/StateVRRules";
 import { StateVRSummary } from "@/components/vr-rules/StateVRSummary";
-import { VRActionButtons } from "@/components/vr-rules/VRActionButtons";
+import { ActionButtons } from "@/components/vr-rules/ActionButtons";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePoliciesJson from "@/data/state-policies.json";
@@ -80,7 +80,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           </div>
           <div className="flex items-center justify-center lg:justify-start">
             <div className="flex flex-col gap-4 lg:flex-row">
-              <VRActionButtons />
+              <ActionButtons />
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
             <h3 className="header-4 font-extrabold">Next Steps!</h3>
             <div>
               <div className="flex w-fit flex-col gap-4">
-                <VRActionButtons />
+                <ActionButtons />
               </div>
             </div>
           </div>

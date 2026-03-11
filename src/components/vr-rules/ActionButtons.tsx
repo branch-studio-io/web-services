@@ -1,7 +1,7 @@
 import { LinkButton } from "@/components/Button";
 import { TCC_URL } from "@/utils/globals";
 
-export const VRActionButtons = () => {
+export const ActionButtons = () => {
   return (
     <>
       <LinkButton
@@ -18,14 +18,9 @@ export const VRActionButtons = () => {
       >
         Learn to Lead
       </LinkButton>
-      <LinkButton
-        variant="primary"
-        href="#"
-        className="whitespace-nowrap"
-      >
+      <LinkButton variant="primary" href="#" className="whitespace-nowrap">
         Share on Social
       </LinkButton>
     </>
   );
 };
-
