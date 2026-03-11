@@ -29,8 +29,8 @@ export function StateVRSummary({
   return (
     <div>
       <h2 className="border-b border-gray-300 py-5">
-        <span className="header-4 mr-2 font-extrabold">{state.name} has</span>
-        <span className="bg-teal-intense header-3 mr-2 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
+        <span className="header-4 mr-3 font-extrabold">{state.name} has</span>
+        <span className="bg-teal-intense header-3 mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
           <span className="header-3 font-extrabold">12,345</span>
           <Image
             src={headExplodingImg}
@@ -44,10 +44,10 @@ export function StateVRSummary({
 
       {authority && (
         <h2 className="border-b border-gray-300 py-5">
-          <span className="header-4 mr-2 font-extrabold">
+          <span className="header-4 mr-3 font-extrabold">
             {state.name} can pre-register
           </span>
-          <span className="bg-teal-intense header-3 mr-2 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
+          <span className="bg-teal-intense header-3 mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
             <span className="header-3 font-extrabold">BEFORE turning 18</span>
             <Image src={sirenImg} alt="Siren" width={32} height={32} />
           </span>
