@@ -17,10 +17,9 @@ export function StateStamp({ state }: StateStampProps) {
       <div className="hidden flex-row items-center justify-center overflow-visible lg:flex">
         <StateIcon
           code={state.code}
-          width={250}
+          width={300}
           height={200}
-          withShadow
-          className="text-yellow"
+          className="text-yellow filter drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
         />
       </div>
     </div>

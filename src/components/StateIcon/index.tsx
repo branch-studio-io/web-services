@@ -11,11 +11,6 @@ type StateIconProps = {
   /** Tailwind classes for styling, e.g. fill-green-600 or text-blue-500 */
   className?: string;
   /**
-   * Whether to render a drop shadow under the state outline.
-   * Implemented via an SVG filter on the path, so only the outline is shadowed.
-   */
-  withShadow?: boolean;
-  /**
    * Explicit width/height for the SVG. When provided, these are applied as
    * `width`/`height` attributes and take precedence over size set by parents.
    * Accepts numbers (pixels) or any valid CSS length string.
@@ -42,7 +37,6 @@ const toDimension = (value?: Dimension): string | undefined => {
 export function StateIcon({
   code,
   className,
-  withShadow,
   size,
   width,
   height,
@@ -67,7 +61,6 @@ export function StateIcon({
   const resolvedWidth = toDimension(size ?? width);
   const resolvedHeight = toDimension(size ?? height);
   const hasExplicitDimensions = Boolean(resolvedWidth || resolvedHeight);
-  const filterId = withShadow ? `state-icon-shadow-${normalizedCode}` : undefined;
 
   return (
     <svg
@@ -83,29 +76,7 @@ export function StateIcon({
       preserveAspectRatio="xMidYMid meet"
       aria-hidden
     >
-      {withShadow && filterId && (
-        <defs>
-          <filter
-            id={filterId}
-            x="-50%"
-            y="-50%"
-            width="200%"
-            height="200%"
-            colorInterpolationFilters="sRGB"
-          >
-            <feDropShadow
-              dx="0"
-              dy="2"
-              stdDeviation="1.5"
-              floodOpacity="0.2"
-            />
-          </filter>
-        </defs>
-      )}
-      <g
-        fill="currentColor"
-        filter={withShadow && filterId ? `url(#${filterId})` : undefined}
-      >
+      <g fill="currentColor">
         <g dangerouslySetInnerHTML={{ __html: svgData.innerHtml }} />
       </g>
     </svg>
