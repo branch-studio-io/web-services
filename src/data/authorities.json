@@ -103,34 +103,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "American Solidarity",
-          "partyLabelEs": "Solidaridad Estadounidense",
-          "partyPhrasingEn": "American Solidarity Party",
-          "partyPhrasingEs": "Partido de la Solidaridad Estadounidense"
-        },
-        {
-          "partyLabelEn": "America",
-          "partyLabelEs": "América",
-          "partyPhrasingEn": "America Party",
-          "partyPhrasingEs": " América"
-        },
-        {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
-        },
-        {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
-          "partyLabelEn": "Conservative",
-          "partyLabelEs": "Conservador",
-          "partyPhrasingEn": "Conservative Party",
-          "partyPhrasingEs": "Partido Conservador"
+          "partyLabelEn": "Veterans",
+          "partyLabelEs": "Veteranos",
+          "partyPhrasingEn": "Veterans Party",
+          "partyPhrasingEs": "Partido de los Veteranos"
         },
         {
           "partyLabelEn": "Prohibition",
@@ -139,34 +115,10 @@
           "partyPhrasingEs": "Partido de la  Prohibición"
         },
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
-          "partyLabelEn": "Independence",
-          "partyLabelEs": "Independencia",
-          "partyPhrasingEn": "Independence Party",
-          "partyPhrasingEs": "Partido de la Independencia"
-        },
-        {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
-          "partyLabelEn": "Veterans",
-          "partyLabelEs": "Veteranos",
-          "partyPhrasingEn": "Veterans Party",
-          "partyPhrasingEs": "Partido de los Veteranos"
-        },
-        {
-          "partyLabelEn": "UCES' Clowns",
-          "partyLabelEs": "UCES' Clowns",
-          "partyPhrasingEn": "UCES' Clowns Party",
-          "partyPhrasingEs": "Partido UCES' Clowns"
+          "partyLabelEn": "Reform Alaska Permanent Fund Dividend",
+          "partyLabelEs": "Reforma del Dividendo del Fondo Permanente",
+          "partyPhrasingEn": "Reform Alaska Permanent Fund Dividend Party",
+          "partyPhrasingEs": "Partido por la Reforma del Dividendo del Fondo Permanente"
         },
         {
           "partyLabelEn": "Republican",
@@ -175,10 +127,58 @@
           "partyPhrasingEs": "Partido Republicano"
         },
         {
-          "partyLabelEn": "Reform Alaska Permanent Fund Dividend",
-          "partyLabelEs": "Reforma del Dividendo del Fondo Permanente",
-          "partyPhrasingEn": "Reform Alaska Permanent Fund Dividend Party",
-          "partyPhrasingEs": "Partido por la Reforma del Dividendo del Fondo Permanente"
+          "partyLabelEn": "UCES' Clowns",
+          "partyLabelEs": "UCES' Clowns",
+          "partyPhrasingEn": "UCES' Clowns Party",
+          "partyPhrasingEs": "Partido UCES' Clowns"
+        },
+        {
+          "partyLabelEn": "America",
+          "partyLabelEs": "América",
+          "partyPhrasingEn": "America Party",
+          "partyPhrasingEs": " América"
+        },
+        {
+          "partyLabelEn": "American Solidarity",
+          "partyLabelEs": "Solidaridad Estadounidense",
+          "partyPhrasingEn": "American Solidarity Party",
+          "partyPhrasingEs": "Partido de la Solidaridad Estadounidense"
+        },
+        {
+          "partyLabelEn": "Conservative",
+          "partyLabelEs": "Conservador",
+          "partyPhrasingEn": "Conservative Party",
+          "partyPhrasingEs": "Partido Conservador"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
+        },
+        {
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
+        },
+        {
+          "partyLabelEn": "Independence",
+          "partyLabelEs": "Independencia",
+          "partyPhrasingEn": "Independence Party",
+          "partyPhrasingEs": "Partido de la Independencia"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -289,16 +289,16 @@
           "partyPhrasingEs": "Partido Demócrata"
         },
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
           "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -314,7 +314,7 @@
       "statusAvailability": "Unknown",
       "eligibilityByElectionType": "next election",
       "eligibilityByElection": {
-        "date": "2026-03-03",
+        "date": "2026-11-03",
         "primaryVotingSupported": false,
         "futureLocalElectionApplicable": true
       }
@@ -353,22 +353,22 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
         },
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         },
         {
           "partyLabelEn": "Independent",
@@ -377,10 +377,10 @@
           "partyPhrasingEs": "Partido Independiente"
         },
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
         }
       ]
     },
@@ -436,10 +436,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Peace and Freedom",
-          "partyLabelEs": "Paz y Libertad",
-          "partyPhrasingEn": "Peace and Freedom Party",
-          "partyPhrasingEs": "Partido Paz y Libertad"
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
         },
         {
           "partyLabelEn": "Libertarian",
@@ -448,16 +448,16 @@
           "partyPhrasingEs": "Partido Libertario"
         },
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
+          "partyLabelEn": "Peace and Freedom",
+          "partyLabelEs": "Paz y Libertad",
+          "partyPhrasingEn": "Peace and Freedom Party",
+          "partyPhrasingEs": "Partido Paz y Libertad"
         },
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         },
         {
           "partyLabelEn": "American Independent",
@@ -466,10 +466,10 @@
           "partyPhrasingEs": "Partido Independiente Americano"
         },
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
         }
       ]
     },
@@ -525,28 +525,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "No Labels",
-          "partyLabelEs": "Sin Etiquetas",
-          "partyPhrasingEn": "No Labels Party",
-          "partyPhrasingEs": "Partido Sin Etiquetas"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "Unity",
-          "partyLabelEs": "Unidad",
-          "partyPhrasingEn": "Unity Party",
-          "partyPhrasingEs": "Partido de la Unidad"
-        },
-        {
-          "partyLabelEn": "American Constitution",
-          "partyLabelEs": "Constitución Estadounidense",
-          "partyPhrasingEn": "American Constitution Party",
-          "partyPhrasingEs": "Partido de la Constitución Estadounidense"
+          "partyLabelEn": "Approval Voting",
+          "partyLabelEs": "Voto por Aprobación",
+          "partyPhrasingEn": "Approval Voting Party",
+          "partyPhrasingEs": "Partido de  Voto por Aprobación"
         },
         {
           "partyLabelEn": "Center",
@@ -579,10 +561,28 @@
           "partyPhrasingEs": " Libertario"
         },
         {
-          "partyLabelEn": "Approval Voting",
-          "partyLabelEs": "Voto por Aprobación",
-          "partyPhrasingEn": "Approval Voting Party",
-          "partyPhrasingEs": "Partido de  Voto por Aprobación"
+          "partyLabelEn": "No Labels",
+          "partyLabelEs": "Sin Etiquetas",
+          "partyPhrasingEn": "No Labels Party",
+          "partyPhrasingEs": "Partido Sin Etiquetas"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Unity",
+          "partyLabelEs": "Unidad",
+          "partyPhrasingEn": "Unity Party",
+          "partyPhrasingEs": "Partido de la Unidad"
+        },
+        {
+          "partyLabelEn": "American Constitution",
+          "partyLabelEs": "Constitución Estadounidense",
+          "partyPhrasingEn": "American Constitution Party",
+          "partyPhrasingEs": "Partido de la Constitución Estadounidense"
         }
       ]
     },
@@ -643,12 +643,6 @@
           "partyPhrasingEs": "Partido Verde"
         },
         {
-          "partyLabelEn": "Independent",
-          "partyLabelEs": "Independiente",
-          "partyPhrasingEn": "Independent Party",
-          "partyPhrasingEs": "Partido Independiente"
-        },
-        {
           "partyLabelEn": "Libertarian",
           "partyLabelEs": "Libertario",
           "partyPhrasingEn": "Libertarian Party",
@@ -671,6 +665,12 @@
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Independent",
+          "partyLabelEs": "Independiente",
+          "partyPhrasingEn": "Independent Party",
+          "partyPhrasingEs": "Partido Independiente"
         }
       ]
     },
@@ -725,10 +725,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "American",
-          "partyLabelEs": "Americano",
-          "partyPhrasingEn": "American Party",
-          "partyPhrasingEs": "Partido Americano"
+          "partyLabelEn": "Natural Law",
+          "partyLabelEs": "Ley Natural",
+          "partyPhrasingEn": "Natural Law Party",
+          "partyPhrasingEs": "Partido de la  Ley Natural"
         },
         {
           "partyLabelEn": "Working Families",
@@ -771,12 +771,6 @@
           "partyLabelEs": "Sin Etiquetas",
           "partyPhrasingEn": "No Labels Party",
           "partyPhrasingEs": "Partido Sin Etiquetas"
-        },
-        {
-          "partyLabelEn": "Natural Law",
-          "partyLabelEs": "Ley Natural",
-          "partyPhrasingEn": "Natural Law Party",
-          "partyPhrasingEs": "Partido de la  Ley Natural"
         },
         {
           "partyLabelEn": "Mandalorians",
@@ -831,6 +825,12 @@
           "partyLabelEs": "Blue Enigma",
           "partyPhrasingEn": "Blue Enigma Party",
           "partyPhrasingEs": "Partido Blue Enigma"
+        },
+        {
+          "partyLabelEn": "American",
+          "partyLabelEs": "Americano",
+          "partyPhrasingEn": "American Party",
+          "partyPhrasingEs": "Partido Americano"
         },
         {
           "partyLabelEn": "American Delta",
@@ -891,10 +891,28 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Boricua",
-          "partyLabelEs": "Boricua",
-          "partyPhrasingEn": "Boricua Party",
-          "partyPhrasingEs": "Partido Boricua"
+          "partyLabelEn": "Forward",
+          "partyLabelEs": "Florida Forward",
+          "partyPhrasingEn": "Forward Party",
+          "partyPhrasingEs": "Partido Florida Forward"
+        },
+        {
+          "partyLabelEn": "Ecology",
+          "partyLabelEs": "Ecologista",
+          "partyPhrasingEn": "Ecology Party",
+          "partyPhrasingEs": "Partido Ecologista"
+        },
+        {
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "America First",
+          "partyLabelEs": "Primero América",
+          "partyPhrasingEn": "America First Party",
+          "partyPhrasingEs": "Partido Primero América"
         },
         {
           "partyLabelEn": "American Solidarity",
@@ -903,10 +921,28 @@
           "partyPhrasingEs": "Partido de la  Solidaridad Americana"
         },
         {
-          "partyLabelEn": "America First",
-          "partyLabelEs": "Primero América",
-          "partyPhrasingEn": "America First Party",
-          "partyPhrasingEs": "Partido Primero América"
+          "partyLabelEn": "Boricua",
+          "partyLabelEs": "Boricua",
+          "partyPhrasingEn": "Boricua Party",
+          "partyPhrasingEs": "Partido Boricua"
+        },
+        {
+          "partyLabelEn": "Coalition With A Purpose",
+          "partyLabelEs": "Coalición con un Propósito",
+          "partyPhrasingEn": "Coalition With A Purpose Party",
+          "partyPhrasingEs": "Partido de la  Coalición con un Propósito"
+        },
+        {
+          "partyLabelEn": "Conservative",
+          "partyLabelEs": "Conservador",
+          "partyPhrasingEn": "Conservative Party",
+          "partyPhrasingEs": "Partido Conservador"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
         },
         {
           "partyLabelEn": "Socialism and Liberation",
@@ -955,42 +991,6 @@
           "partyLabelEs": "Verde",
           "partyPhrasingEn": "Green Party",
           "partyPhrasingEs": "Partido Verde"
-        },
-        {
-          "partyLabelEn": "Forward",
-          "partyLabelEs": "Florida Forward",
-          "partyPhrasingEn": "Forward Party",
-          "partyPhrasingEs": "Partido Florida Forward"
-        },
-        {
-          "partyLabelEn": "Ecology",
-          "partyLabelEs": "Ecologista",
-          "partyPhrasingEn": "Ecology Party",
-          "partyPhrasingEs": "Partido Ecologista"
-        },
-        {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
-          "partyLabelEn": "Conservative",
-          "partyLabelEs": "Conservador",
-          "partyPhrasingEn": "Conservative Party",
-          "partyPhrasingEs": "Partido Conservador"
-        },
-        {
-          "partyLabelEn": "Coalition With A Purpose",
-          "partyLabelEs": "Coalición con un Propósito",
-          "partyPhrasingEn": "Coalition With A Purpose Party",
-          "partyPhrasingEs": "Partido de la  Coalición con un Propósito"
         }
       ]
     },
@@ -1226,18 +1226,6 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
@@ -1248,6 +1236,18 @@
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -1263,7 +1263,7 @@
       "statusAvailability": "Unknown",
       "eligibilityByElectionType": "next election",
       "eligibilityByElection": {
-        "date": "2026-11-03",
+        "date": "2026-05-19",
         "primaryVotingSupported": false,
         "futureLocalElectionApplicable": true
       }
@@ -1405,22 +1405,16 @@
       },
       "parties": [
         {
-          "partyLabelEn": "United Kansas",
-          "partyLabelEs": "Kansas Unido",
-          "partyPhrasingEn": "United Kansas Party",
-          "partyPhrasingEs": "Partido Kansas Unido"
+          "partyLabelEn": "No Labels",
+          "partyLabelEs": "Sin Etiquetas",
+          "partyPhrasingEn": "No Labels Party",
+          "partyPhrasingEs": "Partido Sin Etiquetas"
         },
         {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
           "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "No Labels",
-          "partyLabelEs": "Sin Etiquetas",
-          "partyPhrasingEn": "No Labels Party",
-          "partyPhrasingEs": "Partido Sin Etiquetas"
         },
         {
           "partyLabelEn": "Libertarian",
@@ -1433,6 +1427,12 @@
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "United Kansas",
+          "partyLabelEs": "Kansas Unido",
+          "partyPhrasingEn": "United Kansas Party",
+          "partyPhrasingEs": "Partido Kansas Unido"
         }
       ]
     },
@@ -1487,16 +1487,16 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -1551,12 +1551,6 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
@@ -1567,6 +1561,12 @@
           "partyLabelEs": "Sin Etiquetas",
           "partyPhrasingEn": "Libertarian Party",
           "partyPhrasingEs": "Partido Sin Etiquetas"
+        },
+        {
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Libertario"
         },
         {
           "partyLabelEn": "Republican",
@@ -1627,6 +1627,54 @@
       },
       "parties": [
         {
+          "partyLabelEn": "Reform",
+          "partyLabelEs": "Reformista",
+          "partyPhrasingEn": "Reform Party",
+          "partyPhrasingEs": "Partido Reformista"
+        },
+        {
+          "partyLabelEn": "Socialist",
+          "partyLabelEs": "Socialista",
+          "partyPhrasingEn": "Socialist Party",
+          "partyPhrasingEs": "Partido Socialista"
+        },
+        {
+          "partyLabelEn": "The People's",
+          "partyLabelEs": "Pueblo",
+          "partyPhrasingEn": "The People's Party",
+          "partyPhrasingEs": "Partido Pueblo"
+        },
+        {
+          "partyLabelEn": "Timesizing Not Downsizing",
+          "partyLabelEs": "Optimización del Tiempo, No Reducción de Personal",
+          "partyPhrasingEn": "Timesizing Not Downsizing Party",
+          "partyPhrasingEs": "Partido de la Optimización del Tiempo, No Reducción de Personal"
+        },
+        {
+          "partyLabelEn": "Twelve Visions",
+          "partyLabelEs": "Doce Visiones",
+          "partyPhrasingEn": "Twelve Visions Party",
+          "partyPhrasingEs": "Partido de las Doce Visiones"
+        },
+        {
+          "partyLabelEn": "United Independent",
+          "partyLabelEs": "Independiente Unido",
+          "partyPhrasingEn": "United Independent Party",
+          "partyPhrasingEs": "Partido Independiente Unido"
+        },
+        {
+          "partyLabelEn": "Unity",
+          "partyLabelEs": "Unidad",
+          "partyPhrasingEn": "Unity Party",
+          "partyPhrasingEs": "Partido de la Unidad"
+        },
+        {
+          "partyLabelEn": "Veterans America",
+          "partyLabelEs": "Veteranos de América",
+          "partyPhrasingEn": "Veterans America Party",
+          "partyPhrasingEs": "Partido de los Veteranos de América"
+        },
+        {
           "partyLabelEn": "We The People",
           "partyLabelEs": "Nosotros, el Pueblo",
           "partyPhrasingEn": "We The People Party",
@@ -1651,144 +1699,6 @@
           "partyPhrasingEs": "Partido de los Ciudadanos del Mundo"
         },
         {
-          "partyLabelEn": "Twelve Visions",
-          "partyLabelEs": "Doce Visiones",
-          "partyPhrasingEn": "Twelve Visions Party",
-          "partyPhrasingEs": "Partido de las Doce Visiones"
-        },
-        {
-          "partyLabelEn": "Timesizing Not Downsizing",
-          "partyLabelEs": "Optimización del Tiempo, No Reducción de Personal",
-          "partyPhrasingEn": "Timesizing Not Downsizing Party",
-          "partyPhrasingEs": "Partido de la Optimización del Tiempo, No Reducción de Personal"
-        },
-        {
-          "partyLabelEn": "The People's",
-          "partyLabelEs": "Pueblo",
-          "partyPhrasingEn": "The People's Party",
-          "partyPhrasingEs": "Partido Pueblo"
-        },
-        {
-          "partyLabelEn": "Socialist",
-          "partyLabelEs": "Socialista",
-          "partyPhrasingEn": "Socialist Party",
-          "partyPhrasingEs": "Partido Socialista"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "Reform",
-          "partyLabelEs": "Reformista",
-          "partyPhrasingEn": "Reform Party",
-          "partyPhrasingEs": "Partido Reformista"
-        },
-        {
-          "partyLabelEn": "Rainbow Coalition",
-          "partyLabelEs": "Coalición Arcoíris",
-          "partyPhrasingEn": "Rainbow Coalition Party",
-          "partyPhrasingEs": "Partido de la Coalición Arcoíris"
-        },
-        {
-          "partyLabelEn": "Prohibition",
-          "partyLabelEs": "Prohibición",
-          "partyPhrasingEn": "Prohibition Party",
-          "partyPhrasingEs": "Partido de la Prohibición"
-        },
-        {
-          "partyLabelEn": "Pizza",
-          "partyLabelEs": "Pizza",
-          "partyPhrasingEn": "Pizza Party",
-          "partyPhrasingEs": "Partido Pizza"
-        },
-        {
-          "partyLabelEn": "Pirate",
-          "partyLabelEs": "Pirata",
-          "partyPhrasingEn": "Pirate Party",
-          "partyPhrasingEs": "Partido Pirata"
-        },
-        {
-          "partyLabelEn": "New World Council",
-          "partyLabelEs": "Nuevo Consejo Mundial",
-          "partyPhrasingEn": "New World Council Party",
-          "partyPhrasingEs": "Partido del  Nuevo Consejo Mundial"
-        },
-        {
-          "partyLabelEn": "New Alliance",
-          "partyLabelEs": "Nueva Alianza",
-          "partyPhrasingEn": "New Alliance Party",
-          "partyPhrasingEs": "Partido Nueva Alianza"
-        },
-        {
-          "partyLabelEn": "Natural Law",
-          "partyLabelEs": "Ley Natural",
-          "partyPhrasingEn": "Natural Law Party",
-          "partyPhrasingEs": "Partido de la Ley Natural"
-        },
-        {
-          "partyLabelEn": "Massachusetts Independent",
-          "partyLabelEs": "Independiente de Massachusetts",
-          "partyPhrasingEn": "Massachusetts Independent Party",
-          "partyPhrasingEs": "Partido Independiente de Massachusetts"
-        },
-        {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
-          "partyLabelEn": "Latino-Vote",
-          "partyLabelEs": "Voto Latino",
-          "partyPhrasingEn": "Latino-Vote Party",
-          "partyPhrasingEs": "Partido del  Voto Latino"
-        },
-        {
-          "partyLabelEn": "Interdependent 3rd",
-          "partyLabelEs": "Tercer Partido Interdependiente",
-          "partyPhrasingEn": "Interdependent 3rd Party",
-          "partyPhrasingEs": " Tercer Partido Interdependiente"
-        },
-        {
-          "partyLabelEn": "Green-Rainbow",
-          "partyLabelEs": "Arcoíris Verde",
-          "partyPhrasingEn": "Green-Rainbow Party",
-          "partyPhrasingEs": "Partido del  Arcoíris Verde"
-        },
-        {
-          "partyLabelEn": "Green USA",
-          "partyLabelEs": "Verde de EE. UU.",
-          "partyPhrasingEn": "Green USA Party",
-          "partyPhrasingEs": "Partido Verde de EE. UU."
-        },
-        {
-          "partyLabelEn": "Forward",
-          "partyLabelEs": "Avance",
-          "partyPhrasingEn": "Forward Party",
-          "partyPhrasingEs": "Partido Avance"
-        },
-        {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
-          "partyLabelEn": "Conservative",
-          "partyLabelEs": "Conservador",
-          "partyPhrasingEn": "Conservative Party",
-          "partyPhrasingEs": "Partido Conservador"
-        },
-        {
           "partyLabelEn": "American Term Limits",
           "partyLabelEs": "Límites de Mandato en Estados Unidos",
           "partyPhrasingEn": "American Term Limits Party",
@@ -1807,22 +1717,112 @@
           "partyPhrasingEs": "Partido Primero Estados Unidos"
         },
         {
-          "partyLabelEn": "United Independent",
-          "partyLabelEs": "Independiente Unido",
-          "partyPhrasingEn": "United Independent Party",
-          "partyPhrasingEs": "Partido Independiente Unido"
+          "partyLabelEn": "Green USA",
+          "partyLabelEs": "Verde de EE. UU.",
+          "partyPhrasingEn": "Green USA Party",
+          "partyPhrasingEs": "Partido Verde de EE. UU."
         },
         {
-          "partyLabelEn": "Unity",
-          "partyLabelEs": "Unidad",
-          "partyPhrasingEn": "Unity Party",
-          "partyPhrasingEs": "Partido de la Unidad"
+          "partyLabelEn": "Green-Rainbow",
+          "partyLabelEs": "Arcoíris Verde",
+          "partyPhrasingEn": "Green-Rainbow Party",
+          "partyPhrasingEs": "Partido del  Arcoíris Verde"
         },
         {
-          "partyLabelEn": "Veterans America",
-          "partyLabelEs": "Veteranos de América",
-          "partyPhrasingEn": "Veterans America Party",
-          "partyPhrasingEs": "Partido de los Veteranos de América"
+          "partyLabelEn": "Interdependent 3rd",
+          "partyLabelEs": "Tercer Partido Interdependiente",
+          "partyPhrasingEn": "Interdependent 3rd Party",
+          "partyPhrasingEs": " Tercer Partido Interdependiente"
+        },
+        {
+          "partyLabelEn": "Latino-Vote",
+          "partyLabelEs": "Voto Latino",
+          "partyPhrasingEn": "Latino-Vote Party",
+          "partyPhrasingEs": "Partido del  Voto Latino"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
+        },
+        {
+          "partyLabelEn": "Massachusetts Independent",
+          "partyLabelEs": "Independiente de Massachusetts",
+          "partyPhrasingEn": "Massachusetts Independent Party",
+          "partyPhrasingEs": "Partido Independiente de Massachusetts"
+        },
+        {
+          "partyLabelEn": "Natural Law",
+          "partyLabelEs": "Ley Natural",
+          "partyPhrasingEn": "Natural Law Party",
+          "partyPhrasingEs": "Partido de la Ley Natural"
+        },
+        {
+          "partyLabelEn": "New Alliance",
+          "partyLabelEs": "Nueva Alianza",
+          "partyPhrasingEn": "New Alliance Party",
+          "partyPhrasingEs": "Partido Nueva Alianza"
+        },
+        {
+          "partyLabelEn": "New World Council",
+          "partyLabelEs": "Nuevo Consejo Mundial",
+          "partyPhrasingEn": "New World Council Party",
+          "partyPhrasingEs": "Partido del  Nuevo Consejo Mundial"
+        },
+        {
+          "partyLabelEn": "Pirate",
+          "partyLabelEs": "Pirata",
+          "partyPhrasingEn": "Pirate Party",
+          "partyPhrasingEs": "Partido Pirata"
+        },
+        {
+          "partyLabelEn": "Pizza",
+          "partyLabelEs": "Pizza",
+          "partyPhrasingEn": "Pizza Party",
+          "partyPhrasingEs": "Partido Pizza"
+        },
+        {
+          "partyLabelEn": "Prohibition",
+          "partyLabelEs": "Prohibición",
+          "partyPhrasingEn": "Prohibition Party",
+          "partyPhrasingEs": "Partido de la Prohibición"
+        },
+        {
+          "partyLabelEn": "Rainbow Coalition",
+          "partyLabelEs": "Coalición Arcoíris",
+          "partyPhrasingEn": "Rainbow Coalition Party",
+          "partyPhrasingEs": "Partido de la Coalición Arcoíris"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Conservative",
+          "partyLabelEs": "Conservador",
+          "partyPhrasingEn": "Conservative Party",
+          "partyPhrasingEs": "Partido Conservador"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
+        },
+        {
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Forward",
+          "partyLabelEs": "Avance",
+          "partyPhrasingEn": "Forward Party",
+          "partyPhrasingEs": "Partido Avance"
         }
       ]
     },
@@ -1878,16 +1878,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
         },
         {
           "partyLabelEn": "Working Class",
@@ -1896,10 +1890,16 @@
           "partyPhrasingEs": "Partido de la Clase Trabajadora"
         },
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
         }
       ]
     },
@@ -1955,12 +1955,6 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
@@ -1977,6 +1971,12 @@
           "partyLabelEs": "Verde Independiente",
           "partyPhrasingEn": "Green Independent Party",
           "partyPhrasingEs": "Partido Verde Independiente"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -2135,6 +2135,12 @@
       },
       "parties": [
         {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
+        },
+        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
@@ -2145,12 +2151,6 @@
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -2225,7 +2225,7 @@
   {
     "ocdId": "ocd-division/country:us/state:mt",
     "registration": {
-      "statusUrl": "https://prodvoterportal.mt.gov/WhereToVote.aspx",
+      "statusUrl": "https://voterportal.mt.gov/WhereToVote.aspx",
       "formUrl": "https://votemt.gov/voter-registration/",
       "noRegistrationRequiredInstructions": null,
       "methods": [
@@ -2312,10 +2312,10 @@
           "partyPhrasingEs": "Partido Libertario"
         },
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
         },
         {
           "partyLabelEn": "Democratic",
@@ -2324,10 +2324,10 @@
           "partyPhrasingEs": "Partido Demócrata"
         },
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -2432,28 +2432,28 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
           "partyPhrasingEs": "Partido Republicano"
         },
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
           "partyLabelEn": "Legal Marijuana Now",
           "partyLabelEs": "Legal Marijuana Now",
           "partyPhrasingEn": "Legal Marijuana Now Party",
           "partyPhrasingEs": "Partido Legal Marijuana Now"
+        },
+        {
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         }
       ]
     },
@@ -2565,10 +2565,34 @@
           "partyPhrasingEs": "Partido Conservador"
         },
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
+          "partyLabelEn": "US Constitution",
+          "partyLabelEs": "Constitución de los Estados Unidos",
+          "partyPhrasingEn": "US Constitution Party",
+          "partyPhrasingEs": "Partido de la Constitución de los Estados Unidos"
+        },
+        {
+          "partyLabelEn": "Socialist",
+          "partyLabelEs": "Socialista",
+          "partyPhrasingEn": "Socialist Party",
+          "partyPhrasingEs": "Partido Socialista"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Reform",
+          "partyLabelEs": "Reformista",
+          "partyPhrasingEn": "Reform Party",
+          "partyPhrasingEs": "Partido Reformista"
+        },
+        {
+          "partyLabelEn": "Natural Law",
+          "partyLabelEs": "Ley Natural",
+          "partyPhrasingEn": "Natural Law Party",
+          "partyPhrasingEs": "Partido de la Ley Natural"
         },
         {
           "partyLabelEn": "Libertarian",
@@ -2583,34 +2607,10 @@
           "partyPhrasingEs": "Partido Verde"
         },
         {
-          "partyLabelEn": "Natural Law",
-          "partyLabelEs": "Ley Natural",
-          "partyPhrasingEn": "Natural Law Party",
-          "partyPhrasingEs": "Partido de la Ley Natural"
-        },
-        {
-          "partyLabelEn": "Reform",
-          "partyLabelEs": "Reformista",
-          "partyPhrasingEn": "Reform Party",
-          "partyPhrasingEs": "Partido Reformista"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "Socialist",
-          "partyLabelEs": "Socialista",
-          "partyPhrasingEn": "Socialist Party",
-          "partyPhrasingEs": "Partido Socialista"
-        },
-        {
-          "partyLabelEn": "US Constitution",
-          "partyLabelEs": "Constitución de los Estados Unidos",
-          "partyPhrasingEn": "US Constitution Party",
-          "partyPhrasingEs": "Partido de la Constitución de los Estados Unidos"
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
         }
       ]
     },
@@ -2665,6 +2665,12 @@
       },
       "parties": [
         {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
           "partyLabelEn": "Green",
           "partyLabelEs": "Verde",
           "partyPhrasingEn": "Green Party",
@@ -2681,12 +2687,6 @@
           "partyLabelEs": "Libertario",
           "partyPhrasingEn": "Libertarian Party",
           "partyPhrasingEs": "Partido Libertario"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -2742,10 +2742,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
         },
         {
           "partyLabelEn": "Democratic",
@@ -2754,22 +2754,22 @@
           "partyPhrasingEs": "Partido Demócrata"
         },
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
           "partyLabelEn": "Forward",
           "partyLabelEs": "Avance",
           "partyPhrasingEn": "Forward Party",
           "partyPhrasingEs": "Partido Avance"
         },
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
         },
         {
           "partyLabelEn": "Independent American",
@@ -2836,10 +2836,10 @@
           "partyPhrasingEs": "Partido Republicano"
         },
         {
-          "partyLabelEn": "Conservative",
-          "partyLabelEs": "Conservador",
-          "partyPhrasingEn": "Conservative Party",
-          "partyPhrasingEs": "Partido Conservador"
+          "partyLabelEn": "Working Families",
+          "partyLabelEs": "Familias Trabajadoras",
+          "partyPhrasingEn": "Working Families Party",
+          "partyPhrasingEs": "Partido de las Familias Trabajadoras"
         },
         {
           "partyLabelEn": "Democratic",
@@ -2848,10 +2848,10 @@
           "partyPhrasingEs": "Partido Demócrata"
         },
         {
-          "partyLabelEn": "Working Families",
-          "partyLabelEs": "Familias Trabajadoras",
-          "partyPhrasingEn": "Working Families Party",
-          "partyPhrasingEs": "Partido de las Familias Trabajadoras"
+          "partyLabelEn": "Conservative",
+          "partyLabelEs": "Conservador",
+          "partyPhrasingEn": "Conservative Party",
+          "partyPhrasingEs": "Partido Conservador"
         }
       ]
     },
@@ -3017,7 +3017,7 @@
       },
       "online": {
         "supported": true,
-        "instructions": "To register online in Oregon, you need to provide ONE of the following: Oregon driver’s license, Oregon permit number, OR ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV). If you don’t have an Oregon-issued ID, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
+        "instructions": "To register online in Oregon, you need to provide ONE of the following: Oregon driver’s license, Oregon permit number, ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV), OR the last four digits of your Social Security number with a signature. If you don’t have an Oregon-issued ID or Social Security number, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
         "url": "https://sos.oregon.gov/voting/Pages/registration.aspx?lang=en"
       },
       "inPerson": {
@@ -3027,46 +3027,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "We The People",
-          "partyLabelEs": "Nosotros, el Pueblo",
-          "partyPhrasingEn": "We The People Party",
-          "partyPhrasingEs": "Partido Nosotros, el Pueblo"
-        },
-        {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
-          "partyLabelEn": "Independent",
-          "partyLabelEs": "Independiente",
-          "partyPhrasingEn": "Independent Party",
-          "partyPhrasingEs": "Partido Independiente"
-        },
-        {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
-          "partyLabelEn": "No Labels",
-          "partyLabelEs": "Sin Etiquetas",
-          "partyPhrasingEn": "No Labels Party",
-          "partyPhrasingEs": "Partido Sin Etiquetas"
-        },
-        {
-          "partyLabelEn": "Pacific Green",
-          "partyLabelEs": "Verde Pacífico",
-          "partyPhrasingEn": "Pacific Green Party",
-          "partyPhrasingEs": "Partido Verde Pacífico"
         },
         {
           "partyLabelEn": "Progressive",
@@ -3075,16 +3039,52 @@
           "partyPhrasingEs": "Partido Progresista"
         },
         {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
+          "partyLabelEn": "Pacific Green",
+          "partyLabelEs": "Verde Pacífico",
+          "partyPhrasingEn": "Pacific Green Party",
+          "partyPhrasingEs": "Partido Verde Pacífico"
+        },
+        {
+          "partyLabelEn": "No Labels",
+          "partyLabelEs": "Sin Etiquetas",
+          "partyPhrasingEn": "No Labels Party",
+          "partyPhrasingEs": "Partido Sin Etiquetas"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
+        },
+        {
+          "partyLabelEn": "Independent",
+          "partyLabelEs": "Independiente",
+          "partyPhrasingEn": "Independent Party",
+          "partyPhrasingEs": "Partido Independiente"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
         },
         {
           "partyLabelEn": "Working Families",
           "partyLabelEs": "Familias Trabajadoras",
           "partyPhrasingEn": "Working Families Party",
           "partyPhrasingEs": "Partido de las Familias Trabajadoras"
+        },
+        {
+          "partyLabelEn": "We The People",
+          "partyLabelEs": "Nosotros, el Pueblo",
+          "partyPhrasingEn": "We The People Party",
+          "partyPhrasingEs": "Partido Nosotros, el Pueblo"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -3093,7 +3093,7 @@
       "formUrl": null,
       "supported": "byAge",
       "methods": "online,by-mail,in-person",
-      "onlineInstructions": "To register using the Oregon online voter registration system, you are required to provide ONE of the following: Oregon driver’s license or permit number; ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV)<br><br>If you don’t have an Oregon-issued ID, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
+      "onlineInstructions": "To register using the Oregon online voter registration system, you are required to provide ONE of the following: Oregon driver’s license or permit number; ID card number issued by the Oregon Driver and Motor Vehicle Services Division (DMV); last four digits of your Social Security number and signature<br><br>If you don’t have an Oregon-issued ID or Social Security number, you can still use the online voter registration application to generate a PDF form that you must print, sign, and return to your county elections office by mail or in person.",
       "inPersonInstructions": "If eligible, you will be automatically registered to vote when you apply for, renew, or replace an Oregon driver’s license, ID card, or permit at the DMV, unless you choose to opt-out. You can also complete a voter registration application in person at your county elections office.",
       "byMailInstructions": "When submitting your application by mail in Oregon, you are required to provide your valid Oregon driver's license, permit, or ID number. If you do not have an Oregon-issued ID, you must provide the last four digits of your Social Security number. <br><br>If you have not been issued any of these numbers, check the box that indicates you do not have an ID number and include a copy of ONE of the following with your application: valid photo ID; current utility bill, bank statement, government check, paycheck, or other government document that shows your name and address; proof of eligibility under the Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA) or the Voting Accessibility for the Elderly and Handicapped Act (VAEH)",
       "eligibilityAge": "P16Y",
@@ -3139,28 +3139,28 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Green",
-          "partyLabelEs": "Verde",
-          "partyPhrasingEn": "Green Party",
-          "partyPhrasingEs": "Partido Verde"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
           "partyLabelEn": "Libertarian",
           "partyLabelEs": "Libertario",
           "partyPhrasingEn": "Libertarian Party",
           "partyPhrasingEs": "Partido Libertario"
         },
         {
+          "partyLabelEn": "Green",
+          "partyLabelEs": "Verde",
+          "partyPhrasingEn": "Green Party",
+          "partyPhrasingEs": "Partido Verde"
+        },
+        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
           "partyPhrasingEs": "Partido Demócrata"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -3301,7 +3301,7 @@
     "ocdId": "ocd-division/country:us/state:sd",
     "registration": {
       "statusUrl": "https://vip.sdsos.gov/viplogin.aspx",
-      "formUrl": "https://sdsos.gov/elections-voting/assets/VoterRegistrationFormFillable.pdf",
+      "formUrl": "https://sdsos.gov/elections-voting/voting/assets/FINAL-VoterRegistrationForm_Part1.pdf",
       "noRegistrationRequiredInstructions": null,
       "methods": [
         "byMail"
@@ -3482,36 +3482,6 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Libertarian",
-          "partyLabelEs": "Libertario",
-          "partyPhrasingEn": "Libertarian Party",
-          "partyPhrasingEs": "Partido Libertario"
-        },
-        {
-          "partyLabelEn": "No Labels",
-          "partyLabelEs": "Sin Etiquetas",
-          "partyPhrasingEn": "No Labels Party",
-          "partyPhrasingEs": "Partido Sin Etiquetas"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "Independent American",
-          "partyLabelEs": "Independiente Estadounidense",
-          "partyPhrasingEn": "Independent American Party",
-          "partyPhrasingEs": "Partido Independiente Estadounidense"
-        },
-        {
-          "partyLabelEn": "Forward",
-          "partyLabelEs": "Avance",
-          "partyPhrasingEn": "Forward Party",
-          "partyPhrasingEs": "Partido Avance"
-        },
-        {
           "partyLabelEn": "Democratic",
           "partyLabelEs": "Demócrata",
           "partyPhrasingEn": "Democratic Party",
@@ -3524,10 +3494,40 @@
           "partyPhrasingEs": "Partido Constitucional"
         },
         {
+          "partyLabelEn": "Independent American",
+          "partyLabelEs": "Independiente Estadounidense",
+          "partyPhrasingEn": "Independent American Party",
+          "partyPhrasingEs": "Partido Independiente Estadounidense"
+        },
+        {
           "partyLabelEn": "Green",
           "partyLabelEs": "Verde",
           "partyPhrasingEn": "Green Party",
           "partyPhrasingEs": "Partido Verde"
+        },
+        {
+          "partyLabelEn": "Forward",
+          "partyLabelEs": "Avance",
+          "partyPhrasingEn": "Forward Party",
+          "partyPhrasingEs": "Partido Avance"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Libertarian",
+          "partyLabelEs": "Libertario",
+          "partyPhrasingEn": "Libertarian Party",
+          "partyPhrasingEs": "Partido Libertario"
+        },
+        {
+          "partyLabelEn": "No Labels",
+          "partyLabelEs": "Sin Etiquetas",
+          "partyPhrasingEn": "No Labels Party",
+          "partyPhrasingEs": "Partido Sin Etiquetas"
         }
       ]
     },
@@ -3566,7 +3566,7 @@
         "forms": "nvrf",
         "raceFieldRequired": null,
         "raceFieldInstructions": null,
-        "idInstructions": "When submitting your application by mail in Virginia, you are required to provide your full Social Security number if you have one.",
+        "idInstructions": "When submitting your application by mail in Virginia, you are required to provide your full Social Security number, if you have one.",
         "signatureInstructions": "To register in Virginia you must:<br>be a United States citizen<br>be a Virginia resident (if you come to Virginia for temporary purposes and intend to return to another state, you are not considered a resident for voting purposes)<br>be 18 years old (if you are 17 years old and will be 18 years years old at the next general election, you can register in advance and vote in any intervening primary or special election)<br>not be registered and plan to vote in another state<br>have your right to vote restored if convicted of a felony<br>not currently be declared mentally incompetent by a court of law",
         "citizenInstructions": null,
         "newVoterInstructions": "If you are registering to vote for the first time in your jurisdiction and are mailing your registration application, federal law requires you to show proof of identification the first time you vote or provide a copy of your ID when you submit your application. Proof of identification includes current and valid photo identification or current utility bill, bank statement, government check, paycheck or government document that shows your name and address. More information <a href=\"https://www.eac.gov/sites/default/files/eac_assets/1/6/Federal_Voter_Registration_ENG.pdf\">here</a>."
@@ -3729,7 +3729,7 @@
       },
       "online": {
         "supported": true,
-        "instructions": "To register online in Wisconsin, you are required to provide your Wisconsin driver license number or Wisconsin state ID card number issued by the Wisconsin Department of Motor Vehicles (DMV). If you don’t have a Wisconsin-issued driver license or ID card, you can still submit a voter registration application by mail or in person.",
+        "instructions": "To register online in Wisconsin, you are required to provide your Wisconsin driver license number or Wisconsin state ID card number issued by the Wisconsin Department of Motor Vehicles (DMV). To complete a voter registration application online, your name, date of birth, and ID number must match what is on file with the Department of Motor Vehicles (DMV). If you don’t have a Wisconsin-issued driver license or ID card, or if your voter registration address does not match the address on your ID, you can still submit a voter registration application by mail or in person.",
         "url": "https://myvote.wi.gov/en-us/Register-To-Vote"
       },
       "inPerson": {
@@ -3790,22 +3790,10 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
-          "partyLabelEn": "Republican",
-          "partyLabelEs": "Republicano",
-          "partyPhrasingEn": "Republican Party",
-          "partyPhrasingEs": "Partido Republicano"
-        },
-        {
-          "partyLabelEn": "Mountain",
-          "partyLabelEs": "Montaña",
-          "partyPhrasingEn": "Mountain Party",
-          "partyPhrasingEs": "Partido Montaña"
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
         },
         {
           "partyLabelEn": "Libertarian",
@@ -3814,10 +3802,22 @@
           "partyPhrasingEs": "Partido Libertario"
         },
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
+        },
+        {
+          "partyLabelEn": "Mountain",
+          "partyLabelEs": "Montaña",
+          "partyPhrasingEn": "Mountain Party",
+          "partyPhrasingEs": "Partido Montaña"
+        },
+        {
+          "partyLabelEn": "Republican",
+          "partyLabelEs": "Republicano",
+          "partyPhrasingEn": "Republican Party",
+          "partyPhrasingEs": "Partido Republicano"
         }
       ]
     },
@@ -3872,28 +3872,28 @@
       },
       "parties": [
         {
-          "partyLabelEn": "Constitution",
-          "partyLabelEs": "Constitucional",
-          "partyPhrasingEn": "Constitution Party",
-          "partyPhrasingEs": "Partido Constitucional"
-        },
-        {
           "partyLabelEn": "Libertarian",
           "partyLabelEs": "Libertario",
           "partyPhrasingEn": "Libertarian Party",
           "partyPhrasingEs": "Partido Libertario"
         },
         {
-          "partyLabelEn": "Democratic",
-          "partyLabelEs": "Demócrata",
-          "partyPhrasingEn": "Democratic Party",
-          "partyPhrasingEs": "Partido Demócrata"
-        },
-        {
           "partyLabelEn": "Republican",
           "partyLabelEs": "Republicano",
           "partyPhrasingEn": "Republican Party",
           "partyPhrasingEs": "Partido Republicano"
+        },
+        {
+          "partyLabelEn": "Constitution",
+          "partyLabelEs": "Constitucional",
+          "partyPhrasingEn": "Constitution Party",
+          "partyPhrasingEs": "Partido Constitucional"
+        },
+        {
+          "partyLabelEn": "Democratic",
+          "partyLabelEs": "Demócrata",
+          "partyPhrasingEn": "Democratic Party",
+          "partyPhrasingEs": "Partido Demócrata"
         }
       ]
     },

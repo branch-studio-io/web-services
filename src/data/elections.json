@@ -1,120 +1,5 @@
 [
   {
-    "ocdId": "ocd-division/country:us/state:ar",
-    "date": "2026-03-03",
-    "description": "Arkansas Preferential Primary Election",
-    "type": "state",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-02-02"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": null
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-02-02"
-        }
-      }
-    }
-  },
-  {
-    "ocdId": "ocd-division/country:us/state:nc",
-    "date": "2026-03-03",
-    "description": "North Carolina Primary Election",
-    "type": "state",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-02-06"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": "2026-02-06"
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-02-06"
-        }
-      }
-    }
-  },
-  {
-    "ocdId": "ocd-division/country:us/state:tx",
-    "date": "2026-03-03",
-    "description": "Texas Primary Election",
-    "type": "state",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-02-02"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": null
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-02-02"
-        }
-      }
-    }
-  },
-  {
-    "ocdId": "ocd-division/country:us/state:ga/cd:14",
-    "date": "2026-03-10",
-    "description": "Congressional District 14 Special Election",
-    "type": "congressional",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-02-09"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": "2026-02-09"
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-02-09"
-        }
-      }
-    }
-  },
-  {
-    "ocdId": "ocd-division/country:us/state:ms",
-    "date": "2026-03-10",
-    "description": "Mississippi Primary Election",
-    "type": "state",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-02-09"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": null
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-02-09"
-        }
-      }
-    }
-  },
-  {
     "ocdId": "ocd-division/country:us/state:il",
     "date": "2026-03-17",
     "description": "Illinois Primary Election",
@@ -133,6 +18,29 @@
       "byMail": {
         "deadline": {
           "date": "2026-02-17"
+        }
+      }
+    }
+  },
+  {
+    "ocdId": "ocd-division/country:us/state:ar",
+    "date": "2026-03-31",
+    "description": "Arkansas General Primary Election",
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
         }
       }
     }
@@ -506,6 +414,29 @@
     }
   },
   {
+    "ocdId": "ocd-division/country:us/state:tx",
+    "date": "2026-05-26",
+    "description": "Texas Primary Runoff Election",
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": null
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": null
+        }
+      }
+    }
+  },
+  {
     "ocdId": "ocd-division/country:us/state:ca",
     "date": "2026-06-02",
     "description": "California Primary Election",
@@ -782,29 +713,6 @@
     }
   },
   {
-    "ocdId": "ocd-division/country:us/state:va",
-    "date": "2026-06-16",
-    "description": "Virginia Primary Election",
-    "type": "state",
-    "registration": {
-      "inPerson": {
-        "deadline": {
-          "date": "2026-06-13"
-        }
-      },
-      "online": {
-        "deadline": {
-          "date": "2026-06-05"
-        }
-      },
-      "byMail": {
-        "deadline": {
-          "date": "2026-06-05"
-        }
-      }
-    }
-  },
-  {
     "ocdId": "ocd-division/country:us/state:md",
     "date": "2026-06-23",
     "description": "Maryland Primary Election",
@@ -1007,6 +915,29 @@
       "byMail": {
         "deadline": {
           "date": "2026-07-08"
+        }
+      }
+    }
+  },
+  {
+    "ocdId": "ocd-division/country:us/state:va",
+    "date": "2026-08-04",
+    "description": "Virginia Primary Election",
+    "type": "state",
+    "registration": {
+      "inPerson": {
+        "deadline": {
+          "date": "2026-08-01"
+        }
+      },
+      "online": {
+        "deadline": {
+          "date": "2026-07-24"
+        }
+      },
+      "byMail": {
+        "deadline": {
+          "date": "2026-07-24"
         }
       }
     }
@@ -1341,17 +1272,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -1364,17 +1295,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       }
     }
@@ -1387,17 +1318,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1410,7 +1341,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
@@ -1420,7 +1351,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1433,17 +1364,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -1456,17 +1387,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       }
     }
@@ -1479,17 +1410,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-16"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-16"
         }
       }
     }
@@ -1502,17 +1433,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-10"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-10"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-10"
         }
       }
     }
@@ -1525,17 +1456,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1548,17 +1479,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1571,17 +1502,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-26"
         }
       }
     }
@@ -1594,17 +1525,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       }
     }
@@ -1617,17 +1548,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-18"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-06"
         }
       }
     }
@@ -1640,17 +1571,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1663,17 +1594,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-02"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -1686,17 +1617,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -1709,17 +1640,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1732,17 +1663,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1755,17 +1686,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -1778,17 +1709,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -1801,17 +1732,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       }
     }
@@ -1824,17 +1755,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -1847,17 +1778,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-02"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -1870,7 +1801,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
@@ -1880,7 +1811,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1893,17 +1824,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-07"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-07"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-07"
         }
       }
     }
@@ -1916,7 +1847,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
@@ -1926,7 +1857,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -1939,17 +1870,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-16"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-16"
         }
       }
     }
@@ -1962,17 +1893,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-06"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-06"
         }
       }
     }
@@ -2008,17 +1939,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -2031,17 +1962,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-06"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-06"
         }
       }
     }
@@ -2054,17 +1985,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-24"
         }
       }
     }
@@ -2077,17 +2008,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       }
     }
@@ -2123,17 +2054,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -2146,17 +2077,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-09"
         }
       }
     }
@@ -2169,17 +2100,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -2192,17 +2123,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -2215,17 +2146,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       }
     }
@@ -2238,17 +2169,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-02"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-04"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -2261,7 +2192,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       },
       "online": {
@@ -2271,7 +2202,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }
@@ -2284,17 +2215,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -2307,7 +2238,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       },
       "online": {
@@ -2317,7 +2248,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-05"
         }
       }
     }
@@ -2330,17 +2261,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-25"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -2353,17 +2284,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-30"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       }
     }
@@ -2376,17 +2307,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       }
     }
@@ -2399,17 +2330,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-31"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-23"
         }
       }
     }
@@ -2422,17 +2353,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-03"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-26"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-26"
         }
       }
     }
@@ -2445,17 +2376,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-13"
         }
       }
     }
@@ -2468,17 +2399,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-10-30"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-10-14"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-14"
         }
       }
     }
@@ -2491,7 +2422,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-11-02"
         }
       },
       "online": {
@@ -2501,7 +2432,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-10-19"
         }
       }
     }

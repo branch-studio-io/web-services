@@ -6,13 +6,13 @@ import { StateVRRules } from "@/components/vr-rules/StateVRRules";
 import { StateVRSummary } from "@/components/vr-rules/StateVRSummary";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
+import statePoliciesJson from "@/data/state-policies.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
-import statePoliciesJson from "@/data/state-policies.json";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/state";
-import type { StatePop } from "@/types/statePop";
 import type { StatePolicies } from "@/types/statePolicies";
+import type { StatePop } from "@/types/statePop";
 import { parseStateCode } from "@/utils/democracyWorksUtils";
 import { notFound } from "next/navigation";
 
@@ -38,6 +38,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
   if (!state) {
     notFound();
   }
+
   const authority = authorities.find(
     (a) => parseStateCode(a.ocdId) === state.code,
   );
@@ -47,7 +48,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
     (e) => parseStateCode(e.ocdId) === state.code,
   );
 
-  const policies = statePolicies.find((sp) => sp.state === state.code)?.policies ?? [];
+  const policies =
+    statePolicies.find((sp) => sp.state === state.code)?.policies ?? [];
 
   return (
     <>

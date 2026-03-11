@@ -26,7 +26,11 @@ export const PREREG_STATUS_BORDER_COLORS: Record<PreregStatus, string> = {
 };
 
 // Parse "ocd-division/country:us/state:fl/cd:1" to return the state code in uppercase
+// or "ocd-division/country:us/district:dc" to return "DC"
 export function parseStateCode(ocdId: string): string {
+  if(ocdId.includes("district:dc")) {
+    return "DC";
+  }
   return (
     ocdId
       .split("/")

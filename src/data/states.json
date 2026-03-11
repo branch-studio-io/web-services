@@ -7,6 +7,7 @@
   { "code": "CO", "name": "Colorado", "slug": "colorado", "fips": "08" },
   { "code": "CT", "name": "Connecticut", "slug": "connecticut", "fips": "09" },
   { "code": "DE", "name": "Delaware", "slug": "delaware", "fips": "10" },
+  { "code": "DC", "name": "District of Columbia", "slug": "district-of-columbia", "fips": "11" },
   { "code": "FL", "name": "Florida", "slug": "florida", "fips": "12" },
   { "code": "GA", "name": "Georgia", "slug": "georgia", "fips": "13" },
   { "code": "HI", "name": "Hawaii", "slug": "hawaii", "fips": "15" },
