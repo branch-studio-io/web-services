@@ -28,8 +28,8 @@ export default function DonateButton({ label, menuItems }: Props) {
             <PopoverButton
               ref={buttonRef}
               className={clsx(
-                "bg-cc-red flex items-center gap-2 rounded-md px-[22.4px] py-4 text-[16px] font-semibold text-white uppercase",
-                "focus-visible:ring-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                "bg-red flex items-center gap-2 rounded-md px-[22.4px] py-4 text-[16px] font-semibold text-white uppercase",
+                "focus-visible:ring-navy focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                 "transition-colors duration-200",
               )}
             >
@@ -45,9 +45,9 @@ export default function DonateButton({ label, menuItems }: Props) {
                 "transition-all duration-200 ease-out",
               )}
             >
-              <div className="bg-ink-450 relative min-w-[258px] rounded-[22px] px-6 py-[22px] text-white shadow-lg">
+              <div className="bg-navy-450 relative min-w-[258px] rounded-[22px] px-6 py-[22px] text-white shadow-lg">
                 {/* Speech bubble tail pointing up */}
-                <div className="border-b-ink-450 absolute -top-3 right-6 h-0 w-0 border-r-14 border-b-14 border-l-14 border-transparent" />
+                <div className="border-b-navy-450 absolute -top-3 right-6 h-0 w-0 border-r-14 border-b-14 border-l-14 border-transparent" />
 
                 <div className="flex flex-col gap-2">
                   {menuItems.map((item, index) =>
@@ -57,7 +57,7 @@ export default function DonateButton({ label, menuItems }: Props) {
                         key={index}
                         className={clsx(
                           "text-right text-[16px] leading-[20.8px] font-semibold",
-                          "focus-visible:ring-offset-ink-450 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2",
+                          "focus-visible:ring-offset-navy-450 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2",
                         )}
                       >
                         {item.label}

@@ -207,7 +207,7 @@ export default function NationalPreregMap({
           ref={tooltipRef}
           role="tooltip"
           aria-label={`State: ${hoveredState.name}`}
-          className="bg-sand-100 pointer-events-none z-10 flex w-[430px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
+          className="bg-grey-light pointer-events-none z-10 flex w-[430px] flex-col justify-between overflow-y-auto rounded-md drop-shadow-lg"
           style={{
             position: "fixed",
             left: tooltipSize === null ? -9999 : clampedLeft,

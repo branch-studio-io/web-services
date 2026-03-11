@@ -13,7 +13,7 @@ import DonateButton from "./DonateButton";
 const navigation = [
   {
     name: "Register to Vote",
-    href: `${TCC_URL}/hellovoters/?tv-r=data`,
+    href: `${TCC_URL}/hellovoters`,
     type: "highlighted-link" as const,
   },
   {
@@ -95,7 +95,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={clsx("text-base text-[16px] font-semibold", {
-                  "text-cc-teal text-[16px] uppercase":
+                  "text-teal text-[16px] uppercase":
                     item.type === "highlighted-link",
                 })}
               >
@@ -135,7 +135,7 @@ export default function Header() {
           </div>
           <div className="mt-10 flow-root">
             <div className="text-center">
-              <div className="text-ink text-[clamp(1.3rem,4vw,4rem)] leading-[1.24] font-semibold">
+              <div className="text-[clamp(1.3rem,4vw,4rem)] leading-[1.24] font-semibold">
                 {navigation.map((item) =>
                   item.type === "link" || item.type === "highlighted-link" ? (
                     <Link

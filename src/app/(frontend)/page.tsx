@@ -27,11 +27,11 @@ const routes = [
 ];
 
 const highlightColors = [
-  "border-cc-teal",
-  "border-cc-red",
-  "border-cc-evergreen",
-  "border-cc-yellow",
-  "border-cc-sky-blue",
+  "border-teal",
+  "border-red",
+  "border-evergreen",
+  "border-yellow",
+  "border-sky-blue",
 ];
 
 export default async function HomePage() {
@@ -42,11 +42,11 @@ export default async function HomePage() {
           <div className="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0">
             <div className="space-y-2">
               <h2 className="header-1">Web Services</h2>
-              <p className="body-md font-lora">
+              <p className="body-md">
                 The site contains specific page routes that are not possible to
                 create with Squarespace.
               </p>
-              <p className="body-sm text-ink-300 font-lora">
+              <p className="body-sm">
                 Source code is available on{" "}
                 <Link
                   href="https://github.com/CivicsCenter"
@@ -58,10 +58,10 @@ export default async function HomePage() {
               </p>
               <Link
                 href="/admin"
-                className="text-ink-600 hover:text-ink-700 body-lg mt-4 inline-flex items-center font-medium hover:underline hover:underline-offset-4"
+                className="mt-4 inline-flex items-center text-xl font-medium hover:underline hover:underline-offset-4"
               >
                 Update via Admin Panel
-                <ChevronRightIcon className="text-ink-600 h-6 w-6" />
+                <ChevronRightIcon className="h-6 w-6" />
               </Link>
             </div>
             <div>
@@ -75,14 +75,14 @@ export default async function HomePage() {
                   )}
                 >
                   <div>
-                    <span className="body-sm mb-1 block font-semibold text-gray-500">
+                    <span className="mb-1 block text-sm font-semibold text-gray-500">
                       {route.href}
                     </span>
-                    <span className="text-ink-600 body-xl font-semibold">
+                    <span className="text-2xl font-semibold">
                       {route.label}
                     </span>
                   </div>
-                  <ArrowRightIcon className="text-ink-600 h-6 w-6" />
+                  <ArrowRightIcon className="h-6 w-6" />
                 </Link>
               ))}
             </div>

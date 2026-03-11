@@ -24,7 +24,7 @@ export default function BreadCrumb({ paths }: BreadCrumbProps) {
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
-                    className="text-ink-500 size-5 shrink-0"
+                    className="text-navy-500 size-5 shrink-0"
                   >
                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                   </svg>
@@ -32,14 +32,14 @@ export default function BreadCrumb({ paths }: BreadCrumbProps) {
                 {isLast ? (
                   <span
                     aria-current="page"
-                    className={`${index > 0 ? "ml-2" : ""} text-ink-300 text-sm font-medium`}
+                    className={`${index > 0 ? "ml-2" : ""} text-navy-300 text-sm font-medium`}
                   >
                     {page.name}
                   </span>
                 ) : (
                   <Link
                     href={page.href}
-                    className={`${index > 0 ? "ml-2" : ""} text-ink-500 text-sm font-medium hover:underline hover:underline-offset-2`}
+                    className={`${index > 0 ? "ml-2" : ""} text-navy-500 text-sm font-medium hover:underline hover:underline-offset-2`}
                   >
                     {page.name}
                   </Link>

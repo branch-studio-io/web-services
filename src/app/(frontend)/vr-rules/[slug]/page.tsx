@@ -1,9 +1,9 @@
 import BreadCrumb from "@/components/BreadCrumb";
-import { LinkButton } from "@/components/Button";
 import Container from "@/components/Container";
 import { StateStamp } from "@/components/vr-rules/StateStamp";
 import { StateVRRules } from "@/components/vr-rules/StateVRRules";
 import { StateVRSummary } from "@/components/vr-rules/StateVRSummary";
+import { VRActionButtons } from "@/components/vr-rules/VRActionButtons";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
 import statePoliciesJson from "@/data/state-policies.json";
@@ -53,17 +53,17 @@ export default async function StateVRRulesPage({ params }: PageProps) {
 
   return (
     <>
-      <Container className="bg-sand">
-        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
-          <div className="flex justify-center lg:justify-start">
+      <Container className="bg-beige" innerClassName="">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
+          <div className="flex justify-center lg:mt-10">
             <StateStamp state={state} />
           </div>
-          <div className="">
+          <div className="pt-6">
             <BreadCrumb
               paths={[
                 { name: "All States", href: "/vr-rules" },
                 {
-                  name: `${state.name} Requirements`,
+                  name: `${state.name}`,
                   href: `/vr-rules/${state.slug}`,
                 },
               ]}
@@ -80,27 +80,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           </div>
           <div className="flex items-center justify-center lg:justify-start">
             <div className="flex flex-col gap-4 lg:flex-row">
-              <LinkButton
-                variant="primary"
-                href="#"
-                className="whitespace-nowrap"
-              >
-                Register to Vote
-              </LinkButton>
-              <LinkButton
-                variant="primary"
-                href="#"
-                className="whitespace-nowrap"
-              >
-                Learn to Lead
-              </LinkButton>
-              <LinkButton
-                variant="primary"
-                href="#"
-                className="whitespace-nowrap"
-              >
-                Share on Social
-              </LinkButton>
+              <VRActionButtons />
             </div>
           </div>
         </div>
@@ -111,27 +91,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
             <h3 className="header-4 font-extrabold">Next Steps!</h3>
             <div>
               <div className="flex w-fit flex-col gap-4">
-                <LinkButton
-                  variant="primary"
-                  href="#"
-                  className="whitespace-nowrap"
-                >
-                  Register to Vote
-                </LinkButton>
-                <LinkButton
-                  variant="primary"
-                  href="#"
-                  className="whitespace-nowrap"
-                >
-                  Learn to Lead
-                </LinkButton>
-                <LinkButton
-                  variant="primary"
-                  href="#"
-                  className="whitespace-nowrap"
-                >
-                  Share on Social
-                </LinkButton>
+                <VRActionButtons />
               </div>
             </div>
           </div>

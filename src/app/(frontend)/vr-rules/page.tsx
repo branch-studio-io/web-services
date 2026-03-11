@@ -36,7 +36,7 @@ const categories = [
 export default async function VRRulesPage() {
   return (
     <>
-      <Container className="bg-sand">
+      <Container className="bg-beige">
         <div className="mx-auto flex flex-col gap-10">
           <div className="mx-auto flex flex-col gap-10 lg:flex-row lg:flex-wrap lg:gap-x-20 lg:gap-y-0">
             <div className="order-1 lg:min-w-0 lg:flex-1">
@@ -56,7 +56,7 @@ export default async function VRRulesPage() {
               />
             </div>
             <div className="order-3 lg:order-2 lg:min-w-0 lg:flex-1">
-              <h2 className="header-5 font-bold">Pre-18 Registration Laws</h2>
+              <h2 className="header-3 font-bold">Pre-18 Registration Laws</h2>
               <ul className="font-lora mt-6 list-none space-y-3 text-base">
                 {categories.map(({ label, description }, index) => (
                   <li key={index} className="flex items-start gap-3">

@@ -18,11 +18,11 @@ export function StatePolicyBlock({ title, policies }: StatePolocyBlockProps) {
           </span>
           {title}
         </summary>
-        <div className="font-lora space-y-4 border-t border-gray-300 pt-2">
+        <div className="space-y-4 border-t border-gray-300 pt-2">
           {policies.map((policy) => (
             <div key={policy.label}>
               <h3 className="header-5 font-extrabold">{policy.label}</h3>
-              <p className="body-base">{policy.description}</p>
+              <p className="body-md">{policy.description}</p>
             </div>
           ))}
         </div>

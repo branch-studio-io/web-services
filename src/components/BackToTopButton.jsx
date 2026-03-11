@@ -37,19 +37,19 @@ export default function BackToTopButton() {
   return (
     <button
       className={clsx(
-        "fixed bottom-0 right-0",
-        "cursor-pointer bg-ink border-3 border-white font-sans font-semibold text-[0.8rem] uppercase leading-tight",
-        "rounded-full text-white p-2.5 m-2",
+        "fixed right-0 bottom-0",
+        "bg-navy cursor-pointer border-3 border-white font-sans text-[0.8rem] leading-tight font-semibold uppercase",
+        "m-2 rounded-full p-2.5 text-white",
         "transform-gpu will-change-transform",
         "hover:-translate-y-[3px] hover:opacity-[0.85]",
         "transition-all duration-300 ease-out",
         visible
-          ? "opacity-100 pointer-events-auto translate-y-0"
-          : "opacity-0 pointer-events-none translate-y-2",
+          ? "pointer-events-auto translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-2 opacity-0",
       )}
       onClick={handleBackToTop}
     >
-      <div className="flex flex-col items-center justify-center h-[40px]">
+      <div className="flex h-[40px] flex-col items-center justify-center">
         Back
         <br />
         to Top

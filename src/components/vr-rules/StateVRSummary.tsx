@@ -26,7 +26,7 @@ export function StateVRSummary({
         <span className="header-4 inline-block font-extrabold">
           {state.name} has
         </span>
-        <div className="bg-cc-teal header-3 inline-block px-4 py-3 font-extrabold text-white drop-shadow-md drop-shadow-black/40">
+        <div className="bg-teal header-3 inline-block px-4 py-3 font-extrabold text-white drop-shadow-md drop-shadow-black/40">
           12,345
         </div>
         <span className="header-4 inline-block font-extrabold">
@@ -42,7 +42,7 @@ export function StateVRSummary({
       )}
       {impactText && (
         <h2 className="header-4 border-b border-gray-300 py-5 font-extrabold">
-          That means {impactText} can register to vote in your high school
+          That means {impactText} in your high school can register to vote
           today.
         </h2>
       )}

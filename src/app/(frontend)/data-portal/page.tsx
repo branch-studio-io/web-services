@@ -13,9 +13,9 @@ export default async function Page() {
         </p>
         <Link
           href="/"
-          className="text-ink-600 hover:text-ink-700 mt-4 inline-flex items-center text-lg font-medium hover:underline hover:underline-offset-4"
+          className="mt-4 inline-flex items-center text-lg font-medium hover:underline hover:underline-offset-4"
         >
-          <ChevronLeftIcon className="text-ink-600 h-6 w-6" />
+          <ChevronLeftIcon className="h-6 w-6" />
           Home
         </Link>
       </section>

@@ -73,7 +73,7 @@ const defaultLinkRenderer = ({
   return (
     <Link
       href={href}
-      className="text-ink-600 font-bold hover:underline hover:underline-offset-2"
+      className="font-bold hover:underline hover:underline-offset-2"
       {...(!isInternal && {
         target: "_blank",
         rel: "noopener noreferrer",

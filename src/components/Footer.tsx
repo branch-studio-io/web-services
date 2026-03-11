@@ -22,7 +22,7 @@ export default function Footer() {
     <footer>
       <BackToTopButton />
 
-      <Container className="bg-ink text-white" innerClassName="py-8">
+      <Container className="bg-navy text-white" innerClassName="py-8">
         <div className="flex flex-row items-start justify-between gap-10 py-12">
           <div className="flex flex-col gap-x-8 gap-y-4 md:flex-row">
             <Link href={"/"}>
@@ -34,7 +34,7 @@ export default function Footer() {
                 className="mr-auto h-[72px] w-auto"
               />
             </Link>
-            <div className="flex max-w-[240px] flex-col gap-4">
+            <div className="flex max-w-[280px] flex-col gap-4">
               <p className="body-md">
                 1000 N Alameda St, Suite 240
                 <br />
@@ -45,7 +45,7 @@ export default function Footer() {
                 The Civics Center is a project of{" "}
                 <Link
                   href="https://communitypartners.org"
-                  className="text-cc-yellow"
+                  className="text-yellow"
                   target="_blank"
                 >
                   Community Partners
@@ -53,7 +53,7 @@ export default function Footer() {
                 . © 2025
                 <br />
                 <Link
-                  className="text-cc-yellow"
+                  className="text-yellow"
                   href="https://drive.google.com/file/d/1hbBbaL4uNUw7c3_gdXKiJdDfu_1XWShi/view"
                   target="_blank"
                 >
