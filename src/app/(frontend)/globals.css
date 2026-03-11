@@ -14,42 +14,28 @@
 }
 
 @theme {
-  --color-ink-300: #746da3;
-  --color-ink-400: #423784;
-  --color-ink-450: #1e2a87;
-  --color-ink-500: #160d62;
-  --color-ink: #160d62;
-
   --color-iframe-500: #a3d0dd;
   --color-iframe-600: #91c7d7;
 
-  --color-vale-500: #c8e3eb;
+  --color-beige: #f8f6ee;
+  --color-grey-light: #f6f6f6;
 
-  --color-row-highlight: #d8f3fb;
+  --color-navy-300: #746da3;
+  --color-navy-400: #423784;
+  --color-navy-450: #1e2a87;
+  --color-navy-500: #170c66;
+  --color-navy: #170c66;
 
-  --color-sand: #f8f6ef;
-
-  --color-sand-50: #fefdfb;
-  --color-sand-100: #fcfaf6;
-  --color-sand-200: #f8f6ef;
-  --color-sand-300: #f0ebe2;
-  --color-sand-400: #e5dfd4;
-  --color-sand-500: #d4cec2;
-  --color-sand-600: #b8b2a4;
-  --color-sand-700: #969086;
-  --color-sand-800: #6d6960;
-  --color-sand-900: #44423c;
-  --color-sand-950: #1c1b18;
-
-  --color-cc-navy: #160d62;
-  --color-cc-yellow: #fae164;
-  --color-cc-teal: #00afbe;
-  --color-cc-red: #d12f21;
-  --color-cc-neutral: #f8f6ef;
-  --color-cc-cool-blue: #243a58;
-  --color-cc-grass-green: #466c20;
-  --color-cc-sky-blue: #4785cb;
-  --color-cc-evergreen: #59b169;
+  --color-yellow: #fae164;
+  --color-teal: #02afbd;
+  --color-teal-intense: #05a4b1;
+  --color-teal-tint-black: #00afbe;
+  --color-red: #d12f21;
+  --color-neutral: #f8f6vef;
+  --color-cool-blue: #243a58;
+  --color-grass-green: #466c20;
+  --color-sky-blue: #4785cb;
+  --color-evergreen: #59b169;
 
   --breakpoint-xs: 480px;
 }
@@ -115,27 +101,27 @@ main {
   }
 
   .body-xl {
-    @apply text-[24px] leading-[1.6];
+    @apply font-lora text-[24px] leading-[1.6];
   }
 
   .body-lg {
-    @apply text-[20px] leading-[1.6];
+    @apply font-lora text-[20px] leading-[1.6];
   }
 
   .body-md {
-    @apply text-[18px] leading-[1.6];
+    @apply font-lora text-[18px] leading-[1.6];
   }
 
   .body-base {
-    @apply text-[16px] leading-[1.6];
+    @apply font-lora text-[16px] leading-[1.6];
   }
 
   .body-sm {
-    @apply text-[14px] leading-[1.6];
+    @apply font-lora text-[14px] leading-[1.6];
   }
 
   .underline-highlight {
-    @apply underline underline-offset-2 decoration-cc-teal decoration-[15.5%];
+    @apply decoration-teal underline decoration-[15.5%] underline-offset-2;
   }
 
   /*****************
