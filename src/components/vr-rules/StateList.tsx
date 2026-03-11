@@ -57,15 +57,15 @@ export default function StateList({ states, authorities }: Props) {
               >
                 <StateIcon code={state.code} />
               </Link>
-              <div className="flex min-w-0 flex-1 flex-col w-full text-left">
-                <h3 className="header-5 font-bold">{state.name}</h3>
+              <div className="flex w-full min-w-0 flex-1 flex-col text-left">
+                <h3 className="text-2xl font-bold">{state.name}</h3>
                 <p className="body-md">
                   <strong>Voter registration age:</strong>{" "}
                   {briefEligibility ?? "—"}
                 </p>
                 <Link
                   href={`/vr-rules/${state.slug}`}
-                  className="body-sm mt-1 font-bold hover:underline hover:decoration-2 hover:underline-offset-2 focus:underline focus:decoration-2 focus:outline-none"
+                  className="body-md font-bold hover:underline hover:decoration-2 hover:underline-offset-2 focus:underline focus:decoration-2 focus:outline-none"
                 >
                   See all about {state.name} →
                 </Link>
