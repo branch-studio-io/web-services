@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --color-teal: #00afbe;
+  --color-navy: #160d62;
+  --color-yellow: #fae164;
+  --color-grey-light: #ced4da;
+}
+
+html {
+  overflow-y: hidden !important;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-teal);
+}
+
+.at-inner {
+  background-color: var(--color-teal) !important;
+}
+
+.at fieldset.at-fieldset {
+  padding: 0;
+}
+
+.ngp-form.at {
+  max-width: 100%;
+}
+
+.at input[type="password"]:focus,
+.at label.at-text input[type="text"]:focus,
+.at label.at-text input[type="tel"]:focus,
+.at input[type="date"]:focus,
+.at input[type="datetime"]:focus,
+.at input[type="datetime-local"]:focus,
+.at input[type="month"]:focus,
+.at input[type="week"]:focus,
+.at input[type="email"]:focus,
+.at input[type="number"]:focus,
+.at input[type="search"]:focus,
+.at input.select2-search__field:focus,
+.at input[type="tel"]:focus,
+.at input[type="time"]:focus,
+.at input[type="url"]:focus,
+.at .error input[type="url"]:focus,
+.at input[type="color"]:focus,
+.at textarea:focus,
+.at textarea:focus {
+  background-color: white !important;
+  border-color: var(--color-navy) !important;
+  font-family: var(--font-work-sans), sans-serif;
+}
+
+.at .at-form form label,
+.at .at-form form label .error,
+.at .at-form form label .error span {
+  color: white !important;
+  font-family: var(--font-work-sans), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.at label small {
+  font-family: var(--font-work-sans), sans-serif !important;
+  font-weight: 400 !important;
+  color: white !important;
+}
+
+.at label input[type="checkbox"]:checked + span:before {
+  background-color: var(--color-navy) !important;
+  border-color: #ffffff;
+}
+
+.at .at-checkbox-title-container:before,
+.at input[type="checkbox"] + span.at-checkbox-title-container:before {
+  border: 1px solid #ffffff;
+}
+
+.at .at-checkbox-title-container:before,
+.at input[type="checkbox"] + span.at-checkbox-title-container:before {
+  border: 1px solid #ffffff;
+}
+
+.at input[type="submit"] {
+  font-family: var(--font-work-sans), sans-serif;
+  margin-top: 5px !important;
+  background: var(--color-navy) !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border-radius: 100px !important;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  text-shadow: none !important;
+}
+
+.at input[type="submit"]:hover {
+  background: var(--color-yellow) !important;
+  color: var(--color-navy) !important;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+@layer utilities {
+}
