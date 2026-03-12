@@ -1,6 +1,7 @@
 "use client";
 
 import AnnouncePill from "@/components/AnnouncePill";
+import Container from "@/components/Container";
 import { useEffect, useRef, useState } from "react";
 import { BsSubstack } from "react-icons/bs";
 import {
@@ -64,7 +65,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <div className="bg-teal">
+    <Container className="bg-teal" innerClassName="py-4 lg:px-0 px-0">
       <div className="flex flex-col justify-between lg:flex-row">
         <div className="mx-auto flex w-full flex-col gap-y-10 px-6 py-16 lg:px-8">
           <AnnouncePill text="ADD YOUR NAME" icon={true} />
@@ -120,6 +121,6 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
