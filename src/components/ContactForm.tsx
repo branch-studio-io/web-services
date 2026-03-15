@@ -100,7 +100,7 @@ export default function ContactForm() {
         <div className="mx-auto w-full space-y-4 px-3 py-0 lg:px-0 lg:py-16">
           <iframe
             ref={iframeRef}
-            src={"/contact/"}
+            src={"/embed/contact/"}
             title="EveryAction Form"
             width="100%"
             height={`${iframeHeight}px`}
