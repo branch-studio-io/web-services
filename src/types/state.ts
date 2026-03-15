@@ -16,4 +16,9 @@ export type State = {
    * Slug for the state (e.g. california)
    */
   slug: string;
+
+  /**
+   * Demonym for the state (e.g. Californians)
+   */
+  demonym: string;
 };

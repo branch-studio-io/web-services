@@ -19,7 +19,7 @@ export const ActionButtons = () => {
         Learn to Lead
       </LinkButton>
       <LinkButton variant="primary" href="#" className="whitespace-nowrap">
-        Share on Social
+        Share this Info
       </LinkButton>
     </>
   );

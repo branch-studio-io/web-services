@@ -1,4 +1,6 @@
+import ballotBoxImg from "@/assets/ballot-box.png";
 import { State } from "@/types/state";
+import Image from "next/image";
 import { StateIcon } from "../StateIcon";
 
 type StateStampProps = {
@@ -11,15 +13,23 @@ export function StateStamp({ state }: StateStampProps) {
       <h1 className="header-3 mx-auto max-w-[304px] text-center font-extrabold">
         Pre-18 voter registration in
       </h1>
-      <h2 className="header-3 bg-teal-intense px-[40px] py-[30px] text-center font-extrabold whitespace-nowrap text-white drop-shadow-lg drop-shadow-black/40">
+      <h2 className="header-3 bg-teal-intense px-[40px] py-[22px] text-center font-extrabold whitespace-nowrap text-white drop-shadow-lg drop-shadow-black/40">
         {state.code === "DC" ? "D.C." : state.name}
+
+        <Image
+          className="-mt-3 ml-3 inline-block"
+          src={ballotBoxImg}
+          alt="Ballot Box"
+          width={38}
+          height={38}
+        />
       </h2>
       <div className="hidden flex-row items-center justify-center overflow-visible lg:flex">
         <StateIcon
           code={state.code}
           width={300}
           height={200}
-          className="text-yellow filter drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+          className="text-yellow drop-shadow-[0_5px_2px_rgba(138,124,53,0.9)] filter"
         />
       </div>
     </div>

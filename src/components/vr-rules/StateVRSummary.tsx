@@ -5,7 +5,7 @@ import type { State } from "@/types/state";
 import type { StatePop } from "@/types/statePop";
 import {
   studentImpactText,
-  voterEligibilityText,
+  voterEligibilityParts,
 } from "@/utils/democracyWorksUtils";
 import Image from "next/image";
 
@@ -22,10 +22,8 @@ export function StateVRSummary({
   statePop,
 }: StateVRSummaryProps) {
   const impactText = studentImpactText(authority.youthRegistration);
-  const voterEligibility = voterEligibilityText(authority.youthRegistration);
-  const eligibilityText = `If ${voterEligibility.charAt(0).toLowerCase()}${voterEligibility.slice(
-    1,
-  )}`;
+  const voterEligibility = voterEligibilityParts(authority.youthRegistration);
+
   return (
     <div>
       <h2 className="border-b border-gray-300 py-5">
@@ -43,27 +41,33 @@ export function StateVRSummary({
       </h2>
 
       {authority && (
-        <h2 className="border-b border-gray-300 py-5">
-          <span className="header-4 mr-3 font-extrabold">
-            {state.name} can pre-register
-          </span>
-          <span className="bg-teal-intense header-3 mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
-            <span className="header-3 font-extrabold">BEFORE turning 18</span>
-            <Image src={sirenImg} alt="Siren" width={32} height={32} />
-          </span>
-          <span className="header-4 font-extrabold">{eligibilityText}</span>
-        </h2>
-      )}
-      {impactText && (
-        <h2 className="header-4 underline-highlight border-b border-gray-300 py-5 font-extrabold">
-          That means {impactText} in your high school can register to vote
-          today.
-        </h2>
-      )}
-
-      {statePop && (
         <h2 className="header-4 border-b border-gray-300 py-5 font-extrabold">
-          High school students can help one another get ready to vote.
+          {state.demonym} can
+          <Image
+            className="mx-1.5 -mt-2 inline-block"
+            src={sirenImg}
+            alt="Siren"
+            width={32}
+            height={32}
+          />
+          pre-register before turning 18
+          <Image
+            className="mx-1.5 -mt-2 inline-block"
+            src={sirenImg}
+            alt="Siren"
+            width={32}
+            height={32}
+          />
+        </h2>
+      )}
+      {impactText && voterEligibility.main && (
+        <h2 className="header-4 border-b border-gray-300 py-5 font-extrabold">
+          To register to vote in {state.name}, you must be:{" "}
+          {voterEligibility.main}{" "}
+          <span className="underline-highlight">
+            That means {impactText} in your high school can register to vote
+            today.
+          </span>
         </h2>
       )}
     </div>
