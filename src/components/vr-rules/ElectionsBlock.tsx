@@ -13,7 +13,7 @@ export function ElectionsBlock({ elections }: ElectionsBlockProps) {
   return (
     <div>
       <details className="group" open>
-        <summary className="header-4 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
+        <summary className="header-5 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
           <span
             className="transition-transform select-none group-open:rotate-90"
             aria-hidden

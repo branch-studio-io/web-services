@@ -56,7 +56,7 @@ export function RegInstructionsBlock({
   return (
     <div>
       <details className="group">
-        <summary className="header-4 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
+        <summary className="header-5 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
           <span
             className="transition-transform select-none group-open:rotate-90"
             aria-hidden
@@ -66,52 +66,55 @@ export function RegInstructionsBlock({
           {title}
         </summary>
         <div className="space-y-4 border-t border-gray-300 pt-2">
-        <IdRequirementsList title="ID Requirements" bullets={combinedBullets} />
+          <IdRequirementsList
+            title="ID Requirements"
+            bullets={combinedBullets}
+          />
 
-        {regText || preRegText ? (
-          <>
-            <details className="group/fulldetails">
-              <summary className="body-md mb-2 flex cursor-pointer list-none items-center gap-2 font-bold [&::-webkit-details-marker]:hidden">
-                <span
-                  className="transition-transform select-none group-open/fulldetails:rotate-90"
-                  aria-hidden
-                >
-                  ▸
-                </span>
-                Full Details
-              </summary>
-              <div className="mt-6 space-y-4">
-                <h3 className="body-md mb-2 font-bold">
-                  Registration Instructions
-                </h3>
-                {regText && (
-                  <DemocracyWorksText
-                    text={regText}
-                    renderers={{
-                      paragraph: (children) => (
-                        <p className="body-md mb-4">{children}</p>
-                      ),
-                    }}
-                  />
-                )}
+          {regText || preRegText ? (
+            <>
+              <details className="group/fulldetails">
+                <summary className="body-md mb-2 flex cursor-pointer list-none items-center gap-2 font-bold [&::-webkit-details-marker]:hidden">
+                  <span
+                    className="transition-transform select-none group-open/fulldetails:rotate-90"
+                    aria-hidden
+                  >
+                    ▸
+                  </span>
+                  Full Details
+                </summary>
+                <div className="mt-6 space-y-4">
+                  <h3 className="body-md mb-2 font-bold">
+                    Registration Instructions
+                  </h3>
+                  {regText && (
+                    <DemocracyWorksText
+                      text={regText}
+                      renderers={{
+                        paragraph: (children) => (
+                          <p className="body-md mb-4">{children}</p>
+                        ),
+                      }}
+                    />
+                  )}
 
-                <h3 className="body-md mb-2 font-bold">
-                  Pre-Registration Instructions
-                </h3>
-                {preRegText && (
-                  <DemocracyWorksText
-                    text={preRegText}
-                    renderers={{
-                      paragraph: (children) => (
-                        <p className="body-md mb-4">{children}</p>
-                      ),
-                    }}
-                  />
-                )}
-              </div>
-            </details>
-          </>
-        ) : null}
+                  <h3 className="body-md mb-2 font-bold">
+                    Pre-Registration Instructions
+                  </h3>
+                  {preRegText && (
+                    <DemocracyWorksText
+                      text={preRegText}
+                      renderers={{
+                        paragraph: (children) => (
+                          <p className="body-md mb-4">{children}</p>
+                        ),
+                      }}
+                    />
+                  )}
+                </div>
+              </details>
+            </>
+          ) : null}
         </div>
       </details>
     </div>
