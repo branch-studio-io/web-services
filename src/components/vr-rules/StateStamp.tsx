@@ -13,7 +13,7 @@ export function StateStamp({ state }: StateStampProps) {
       <h1 className="header-3 mx-auto max-w-[304px] text-center font-extrabold">
         Pre-18 voter registration in
       </h1>
-      <h2 className="header-3 bg-teal-intense px-[40px] py-[22px] text-center font-extrabold whitespace-nowrap text-white drop-shadow-lg drop-shadow-black/40">
+      <h2 className="header-3 bg-teal-intense box-shadow-md px-[40px] py-[22px] text-center font-extrabold whitespace-nowrap text-white">
         {state.code === "DC" ? "D.C." : state.name}
 
         <Image

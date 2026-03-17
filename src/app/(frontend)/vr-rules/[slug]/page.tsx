@@ -142,7 +142,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               <LinkButton
                 variant="primary"
                 href={`${TCC_URL}/toolkits-by-state`}
-                className="whitespace-nowrap"
+                className="box-shadow-md whitespace-nowrap"
               >
                 Download Toolkit
               </LinkButton>

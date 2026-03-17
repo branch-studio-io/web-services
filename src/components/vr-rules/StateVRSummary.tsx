@@ -28,7 +28,7 @@ export function StateVRSummary({
     <div>
       <h2 className="border-b border-gray-300 py-5">
         <span className="header-4 mr-3 font-extrabold">{state.name} has</span>
-        <span className="bg-teal-intense header-3 mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white drop-shadow-md drop-shadow-black/40">
+        <span className="bg-teal-intense header-3 box-shadow-md mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white">
           <span className="header-3 font-extrabold">12,345</span>
           <Image
             src={headExplodingImg}
