@@ -32,14 +32,14 @@ export default function BreadCrumb({ paths }: BreadCrumbProps) {
                 {isLast ? (
                   <span
                     aria-current="page"
-                    className={`${index > 0 ? "ml-2" : ""} text-navy-300 text-sm font-medium`}
+                    className={`${index > 0 ? "ml-2" : ""} text-navy-300 text-sm font-bold`}
                   >
                     {page.name}
                   </span>
                 ) : (
                   <Link
                     href={page.href}
-                    className={`${index > 0 ? "ml-2" : ""} text-navy-500 text-sm font-medium hover:underline hover:underline-offset-2`}
+                    className={`${index > 0 ? "ml-2" : ""} text-navy-500 text-sm font-bold hover:underline hover:underline-offset-2`}
                   >
                     {page.name}
                   </Link>

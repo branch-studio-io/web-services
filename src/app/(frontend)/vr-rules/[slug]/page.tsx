@@ -62,7 +62,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           <div className="flex justify-center lg:mt-10">
             <StateStamp state={state} />
           </div>
-          <div className="pt-6">
+          <div className="pt-2">
             <BreadCrumb
               paths={[
                 { name: "All States", href: "/vr-rules" },
