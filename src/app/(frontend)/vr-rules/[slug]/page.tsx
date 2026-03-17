@@ -135,8 +135,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               {state.name} high school educators:
             </h3>
             <p className="body-md">
-              Support your students' voter registration effort with our free
-              toolkit.
+              Support your students&rsquo; voter registration effort with our
+              free toolkit.
             </p>
             <div className="mt-4 flex flex-col items-stretch gap-4 sm:flex-row">
               <LinkButton
