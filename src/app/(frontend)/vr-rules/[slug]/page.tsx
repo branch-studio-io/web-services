@@ -12,6 +12,7 @@ import refreshHistoryJson from "@/data/refresh-history.json";
 import statePoliciesJson from "@/data/state-policies.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
+import stateRegRatesJson from "@/data/state-reg-rates.json";
 import type {
   Authority,
   Election,
@@ -27,13 +28,15 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { StateRegRates } from "@/types/stateRegRates";
 
-const refreshHistory = refreshHistoryJson as RefreshHistory;
-const states = statesJson as State[];
-const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
 const elections = electionsJson as Election[];
+const refreshHistory = refreshHistoryJson as RefreshHistory;
 const statePolicies = statePoliciesJson as StatePolicies[];
+const statePops = statePopsJson as StatePop[];
+const states = statesJson as State[];
+const stateRegRates = stateRegRatesJson as StateRegRates[];
 
 const lastRunDate = formatElectionDate(refreshHistory.lastRunDate.slice(0, 10));
 
@@ -63,6 +66,8 @@ export default async function StateVRRulesPage({ params }: PageProps) {
     (e) => parseStateCode(e.ocdId) === state.code,
   );
 
+  const stateRegRate = stateRegRates.find((sr) => sr.state === state.code);
+
   const policies =
     statePolicies.find((sp) => sp.state === state.code)?.policies ?? [];
 
@@ -87,6 +92,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               state={state}
               authority={authority}
               statePop={statePop}
+              stateRegRate={stateRegRate}
               stateElections={stateElections}
             />
           </div>
