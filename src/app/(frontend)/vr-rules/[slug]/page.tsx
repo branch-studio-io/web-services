@@ -24,7 +24,6 @@ import {
   formatElectionDate,
   parseStateCode,
 } from "@/utils/democracyWorksUtils";
-import { TCC_URL } from "@/utils/globals";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -36,9 +35,7 @@ const authorities = authoritiesJson as Authority[];
 const elections = electionsJson as Election[];
 const statePolicies = statePoliciesJson as StatePolicies[];
 
-const lastRunDate = formatElectionDate(
-  refreshHistory.lastRunDate.slice(0, 10),
-);
+const lastRunDate = formatElectionDate(refreshHistory.lastRunDate.slice(0, 10));
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -153,29 +150,32 @@ export default async function StateVRRulesPage({ params }: PageProps) {
         </div>
       </Container>
 
-      <Container className="bg-beige">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16">
-          <div className="hidden lg:flex"></div>
-          <div>
-            <h3 className="header-4 font-extrabold">
-              {state.name} high school educators:
-            </h3>
-            <p className="body-md">
-              Support your students&rsquo; voter registration effort with our
-              free toolkit.
-            </p>
-            <div className="mt-4 flex flex-col items-stretch gap-4 sm:flex-row">
-              <LinkButton
-                variant="primary"
-                href={`${TCC_URL}/toolkits-by-state`}
-                className="box-shadow-md whitespace-nowrap"
-              >
-                Download Toolkit
-              </LinkButton>
+      {state.toolkitUrl && (
+        <Container className="bg-beige">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16">
+            <div className="hidden lg:flex"></div>
+            <div>
+              <h3 className="header-4 font-extrabold">
+                {state.name} high school educators:
+              </h3>
+              <p className="body-md">
+                Support your students&rsquo; voter registration effort with our
+                free toolkit.
+              </p>
+              <div className="mt-4 flex flex-col items-stretch gap-4 sm:flex-row">
+                <LinkButton
+                  variant="primary"
+                  href={state.toolkitUrl}
+                  target="_blank"
+                  className="box-shadow-md whitespace-nowrap"
+                >
+                  Download Toolkit
+                </LinkButton>
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      )}
     </>
   );
 }

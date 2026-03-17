@@ -4,56 +4,64 @@
     "name": "Alabama",
     "slug": "alabama",
     "fips": "01",
-    "demonym": "Alabamians"
+    "demonym": "Alabamians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "AK",
     "name": "Alaska",
     "slug": "alaska",
     "fips": "02",
-    "demonym": "Alaskans"
+    "demonym": "Alaskans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "AZ",
     "name": "Arizona",
     "slug": "arizona",
     "fips": "04",
-    "demonym": "Arizonans"
+    "demonym": "Arizonans",
+    "toolkitUrl": "https://secure.everyaction.com/qHw2otXDQUK60Ha139ARgQ2"
   },
   {
     "code": "AR",
     "name": "Arkansas",
     "slug": "arkansas",
     "fips": "05",
-    "demonym": "Arkansans"
+    "demonym": "Arkansans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "CA",
     "name": "California",
     "slug": "california",
     "fips": "06",
-    "demonym": "Californians"
+    "demonym": "Californians",
+    "toolkitUrl": "https://secure.everyaction.com/LHzTP9Ff00aRujYUlr2o2w2"
   },
   {
     "code": "CO",
     "name": "Colorado",
     "slug": "colorado",
     "fips": "08",
-    "demonym": "Coloradans"
+    "demonym": "Coloradans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "CT",
     "name": "Connecticut",
     "slug": "connecticut",
     "fips": "09",
-    "demonym": "Connecticuters"
+    "demonym": "Connecticuters",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "DE",
     "name": "Delaware",
     "slug": "delaware",
     "fips": "10",
-    "demonym": "Delawareans"
+    "demonym": "Delawareans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "DC",
@@ -67,293 +75,335 @@
     "name": "Florida",
     "slug": "florida",
     "fips": "12",
-    "demonym": "Floridians"
+    "demonym": "Floridians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "GA",
     "name": "Georgia",
     "slug": "georgia",
     "fips": "13",
-    "demonym": "Georgians"
+    "demonym": "Georgians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "HI",
     "name": "Hawaii",
     "slug": "hawaii",
     "fips": "15",
-    "demonym": "Hawaiians"
+    "demonym": "Hawaiians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "ID",
     "name": "Idaho",
     "slug": "idaho",
     "fips": "16",
-    "demonym": "Idahoans"
+    "demonym": "Idahoans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "IL",
     "name": "Illinois",
     "slug": "illinois",
     "fips": "17",
-    "demonym": "Illinoisans"
+    "demonym": "Illinoisans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "IN",
     "name": "Indiana",
     "slug": "indiana",
     "fips": "18",
-    "demonym": "Hoosiers"
+    "demonym": "Hoosiers",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "IA",
     "name": "Iowa",
     "slug": "iowa",
     "fips": "19",
-    "demonym": "Iowans"
+    "demonym": "Iowans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "KS",
     "name": "Kansas",
     "slug": "kansas",
     "fips": "20",
-    "demonym": "Kansans"
+    "demonym": "Kansans",
+    "toolkitUrl": "https://secure.everyaction.com/Gp2W9IsHdke64_76Isw7sA2"
   },
   {
     "code": "KY",
     "name": "Kentucky",
     "slug": "kentucky",
     "fips": "21",
-    "demonym": "Kentuckians"
+    "demonym": "Kentuckians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "LA",
     "name": "Louisiana",
     "slug": "louisiana",
     "fips": "22",
-    "demonym": "Louisianans"
+    "demonym": "Louisianans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "ME",
     "name": "Maine",
     "slug": "maine",
     "fips": "23",
-    "demonym": "Mainers"
+    "demonym": "Mainers",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "MD",
     "name": "Maryland",
     "slug": "maryland",
     "fips": "24",
-    "demonym": "Marylanders"
+    "demonym": "Marylanders",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "MA",
     "name": "Massachusetts",
     "slug": "massachusetts",
     "fips": "25",
-    "demonym": "Massachusettsans"
+    "demonym": "Massachusettsans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "MI",
     "name": "Michigan",
     "slug": "michigan",
     "fips": "26",
-    "demonym": "Michiganders"
+    "demonym": "Michiganders",
+    "toolkitUrl": "https://secure.everyaction.com/C1prDNU7j0qehTf2kCucZQ2"
   },
   {
     "code": "MN",
     "name": "Minnesota",
     "slug": "minnesota",
     "fips": "27",
-    "demonym": "Minnesotans"
+    "demonym": "Minnesotans",
+    "toolkitUrl": "https://secure.everyaction.com/JKXip5FrjUO29YX_QuFLDQ2"
   },
   {
     "code": "MS",
     "name": "Mississippi",
     "slug": "mississippi",
     "fips": "28",
-    "demonym": "Mississippians"
+    "demonym": "Mississippians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "MO",
     "name": "Missouri",
     "slug": "missouri",
     "fips": "29",
-    "demonym": "Missourians"
+    "demonym": "Missourians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "MT",
     "name": "Montana",
     "slug": "montana",
     "fips": "30",
-    "demonym": "Montanans"
+    "demonym": "Montanans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "NE",
     "name": "Nebraska",
     "slug": "nebraska",
     "fips": "31",
-    "demonym": "Nebraskans"
+    "demonym": "Nebraskans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "NV",
     "name": "Nevada",
     "slug": "nevada",
     "fips": "32",
-    "demonym": "Nevadans"
+    "demonym": "Nevadans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "NH",
     "name": "New Hampshire",
     "slug": "new-hampshire",
     "fips": "33",
-    "demonym": "New Hampshirites"
+    "demonym": "New Hampshirites",
+    "toolkitUrl": "https://secure.everyaction.com/lUHi2QNJLEG0HR7W5ilrTg2"
   },
   {
     "code": "NJ",
     "name": "New Jersey",
     "slug": "new-jersey",
     "fips": "34",
-    "demonym": "New Jerseyans"
+    "demonym": "New Jerseyans",
+    "toolkitUrl": "https://secure.everyaction.com/pgV7XxtS1U-GdZjHuuNAqQ2"
   },
   {
     "code": "NM",
     "name": "New Mexico",
     "slug": "new-mexico",
     "fips": "35",
-    "demonym": "New Mexicans"
+    "demonym": "New Mexicans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "NY",
     "name": "New York",
     "slug": "new-york",
     "fips": "36",
-    "demonym": "New Yorkers"
+    "demonym": "New Yorkers",
+    "toolkitUrl": "https://secure.everyaction.com/E8QqUXQY9kKx2hcHVmy19w2"
   },
   {
     "code": "NC",
     "name": "North Carolina",
     "slug": "north-carolina",
     "fips": "37",
-    "demonym": "North Carolinians"
+    "demonym": "North Carolinians",
+    "toolkitUrl": "https://secure.everyaction.com/qmaU3EGpqUmR5Zlaq2og5w2"
   },
   {
     "code": "ND",
     "name": "North Dakota",
     "slug": "north-dakota",
     "fips": "38",
-    "demonym": "North Dakotans"
+    "demonym": "North Dakotans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "OH",
     "name": "Ohio",
     "slug": "ohio",
     "fips": "39",
-    "demonym": "Ohioans"
+    "demonym": "Ohioans",
+    "toolkitUrl": "https://secure.everyaction.com/UjIsBWUTTkmOTHtrbFjOug2"
   },
   {
     "code": "OK",
     "name": "Oklahoma",
     "slug": "oklahoma",
     "fips": "40",
-    "demonym": "Oklahomans"
+    "demonym": "Oklahomans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "OR",
     "name": "Oregon",
     "slug": "oregon",
     "fips": "41",
-    "demonym": "Oregonians"
+    "demonym": "Oregonians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "PA",
     "name": "Pennsylvania",
     "slug": "pennsylvania",
     "fips": "42",
-    "demonym": "Pennsylvanians"
+    "demonym": "Pennsylvanians",
+    "toolkitUrl": "https://secure.everyaction.com/Y37-65Wf-kaOJKiZQB92IA2"
   },
   {
     "code": "RI",
     "name": "Rhode Island",
     "slug": "rhode-island",
     "fips": "44",
-    "demonym": "Rhode Islanders"
+    "demonym": "Rhode Islanders",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "SC",
     "name": "South Carolina",
     "slug": "south-carolina",
     "fips": "45",
-    "demonym": "South Carolinians"
+    "demonym": "South Carolinians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "SD",
     "name": "South Dakota",
     "slug": "south-dakota",
     "fips": "46",
-    "demonym": "South Dakotans"
+    "demonym": "South Dakotans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "TN",
     "name": "Tennessee",
     "slug": "tennessee",
     "fips": "47",
-    "demonym": "Tennesseans"
+    "demonym": "Tennesseans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "TX",
     "name": "Texas",
     "slug": "texas",
     "fips": "48",
-    "demonym": "Texans"
+    "demonym": "Texans",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "UT",
     "name": "Utah",
     "slug": "utah",
     "fips": "49",
-    "demonym": "Utahns"
+    "demonym": "Utahns",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "VT",
     "name": "Vermont",
     "slug": "vermont",
     "fips": "50",
-    "demonym": "Vermonters"
+    "demonym": "Vermonters",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "VA",
     "name": "Virginia",
     "slug": "virginia",
     "fips": "51",
-    "demonym": "Virginians"
+    "demonym": "Virginians",
+    "toolkitUrl": "https://secure.everyaction.com/94azwVrGOkSEKs77whejVQ2"
   },
   {
     "code": "WA",
     "name": "Washington",
     "slug": "washington",
     "fips": "53",
-    "demonym": "Washingtonians"
+    "demonym": "Washingtonians",
+    "toolkitUrl": "https://secure.everyaction.com/B9KQynA3-0GW5-gTPaHckA2"
   },
   {
     "code": "WV",
     "name": "West Virginia",
     "slug": "west-virginia",
     "fips": "54",
-    "demonym": "West Virginians"
+    "demonym": "West Virginians",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   },
   {
     "code": "WI",
     "name": "Wisconsin",
     "slug": "wisconsin",
     "fips": "55",
-    "demonym": "Wisconsinites"
+    "demonym": "Wisconsinites",
+    "toolkitUrl": "https://secure.everyaction.com/nXdU-Vp5ak-2EWFR0ki5NA2"
   },
   {
     "code": "WY",
     "name": "Wyoming",
     "slug": "wyoming",
     "fips": "56",
-    "demonym": "Wyomingites"
+    "demonym": "Wyomingites",
+    "toolkitUrl": "https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2"
   }
 ]

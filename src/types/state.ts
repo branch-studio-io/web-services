@@ -21,4 +21,9 @@ export type State = {
    * Demonym for the state (e.g. Californians)
    */
   demonym: string;
+
+  /**
+   * URL for the state's toolkit (e.g. https://secure.everyaction.com/lWRwd3xuc068Uu2UfoeqZw2)
+   */
+  toolkitUrl: string | null;
 };
