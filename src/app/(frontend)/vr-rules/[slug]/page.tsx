@@ -85,7 +85,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
       <Container className="bg-yellow-light" innerClassName="pt-6 pb-8">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
           <div className=""></div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             <h3 className="header-4 font-extrabold">
               High school students can help one another get ready to{" "}
               <span className="whitespace-nowrap">
@@ -99,7 +99,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
                 />
               </span>
             </h3>
-            <div className="flex flex-col gap-4 lg:flex-row">
+            <div className="flex flex-col items-stretch gap-4 sm:flex-row">
               <ActionButtons />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
       </Container>
 
       <Container className="bg-white">
-        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16 lg:gap-y-4">
           <div className="hidden flex-col items-center justify-center gap-6 lg:flex">
             <h3 className="header-4 font-extrabold">Next Steps!</h3>
             <div>
@@ -138,7 +138,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               Support your students' voter registration effort with our free
               toolkit.
             </p>
-            <div className="mt-6">
+            <div className="mt-4 flex flex-col items-stretch gap-4 sm:flex-row">
               <LinkButton
                 variant="primary"
                 href={`${TCC_URL}/toolkits-by-state`}

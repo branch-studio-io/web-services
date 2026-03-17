@@ -61,7 +61,7 @@ export function StateVRSummary({
         </h2>
       )}
       {impactText && voterEligibility.main && (
-        <h2 className="header-4 border-b border-gray-300 py-5 font-extrabold">
+        <h2 className="header-4 py-5 font-extrabold">
           To register to vote in {state.name}, you must be:{" "}
           {voterEligibility.main}{" "}
           <span className="underline-highlight">
