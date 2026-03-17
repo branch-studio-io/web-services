@@ -1,5 +1,6 @@
 import mortarboardImg from "@/assets/mortarboard.png";
 import BreadCrumb from "@/components/BreadCrumb";
+import { LinkButton } from "@/components/Button";
 import Container from "@/components/Container";
 import { ActionButtons } from "@/components/vr-rules/ActionButtons";
 import { StateStamp } from "@/components/vr-rules/StateStamp";
@@ -15,6 +16,7 @@ import type { State } from "@/types/state";
 import type { StatePolicies } from "@/types/statePolicies";
 import type { StatePop } from "@/types/statePop";
 import { parseStateCode } from "@/utils/democracyWorksUtils";
+import { TCC_URL } from "@/utils/globals";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -85,7 +87,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
           <div className=""></div>
           <div className="flex flex-col gap-3">
             <h3 className="header-4 font-extrabold">
-              High school students can help one another get ready to{' '}
+              High school students can help one another get ready to{" "}
               <span className="whitespace-nowrap">
                 vote.
                 <Image
@@ -121,6 +123,30 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               stateElections={stateElections}
               statePolicies={policies}
             />
+          </div>
+        </div>
+      </Container>
+
+      <Container className="bg-beige">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[375px_1fr] lg:gap-x-16">
+          <div className="hidden lg:flex"></div>
+          <div>
+            <h3 className="header-4 font-extrabold">
+              {state.name} high school educators:
+            </h3>
+            <p className="body-md">
+              Support your students' voter registration effort with our free
+              toolkit.
+            </p>
+            <div className="mt-6">
+              <LinkButton
+                variant="primary"
+                href={`${TCC_URL}/toolkits-by-state`}
+                className="whitespace-nowrap"
+              >
+                Download Toolkit
+              </LinkButton>
+            </div>
           </div>
         </div>
       </Container>
