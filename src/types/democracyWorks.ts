@@ -1,3 +1,7 @@
+export type RefreshHistory = {
+  lastRunDate: string;
+};
+
 export enum PreregStatus {
   AGE_16_OR_EARLIER = "AGE_16_OR_EARLIER",
   AT_LEAST_ONE_YEAR = "AT_LEAST_ONE_YEAR",
@@ -60,21 +64,21 @@ export type Election = {
     | "subCounty"
     | "municipal"
     | "special";
-    registration: {
-      inPerson: {
-        deadline: {
-          date: string;
-        }
-      },
-      byMail: {
-        deadline: {
-          date: string;
-        }
-      },
-      online: {
-        deadline: {
-          date: string;
-        }
-      }
-    }
+  registration: {
+    inPerson: {
+      deadline: {
+        date: string;
+      };
+    };
+    byMail: {
+      deadline: {
+        date: string;
+      };
+    };
+    online: {
+      deadline: {
+        date: string;
+      };
+    };
+  };
 };

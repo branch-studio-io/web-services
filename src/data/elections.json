@@ -25,12 +25,12 @@
   {
     "ocdId": "ocd-division/country:us/state:ar",
     "date": "2026-03-31",
-    "description": "Arkansas General Primary Election",
+    "description": "Arkansas General Primary Runoff Election",
     "type": "state",
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-03-02"
         }
       },
       "online": {
@@ -40,7 +40,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-03-02"
         }
       }
     }
@@ -53,17 +53,17 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-02-09"
         }
       },
       "online": {
         "deadline": {
-          "date": null
+          "date": "2026-02-09"
         }
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-02-09"
         }
       }
     }
@@ -421,7 +421,7 @@
     "registration": {
       "inPerson": {
         "deadline": {
-          "date": null
+          "date": "2026-04-27"
         }
       },
       "online": {
@@ -431,7 +431,7 @@
       },
       "byMail": {
         "deadline": {
-          "date": null
+          "date": "2026-04-27"
         }
       }
     }

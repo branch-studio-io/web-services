@@ -8,23 +8,37 @@ import { StateVRRules } from "@/components/vr-rules/StateVRRules";
 import { StateVRSummary } from "@/components/vr-rules/StateVRSummary";
 import authoritiesJson from "@/data/authorities.json";
 import electionsJson from "@/data/elections.json";
+import refreshHistoryJson from "@/data/refresh-history.json";
 import statePoliciesJson from "@/data/state-policies.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
-import type { Authority, Election } from "@/types/democracyWorks";
+import type {
+  Authority,
+  Election,
+  RefreshHistory,
+} from "@/types/democracyWorks";
 import type { State } from "@/types/state";
 import type { StatePolicies } from "@/types/statePolicies";
 import type { StatePop } from "@/types/statePop";
-import { parseStateCode } from "@/utils/democracyWorksUtils";
+import {
+  formatElectionDate,
+  parseStateCode,
+} from "@/utils/democracyWorksUtils";
 import { TCC_URL } from "@/utils/globals";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const refreshHistory = refreshHistoryJson as RefreshHistory;
 const states = statesJson as State[];
 const statePops = statePopsJson as StatePop[];
 const authorities = authoritiesJson as Authority[];
 const elections = electionsJson as Election[];
 const statePolicies = statePoliciesJson as StatePolicies[];
+
+const lastRunDate = formatElectionDate(
+  refreshHistory.lastRunDate.slice(0, 10),
+);
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -123,6 +137,18 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               stateElections={stateElections}
               statePolicies={policies}
             />
+            <p className="body-sm mt-4">
+              This information was retrieved from the{" "}
+              <Link
+                className="font-bold hover:underline hover:underline-offset-2"
+                href="https://democracyworks.org/elections-api/"
+              >
+                Democracy Works Elections API
+              </Link>{" "}
+              on {lastRunDate}; the API compiles election guidance from official
+              government sources and other vetted data providers, and details
+              may change over time.
+            </p>
           </div>
         </div>
       </Container>

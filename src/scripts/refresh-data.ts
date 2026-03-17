@@ -14,6 +14,11 @@ async function main(): Promise<void> {
 
   console.log("Fetching Democracy Works Elections...");
   await writeData(await getElections(), "src/data/elections.json");
+
+  await writeData(
+    { lastRunDate: new Date().toISOString() },
+    "src/data/refresh-history.json"
+  );
 }
 
 async function writeData(data: any, filePath: string) {

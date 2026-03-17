@@ -57,7 +57,7 @@ export function StateVRRules({
       )}
       {statePolicies.length > 0 && (
         <StatePolicyBlock
-          title="High School VR Requirements:"
+          title="High School Requirements:"
           policies={statePolicies}
         />
       )}
