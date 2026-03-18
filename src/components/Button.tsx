@@ -63,12 +63,13 @@ export function getButtonClasses(
   shadow: boolean,
 ) {
   return clsx(
-    "cursor-pointer rounded-full text-base leading-none font-semibold text-center leading-tight",
+    "cursor-pointer rounded-full leading-none font-semibold text-center",
     "focus:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2",
+    size === "large" ? "text-lg" : "text-base",
     shadow && "shadow-button",
     variant === "primary"
       ? [
-          size === "medium" ? "px-[20px] py-[10px]" : "px-[40px] py-[16px]",
+          size === "medium" ? "px-[20px] py-[10px] " : "px-[40px] py-[16px]",
           "bg-navy hover:bg-yellow hover:text-navy active:bg-yellow/80 active:text-navy text-white",
         ]
       : [

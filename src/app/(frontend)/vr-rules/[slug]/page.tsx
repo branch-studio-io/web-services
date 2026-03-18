@@ -26,6 +26,7 @@ import {
   formatElectionDate,
   parseStateCode,
 } from "@/utils/democracyWorksUtils";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -176,7 +177,10 @@ export default async function StateVRRulesPage({ params }: PageProps) {
                   target="_blank"
                   className="box-shadow-md whitespace-nowrap"
                 >
-                  Download Toolkit
+                  <span className="flex items-center justify-center gap-2">
+                    Download Toolkit
+                    <ArrowRightIcon className="h-5 w-5" />
+                  </span>
                 </LinkButton>
               </div>
             </div>
