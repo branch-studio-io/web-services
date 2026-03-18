@@ -1,4 +1,5 @@
 export const TCC_URL = "https://www.thecivicscenter.org";
+export const DATA_URL = "https://data.thecivicscenter.org";
 
 export const SOCIAL_CARD_VERSION = "4";
 export const MAX_WIDTH = "1400px";

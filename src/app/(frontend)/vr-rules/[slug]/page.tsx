@@ -11,8 +11,8 @@ import electionsJson from "@/data/elections.json";
 import refreshHistoryJson from "@/data/refresh-history.json";
 import statePoliciesJson from "@/data/state-policies.json";
 import statePopsJson from "@/data/state-pops.json";
-import statesJson from "@/data/states.json";
 import stateRegRatesJson from "@/data/state-reg-rates.json";
+import statesJson from "@/data/states.json";
 import type {
   Authority,
   Election,
@@ -21,6 +21,7 @@ import type {
 import type { State } from "@/types/state";
 import type { StatePolicies } from "@/types/statePolicies";
 import type { StatePop } from "@/types/statePop";
+import { StateRegRates } from "@/types/stateRegRates";
 import {
   formatElectionDate,
   parseStateCode,
@@ -28,7 +29,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { StateRegRates } from "@/types/stateRegRates";
 
 const authorities = authoritiesJson as Authority[];
 const elections = electionsJson as Election[];
@@ -106,9 +106,9 @@ export default async function StateVRRulesPage({ params }: PageProps) {
             <h3 className="header-4 font-extrabold">
               High school students can help one another get ready to{" "}
               <span className="whitespace-nowrap">
-                vote.
+                vote.{" "}
                 <Image
-                  className="-mt-1 ml-1.5 inline-block"
+                  className="-mt-1 inline-block"
                   src={mortarboardImg}
                   alt="Mortarboard"
                   width={32}

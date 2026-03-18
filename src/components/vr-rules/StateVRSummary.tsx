@@ -8,7 +8,9 @@ import {
   studentImpactText,
   voterEligibilityParts,
 } from "@/utils/democracyWorksUtils";
+import { DATA_URL } from "@/utils/globals";
 import Image from "next/image";
+import Link from "next/link";
 import numeral from "numeral";
 
 type StateVRSummaryProps = {
@@ -36,19 +38,23 @@ export function StateVRSummary({
     <div>
       <h2 className="border-b border-gray-300 py-5">
         <span className="header-4 mr-3 font-extrabold">{state.name} has</span>
-        <span className="bg-teal-intense header-3 box-shadow-md mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white">
-          <span className="header-3 font-extrabold">
-            {numeral(
-              unregistered18 ? unregistered18 : (statePop?.pop18 ?? 0),
-            ).format("0,0")}
-          </span>
-          <Image
-            src={headExplodingImg}
-            alt="Head exploding"
-            width={32}
-            height={32}
+        {unregistered18 ? (
+          <Link
+            href={`${DATA_URL}/state/${state.code}/#state-registration-rates`}
+          >
+            <PopButton
+              population={
+                unregistered18 ? unregistered18 : (statePop?.pop18 ?? 0)
+              }
+            />
+          </Link>
+        ) : (
+          <PopButton
+            population={
+              unregistered18 ? unregistered18 : (statePop?.pop18 ?? 0)
+            }
           />
-        </span>
+        )}
         <span className="header-4 font-extrabold">
           {unregistered18 ? "unregistered 18yos." : "18yos."}
         </span>
@@ -56,22 +62,25 @@ export function StateVRSummary({
 
       {authority && (
         <h2 className="header-4 border-b border-gray-300 py-5 font-extrabold">
-          {state.demonym} can
+          {state.demonym} can{" "}
           <Image
-            className="mx-1.5 -mt-2 inline-block"
+            className="-mt-2 inline-block"
             src={sirenImg}
             alt="Siren"
             width={32}
             height={32}
-          />
-          pre-register before turning 18
-          <Image
-            className="mx-1.5 -mt-2 inline-block"
-            src={sirenImg}
-            alt="Siren"
-            width={32}
-            height={32}
-          />
+          />{" "}
+          pre-register before turning{" "}
+          <span className="whitespace-nowrap">
+            18{" "}
+            <Image
+              className="-mt-2 inline-block"
+              src={sirenImg}
+              alt="Siren"
+              width={32}
+              height={32}
+            />
+          </span>
         </h2>
       )}
       {impactText && voterEligibility.main && (
@@ -87,5 +96,25 @@ export function StateVRSummary({
         </div>
       )}
     </div>
+  );
+}
+
+type PopButtonProps = {
+  population: number;
+};
+
+function PopButton({ population }: PopButtonProps) {
+  return (
+    <span className="bg-teal-intense header-3 box-shadow-md mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white">
+      <span className="header-3 font-extrabold">
+        {numeral(population).format("0,0")}
+      </span>
+      <Image
+        src={headExplodingImg}
+        alt="Head exploding"
+        width={32}
+        height={32}
+      />
+    </span>
   );
 }
