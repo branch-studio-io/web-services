@@ -171,6 +171,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               <div className="mt-4 flex flex-col items-stretch gap-4 sm:flex-row">
                 <LinkButton
                   variant="primary"
+                  size="large"
                   href={state.toolkitUrl}
                   target="_blank"
                   className="box-shadow-md whitespace-nowrap"

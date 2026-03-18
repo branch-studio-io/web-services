@@ -24,27 +24,27 @@ export function StateVRRules({
   return (
     <div className="space-y-6">
       <h3 className="header-4 font-extrabold">More Details on {state.name}</h3>
-      <TitleExpandBlock title="Upcoming Elections:">
+      <TitleExpandBlock title="Upcoming Elections">
         <ElectionsList elections={stateElections} />
       </TitleExpandBlock>
 
-      <TitleExpandBlock title="Useful Links">
-        <UsefulLinks state={state} authority={authority} />
-      </TitleExpandBlock>
-
       {authority && (
-        <TitleExpandBlock title="Eligibility Requirements:" open={false}>
+        <TitleExpandBlock title="Full Eligibility Requirements" open={false}>
           <EligibilityRequirments authority={authority} />
         </TitleExpandBlock>
       )}
 
       {statePolicies.length > 0 && (
-        <TitleExpandBlock title="High School Requirements:" open={false}>
+        <TitleExpandBlock title="High School Requirements" open={false}>
           <StatePolicyList policies={statePolicies} />
         </TitleExpandBlock>
       )}
       <TitleExpandBlock title="Assistance Obtaining an ID" open={false}>
         <VoteRidersInfo />
+      </TitleExpandBlock>
+
+      <TitleExpandBlock title="More Useful Links" open={false}>
+        <UsefulLinks state={state} authority={authority} />
       </TitleExpandBlock>
     </div>
   );

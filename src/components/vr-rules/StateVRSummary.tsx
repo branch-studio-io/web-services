@@ -42,21 +42,15 @@ export function StateVRSummary({
           <Link
             href={`${DATA_URL}/state/${state.code}/#state-registration-rates`}
           >
-            <PopButton
-              population={
-                unregistered18 ? unregistered18 : (statePop?.pop18 ?? 0)
-              }
-            />
+            <PopButton population={unregistered18} hoverable={true} />
           </Link>
         ) : (
-          <PopButton
-            population={
-              unregistered18 ? unregistered18 : (statePop?.pop18 ?? 0)
-            }
-          />
+          <PopButton population={statePop?.pop18 ?? 0} hoverable={false} />
         )}
         <span className="header-4 font-extrabold">
-          {unregistered18 ? "unregistered 18yos." : "18yos."}
+          {unregistered18
+            ? "18-year-olds not yet registered."
+            : "18-year-olds."}
         </span>
       </h2>
 
@@ -101,11 +95,18 @@ export function StateVRSummary({
 
 type PopButtonProps = {
   population: number;
+  hoverable?: boolean;
 };
 
-function PopButton({ population }: PopButtonProps) {
+function PopButton({ population, hoverable = false }: PopButtonProps) {
+  const baseClasses =
+    "header-3 box-shadow-md mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white";
+  const colorClasses = hoverable
+    ? "bg-teal-intense hover:bg-yellow hover:text-navy"
+    : "bg-teal-intense";
+
   return (
-    <span className="bg-teal-intense header-3 box-shadow-md mr-3 inline-flex flex-row items-center gap-3 px-[26px] py-[14px] text-white">
+    <span className={`${colorClasses} ${baseClasses}`}>
       <span className="header-3 font-extrabold">
         {numeral(population).format("0,0")}
       </span>
