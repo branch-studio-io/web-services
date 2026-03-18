@@ -65,6 +65,7 @@ export type Election = {
     | "municipal"
     | "special";
   registration: {
+    noRegistrationRequiredInstructions: string | null;
     inPerson: {
       deadline: {
         date: string;

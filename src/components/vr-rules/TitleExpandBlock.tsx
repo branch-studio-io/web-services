@@ -1,18 +1,19 @@
-import { Authority } from "@/types/democracyWorks";
+import type { ReactNode } from "react";
 
-type EligibilityReqBlockProps = {
+type TitleExpandBlockProps = {
   title: string;
-  authority: Authority;
+  children: ReactNode;
+  open?: boolean;
 };
 
-export function EligibilityReqBlock({
+export function TitleExpandBlock({
   title,
-  authority,
-}: EligibilityReqBlockProps) {
-
+  children,
+  open = true,
+}: TitleExpandBlockProps) {
   return (
     <div>
-      <details className="group">
+      <details className="group" open={open}>
         <summary className="header-5 mb-2 flex cursor-pointer list-none items-center gap-2 font-extrabold [&::-webkit-details-marker]:hidden">
           <span
             className="transition-transform select-none group-open:rotate-90"
@@ -22,7 +23,9 @@ export function EligibilityReqBlock({
           </span>
           {title}
         </summary>
-        <div className="space-y-4 border-t border-gray-300 pt-2">TODO</div>
+        <div className="mb-10 border-t border-gray-300 pt-4 pl-6">
+          {children}
+        </div>
       </details>
     </div>
   );

@@ -1,24 +1,12 @@
-import { ElectionsBlock } from "@/components/vr-rules/ElectionsBlock";
-import { RegInstructionsBlock } from "@/components/vr-rules/RegInstructionsBlock";
-import { UsefulLinksBlock } from "@/components/vr-rules/UsefulLinksBlock";
-import { VoteRidersBlock } from "@/components/vr-rules/VoteRidersBlock";
+import { ElectionsList } from "@/components/vr-rules/ElectionsList";
+import { EligibilityRequirments } from "@/components/vr-rules/EligibilityRequirments";
+import { StatePolicyList } from "@/components/vr-rules/StatePolicyList";
+import { TitleExpandBlock } from "@/components/vr-rules/TitleExpandBlock";
+import { UsefulLinks } from "@/components/vr-rules/UsefulLinks";
+import { VoteRidersInfo } from "@/components/vr-rules/VoteRidersInfo";
 import type { Authority, Election } from "@/types/democracyWorks";
 import type { State } from "@/types/State";
 import type { StatePolicy } from "@/types/StatePolicies";
-import { EligibilityReqBlock } from "./EligibilityReqBlock";
-import { StatePolicyBlock } from "./StatePolicyBlock";
-
-function concatByMailInstructions(authority: Authority): string | null {
-  const byMail = authority.registration.byMail;
-  if (!byMail) return null;
-  const parts = [
-    byMail.idInstructions,
-    byMail.signatureInstructions,
-    byMail.citizenInstructions,
-    byMail.newVoterInstructions,
-  ].filter((s): s is string => Boolean(s?.trim()));
-  return parts.length > 0 ? parts.join("<br>") : null;
-}
 
 type StateVRRulesProps = {
   state: State;
@@ -34,42 +22,30 @@ export function StateVRRules({
   statePolicies,
 }: StateVRRulesProps) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <h3 className="header-4 font-extrabold">More Details on {state.name}</h3>
-      <ElectionsBlock elections={stateElections} />
-      <UsefulLinksBlock state={state} authority={authority} />
-      {/* {authority && (
-        <EligibilityReqBlock
-          title="Eligibility Requirements:"
-          authority={authority}
-        />
-      )} */}
+      <TitleExpandBlock title="Upcoming Elections:">
+        <ElectionsList elections={stateElections} />
+      </TitleExpandBlock>
 
-      {authority && authority.registration.online?.supported && (
-        <RegInstructionsBlock
-          title="Registration Online:"
-          regInstructions={authority.registration.online?.instructions ?? null}
-          preRegInstructions={
-            authority.youthRegistration.onlineInstructions ?? null
-          }
-        />
+      <TitleExpandBlock title="Useful Links">
+        <UsefulLinks state={state} authority={authority} />
+      </TitleExpandBlock>
+
+      {authority && (
+        <TitleExpandBlock title="Eligibility Requirements:" open={false}>
+          <EligibilityRequirments authority={authority} />
+        </TitleExpandBlock>
       )}
-      {authority && authority.registration.byMail?.supported && (
-        <RegInstructionsBlock
-          title="Registration by Mail:"
-          regInstructions={concatByMailInstructions(authority) ?? null}
-          preRegInstructions={
-            authority.youthRegistration.byMailInstructions ?? null
-          }
-        />
-      )}
+
       {statePolicies.length > 0 && (
-        <StatePolicyBlock
-          title="High School Requirements:"
-          policies={statePolicies}
-        />
+        <TitleExpandBlock title="High School Requirements:" open={false}>
+          <StatePolicyList policies={statePolicies} />
+        </TitleExpandBlock>
       )}
-      <VoteRidersBlock />
+      <TitleExpandBlock title="Assistance Obtaining an ID" open={false}>
+        <VoteRidersInfo />
+      </TitleExpandBlock>
     </div>
   );
 }

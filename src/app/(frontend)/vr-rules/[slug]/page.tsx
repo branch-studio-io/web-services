@@ -140,7 +140,7 @@ export default async function StateVRRulesPage({ params }: PageProps) {
               stateElections={stateElections}
               statePolicies={policies}
             />
-            <p className="body-sm mt-4">
+            <p className="body-md mt-4">
               This information was retrieved from the{" "}
               <Link
                 className="font-bold hover:underline hover:underline-offset-2"
