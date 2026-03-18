@@ -18,10 +18,10 @@ import type {
   Election,
   RefreshHistory,
 } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
-import type { StatePolicies } from "@/types/statePolicies";
-import type { StatePop } from "@/types/statePop";
-import { StateRegRates } from "@/types/stateRegRates";
+import type { State } from "@/types/State";
+import type { StatePolicies } from "@/types/StatePolicies";
+import type { StatePop } from "@/types/StatePop";
+import { StateRegRates } from "@/types/StateRegRates";
 import {
   formatElectionDate,
   parseStateCode,

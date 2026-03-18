@@ -1,4 +1,4 @@
-import type { StatePolicy } from "@/types/statePolicies";
+import type { StatePolicy } from "@/types/StatePolicies";
 
 type StatePolocyBlockProps = {
   title: string;

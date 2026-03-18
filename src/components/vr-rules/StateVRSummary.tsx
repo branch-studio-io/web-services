@@ -1,9 +1,9 @@
 import headExplodingImg from "@/assets/head-exploding.png";
 import sirenImg from "@/assets/siren.png";
 import type { Authority, Election } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
-import type { StatePop } from "@/types/statePop";
-import { StateRegRates } from "@/types/stateRegRates";
+import type { State } from "@/types/State";
+import type { StatePop } from "@/types/StatePop";
+import { StateRegRates } from "@/types/StateRegRates";
 import {
   studentImpactText,
   voterEligibilityParts,

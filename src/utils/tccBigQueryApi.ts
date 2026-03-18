@@ -1,4 +1,4 @@
-import type { StatePop } from "@/types/statePop";
+import type { StatePop } from "@/types/StatePop";
 import { BigQuery } from "@google-cloud/bigquery";
 import "dotenv/config";
 import { getEnvKey } from "./utils";
@@ -35,11 +35,11 @@ export async function getStatePopulations(): Promise<StatePop[]> {
   }));
 
   // Add in Alabama
-  if(!statePop.find((state) => state.fips === "01")) {
+  if (!statePop.find((state) => state.fips === "01")) {
     statePop.unshift({
       fips: "01",
       pop18: 45366,
-    });  
+    });
   }
   return statePop;
 }

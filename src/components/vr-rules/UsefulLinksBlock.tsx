@@ -1,5 +1,5 @@
 import type { Authority } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
+import type { State } from "@/types/State";
 import Link from "next/link";
 
 type UsefulLinksBlockProps = {

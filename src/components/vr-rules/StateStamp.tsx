@@ -1,5 +1,5 @@
 import ballotBoxImg from "@/assets/ballot-box.png";
-import { State } from "@/types/state";
+import { State } from "@/types/State";
 import Image from "next/image";
 import { StateIcon } from "../StateIcon";
 

@@ -2,7 +2,7 @@
 
 import { StateIcon } from "@/components/StateIcon";
 import type { Authority } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
+import type { State } from "@/types/State";
 import {
   parseStateCode,
   voterEligibilityParts,

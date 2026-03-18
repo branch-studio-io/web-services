@@ -5,8 +5,8 @@ import authoritiesJson from "@/data/authorities.json";
 import statePopsJson from "@/data/state-pops.json";
 import statesJson from "@/data/states.json";
 import type { Authority } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
-import type { StatePop } from "@/types/statePop";
+import type { State } from "@/types/State";
+import type { StatePop } from "@/types/StatePop";
 import {
   THREE_COLOR_BORDER_DIVERGENT_SCALE,
   THREE_COLOR_DIVERGENT_SCALE,

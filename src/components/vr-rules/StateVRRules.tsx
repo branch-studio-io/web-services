@@ -3,8 +3,9 @@ import { RegInstructionsBlock } from "@/components/vr-rules/RegInstructionsBlock
 import { UsefulLinksBlock } from "@/components/vr-rules/UsefulLinksBlock";
 import { VoteRidersBlock } from "@/components/vr-rules/VoteRidersBlock";
 import type { Authority, Election } from "@/types/democracyWorks";
-import type { State } from "@/types/state";
-import type { StatePolicy } from "@/types/statePolicies";
+import type { State } from "@/types/State";
+import type { StatePolicy } from "@/types/StatePolicies";
+import { EligibilityReqBlock } from "./EligibilityReqBlock";
 import { StatePolicyBlock } from "./StatePolicyBlock";
 
 function concatByMailInstructions(authority: Authority): string | null {
@@ -37,6 +38,13 @@ export function StateVRRules({
       <h3 className="header-4 font-extrabold">More Details on {state.name}</h3>
       <ElectionsBlock elections={stateElections} />
       <UsefulLinksBlock state={state} authority={authority} />
+      {/* {authority && (
+        <EligibilityReqBlock
+          title="Eligibility Requirements:"
+          authority={authority}
+        />
+      )} */}
+
       {authority && authority.registration.online?.supported && (
         <RegInstructionsBlock
           title="Registration Online:"
